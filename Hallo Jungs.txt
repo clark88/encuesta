@@ -1,4 +1,4 @@
-Wenn ihr diese Datei lesen könnt habt ihr SVN erfolgreich konfiguriert!
+Wenn ihr diese Datei lesen könnt habt ihr SVN erfolgreich konfiguriert!!
 
 Viele Grüße
 
