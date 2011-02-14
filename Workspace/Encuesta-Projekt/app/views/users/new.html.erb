@@ -1,0 +1,34 @@
+Legen sie hier einen neuen User an!
+
+
+
+<%= form_for(@user) do |f| %>
+  <div class="field">
+    <%= f.label :login %><br />
+    <%= f.text_field :login %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :vorname %><br />
+    <%= f.text_field :vorname %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :passwort %><br />
+    <%= f.password_field :passwort %>
+  </div>
+  <div class="field">
+    <%= f.label :passwort_confirmation, "Confirmation" %><br />
+    <%= f.password_field :passwort_confirmation %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+
