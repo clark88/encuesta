@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(:version => 20110214083411) do
   end
 
   create_table "surveys", :force => true do |t|
+    t.string   "bezeichnung"
     t.boolean  "gesperrt"
     t.integer  "surveytype_id"
     t.integer  "user_id"
@@ -60,8 +61,8 @@ ActiveRecord::Schema.define(:version => 20110214083411) do
     t.string   "name"
     t.string   "vorname"
     t.string   "login"
-    t.string   "passwort"
     t.string   "email"
+    t.integer  "roll_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "encrypted_passwort"
