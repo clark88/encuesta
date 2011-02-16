@@ -1,11 +1,18 @@
 class UsersController < ApplicationController
-  def index
-    flash[:notice] = "You did it"
+  before_filter :authenticate, :only => [:edit, :update]
+  before_filter :correct_user, :only => [:edit, :update]
+  
+   def index
+    @title = "All users"
+    @users = User.all
   end
+
+
+
 
   def new
   	@user = User.new
-    @title = "Sign up"
+    @title = "Registrieren"
   end
 
   def show
@@ -14,37 +21,25 @@ class UsersController < ApplicationController
 
   end
 
+  
   def create
-    user = User.new()
-    user.name = params[:user][:name]
-    user.vorname = params[:user][:vorname]
-    user.login = params[:user][:login]
-    user.passwort = params[:user][:passwort]
-    user.email = params[:user][:email]
-    user.save
-    redirect_to(users_path)
+    @user = User.new(params[:user])
+    if @user.save
+      sign_in @user
+      flash[:success] = "Hallo " + @user.login + "."
+      redirect_to @user
+    else
+      @title = "Sign up"
+      render 'new'
+    end
   end
+
 
   def edit
-    #@user =User.find(params[:id])
-    @user = User.find_by_login(params[:login])
-
-    if session [:user_id] != @user.user_id
-      flash[:notice] = "Sorry du bist nicht der richtige User"
-      redirect_to(users_path)
-    end
-
-    if session [:user_id] == @user.user_id
-      @user.name = params[:user][:name]
-      @user.vorname = params[:user][:vorname]
-      @user.login = params[:user][:login]
-      @user.passwort = params[:user][:passwort]
-      @user.email = params[:user][:email]
-      @user.save
-      redirect_to(users_path)
-    end
-
+    @user = User.find(params[:id])
+    @title = "Edit user"
   end
+
 
   def delete
     @user =User.find(params[:id])
@@ -58,5 +53,32 @@ class UsersController < ApplicationController
     @user.delete
     end
   end
+  
+  def update
+    @user = User.find(params[:id])
+    if @user.update_attributes(params[:user])
+      flash[:success] = "Profile updated."
+      redirect_to @user
+    else
+      @title = "Edit user"
+      render 'edit'
+    end
+  end
+
+
+  
+  private
+
+    def authenticate
+      deny_access unless signed_in?
+    end
+
+
+    def correct_user
+      @user = User.find(params[:id])
+      redirect_to(root_path) unless current_user?(@user)
+    end
+
+
 
 end

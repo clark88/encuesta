@@ -1,8 +1,10 @@
 <h1>Encuesta</h1>
 <p>
-  Dies ist die Home-Page des Encuesta-Umfragen-Systems. Erstellt in Unterstützung mit
-  <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
-  
-  </p>
-  
-<%= link_to "Sign up now!", signup_path, :class => "signup_button round" %>
+    Dies ist die Home-Page des Encuesta-Umfragen-Systems. Erstellt in Unterstützung mit
+    <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
+</p>
+<% if signed_in? %>
+<!--><p>Sie sind eingelogt als  <%= @current_user.login %> !   </p>-->
+    <% else %>
+    <%= link_to "Jetzt registrieren!", signup_path, :class => "signup_button round" %>
+    <% end %>

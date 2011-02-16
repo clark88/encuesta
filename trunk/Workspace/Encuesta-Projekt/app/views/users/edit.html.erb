@@ -1,10 +1,7 @@
-Legen sie hier einen neuen User an!
-
-
+<h1>Benutzer verändern</h1>
 
 <%= form_for(@user) do |f| %>
   <%= render 'shared/error_messages', :object => f.object %>
-
   <div class="field">
     <%= f.label :login %><br />
     <%= f.text_field :login %>
@@ -17,6 +14,7 @@ Legen sie hier einen neuen User an!
     <%= f.label :vorname %><br />
     <%= f.text_field :vorname %>
   </div>
+  
   <div class="field">
     <%= f.label :email %><br />
     <%= f.text_field :email %>
@@ -30,7 +28,7 @@ Legen sie hier einen neuen User an!
     <%= f.password_field :passwort_confirmation %>
   </div>
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Update" %>
   </div>
 <% end %>
 
