@@ -1,0 +1,17 @@
+<%= form_for @survey do |f| %>
+  <%= #render 'shared/error_messages', :object => f.object 
+  %>
+  <div class="field">
+    <%= f.text_field :bezeichnung %>
+  </div>
+  <div class="field">
+    <% Surveytype.all.each do |surveytype| %>
+    <br><%= radio_button_tag 'surveytype', surveytype.id, @surveytype == surveytype.id %>
+    <%= label_tag "surveytype_#{surveytype}", surveytype.bezeichnung
+    %>
+  <% end %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Umfrage erstellen" %>
+  </div>
+<% end %>

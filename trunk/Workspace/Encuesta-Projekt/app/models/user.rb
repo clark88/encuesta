@@ -14,7 +14,8 @@
 #
 
 class User < ActiveRecord::Base
-  has_many :surveys
+  has_many :surveys, :dependent => :destroy
+
   belongs_to :roll
 
   attr_accessor :passwort
@@ -55,6 +56,12 @@ class User < ActiveRecord::Base
     user = find_by_id(id)
     (user && user.salt == cookie_salt) ? user : nil
   end
+  
+  def feed
+    # This is preliminary. See Chapter 12 for the full implementation.
+    Survey.where("user_id = ?", id)
+  end
+
 
 
 
