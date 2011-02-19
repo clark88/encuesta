@@ -4,6 +4,20 @@
     <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
 </p>
 <% if signed_in? %>
+<table class="front" summary="For signed-in users">
+    <tr>
+      <td class="main">
+        <h1 class="survey">Umfragen</h1>
+        <%= render 'shared/survey_form' %>
+        <%= render 'shared/feed' %>
+
+      </td>
+      <td class="sidebar round">
+        <%= render 'shared/user_info' %>
+      </td>
+    </tr>
+  </table>
+
 <!--><p>Sie sind eingelogt als  <%= @current_user.login %> !   </p>-->
     <% else %>
     <%= link_to "Jetzt registrieren!", signup_path, :class => "signup_button round" %>

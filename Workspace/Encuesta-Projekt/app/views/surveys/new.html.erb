@@ -1,7 +1,7 @@
 Legen sie hier eine neue Umfrage an!
 
 <% form_for :survey, Survey.new, :url => { :action => "create" } do |form| %>
-Name
+
 <%= form.text_field :name %><br />
 Vorname
 <%= form.text_field :vorname %><br />

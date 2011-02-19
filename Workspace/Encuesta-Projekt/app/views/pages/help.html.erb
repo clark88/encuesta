@@ -5,3 +5,49 @@
   To get help on this sample app, see the
   <a href="http://railstutorial.org/book">Rails Tutorial book</a>.
 </p>
+
+
+Hier liegen erst mal meine Testmethoden
+
+<%= collection_select(:user, :user_id, User.all, :id, :login) %>
+ <br>
+
+<%= for user in User.all do
+	radio_button_tag(:user, :id)
+	label_tag(:user, :login)
+end %> <br>    Das Funzt so nicht
+
+
+<div >
+  <p>Logins</p>
+  <% User.all.each do |user| %>
+    <br><%= radio_button_tag 'user', user, @user == user %>
+    <%= label_tag "user_#{user}", user.login
+    %>
+  <% end %>
+</div>
+
+<div >
+  <p>Logins</p>
+  <% User.all.each do |user| %>
+    <br><%= check_box_tag 'user', user, @user == user %>
+    <%= label_tag "user_#{user}", user.login
+    %>
+  <% end %>
+  <% Surveytype.all.each do |surveytype| %>
+    <br><%= check_box_tag 'surveytype', surveytype, @surveytype == surveytype %>
+    <%= label_tag "surveytype_#{surveytype}", surveytype.bezeichnung
+    %>
+  <% end %>
+</div>
+
+
+<div class="form_row">
+  <p>Theme:</p>
+  <% [ 'plain', 'desert', 'green', 'corporate', 'funky' ].each do |theme| %>
+    <br><%= radio_button_tag 'theme', theme, @theme == theme %>
+    <%= label_tag "theme_#{theme}", theme.humanize %>
+  <% end %>
+</div>
+
+

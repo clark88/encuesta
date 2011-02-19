@@ -1,4 +1,10 @@
 EncuestaProjekt::Application.routes.draw do
+  get "surveytypes/new"
+
+  get "surveytypes/edit"
+
+  get "surveytypes/delete"
+
   get "sessions/new"
 
   get "surveys/new"
@@ -10,7 +16,10 @@ EncuestaProjekt::Application.routes.draw do
 
   resources :users
   resources :sessions, :only => [:new, :create, :destroy]
-
+  resources :surveys, :only => [:create, :destroy]
+  resources :surveytypes
+  
+  get "surveys/new"
   get "surveys/edit"
   get "surveys/delete"
 
@@ -23,7 +32,8 @@ EncuestaProjekt::Application.routes.draw do
   match '/edit',	:to => 'users#edit'
   match '/signin',  :to => 'sessions#new'
   match '/signout', :to => 'sessions#destroy'
-
+  
+  
   match '/home',	:to => 'pages#home'
   match '/contact', :to => 'pages#contact'
   match '/about',   :to => 'pages#about'

@@ -4,12 +4,21 @@
       <h1>
         <%= @user.login %>
       </h1>
+      <% unless @user.surveys.empty? %>
+        <table class="surveys" summary="User surveys">
+          <%= render @surveys %>
+        </table>
+        <%= #will_paginate @microposts
+         %>
+      <% end %>
+
     </td>
     <td class="sidebar round">
       <strong>Vorname</strong> <%= @user.vorname %><br />
       <strong>Name</strong> <%= @user.name %><br />
       <strong>E-Mail</strong> <%= @user.email %><br />
-      <strong>URL</strong>  <%= link_to user_path(@user), @user %>
+      <strong>URL</strong>  <%= link_to user_path(@user), @user %><br />
+      <strong>Umfragen</strong> <%= @user.surveys.count %>
     </td>
   </tr>
 </table>

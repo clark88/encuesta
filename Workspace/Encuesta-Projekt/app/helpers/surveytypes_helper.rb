@@ -1,0 +1,2 @@
+module SurveytypesHelper
+end

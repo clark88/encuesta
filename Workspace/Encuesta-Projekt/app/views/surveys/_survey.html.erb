@@ -1,0 +1,16 @@
+<tr>
+  <td class="survey">
+    <span class="content"><%= survey.bezeichnung %></span>
+    <span class="timestamp">
+     Erstellzeit:<%= time_ago_in_words(survey.created_at) %> ago.
+    </span>
+  </td>
+  <% if current_user?(micropost.user) %>
+  <td>
+    <%= link_to "Löschen", micropost, :method => :delete,
+                                     :confirm => "You sure?",
+                                     :title => micropost.bezeichnung %>
+  </td>
+  <% end %>
+
+</tr>

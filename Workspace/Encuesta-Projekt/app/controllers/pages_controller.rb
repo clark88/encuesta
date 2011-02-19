@@ -1,7 +1,13 @@
 class PagesController < ApplicationController
   def home
-  	@title = "Home"
+    @title = "Home"
+    if signed_in?
+    	@survey = Survey.new
+    	@feed_items = current_user.feed
+    end
+    
   end
+
 
   def contact
   	@title = "Kontakt"

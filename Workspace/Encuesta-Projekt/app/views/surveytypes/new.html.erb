@@ -1,0 +1,19 @@
+Legen sie hier einen neuen Surveytype an!  FINGER WEG!
+
+
+
+<%= form_for(@surveytype) do |f| %>
+  
+  <div class="field">
+    <%= f.label :bezeichnung %><br />
+    <%= f.text_field :bezeichnung %>
+  </div>
+  <div class="field">
+    <%= f.label :beschreibung %><br />
+    <%= f.text_field :beschreibung %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Neuen Umfragetyp erstellen" %>
+  </div>
+<% end %>
+
