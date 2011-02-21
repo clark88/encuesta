@@ -1,0 +1,9 @@
+http://nubyonrails.com/pages/css_graphs
+
+http://openbook.galileocomputing.de/ruby_on_rails/ruby_on_rails_04_003.htm#mj9a95206d8652f7835a53b4173c92a21b
+
+http://guides.rubyonrails.org/form_helpers.html
+
+http://jimneath.org/2008/04/17/paperclip-attaching-files-in-rails/
+
+http://ruby.railstutorial.org/chapters/sign-in-sign-out
