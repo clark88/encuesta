@@ -14,12 +14,15 @@ class SurveysController < ApplicationController
   
   def create
 		@survey = current_user.surveys.build(params[:survey])
-		@survey.gesperrt = params[:survey][:gesperrt]
+		#@survey.gesperrt = params[:survey][:gesperrt]
+		@survey.gesperrt = false
+		#@survey.surveytype_id = params[:surveytype.id]
 		
 		if @survey.save
       		flash[:success] = "Umfrage erstellt!"
 			redirect_to(home_path)
     	else
+    		flash[:failure] = "Umfragetyp oder Bezeichnung fehlt!"
     		@feed_items = []
 
       		render 'pages/home'

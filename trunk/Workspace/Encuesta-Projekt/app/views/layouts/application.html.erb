@@ -15,7 +15,7 @@
   </head>
 
   <body>
-  	
+  	<!-- Hier beginnt die Hauptseite mit einer Kopfzeile, einem Hauptteil und der Fußzeile -->
     <div class="container">
       <header>
   		<%= link_to logo, home_path %>
@@ -44,6 +44,7 @@
         <% flash.each do |key, value| %>
           <div class="flash <%= key %>"><%= value %></div>
         <% end %>
+        <!-- an dieser Stelle werden die anderen Seiten in die Hauptseite eingefügt -->
         <%= yield %>
       </section>
 
