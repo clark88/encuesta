@@ -5,11 +5,11 @@
      Erstellzeit:<%= time_ago_in_words(survey.created_at) %> ago.
     </span>
   </td>
-  <% if current_user?(micropost.user) %>
+  <% if current_user?(survey.user) %>
   <td>
-    <%= link_to "Löschen", micropost, :method => :delete,
+    <%= link_to "Löschen", survey, :method => :destroy,
                                      :confirm => "You sure?",
-                                     :title => micropost.bezeichnung %>
+                                     :title => survey.bezeichnung %>
   </td>
   <% end %>
 
