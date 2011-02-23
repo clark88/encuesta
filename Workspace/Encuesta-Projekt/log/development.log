@@ -12752,3 +12752,2853 @@ Started GET "/home" for 127.0.0.1 at 2011-02-21 15:48:33 +0100
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
 Rendered pages/home.html.erb within layouts/application (11.0ms)
 Completed 200 OK in 123ms (Views: 39.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 15:22:07 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered pages/home.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 739ms (Views: 61.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 15:23:04 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+Rendered pages/home.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 102ms (Views: 42.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 15:24:10 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered pages/home.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 96ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 15:25:32 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+Rendered pages/home.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 128ms (Views: 40.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/images/logo.png" for 127.0.0.1 at 2011-02-22 15:25:32 +0100
+
+ActionController::RoutingError (No route matches "/images/logo.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 15:26:58 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered pages/home.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 125ms (Views: 41.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 15:31:05 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+Rendered pages/home.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 124ms (Views: 52.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/images/logo.jpeg" for 127.0.0.1 at 2011-02-22 15:31:06 +0100
+
+ActionController::RoutingError (No route matches "/images/logo.jpeg"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 15:31:16 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered pages/home.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 105ms (Views: 42.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 15:34:24 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+Rendered pages/home.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 145ms (Views: 49.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 15:35:04 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered pages/home.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 131ms (Views: 41.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 15:35:18 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+Rendered pages/home.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 158ms (Views: 43.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 15:37:26 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered pages/home.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 99ms (Views: 41.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 15:37:46 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+Rendered pages/home.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 94ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 15:37:54 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered pages/home.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 135ms (Views: 45.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 15:38:00 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+Rendered pages/home.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 161ms (Views: 42.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 15:38:06 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered pages/home.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 95ms (Views: 40.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 15:39:57 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+Rendered pages/home.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 133ms (Views: 46.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 15:40:22 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered pages/home.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 197ms (Views: 45.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 15:40:40 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+Rendered pages/home.html.erb within layouts/application (73.0ms)
+Completed 200 OK in 160ms (Views: 106.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 15:41:08 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered pages/home.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 163ms (Views: 46.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 15:41:47 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+Rendered pages/home.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 128ms (Views: 41.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 15:43:49 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered pages/home.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 129ms (Views: 40.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 15:44:44 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+Rendered pages/home.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 129ms (Views: 40.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 15:45:03 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered pages/home.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 135ms (Views: 41.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 15:49:27 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+Rendered pages/home.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 104ms (Views: 43.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/roundedcornr_335844_tr.png" for 127.0.0.1 at 2011-02-22 15:49:28 +0100
+
+ActionController::RoutingError (No route matches "/roundedcornr_335844_tr.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/roundedcornr_335844_tl.png" for 127.0.0.1 at 2011-02-22 15:49:29 +0100
+
+ActionController::RoutingError (No route matches "/roundedcornr_335844_tl.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/Login.png" for 127.0.0.1 at 2011-02-22 15:49:29 +0100
+
+ActionController::RoutingError (No route matches "/Login.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/roundedcornr_335844_br.png" for 127.0.0.1 at 2011-02-22 15:49:29 +0100
+
+ActionController::RoutingError (No route matches "/roundedcornr_335844_br.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/roundedcornr_335844_bl.png" for 127.0.0.1 at 2011-02-22 15:49:29 +0100
+
+ActionController::RoutingError (No route matches "/roundedcornr_335844_bl.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/GO.png" for 127.0.0.1 at 2011-02-22 15:49:29 +0100
+
+ActionController::RoutingError (No route matches "/GO.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/Neu%20registieren!.png" for 127.0.0.1 at 2011-02-22 15:49:30 +0100
+
+ActionController::RoutingError (No route matches "/Neu%20registieren!.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 15:50:22 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered pages/home.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 104ms (Views: 45.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/roundedcornr_335844_tl.png" for 127.0.0.1 at 2011-02-22 15:50:23 +0100
+
+ActionController::RoutingError (No route matches "/roundedcornr_335844_tl.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/roundedcornr_335844_tr.png" for 127.0.0.1 at 2011-02-22 15:50:23 +0100
+
+ActionController::RoutingError (No route matches "/roundedcornr_335844_tr.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/roundedcornr_335844_bl.png" for 127.0.0.1 at 2011-02-22 15:50:24 +0100
+
+ActionController::RoutingError (No route matches "/roundedcornr_335844_bl.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/roundedcornr_335844_br.png" for 127.0.0.1 at 2011-02-22 15:50:24 +0100
+
+ActionController::RoutingError (No route matches "/roundedcornr_335844_br.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.0ms)
+
+
+Started GET "/Login.png" for 127.0.0.1 at 2011-02-22 15:50:24 +0100
+
+ActionController::RoutingError (No route matches "/Login.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (42.0ms)
+
+
+Started GET "/Neu%20registieren!.png" for 127.0.0.1 at 2011-02-22 15:50:24 +0100
+
+ActionController::RoutingError (No route matches "/Neu%20registieren!.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/GO.png" for 127.0.0.1 at 2011-02-22 15:50:24 +0100
+
+ActionController::RoutingError (No route matches "/GO.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 15:54:35 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+Rendered pages/home.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 100ms (Views: 42.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/roundedcornr_335844_tr.png" for 127.0.0.1 at 2011-02-22 15:54:36 +0100
+
+ActionController::RoutingError (No route matches "/roundedcornr_335844_tr.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (4.0ms)
+
+
+Started GET "/roundedcornr_335844_bl.png" for 127.0.0.1 at 2011-02-22 15:54:37 +0100
+
+ActionController::RoutingError (No route matches "/roundedcornr_335844_bl.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/roundedcornr_335844_tl.png" for 127.0.0.1 at 2011-02-22 15:54:37 +0100
+
+ActionController::RoutingError (No route matches "/roundedcornr_335844_tl.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/roundedcornr_335844_br.png" for 127.0.0.1 at 2011-02-22 15:54:37 +0100
+
+ActionController::RoutingError (No route matches "/roundedcornr_335844_br.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/Login.png" for 127.0.0.1 at 2011-02-22 15:54:37 +0100
+
+ActionController::RoutingError (No route matches "/Login.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.0ms)
+
+
+Started GET "/Neu%20registieren!.png" for 127.0.0.1 at 2011-02-22 15:54:38 +0100
+
+ActionController::RoutingError (No route matches "/Neu%20registieren!.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/GO.png" for 127.0.0.1 at 2011-02-22 15:54:38 +0100
+
+ActionController::RoutingError (No route matches "/GO.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 15:54:55 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered pages/home.html.erb within layouts/application (102.0ms)
+Completed   in 276ms
+
+ActionView::Template::Error (undefined local variable or method `no_path' for #<#<Class:0x4487160>:0x4485918>):
+    39:   </nav> -->
+    40:   
+    41:   <div id = "sidebox">
+    42:   	<%= link_to greyroundtopleft, no_path%>
+    43: 	<img src="roundedcornr_335844_tl.png" alt="" class="eck5" />
+    44:   <img src="roundedcornr_335844_tr.png" alt="" class="eck6" />
+    45:   <img src="roundedcornr_335844_bl.png" alt="" class="eck7" />
+  app/views/layouts/application.html.erb:42:in `_app_views_layouts_application_html_erb___204461346_35790552_999162851'
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (30.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 15:55:02 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+Rendered pages/home.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 163ms (Views: 45.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/roundedcornr_335844_tl.png" for 127.0.0.1 at 2011-02-22 15:55:03 +0100
+
+ActionController::RoutingError (No route matches "/roundedcornr_335844_tl.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/roundedcornr_335844_tr.png" for 127.0.0.1 at 2011-02-22 15:55:04 +0100
+
+ActionController::RoutingError (No route matches "/roundedcornr_335844_tr.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/roundedcornr_335844_bl.png" for 127.0.0.1 at 2011-02-22 15:55:04 +0100
+
+ActionController::RoutingError (No route matches "/roundedcornr_335844_bl.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.0ms)
+
+
+Started GET "/Login.png" for 127.0.0.1 at 2011-02-22 15:55:04 +0100
+
+ActionController::RoutingError (No route matches "/Login.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.0ms)
+
+
+Started GET "/roundedcornr_335844_br.png" for 127.0.0.1 at 2011-02-22 15:55:04 +0100
+
+ActionController::RoutingError (No route matches "/roundedcornr_335844_br.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/GO.png" for 127.0.0.1 at 2011-02-22 15:55:04 +0100
+
+ActionController::RoutingError (No route matches "/GO.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/Neu%20registieren!.png" for 127.0.0.1 at 2011-02-22 15:55:04 +0100
+
+ActionController::RoutingError (No route matches "/Neu%20registieren!.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 15:55:18 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered pages/home.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 164ms (Views: 46.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/roundedcornr_335844_tl.png" for 127.0.0.1 at 2011-02-22 15:55:19 +0100
+
+ActionController::RoutingError (No route matches "/roundedcornr_335844_tl.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/roundedcornr_335844_tr.png" for 127.0.0.1 at 2011-02-22 15:55:19 +0100
+
+ActionController::RoutingError (No route matches "/roundedcornr_335844_tr.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/roundedcornr_335844_bl.png" for 127.0.0.1 at 2011-02-22 15:55:19 +0100
+
+ActionController::RoutingError (No route matches "/roundedcornr_335844_bl.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (5.0ms)
+
+
+Started GET "/roundedcornr_335844_br.png" for 127.0.0.1 at 2011-02-22 15:55:19 +0100
+
+ActionController::RoutingError (No route matches "/roundedcornr_335844_br.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/Login.png" for 127.0.0.1 at 2011-02-22 15:55:20 +0100
+
+ActionController::RoutingError (No route matches "/Login.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/Neu%20registieren!.png" for 127.0.0.1 at 2011-02-22 15:55:20 +0100
+
+ActionController::RoutingError (No route matches "/Neu%20registieren!.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/GO.png" for 127.0.0.1 at 2011-02-22 15:55:20 +0100
+
+ActionController::RoutingError (No route matches "/GO.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 15:56:14 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+Rendered pages/home.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 98ms (Views: 40.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/roundedcornr_335844_tl.png" for 127.0.0.1 at 2011-02-22 15:56:15 +0100
+
+ActionController::RoutingError (No route matches "/roundedcornr_335844_tl.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.0ms)
+
+
+Started GET "/roundedcornr_335844_bl.png" for 127.0.0.1 at 2011-02-22 15:56:16 +0100
+
+ActionController::RoutingError (No route matches "/roundedcornr_335844_bl.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.0ms)
+
+
+Started GET "/roundedcornr_335844_tr.png" for 127.0.0.1 at 2011-02-22 15:56:16 +0100
+
+ActionController::RoutingError (No route matches "/roundedcornr_335844_tr.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/roundedcornr_335844_br.png" for 127.0.0.1 at 2011-02-22 15:56:16 +0100
+
+ActionController::RoutingError (No route matches "/roundedcornr_335844_br.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/GO.png" for 127.0.0.1 at 2011-02-22 15:56:16 +0100
+
+ActionController::RoutingError (No route matches "/GO.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/Login.png" for 127.0.0.1 at 2011-02-22 15:56:16 +0100
+
+ActionController::RoutingError (No route matches "/Login.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/Neu%20registieren!.png" for 127.0.0.1 at 2011-02-22 15:56:16 +0100
+
+ActionController::RoutingError (No route matches "/Neu%20registieren!.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 15:58:32 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered pages/home.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 95ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/GO.png" for 127.0.0.1 at 2011-02-22 15:58:33 +0100
+
+ActionController::RoutingError (No route matches "/GO.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/Login.png" for 127.0.0.1 at 2011-02-22 15:58:33 +0100
+
+ActionController::RoutingError (No route matches "/Login.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/Neu%20registieren!.png" for 127.0.0.1 at 2011-02-22 15:58:33 +0100
+
+ActionController::RoutingError (No route matches "/Neu%20registieren!.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 15:58:47 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+Rendered pages/home.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 100ms (Views: 44.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/GO.png" for 127.0.0.1 at 2011-02-22 15:58:48 +0100
+
+ActionController::RoutingError (No route matches "/GO.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (4.0ms)
+
+
+Started GET "/Neu%20registieren!.png" for 127.0.0.1 at 2011-02-22 15:58:48 +0100
+
+ActionController::RoutingError (No route matches "/Neu%20registieren!.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/Login.png" for 127.0.0.1 at 2011-02-22 15:58:48 +0100
+
+ActionController::RoutingError (No route matches "/Login.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 15:59:22 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered pages/home.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 123ms (Views: 39.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/Login.png" for 127.0.0.1 at 2011-02-22 15:59:23 +0100
+
+ActionController::RoutingError (No route matches "/Login.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/Neu%20registieren!.png" for 127.0.0.1 at 2011-02-22 15:59:23 +0100
+
+ActionController::RoutingError (No route matches "/Neu%20registieren!.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/GO.png" for 127.0.0.1 at 2011-02-22 15:59:24 +0100
+
+ActionController::RoutingError (No route matches "/GO.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 15:59:36 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+Rendered pages/home.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 99ms (Views: 42.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/GO.png" for 127.0.0.1 at 2011-02-22 15:59:36 +0100
+
+ActionController::RoutingError (No route matches "/GO.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/Login.png" for 127.0.0.1 at 2011-02-22 15:59:37 +0100
+
+ActionController::RoutingError (No route matches "/Login.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/Neu%20registieren!.png" for 127.0.0.1 at 2011-02-22 15:59:37 +0100
+
+ActionController::RoutingError (No route matches "/Neu%20registieren!.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 16:06:49 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered pages/home.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 104ms (Views: 47.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/GO.png" for 127.0.0.1 at 2011-02-22 16:06:50 +0100
+
+ActionController::RoutingError (No route matches "/GO.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/Neu%20registieren!.png" for 127.0.0.1 at 2011-02-22 16:06:50 +0100
+
+ActionController::RoutingError (No route matches "/Neu%20registieren!.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 16:07:16 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+Rendered pages/home.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 95ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/GO.png" for 127.0.0.1 at 2011-02-22 16:07:17 +0100
+
+ActionController::RoutingError (No route matches "/GO.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/Neu%20registieren!.png" for 127.0.0.1 at 2011-02-22 16:07:17 +0100
+
+ActionController::RoutingError (No route matches "/Neu%20registieren!.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 16:07:40 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered pages/home.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 98ms (Views: 44.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/GO.png" for 127.0.0.1 at 2011-02-22 16:07:41 +0100
+
+ActionController::RoutingError (No route matches "/GO.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/Neu%20registieren!.png" for 127.0.0.1 at 2011-02-22 16:07:41 +0100
+
+ActionController::RoutingError (No route matches "/Neu%20registieren!.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 16:08:12 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+Rendered pages/home.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 128ms (Views: 44.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/GO.png" for 127.0.0.1 at 2011-02-22 16:08:13 +0100
+
+ActionController::RoutingError (No route matches "/GO.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/Neu%20registieren!.png" for 127.0.0.1 at 2011-02-22 16:08:13 +0100
+
+ActionController::RoutingError (No route matches "/Neu%20registieren!.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 16:08:35 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered pages/home.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 137ms (Views: 44.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/Neu%20registieren!.png" for 127.0.0.1 at 2011-02-22 16:08:36 +0100
+
+ActionController::RoutingError (No route matches "/Neu%20registieren!.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/GO.png" for 127.0.0.1 at 2011-02-22 16:08:36 +0100
+
+ActionController::RoutingError (No route matches "/GO.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 16:08:55 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+Rendered pages/home.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 100ms (Views: 45.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/Neu%20registieren!.png" for 127.0.0.1 at 2011-02-22 16:08:55 +0100
+
+ActionController::RoutingError (No route matches "/Neu%20registieren!.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/GO.png" for 127.0.0.1 at 2011-02-22 16:08:55 +0100
+
+ActionController::RoutingError (No route matches "/GO.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 16:10:07 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered pages/home.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 99ms (Views: 43.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/GO.png" for 127.0.0.1 at 2011-02-22 16:10:09 +0100
+
+ActionController::RoutingError (No route matches "/GO.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.0ms)
+
+
+Started GET "/Neu%20registieren!.png" for 127.0.0.1 at 2011-02-22 16:10:09 +0100
+
+ActionController::RoutingError (No route matches "/Neu%20registieren!.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 16:10:18 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+Rendered pages/home.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 101ms (Views: 46.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/Neu%20registieren!.png" for 127.0.0.1 at 2011-02-22 16:10:19 +0100
+
+ActionController::RoutingError (No route matches "/Neu%20registieren!.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/GO.png" for 127.0.0.1 at 2011-02-22 16:10:19 +0100
+
+ActionController::RoutingError (No route matches "/GO.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 16:11:00 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered pages/home.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 131ms (Views: 42.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/Neu%20registieren!.png" for 127.0.0.1 at 2011-02-22 16:11:01 +0100
+
+ActionController::RoutingError (No route matches "/Neu%20registieren!.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/GO.png" for 127.0.0.1 at 2011-02-22 16:11:01 +0100
+
+ActionController::RoutingError (No route matches "/GO.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 16:11:36 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+Rendered pages/home.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 128ms (Views: 41.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/GO.png" for 127.0.0.1 at 2011-02-22 16:11:37 +0100
+
+ActionController::RoutingError (No route matches "/GO.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/Neu%20registieren!.png" for 127.0.0.1 at 2011-02-22 16:11:38 +0100
+
+ActionController::RoutingError (No route matches "/Neu%20registieren!.png"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 16:14:09 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered pages/home.html.erb within layouts/application (139.0ms)
+Completed 200 OK in 222ms (Views: 168.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 16:15:49 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+Rendered pages/home.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 97ms (Views: 41.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 16:15:56 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (2.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered pages/home.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 101ms (Views: 44.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 16:16:11 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+Rendered pages/home.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 103ms (Views: 43.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 16:17:06 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered pages/home.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 131ms (Views: 43.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 16:17:43 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+Rendered pages/home.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 127ms (Views: 42.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 16:17:53 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered pages/home.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 133ms (Views: 42.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 16:18:02 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+Rendered pages/home.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 135ms (Views: 45.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 16:18:13 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered pages/home.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 159ms (Views: 44.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 16:18:20 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+Rendered pages/home.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 98ms (Views: 43.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 16:18:38 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered pages/home.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 105ms (Views: 44.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 16:18:49 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+Rendered pages/home.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 102ms (Views: 45.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 16:19:00 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered pages/home.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 119ms (Views: 50.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 16:19:16 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+Rendered pages/home.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 104ms (Views: 44.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 16:19:31 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered pages/home.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 107ms (Views: 47.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 16:19:41 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+Rendered pages/home.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 102ms (Views: 43.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 16:19:46 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered pages/home.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 100ms (Views: 47.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-22 16:19:55 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+Rendered pages/home.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 99ms (Views: 45.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-23 08:33:50 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered pages/home.html.erb within layouts/application (338.0ms)
+Completed   in 1187ms
+
+ActionView::Template::Error (undefined method `image_submit_tag' for #<ActionView::Helpers::FormBuilder:0x34d54e8>):
+    56:     <%= f.password_field :passwort %>
+    57:   </div>
+    58:   <div class="actions">
+    59:     <%= f.image_submit_tag("GO.png") %>
+    60:   </div>
+    61: <% end %>
+    62: 	<br><br>  
+  app/views/layouts/application.html.erb:59:in `block in _app_views_layouts_application_html_erb__664991825_27882612__557360504'
+  app/views/layouts/application.html.erb:49:in `_app_views_layouts_application_html_erb__664991825_27882612__557360504'
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (72.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2011-02-23 08:34:15 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+Rendered pages/home.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 107ms (Views: 43.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-02-23 08:34:31 +0100
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cw1AwXzbakccPkUAFEWtoE0lA8cKd7cMiwXWLOfm32Q=", "session"=>{"login"=>"VanZan", "passwort"=>"kitsune"}, "x"=>"23", "y"=>"17"}
+  [1m[35mUser Load (2.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."login" = 'VanZan') LIMIT 1
+Redirected to http://127.0.0.1:3000/users/1
+Completed 302 Found in 297ms
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-02-23 08:34:31 +0100
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)
+  [1m[36mSurvey Load (5.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE ("surveys".user_id = 1) ORDER BY surveys.created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered surveys/_survey.html.erb (35.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)
+Rendered users/show.html.erb within layouts/application (90.0ms)
+Completed 200 OK in 391ms (Views: 121.0ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/signout" for 127.0.0.1 at 2011-02-23 08:34:35 +0100
+  Processing by SessionsController#destroy as HTML
+Redirected to http://127.0.0.1:3000/home
+Completed 302 Found in 1ms
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 08:34:36 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+Rendered pages/home.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 122ms (Views: 58.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 08:37:26 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered pages/home.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 135ms (Views: 45.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/images/Neu%20registieren!.jpg" for 127.0.0.1 at 2011-02-23 08:37:28 +0100
+
+ActionController::RoutingError (No route matches "/images/Neu%20registieren!.jpg"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 08:37:55 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+Rendered pages/home.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 104ms (Views: 45.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/images/Neu%20registieren!.jpg" for 127.0.0.1 at 2011-02-23 08:37:56 +0100
+
+ActionController::RoutingError (No route matches "/images/Neu%20registieren!.jpg"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 08:39:01 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered pages/home.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 118ms (Views: 50.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 08:45:01 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+ERROR: compiling _app_views_layouts_application_html_erb__664991825_27102516__557360504 RAISED C:/Users/Marvin/My Documents/Aptana Studio 3 Workspace/Encuesta-Projekt/app/views/layouts/application.html.erb:62: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+...swort vergessen?", home_path  :class => "forgottenpw" );@out...
+...                               ^
+Function body:           def _app_views_layouts_application_html_erb__664991825_27102516__557360504(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "layouts/application";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('<!DOCTYPE html>
+<html>
+  <!DOCTYPE html>
+<html>
+  <head>
+    <title>Encuesta Projekt</title>
+    ');@output_buffer.append= ( csrf_meta_tag );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->    
+    <!--');@output_buffer.append= ( stylesheet_link_tag 'blueprint/screen', :media => 'screen' );@output_buffer.safe_concat('-->
+    <!--');@output_buffer.append= ( stylesheet_link_tag 'blueprint/print',  :media => 'print' );@output_buffer.safe_concat('-->
+    <!--[if lt IE 8]>');@output_buffer.append= ( stylesheet_link_tag 'blueprint/ie' );@output_buffer.safe_concat('<![endif]-->
+    ');@output_buffer.append= ( stylesheet_link_tag 'custom', :media => 'screen' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </head>
+
+  <body>
+  	<!-- Hier beginnt die Hauptseite mit einer Kopfzeile, einem Hauptteil und der Fußzeile -->
+      <header>
+  		');@output_buffer.append= ( link_to logo, home_path );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  		<nav class="round">
+   		<ul>
+      		<li>');@output_buffer.append= ( link_to "Home", home_path );@output_buffer.safe_concat('</li>
+');      		 if signed_in? 
+@output_buffer.safe_concat('      			<li>');@output_buffer.append= ( link_to "Benutzer", users_path );@output_buffer.safe_concat('</li>
+      			<li>');@output_buffer.append= ( link_to "Mein Profil", current_user );@output_buffer.safe_concat('</li>
+      			<li>');@output_buffer.append= ( link_to "Einstellungen", edit_user_path(current_user) );@output_buffer.safe_concat('</li>
+');      		 end 
+@output_buffer.safe_concat('      		<li>');@output_buffer.append= ( link_to "Hilfe", help_path );@output_buffer.safe_concat('</li>
+');      		 if signed_in? 
+@output_buffer.safe_concat('      			<li>');@output_buffer.append= ( link_to "Ausloggen", signout_path, :method => :delete );@output_buffer.safe_concat('</li>
+');      		 else 
+@output_buffer.safe_concat('      			<li>');@output_buffer.append= ( link_to "Einloggen", signin_path );@output_buffer.safe_concat('</li>
+');      		 end 
+      		 if signed_in? 
+@output_buffer.safe_concat('      			<li>Eingeloggt als:');@output_buffer.append= ( @current_user.login );@output_buffer.safe_concat('</li>
+');      		 end 
+@output_buffer.safe_concat('    	</ul>
+  </nav>
+  
+  <div id = "sidebox" class= "round">
+  <br>
+   <table border="0">
+  <tr><td><center>');@output_buffer.append= ( image_tag("Login.png") );@output_buffer.safe_concat('</center></tr></td>
+  <tr><td><br></tr></td>
+  </table>
+ <br><br>
+ 
+  ');@output_buffer.append=  form_for(:session, :url => sessions_path) do |f| @output_buffer.safe_concat('
+');@output_buffer.safe_concat('  <div class="field">
+    ');@output_buffer.append= ( f.label :login );@output_buffer.safe_concat('<br />
+    ');@output_buffer.append= ( f.text_field :login );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+  <div class="field">
+    ');@output_buffer.append= ( f.label :passwort );@output_buffer.safe_concat('<br />
+    ');@output_buffer.append= ( f.password_field :passwort );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+  <div class="actions">
+    ');@output_buffer.append= ( image_submit_tag("GO.png") );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+'); end 
+@output_buffer.safe_concat('	<li>');@output_buffer.append= ( link_to "Passwort vergessen?", home_path  :class => "forgottenpw" );@output_buffer.safe_concat('</li>
+	');@output_buffer.append= ( link_to registerPic, signup_path );@output_buffer.safe_concat(' 
+');@output_buffer.safe_concat('	<br><br> 
+</div>
+</header>
+
+      <section class="round">
+');@output_buffer.append_if_string=          flash.each do |key, value| 
+@output_buffer.safe_concat('          <div class="flash ');@output_buffer.append= ( key );@output_buffer.safe_concat('">');@output_buffer.append= ( value );@output_buffer.safe_concat('</div>
+');         end 
+@output_buffer.safe_concat('        <!-- an dieser Stelle werden die anderen Seiten in die Hauptseite eingefügt -->
+        ');@output_buffer.append= ( yield );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('      </section>
+
+    
+ <footer>
+  <nav class="round">
+    <ul>
+      <li>');@output_buffer.append= ( link_to "Über uns", about_path );@output_buffer.safe_concat('</li>
+      <li>');@output_buffer.append= ( link_to "Kontakt", contact_path );@output_buffer.safe_concat('</li>
+      <li><a href="http://news.railstutorial.org/">News von Rails Tutorial</a></li>
+      <li><a href="http://www.railstutorial.org/">Rails Tutorial</a></li>
+    </ul>
+  </nav>
+</footer>
+
+  </body>
+
+</html>
+');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/template.rb:255:in `module_eval'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/template.rb:255:in `compile'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/template.rb:134:in `block in render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications.rb:54:in `instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/template.rb:127:in `render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/render/layouts.rb:80:in `_render_layout'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:62:in `block in _render_template'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:56:in `_render_template'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:26:in `render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:114:in `_render_template'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:108:in `render_to_body'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:101:in `render_to_string'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:92:in `render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/rendering.rb:17:in `render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+d:/Ruby192/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.3/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:39:in `render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/base.rb:151:in `process_action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/rendering.rb:11:in `process_action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:435:in `_run__613117479__process_action__24682040__callbacks'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:93:in `run_callbacks'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/callbacks.rb:17:in `process_action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/rescue.rb:17:in `process_action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/base.rb:120:in `process'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:40:in `process'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal.rb:138:in `dispatch'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal.rb:178:in `block in action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:62:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:27:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `block in call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:96:in `optimized_each'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:492:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/head.rb:14:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/flash.rb:182:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/cookies.rb:295:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:32:in `block in call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:12:in `cache'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:31:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:353:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/railties-3.0.3/lib/rails/rack/logger.rb:13:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/static.rb:30:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/railties-3.0.3/lib/rails/application.rb:168:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/railties-3.0.3/lib/rails/application.rb:77:in `method_missing'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/railties-3.0.3/lib/rails/rack/log_tailer.rb:14:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+d:/Ruby192/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+d:/Ruby192/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+d:/Ruby192/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered pages/home.html.erb within layouts/application (38.0ms)
+Completed   in 151ms
+
+ActionView::Template::Error (C:/Users/Marvin/My Documents/Aptana Studio 3 Workspace/Encuesta-Projekt/app/views/layouts/application.html.erb:62: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+...swort vergessen?", home_path  :class => "forgottenpw" );@out...
+...                               ^):
+    59:     <%= image_submit_tag("GO.png") %>
+    60:   </div>
+    61: <% end %>
+    62: 	<li><%= link_to "Passwort vergessen?", home_path  :class => "forgottenpw" %></li>
+    63: 	<%= link_to registerPic, signup_path %> 
+    64: 	<br><br> 
+    65: </div>
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (26.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 08:45:13 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+Rendered pages/home.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 104ms (Views: 47.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 08:45:32 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered pages/home.html.erb within layouts/application (101.0ms)
+Completed 200 OK in 658ms (Views: 329.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 08:45:55 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+Rendered pages/home.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 295ms (Views: 48.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 08:46:06 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered pages/home.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 156ms (Views: 52.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 08:47:47 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+Rendered pages/home.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 99ms (Views: 44.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 08:48:05 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered pages/home.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 106ms (Views: 47.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 08:49:52 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+Rendered pages/home.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 210ms (Views: 67.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 08:50:10 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered pages/home.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 241ms (Views: 48.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 08:50:17 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+Rendered pages/home.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 285ms (Views: 61.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 08:56:16 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered pages/home.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 134ms (Views: 46.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 08:58:04 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+Rendered pages/home.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 95ms (Views: 42.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 08:58:38 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered pages/home.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 101ms (Views: 46.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 09:00:33 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+Rendered pages/home.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 129ms (Views: 44.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 09:03:33 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered pages/home.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 96ms (Views: 46.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 09:03:43 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+Rendered pages/home.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 94ms (Views: 42.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 09:07:20 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered pages/home.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 125ms (Views: 46.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 09:08:04 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+Rendered pages/home.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 96ms (Views: 42.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 09:08:23 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered pages/home.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 96ms (Views: 45.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 09:10:18 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+Rendered pages/home.html.erb within layouts/application (44.0ms)
+Completed 200 OK in 127ms (Views: 75.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 09:10:56 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered pages/home.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 125ms (Views: 41.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 09:11:05 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+Rendered pages/home.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 182ms (Views: 98.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 09:11:11 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered pages/home.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 154ms (Views: 45.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 09:11:36 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+Rendered pages/home.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 123ms (Views: 42.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 09:11:55 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered pages/home.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 127ms (Views: 42.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 09:14:23 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+Rendered pages/home.html.erb within layouts/application (14.0ms)
+Completed 200 OK in 97ms (Views: 42.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-02-23 09:17:06 +0100
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zqjYRkxMgnLZy6BAVfjmeRvcrj6yxBXgCdxeR5tHDSE=", "session"=>{"login"=>"VanZan", "passwort"=>"kitsune"}, "x"=>"0", "y"=>"0"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."login" = 'VanZan') LIMIT 1
+Redirected to http://127.0.0.1:3000/users/1
+Completed 302 Found in 92ms
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-02-23 09:17:06 +0100
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)
+  [1m[36mSurvey Load (5.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE ("surveys".user_id = 1) ORDER BY surveys.created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered surveys/_survey.html.erb (36.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)
+Rendered users/show.html.erb within layouts/application (74.0ms)
+Completed 200 OK in 233ms (Views: 97.0ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 09:17:14 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSurveytype Load (2.0ms)[0m  SELECT "surveytypes".* FROM "surveytypes"
+Rendered shared/_survey_form.html.erb (61.0ms)
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE (user_id = 1)[0m
+  [1m[35mSurvey Load (5.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE (user_id = 1) ORDER BY surveys.created_at DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered shared/_feed_item.html.erb (36.0ms)
+Rendered shared/_feed.html.erb (138.0ms)
+  [1m[35mSQL (1.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)
+Rendered shared/_user_info.html.erb (14.0ms)
+Rendered pages/home.html.erb within layouts/application (249.0ms)
+Completed 200 OK in 410ms (Views: 268.0ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 09:18:54 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSurveytype Load (2.0ms)[0m  SELECT "surveytypes".* FROM "surveytypes"
+Rendered shared/_survey_form.html.erb (48.0ms)
+Rendered pages/home.html.erb within layouts/application (55.0ms)
+Completed   in 211ms
+
+ActionView::Template::Error (undefined method `' for #<Survey:0x2cef8f0>):
+    7:   <div class="field">
+    8:     <% Surveytype.all.each do |surveytype| %>
+    9:     <br><%= #radio_button_tag 'surveytype', surveytype.id, @survey.surveytype_id == surveytype.id 
+    10:     f.radio_button(@survey.surveytype, "surveytype")
+    11:     %>
+    12:     <%= label_tag "surveytype_#{surveytype}", surveytype.bezeichnung
+    13:     %>
+  app/views/shared/_survey_form.html.erb:10:in `block (2 levels) in _app_views_shared__survey_form_html_erb___655627731_30624852_563637276'
+  app/views/shared/_survey_form.html.erb:8:in `each'
+  app/views/shared/_survey_form.html.erb:8:in `block in _app_views_shared__survey_form_html_erb___655627731_30624852_563637276'
+  app/views/shared/_survey_form.html.erb:1:in `_app_views_shared__survey_form_html_erb___655627731_30624852_563637276'
+  app/views/pages/home.html.erb:11:in `_app_views_pages_home_html_erb___527840755_30789576__557360504'
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  [1m[36mSurvey Load (3.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE (user_id = 1) ORDER BY surveys.created_at DESC[0m
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (12.0ms)
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (30.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 09:19:12 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+ERROR: compiling _app_views_shared__survey_form_html_erb___655627731_25085100_563637276 RAISED C:/Users/Marvin/My Documents/Aptana Studio 3 Workspace/Encuesta-Projekt/app/views/shared/_survey_form.html.erb:12: syntax error, unexpected ',', expecting '}'
+...ag {"surveytype_#{surveytype}", surveytype.bezeichnung
+...                               ^
+C:/Users/Marvin/My Documents/Aptana Studio 3 Workspace/Encuesta-Projekt/app/views/shared/_survey_form.html.erb:13: syntax error, unexpected ')', expecting '}'
+    );@output_buffer.safe_concat('
+     ^
+C:/Users/Marvin/My Documents/Aptana Studio 3 Workspace/Encuesta-Projekt/app/views/shared/_survey_form.html.erb:14: syntax error, unexpected keyword_end, expecting '}'
+');   end 
+         ^
+C:/Users/Marvin/My Documents/Aptana Studio 3 Workspace/Encuesta-Projekt/app/views/shared/_survey_form.html.erb:19: syntax error, unexpected keyword_end, expecting '}'
+'); end 
+       ^
+C:/Users/Marvin/My Documents/Aptana Studio 3 Workspace/Encuesta-Projekt/app/views/shared/_survey_form.html.erb:21: syntax error, unexpected keyword_ensure, expecting '}'
+C:/Users/Marvin/My Documents/Aptana Studio 3 Workspace/Encuesta-Projekt/app/views/shared/_survey_form.html.erb:23: syntax error, unexpected keyword_end, expecting '}'
+Function body:           def _app_views_shared__survey_form_html_erb___655627731_25085100_563637276(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "shared/_survey_form";_old_output_buffer = @output_buffer;survey_form = local_assigns[:survey_form];;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.append=  form_for @survey do |f| @output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( #render 'shared/error_messages', :object => f.object 
+  );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  <div class="field">
+    ');@output_buffer.append= ( f.text_field :bezeichnung );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+  <div class="field">
+');@output_buffer.append_if_string=      Surveytype.all.each do |surveytype| 
+@output_buffer.safe_concat('    <br>');@output_buffer.append= ( #radio_button_tag 'surveytype', surveytype.id, @survey.surveytype_id == surveytype.id 
+    f.radio_button(@survey.surveytype, "surveytype")
+    );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    ');@output_buffer.append= ( label_tag {"surveytype_#{surveytype}", surveytype.bezeichnung
+    );@output_buffer.safe_concat('
+');   end 
+@output_buffer.safe_concat('  </div>
+  <div class="actions">
+    ');@output_buffer.append= ( f.submit "Umfrage erstellen" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+'); end 
+@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/template.rb:255:in `module_eval'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/template.rb:255:in `compile'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/template.rb:134:in `block in render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications.rb:54:in `instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/template.rb:127:in `render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/render/partials.rb:333:in `render_partial'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/render/partials.rb:262:in `block in render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/render/partials.rb:260:in `render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/render/partials.rb:378:in `_render_partial'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:31:in `render'
+C:/Users/Marvin/My Documents/Aptana Studio 3 Workspace/Encuesta-Projekt/app/views/pages/home.html.erb:11:in `_app_views_pages_home_html_erb___527840755_25099356__557360504'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/template.rb:135:in `block in render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications.rb:54:in `instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/template.rb:127:in `render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:59:in `block in _render_template'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:56:in `_render_template'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:26:in `render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:114:in `_render_template'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:108:in `render_to_body'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:101:in `render_to_string'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:92:in `render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/rendering.rb:17:in `render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+d:/Ruby192/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.3/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:39:in `render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/base.rb:151:in `process_action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/rendering.rb:11:in `process_action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:435:in `_run__613117479__process_action__24682040__callbacks'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:93:in `run_callbacks'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/callbacks.rb:17:in `process_action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/rescue.rb:17:in `process_action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/base.rb:120:in `process'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:40:in `process'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal.rb:138:in `dispatch'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal.rb:178:in `block in action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:62:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:27:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `block in call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:96:in `optimized_each'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:492:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/head.rb:14:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/flash.rb:182:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/cookies.rb:295:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:32:in `block in call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:12:in `cache'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:31:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:353:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/railties-3.0.3/lib/rails/rack/logger.rb:13:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/static.rb:30:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/railties-3.0.3/lib/rails/application.rb:168:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/railties-3.0.3/lib/rails/application.rb:77:in `method_missing'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/railties-3.0.3/lib/rails/rack/log_tailer.rb:14:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+d:/Ruby192/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+d:/Ruby192/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+d:/Ruby192/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered shared/_survey_form.html.erb (2.0ms)
+Rendered pages/home.html.erb within layouts/application (10.0ms)
+Completed   in 126ms
+
+ActionView::Template::Error (C:/Users/Marvin/My Documents/Aptana Studio 3 Workspace/Encuesta-Projekt/app/views/shared/_survey_form.html.erb:12: syntax error, unexpected ',', expecting '}'
+...ag {"surveytype_#{surveytype}", surveytype.bezeichnung
+...                               ^
+C:/Users/Marvin/My Documents/Aptana Studio 3 Workspace/Encuesta-Projekt/app/views/shared/_survey_form.html.erb:13: syntax error, unexpected ')', expecting '}'
+    );@output_buffer.safe_concat('
+     ^
+C:/Users/Marvin/My Documents/Aptana Studio 3 Workspace/Encuesta-Projekt/app/views/shared/_survey_form.html.erb:14: syntax error, unexpected keyword_end, expecting '}'
+');   end 
+         ^
+C:/Users/Marvin/My Documents/Aptana Studio 3 Workspace/Encuesta-Projekt/app/views/shared/_survey_form.html.erb:19: syntax error, unexpected keyword_end, expecting '}'
+'); end 
+       ^
+C:/Users/Marvin/My Documents/Aptana Studio 3 Workspace/Encuesta-Projekt/app/views/shared/_survey_form.html.erb:21: syntax error, unexpected keyword_ensure, expecting '}'
+C:/Users/Marvin/My Documents/Aptana Studio 3 Workspace/Encuesta-Projekt/app/views/shared/_survey_form.html.erb:23: syntax error, unexpected keyword_end, expecting '}'):
+    9:     <br><%= #radio_button_tag 'surveytype', surveytype.id, @survey.surveytype_id == surveytype.id 
+    10:     f.radio_button(@survey.surveytype, "surveytype")
+    11:     %>
+    12:     <%= label_tag {"surveytype_#{surveytype}", surveytype.bezeichnung
+    13:     %>
+    14:   <% end %>
+    15:   </div>
+  app/views/pages/home.html.erb:11:in `_app_views_pages_home_html_erb___527840755_25099356__557360504'
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  [1m[36mSurvey Load (3.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE (user_id = 1) ORDER BY surveys.created_at DESC[0m
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (12.0ms)
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (32.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 09:20:13 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (35.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+ERROR: compiling _app_views_shared__survey_form_html_erb___655627731_28116336_563637276 RAISED C:/Users/Marvin/My Documents/Aptana Studio 3 Workspace/Encuesta-Projekt/app/views/shared/_survey_form.html.erb:12: syntax error, unexpected ',', expecting '}'
+...ag {"surveytype_#{surveytype}", surveytype.bezeichnung
+...                               ^
+C:/Users/Marvin/My Documents/Aptana Studio 3 Workspace/Encuesta-Projekt/app/views/shared/_survey_form.html.erb:13: syntax error, unexpected ')', expecting '}'
+    );@output_buffer.safe_concat('
+     ^
+C:/Users/Marvin/My Documents/Aptana Studio 3 Workspace/Encuesta-Projekt/app/views/shared/_survey_form.html.erb:14: syntax error, unexpected keyword_end, expecting '}'
+');   end 
+         ^
+C:/Users/Marvin/My Documents/Aptana Studio 3 Workspace/Encuesta-Projekt/app/views/shared/_survey_form.html.erb:19: syntax error, unexpected keyword_end, expecting '}'
+'); end 
+       ^
+C:/Users/Marvin/My Documents/Aptana Studio 3 Workspace/Encuesta-Projekt/app/views/shared/_survey_form.html.erb:21: syntax error, unexpected keyword_ensure, expecting '}'
+C:/Users/Marvin/My Documents/Aptana Studio 3 Workspace/Encuesta-Projekt/app/views/shared/_survey_form.html.erb:23: syntax error, unexpected keyword_end, expecting '}'
+Function body:           def _app_views_shared__survey_form_html_erb___655627731_28116336_563637276(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "shared/_survey_form";_old_output_buffer = @output_buffer;survey_form = local_assigns[:survey_form];;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.append=  form_for @survey do |f| @output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( #render 'shared/error_messages', :object => f.object 
+  );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  <div class="field">
+    ');@output_buffer.append= ( f.text_field :bezeichnung );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+  <div class="field">
+');@output_buffer.append_if_string=      Surveytype.all.each do |surveytype| 
+@output_buffer.safe_concat('    <br>');@output_buffer.append= ( #radio_button_tag 'surveytype', surveytype.id, @survey.surveytype_id == surveytype.id 
+    f.radio_button(:surveytype, "surveytype")
+    );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    ');@output_buffer.append= ( label_tag {"surveytype_#{surveytype}", surveytype.bezeichnung
+    );@output_buffer.safe_concat('
+');   end 
+@output_buffer.safe_concat('  </div>
+  <div class="actions">
+    ');@output_buffer.append= ( f.submit "Umfrage erstellen" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+'); end 
+@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/template.rb:255:in `module_eval'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/template.rb:255:in `compile'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/template.rb:134:in `block in render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications.rb:54:in `instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/template.rb:127:in `render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/render/partials.rb:333:in `render_partial'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/render/partials.rb:262:in `block in render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/render/partials.rb:260:in `render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/render/partials.rb:378:in `_render_partial'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:31:in `render'
+C:/Users/Marvin/My Documents/Aptana Studio 3 Workspace/Encuesta-Projekt/app/views/pages/home.html.erb:11:in `_app_views_pages_home_html_erb___527840755_28379532__557360504'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/template.rb:135:in `block in render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications.rb:54:in `instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/template.rb:127:in `render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:59:in `block in _render_template'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:56:in `_render_template'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:26:in `render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:114:in `_render_template'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:108:in `render_to_body'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:101:in `render_to_string'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:92:in `render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/rendering.rb:17:in `render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+d:/Ruby192/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.3/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:39:in `render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/base.rb:151:in `process_action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/rendering.rb:11:in `process_action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:435:in `_run__613117479__process_action__24682040__callbacks'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:93:in `run_callbacks'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/callbacks.rb:17:in `process_action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/rescue.rb:17:in `process_action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/base.rb:120:in `process'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:40:in `process'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal.rb:138:in `dispatch'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal.rb:178:in `block in action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:62:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:27:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `block in call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:96:in `optimized_each'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:492:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/head.rb:14:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/flash.rb:182:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/cookies.rb:295:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:32:in `block in call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:12:in `cache'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:31:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:353:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/railties-3.0.3/lib/rails/rack/logger.rb:13:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/static.rb:30:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/railties-3.0.3/lib/rails/application.rb:168:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/railties-3.0.3/lib/rails/application.rb:77:in `method_missing'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/railties-3.0.3/lib/rails/rack/log_tailer.rb:14:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+d:/Ruby192/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+d:/Ruby192/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+d:/Ruby192/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered shared/_survey_form.html.erb (2.0ms)
+Rendered pages/home.html.erb within layouts/application (11.0ms)
+Completed   in 163ms
+
+ActionView::Template::Error (C:/Users/Marvin/My Documents/Aptana Studio 3 Workspace/Encuesta-Projekt/app/views/shared/_survey_form.html.erb:12: syntax error, unexpected ',', expecting '}'
+...ag {"surveytype_#{surveytype}", surveytype.bezeichnung
+...                               ^
+C:/Users/Marvin/My Documents/Aptana Studio 3 Workspace/Encuesta-Projekt/app/views/shared/_survey_form.html.erb:13: syntax error, unexpected ')', expecting '}'
+    );@output_buffer.safe_concat('
+     ^
+C:/Users/Marvin/My Documents/Aptana Studio 3 Workspace/Encuesta-Projekt/app/views/shared/_survey_form.html.erb:14: syntax error, unexpected keyword_end, expecting '}'
+');   end 
+         ^
+C:/Users/Marvin/My Documents/Aptana Studio 3 Workspace/Encuesta-Projekt/app/views/shared/_survey_form.html.erb:19: syntax error, unexpected keyword_end, expecting '}'
+'); end 
+       ^
+C:/Users/Marvin/My Documents/Aptana Studio 3 Workspace/Encuesta-Projekt/app/views/shared/_survey_form.html.erb:21: syntax error, unexpected keyword_ensure, expecting '}'
+C:/Users/Marvin/My Documents/Aptana Studio 3 Workspace/Encuesta-Projekt/app/views/shared/_survey_form.html.erb:23: syntax error, unexpected keyword_end, expecting '}'):
+    9:     <br><%= #radio_button_tag 'surveytype', surveytype.id, @survey.surveytype_id == surveytype.id 
+    10:     f.radio_button(:surveytype, "surveytype")
+    11:     %>
+    12:     <%= label_tag {"surveytype_#{surveytype}", surveytype.bezeichnung
+    13:     %>
+    14:   <% end %>
+    15:   </div>
+  app/views/pages/home.html.erb:11:in `_app_views_pages_home_html_erb___527840755_28379532__557360504'
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  [1m[36mSurvey Load (4.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE (user_id = 1) ORDER BY surveys.created_at DESC[0m
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (12.0ms)
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (29.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 09:20:29 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSurveytype Load (2.0ms)[0m  [1mSELECT "surveytypes".* FROM "surveytypes"[0m
+Rendered shared/_survey_form.html.erb (52.0ms)
+  [1m[35mSQL (1.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE (user_id = 1)
+  [1m[36mSurvey Load (43.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE (user_id = 1) ORDER BY surveys.created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered shared/_feed_item.html.erb (39.0ms)
+Rendered shared/_feed.html.erb (93.0ms)
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)[0m
+Rendered shared/_user_info.html.erb (16.0ms)
+Rendered pages/home.html.erb within layouts/application (197.0ms)
+Completed 200 OK in 322ms (Views: 182.0ms | ActiveRecord: 50.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 09:21:35 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSurveytype Load (1.0ms)[0m  [1mSELECT "surveytypes".* FROM "surveytypes"[0m
+Rendered shared/_survey_form.html.erb (81.0ms)
+  [1m[35mSQL (0.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE (user_id = 1)
+  [1m[36mSurvey Load (4.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE (user_id = 1) ORDER BY surveys.created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered shared/_feed_item.html.erb (37.0ms)
+Rendered shared/_feed.html.erb (52.0ms)
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)[0m
+Rendered shared/_user_info.html.erb (15.0ms)
+Rendered pages/home.html.erb within layouts/application (183.0ms)
+Completed 200 OK in 302ms (Views: 205.0ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 09:22:05 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSurveytype Load (38.0ms)[0m  [1mSELECT "surveytypes".* FROM "surveytypes"[0m
+Rendered shared/_survey_form.html.erb (156.0ms)
+  [1m[35mSQL (1.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE (user_id = 1)
+  [1m[36mSurvey Load (4.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE (user_id = 1) ORDER BY surveys.created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered shared/_feed_item.html.erb (38.0ms)
+Rendered shared/_feed.html.erb (53.0ms)
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)[0m
+Rendered shared/_user_info.html.erb (14.0ms)
+Rendered pages/home.html.erb within layouts/application (258.0ms)
+Completed 200 OK in 378ms (Views: 242.0ms | ActiveRecord: 44.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 09:22:41 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+ERROR: compiling _app_views_shared__survey_form_html_erb___655627731_23522412_563637276 RAISED C:/Users/Marvin/My Documents/Aptana Studio 3 Workspace/Encuesta-Projekt/app/views/shared/_survey_form.html.erb:12: syntax error, unexpected ',', expecting '}'
+...ag {"surveytype_#{surveytype}", surveytype.bezeichnung}
+...                               ^
+Function body:           def _app_views_shared__survey_form_html_erb___655627731_23522412_563637276(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "shared/_survey_form";_old_output_buffer = @output_buffer;survey_form = local_assigns[:survey_form];;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.append=  form_for @survey do |f| @output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( #render 'shared/error_messages', :object => f.object 
+  );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  <div class="field">
+    ');@output_buffer.append= ( f.text_field :bezeichnung );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+  <div class="field">
+');@output_buffer.append_if_string=      Surveytype.all.each do |surveytype| 
+@output_buffer.safe_concat('    <br>');@output_buffer.append= ( #radio_button_tag 'surveytype', surveytype.id, @survey.surveytype_id == surveytype.id 
+    f.radio_button(:surveytype, surveytype.id)
+    );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    ');@output_buffer.append= ( label_tag {"surveytype_#{surveytype}", surveytype.bezeichnung}
+    );@output_buffer.safe_concat('
+');   end 
+@output_buffer.safe_concat('  </div>
+  <div class="actions">
+    ');@output_buffer.append= ( f.submit "Umfrage erstellen" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+'); end 
+@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/template.rb:255:in `module_eval'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/template.rb:255:in `compile'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/template.rb:134:in `block in render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications.rb:54:in `instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/template.rb:127:in `render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/render/partials.rb:333:in `render_partial'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/render/partials.rb:262:in `block in render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/render/partials.rb:260:in `render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/render/partials.rb:378:in `_render_partial'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:31:in `render'
+C:/Users/Marvin/My Documents/Aptana Studio 3 Workspace/Encuesta-Projekt/app/views/pages/home.html.erb:11:in `_app_views_pages_home_html_erb___527840755_23561400__557360504'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/template.rb:135:in `block in render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications.rb:54:in `instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/template.rb:127:in `render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:59:in `block in _render_template'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:56:in `_render_template'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:26:in `render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:114:in `_render_template'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:108:in `render_to_body'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:101:in `render_to_string'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:92:in `render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/rendering.rb:17:in `render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+d:/Ruby192/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.3/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:39:in `render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/base.rb:151:in `process_action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/rendering.rb:11:in `process_action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:435:in `_run__613117479__process_action__24682040__callbacks'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:93:in `run_callbacks'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/callbacks.rb:17:in `process_action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/rescue.rb:17:in `process_action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/base.rb:120:in `process'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:40:in `process'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal.rb:138:in `dispatch'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal.rb:178:in `block in action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:62:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:27:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `block in call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:96:in `optimized_each'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:492:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/head.rb:14:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/flash.rb:182:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/cookies.rb:295:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:32:in `block in call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:12:in `cache'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:31:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:353:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/railties-3.0.3/lib/rails/rack/logger.rb:13:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/static.rb:30:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/railties-3.0.3/lib/rails/application.rb:168:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/railties-3.0.3/lib/rails/application.rb:77:in `method_missing'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/railties-3.0.3/lib/rails/rack/log_tailer.rb:14:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+d:/Ruby192/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+d:/Ruby192/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+d:/Ruby192/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered shared/_survey_form.html.erb (2.0ms)
+Rendered pages/home.html.erb within layouts/application (11.0ms)
+Completed   in 133ms
+
+ActionView::Template::Error (C:/Users/Marvin/My Documents/Aptana Studio 3 Workspace/Encuesta-Projekt/app/views/shared/_survey_form.html.erb:12: syntax error, unexpected ',', expecting '}'
+...ag {"surveytype_#{surveytype}", surveytype.bezeichnung}
+...                               ^):
+    9:     <br><%= #radio_button_tag 'surveytype', surveytype.id, @survey.surveytype_id == surveytype.id 
+    10:     f.radio_button(:surveytype, surveytype.id)
+    11:     %>
+    12:     <%= label_tag {"surveytype_#{surveytype}", surveytype.bezeichnung}
+    13:     %>
+    14:   <% end %>
+    15:   </div>
+  app/views/pages/home.html.erb:11:in `_app_views_pages_home_html_erb___527840755_23561400__557360504'
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  [1m[36mSurvey Load (3.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE (user_id = 1) ORDER BY surveys.created_at DESC[0m
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (48.0ms)
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (66.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 09:23:02 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+ERROR: compiling _app_views_shared__survey_form_html_erb___655627731_27877428_563637276 RAISED C:/Users/Marvin/My Documents/Aptana Studio 3 Workspace/Encuesta-Projekt/app/views/shared/_survey_form.html.erb:12: syntax error, unexpected ',', expecting ')'
+...ag ("surveytype_#{surveytype}", surveytype.bezeichnung)
+...                               ^
+C:/Users/Marvin/My Documents/Aptana Studio 3 Workspace/Encuesta-Projekt/app/views/shared/_survey_form.html.erb:13: syntax error, unexpected ')', expecting keyword_end
+    );@output_buffer.safe_concat('
+     ^
+Function body:           def _app_views_shared__survey_form_html_erb___655627731_27877428_563637276(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "shared/_survey_form";_old_output_buffer = @output_buffer;survey_form = local_assigns[:survey_form];;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.append=  form_for @survey do |f| @output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( #render 'shared/error_messages', :object => f.object 
+  );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  <div class="field">
+    ');@output_buffer.append= ( f.text_field :bezeichnung );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+  <div class="field">
+');@output_buffer.append_if_string=      Surveytype.all.each do |surveytype| 
+@output_buffer.safe_concat('    <br>');@output_buffer.append= ( #radio_button_tag 'surveytype', surveytype.id, @survey.surveytype_id == surveytype.id 
+    f.radio_button(:surveytype, surveytype.id)
+    );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    ');@output_buffer.append= ( label_tag ("surveytype_#{surveytype}", surveytype.bezeichnung)
+    );@output_buffer.safe_concat('
+');   end 
+@output_buffer.safe_concat('  </div>
+  <div class="actions">
+    ');@output_buffer.append= ( f.submit "Umfrage erstellen" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </div>
+'); end 
+@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/template.rb:255:in `module_eval'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/template.rb:255:in `compile'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/template.rb:134:in `block in render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications.rb:54:in `instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/template.rb:127:in `render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/render/partials.rb:333:in `render_partial'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/render/partials.rb:262:in `block in render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/render/partials.rb:260:in `render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/render/partials.rb:378:in `_render_partial'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:31:in `render'
+C:/Users/Marvin/My Documents/Aptana Studio 3 Workspace/Encuesta-Projekt/app/views/pages/home.html.erb:11:in `_app_views_pages_home_html_erb___527840755_27953664__557360504'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/template.rb:135:in `block in render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications.rb:54:in `instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/template.rb:127:in `render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:59:in `block in _render_template'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:56:in `_render_template'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:26:in `render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:114:in `_render_template'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:108:in `render_to_body'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:101:in `render_to_string'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:92:in `render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/rendering.rb:17:in `render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+d:/Ruby192/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.3/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:39:in `render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/base.rb:151:in `process_action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/rendering.rb:11:in `process_action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:435:in `_run__613117479__process_action__24682040__callbacks'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:93:in `run_callbacks'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/callbacks.rb:17:in `process_action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/rescue.rb:17:in `process_action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/base.rb:120:in `process'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:40:in `process'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal.rb:138:in `dispatch'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal.rb:178:in `block in action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:62:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:27:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `block in call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:96:in `optimized_each'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:492:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/head.rb:14:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/flash.rb:182:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/cookies.rb:295:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:32:in `block in call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:12:in `cache'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:31:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:353:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/railties-3.0.3/lib/rails/rack/logger.rb:13:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/static.rb:30:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/railties-3.0.3/lib/rails/application.rb:168:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/railties-3.0.3/lib/rails/application.rb:77:in `method_missing'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/railties-3.0.3/lib/rails/rack/log_tailer.rb:14:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+d:/Ruby192/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+d:/Ruby192/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+d:/Ruby192/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered shared/_survey_form.html.erb (2.0ms)
+Rendered pages/home.html.erb within layouts/application (11.0ms)
+Completed   in 166ms
+
+ActionView::Template::Error (C:/Users/Marvin/My Documents/Aptana Studio 3 Workspace/Encuesta-Projekt/app/views/shared/_survey_form.html.erb:12: syntax error, unexpected ',', expecting ')'
+...ag ("surveytype_#{surveytype}", surveytype.bezeichnung)
+...                               ^
+C:/Users/Marvin/My Documents/Aptana Studio 3 Workspace/Encuesta-Projekt/app/views/shared/_survey_form.html.erb:13: syntax error, unexpected ')', expecting keyword_end
+    );@output_buffer.safe_concat('
+     ^):
+    9:     <br><%= #radio_button_tag 'surveytype', surveytype.id, @survey.surveytype_id == surveytype.id 
+    10:     f.radio_button(:surveytype, surveytype.id)
+    11:     %>
+    12:     <%= label_tag ("surveytype_#{surveytype}", surveytype.bezeichnung)
+    13:     %>
+    14:   <% end %>
+    15:   </div>
+  app/views/pages/home.html.erb:11:in `_app_views_pages_home_html_erb___527840755_27953664__557360504'
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  [1m[36mSurvey Load (3.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE (user_id = 1) ORDER BY surveys.created_at DESC[0m
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (12.0ms)
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (38.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 09:23:11 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSurveytype Load (36.0ms)[0m  [1mSELECT "surveytypes".* FROM "surveytypes"[0m
+Rendered shared/_survey_form.html.erb (95.0ms)
+  [1m[35mSQL (0.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE (user_id = 1)
+  [1m[36mSurvey Load (4.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE (user_id = 1) ORDER BY surveys.created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered shared/_feed_item.html.erb (36.0ms)
+Rendered shared/_feed.html.erb (51.0ms)
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)[0m
+Rendered shared/_user_info.html.erb (14.0ms)
+Rendered pages/home.html.erb within layouts/application (194.0ms)
+Completed 200 OK in 315ms (Views: 184.0ms | ActiveRecord: 45.0ms)
+
+
+Started POST "/surveys" for 127.0.0.1 at 2011-02-23 09:23:22 +0100
+  Processing by SurveysController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zqjYRkxMgnLZy6BAVfjmeRvcrj6yxBXgCdxeR5tHDSE=", "survey"=>{"bezeichnung"=>"Test6", "surveytype"=>"1"}, "commit"=>"Umfrage erstellen"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+WARNING: Can't mass-assign protected attributes: surveytype
+  [1m[36mSurveytype Load (2.0ms)[0m  [1mSELECT "surveytypes".* FROM "surveytypes"[0m
+Rendered shared/_survey_form.html.erb (90.0ms)
+Rendered shared/_feed.html.erb (4.0ms)
+  [1m[35mSQL (0.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)
+Rendered shared/_user_info.html.erb (5.0ms)
+Rendered pages/home.html.erb within layouts/application (214.0ms)
+Completed 200 OK in 355ms (Views: 243.0ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/surveys" for 127.0.0.1 at 2011-02-23 09:25:37 +0100
+  Processing by SurveysController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zqjYRkxMgnLZy6BAVfjmeRvcrj6yxBXgCdxeR5tHDSE=", "survey"=>{"bezeichnung"=>"Test6", "surveytype"=>"1"}, "commit"=>"Umfrage erstellen"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+WARNING: Can't mass-assign protected attributes: surveytype
+  [1m[35mSurveytype Load (0.0ms)[0m  SELECT "surveytypes".* FROM "surveytypes" WHERE ("surveytypes"."id" = 1) LIMIT 1
+  [1m[36mAREL (47.0ms)[0m  [1mINSERT INTO "surveys" ("bezeichnung", "gesperrt", "surveytype_id", "user_id", "created_at", "updated_at") VALUES ('Test6', 'f', 1, 1, '2011-02-23 08:25:37.513000', '2011-02-23 08:25:37.513000')[0m
+Redirected to http://127.0.0.1:3000/home
+Completed 302 Found in 274ms
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 09:25:37 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSurveytype Load (2.0ms)[0m  [1mSELECT "surveytypes".* FROM "surveytypes"[0m
+Rendered shared/_survey_form.html.erb (56.0ms)
+  [1m[35mSQL (1.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE (user_id = 1)
+  [1m[36mSurvey Load (65.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE (user_id = 1) ORDER BY surveys.created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered shared/_feed_item.html.erb (47.0ms)
+Rendered shared/_feed.html.erb (123.0ms)
+  [1m[35mSQL (0.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)
+Rendered shared/_user_info.html.erb (16.0ms)
+Rendered pages/home.html.erb within layouts/application (235.0ms)
+Completed 200 OK in 429ms (Views: 195.0ms | ActiveRecord: 69.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 09:39:28 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSurveytype Load (2.0ms)[0m  SELECT "surveytypes".* FROM "surveytypes"
+Rendered shared/_survey_form.html.erb (124.0ms)
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE (user_id = 1)[0m
+  [1m[35mSurvey Load (7.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE (user_id = 1) ORDER BY surveys.created_at DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered shared/_feed_item.html.erb (42.0ms)
+Rendered shared/_feed.html.erb (64.0ms)
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)[0m
+Rendered shared/_user_info.html.erb (14.0ms)
+Rendered pages/home.html.erb within layouts/application (240.0ms)
+Completed 200 OK in 362ms (Views: 256.0ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/surveys/10" for 127.0.0.1 at 2011-02-23 09:39:33 +0100
+
+ActionController::RoutingError (No route matches "/surveys/10"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)

@@ -16,9 +16,8 @@
 
   <body>
   	<!-- Hier beginnt die Hauptseite mit einer Kopfzeile, einem Hauptteil und der Fußzeile -->
-    <div class="container">
       <header>
-  		<%= link_to logo, home_path %>
+  		<%= link_to logo, home_path %><br>
   		<nav class="round">
    		<ul>
       		<li><%= link_to "Home", home_path %></li>
@@ -37,7 +36,35 @@
       			<li>Eingeloggt als:<%= @current_user.login %></li>
       		<% end %>
     	</ul>
-  </nav>
+ </nav>
+  
+  <div id = "sidebox" class= "round">
+  <br>
+   <table border="0">
+  <tr><td><center><%= image_tag("Login.png") %></center></tr></td>
+  <tr><td><br></tr></td>
+  </table>
+ <br><br>
+ 
+  <%= form_for(:session, :url => sessions_path) do |f| %>
+  <div class="field">
+    <%= f.label :login %><br />
+    <%= f.text_field :login %>
+  </div>
+  <div class="field">
+    <%= f.label :passwort %><br />
+    <%= f.password_field :passwort %>
+  </div>
+  <div class="actions">
+    <%= link_to "Passwort vergessen?", home_path,  :class => "forgottenpw" %><br>
+  </div>
+  <div class="actions">
+    <%= image_submit_tag("GO.png") %>
+  </div>
+<% end %>
+	<%= link_to registerPic, signup_path %> 
+	<br><br> 
+</div>
 </header>
 
       <section class="round">
@@ -48,7 +75,6 @@
         <%= yield %>
       </section>
 
-    </div>
     
  <footer>
   <nav class="round">

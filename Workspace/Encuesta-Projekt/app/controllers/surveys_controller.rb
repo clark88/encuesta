@@ -9,14 +9,14 @@ class SurveysController < ApplicationController
 		flash[:notice] = "You did it"
 	end
   
-  def new
-  end
+ def new
+ end
   
   def create
 		@survey = current_user.surveys.build(params[:survey])
 		#@survey.gesperrt = params[:survey][:gesperrt]
 		@survey.gesperrt = false
-		#@survey.surveytype_id = params[:surveytype.id]
+		@survey.surveytype = Surveytype.find(params[:survey][:surveytype])
 		
 		if @survey.save
       		flash[:success] = "Umfrage erstellt!"

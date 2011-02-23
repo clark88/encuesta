@@ -1,44 +1,70 @@
-.container {
-    width: 900px;
-}
 body {
-    /*background: #cff;*/
-    padding-left: 15%;
-    padding-right: 10%;
-    padding-top: 2%;
-}
+    
+   font-family:Arial;
+    }
+
 header {
     padding-top: 20px;
 }
 header img {
-    padding: 1em;
+    padding: 0em;
+    border: 0;
+    position: absolute;
+    left: 12%;
     background: #fff;
 }
-section {
-	float:left;
-    margin-top: 1em;
-    font-size: 120%;
-    width:100%;
-    padding: 20px;
-    background: #fff;
+/* Die Sidebox */
+#sidebox {
+    width:13em;
+    background:#dcdcdc;
+    margin:0 ;
+    padding:0.5em;
+    position:relative;
+    margin:30px auto;
+    margin-top:100px;
+    left:410px;
 }
-section h1 {
-    font-size: 200%;
+
+.round {
+    -moz-border-radius:    30px;
+    -webkit-border-radius: 30px;
+    border-radius:         30px;
 }
-footer {
-	float: left;
-    width:702px;
-    height:50px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 30px;
+
+
+#sidebox img {
+    position:absolute;
 }
-/* Links */
+#sidebox img.eck5 {
+    top:0;
+    left:0;
+}
+#sidebox img.eck6 {
+    top:0;
+    right:0;
+}
+#sidebox img.eck7 {
+    bottom:0;
+    left:0;
+}
+#sidebox img.eck8 {
+    bottom:0;
+    right:0;
+}
+
+
+
+
 
 a {
     color: #09c;
     text-decoration: none;
 }
+
+.forgottenpw {
+	font-size:13px;
+}
+
 a:hover {
     color: #069;
     text-decoration: underline;
@@ -46,13 +72,14 @@ a:hover {
 a:visited {
     color: #069;
 }
+
+
 /* Navigation */
 
 nav {
-    float: left;
-}
-nav {
-    background-color: white;
+    position:relative;
+    margin: 0 auto;
+    left:370px;
     padding: 0 0.8em;
     white-space: nowrap;
 }
@@ -74,55 +101,4 @@ nav ul li a:visited {
 }
 nav ul li a:hover {
     text-decoration: underline;
-}
-/* Sign up button */
-
-a.signup_button {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    text-align: center;
-    width: 190px;
-    color: #fff;
-   /* background: #006400;*/
-    background:#6699CC;
-    font-size: 150%;
-    font-weight: bold;
-    padding: 20px;
-}
-/* Round corners */
-
-.round {
-    -moz-border-radius:    10px;
-    -webkit-border-radius: 10px;
-    border-radius:         10px;
-}
-
-/* User show page */
-
-table.profile {
-    width: 100%;
-    margin-bottom: 0;
-}
-td.main {
-    width: 70%;
-    padding: 1em;
-}
-td.sidebar {
-    width: 30%;
-    padding: 1em;
-    vertical-align: top;
-    background:  	#09c;
-}
-div.field, div.actions {
-    margin-bottom: 10px;
-}
-
-
-ul.users {
-  margin-top: 1em;
-}
-
-.users li {
-  list-style: none;
 }
