@@ -1,4 +1,16 @@
 EncuestaProjekt::Application.routes.draw do
+  get "answers/new"
+
+  get "answers/edit"
+
+  get "answers/delete"
+
+  get "questions/new"
+
+  get "questions/edit"
+
+  get "questions/delete"
+
   get "surveytypes/new"
 
   get "surveytypes/edit"
