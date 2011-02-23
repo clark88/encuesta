@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workbench progressCount="37" version="2.0">
+<workbenchAdvisor/>
+<window height="738" width="1200" x="92" y="0">
+<fastViewData fastViewLocation="1024"/>
+<perspectiveBar>
+<itemSize x="160"/>
+</perspectiveBar>
+<coolbarLayout locked="0">
+<coolItem id="group.file" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="122" y="22"/>
+<coolItem id="additions" itemType="typeGroupMarker"/>
+<coolItem id="com.aptana.ui.globalActionSet" itemType="typeToolBarContribution" x="107" y="22"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="53" y="22"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="84" y="22"/>
+<coolItem id="group.nav" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="91" y="22"/>
+<coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="com.aptana.editor.ruby" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="com.aptana.editor.erb.html" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="group.help" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
+</coolbarLayout>
+<page focus="true" label="Workspace - Web">
+<editors>
+<editorArea activeWorkbook="DefaultEditorWorkbook">
+<info part="DefaultEditorWorkbook">
+<folder appearance="1" expanded="2">
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
+<part id="6"/>
+<part id="7"/>
+<part id="8"/>
+<part id="9"/>
+<part id="10"/>
+<part id="11"/>
+</presentation>
+</folder>
+</info>
+</editorArea>
+<editor id="com.aptana.editor.erb.html" name="application.html.erb" partName="application.html.erb" path="D:/Studium/Semester 4/Projekt Umfragesystem/Workspace/Encuesta-Projekt/app/views/layouts/application.html.erb" title="application.html.erb" tooltip="Encuesta-Projekt/app/views/layouts/application.html.erb" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Encuesta-Projekt/app/views/layouts/application.html.erb"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="570" selectionTopPixel="918"/>
+</editor>
+<editor id="com.aptana.editor.ruby" name="surveytypes_helper.rb" partName="surveytypes_helper.rb" path="D:/Studium/Semester 4/Projekt Umfragesystem/Workspace/Encuesta-Projekt/app/helpers/surveytypes_helper.rb" title="surveytypes_helper.rb" tooltip="Encuesta-Projekt/app/helpers/surveytypes_helper.rb" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Encuesta-Projekt/app/helpers/surveytypes_helper.rb"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="29" selectionTopPixel="0"/>
+</editor>
+<editor id="com.aptana.editor.ruby" name="surveytypes_controller.rb" partName="surveytypes_controller.rb" path="D:/Studium/Semester 4/Projekt Umfragesystem/Workspace/Encuesta-Projekt/app/controllers/surveytypes_controller.rb" title="surveytypes_controller.rb" tooltip="Encuesta-Projekt/app/controllers/surveytypes_controller.rb" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Encuesta-Projekt/app/controllers/surveytypes_controller.rb"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="296" selectionTopPixel="0"/>
+</editor>
+<editor id="com.aptana.editor.ruby" name="application_controller.rb" partName="application_controller.rb" path="D:/Studium/Semester 4/Projekt Umfragesystem/Workspace/Encuesta-Projekt/app/controllers/application_controller.rb" title="application_controller.rb" tooltip="Encuesta-Projekt/app/controllers/application_controller.rb" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Encuesta-Projekt/app/controllers/application_controller.rb"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="com.aptana.editor.erb.html" name="home.html.erb" partName="home.html.erb" path="D:/Studium/Semester 4/Projekt Umfragesystem/Workspace/Encuesta-Projekt/app/views/pages/home.html.erb" title="home.html.erb" tooltip="Encuesta-Projekt/app/views/pages/home.html.erb" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Encuesta-Projekt/app/views/pages/home.html.erb"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="17"/>
+</editor>
+<editor id="com.aptana.editor.erb.html" name="new.html.erb" partName="new.html.erb" path="D:/Studium/Semester 4/Projekt Umfragesystem/Workspace/Encuesta-Projekt/app/views/surveys/new.html.erb" title="new.html.erb" tooltip="Encuesta-Projekt/app/views/surveys/new.html.erb" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Encuesta-Projekt/app/views/surveys/new.html.erb"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="116" selectionTopPixel="0"/>
+</editor>
+<editor id="com.aptana.editor.ruby" name="surveys_controller.rb" partName="surveys_controller.rb" path="D:/Studium/Semester 4/Projekt Umfragesystem/Workspace/Encuesta-Projekt/app/controllers/surveys_controller.rb" title="surveys_controller.rb" tooltip="Encuesta-Projekt/app/controllers/surveys_controller.rb" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Encuesta-Projekt/app/controllers/surveys_controller.rb"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="906" selectionTopPixel="544"/>
+</editor>
+<editor id="com.aptana.editor.ruby" name="routes.rb" partName="routes.rb" path="D:/Studium/Semester 4/Projekt Umfragesystem/Workspace/Encuesta-Projekt/config/routes.rb" title="routes.rb" tooltip="Encuesta-Projekt/config/routes.rb" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Encuesta-Projekt/config/routes.rb"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="145" selectionTopPixel="0"/>
+</editor>
+<editor activePart="true" focus="true" id="com.aptana.editor.erb.html" name="_feed.html.erb" partName="_feed.html.erb" path="D:/Studium/Semester 4/Projekt Umfragesystem/Workspace/Encuesta-Projekt/app/views/shared/_feed.html.erb" title="_feed.html.erb" tooltip="Encuesta-Projekt/app/views/shared/_feed.html.erb" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Encuesta-Projekt/app/views/shared/_feed.html.erb"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="389" selectionTopPixel="0"/>
+</editor>
+<editor id="com.aptana.editor.ruby" name="user.rb" partName="user.rb" path="D:/Studium/Semester 4/Projekt Umfragesystem/Workspace/Encuesta-Projekt/app/models/user.rb" title="user.rb" tooltip="Encuesta-Projekt/app/models/user.rb" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Encuesta-Projekt/app/models/user.rb"/>
+<editorState selectionHorizontalPixel="0" selectionLength="2" selectionOffset="2680" selectionTopPixel="1105"/>
+</editor>
+<editor id="com.aptana.editor.ruby" name="pages_controller.rb" partName="pages_controller.rb" path="D:/Studium/Semester 4/Projekt Umfragesystem/Workspace/Encuesta-Projekt/app/controllers/pages_controller.rb" title="pages_controller.rb" tooltip="Encuesta-Projekt/app/controllers/pages_controller.rb" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Encuesta-Projekt/app/controllers/pages_controller.rb"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="132" selectionTopPixel="0"/>
+</editor>
+<editor id="com.aptana.editor.erb.html" name="_survey.html.erb" partName="_survey.html.erb" path="D:/Studium/Semester 4/Projekt Umfragesystem/Workspace/Encuesta-Projekt/app/views/surveys/_survey.html.erb" title="_survey.html.erb" tooltip="Encuesta-Projekt/app/views/surveys/_survey.html.erb" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Encuesta-Projekt/app/views/surveys/_survey.html.erb"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="245" selectionTopPixel="0"/>
+</editor>
+</editors>
+<views>
+<view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
+<viewState CommonNavigator.LINKING_ENABLED="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0"/>
+</view>
+<view id="com.aptana.terminal.views.terminal:Encuesta-Projekt" partName="Encuesta-Projekt">
+<viewState>
+<title>Encuesta-Projekt</title>
+<workingDirectory>D:\Studium\Semester 4\Projekt Umfragesystem\Workspace\Encuesta-Projekt</workingDirectory>
+</viewState>
+</view>
+<view id="com.aptana.explorer.view" partName="App Explorer">
+<viewState CommonNavigator.LINKING_ENABLED="0" GitChangedFilesFilterEnabled="" activeProject="Encuesta-Projekt">
+<project name="Encuesta-Projekt">
+<expanded>
+<element path="/Encuesta-Projekt/app"/>
+<element path="/Encuesta-Projekt/app/controllers"/>
+<element path="/Encuesta-Projekt/app/helpers"/>
+<element path="/Encuesta-Projekt/app/models"/>
+<element path="/Encuesta-Projekt/app/views"/>
+<element path="/Encuesta-Projekt/app/views/pages"/>
+<element path="/Encuesta-Projekt/app/views/sessions"/>
+<element path="/Encuesta-Projekt/app/views/shared"/>
+<element path="/Encuesta-Projekt/app/views/surveys"/>
+<element path="/Encuesta-Projekt/app/views/surveytypes"/>
+<element path="/Encuesta-Projekt/app/views/users"/>
+<element path="/Encuesta-Projekt/config"/>
+</expanded>
+<selection>
+<element path="/Encuesta-Projekt/app/views/pages/home.html.erb"/>
+</selection>
+</project>
+</viewState>
+</view>
+<view id="com.aptana.terminal.views.terminal:12e51d7ec57" partName="Encuesta-Projekt">
+<viewState>
+<title>Encuesta-Projekt</title>
+<workingDirectory>D:\Studium\Semester 4\Projekt Umfragesystem\Workspace\Encuesta-Projekt</workingDirectory>
+</viewState>
+</view>
+<view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
+<viewState/>
+</view>
+</views>
+<perspectives activePart="com.aptana.editor.erb.html" activePerspective="com.aptana.ui.WebPerspective">
+<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<descriptor class="com.aptana.ui.internal.WebPerspectiveFactory" id="com.aptana.ui.WebPerspective" label="Web"/>
+<alwaysOnActionSet id="com.aptana.browser.actionSet"/>
+<alwaysOnActionSet id="com.aptana.ruby.debug.ui.RubyDebugActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.convertLineDelimitersTo"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
+<alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
+<alwaysOnActionSet id="com.aptana.editor.php.presentation"/>
+<alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
+<alwaysOnActionSet id="org.eclipse.ui.edit.text.actionSet.presentation"/>
+<alwaysOnActionSet id="com.aptana.ui.globalActionSet"/>
+<alwaysOnActionSet id="com.aptana.terminal.actionSet"/>
+<show_view_action id="com.aptana.browser.views.webbrowser"/>
+<show_view_action id="com.aptana.explorer.view"/>
+<show_view_action id="org.eclipse.ui.navigator.ProjectExplorer"/>
+<show_view_action id="com.aptana.ui.io.remoteview"/>
+<show_view_action id="org.eclipse.ui.views.ContentOutline"/>
+<show_view_action id="com.aptana.terminal.views.terminal"/>
+<show_view_action id="org.eclipse.ui.console.ConsoleView"/>
+<new_wizard_action id="com.aptana.editor.php.NewPHPProjectWizard"/>
+<new_wizard_action id="com.aptana.ui.wizards.NewWebProject"/>
+<new_wizard_action id="com.aptana.ruby.core.ui.rubyProjectWizard"/>
+<new_wizard_action id="com.aptana.ui.wizards.new.file"/>
+<new_wizard_action id="org.eclipse.ui.wizards.new.folder"/>
+<new_wizard_action id="org.eclipse.ui.editors.wizards.UntitledTextFileWizard"/>
+<new_wizard_action id="org.radrails.rails.ui.projectWizard"/>
+<perspective_action id="org.eclipse.debug.ui.DebugPerspective"/>
+<hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<view id="com.aptana.explorer.view"/>
+<view id="org.eclipse.ui.navigator.ProjectExplorer"/>
+<view id="org.eclipse.ui.views.ContentOutline"/>
+<view id="com.aptana.terminal.views.terminal:Encuesta-Projekt"/>
+<view id="com.aptana.terminal.views.terminal:12e51d7ec57"/>
+<fastViewBars/>
+<layout>
+<mainWindow>
+<info folder="true" part="left">
+<folder activePageID="com.aptana.explorer.view" appearance="2" expanded="2">
+<page content="com.aptana.explorer.view" label="App Explorer"/>
+<page content="org.eclipse.ui.navigator.ProjectExplorer" label="Project Explorer"/>
+<page content="com.aptana.ui.io.remoteview" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="882" ratioRight="294" relationship="2" relative="left">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
+<page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
+</folder>
+</info>
+<info part="org.eclipse.ui.editorss" ratio="0.25" ratioLeft="294" ratioRight="882" relationship="2" relative="left"/>
+<info folder="true" part="terminalArea" ratio="0.75" ratioLeft="486" ratioRight="162" relationship="4" relative="org.eclipse.ui.editorss">
+<folder activePageID="com.aptana.terminal.views.terminal:Encuesta-Projekt" appearance="2" expanded="2">
+<page content="com.aptana.terminal.views.terminal:Encuesta-Projekt" label="Encuesta-Projekt"/>
+<page content="com.aptana.terminal.views.terminal:12e51d7ec57" label="Encuesta-Projekt"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="LabelNotFound"/>
+<page content="com.aptana.terminal.views.terminal:*" label="LabelNotFound"/>
+<page content="com.aptana.terminal.views.terminal" label="LabelNotFound"/>
+<page content="org.eclipse.pde.runtime.LogView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ProblemView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.TaskList" label="LabelNotFound"/>
+<page content="com.aptana.terminal.views.terminal:12e51c2eca3" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+</presentation>
+</folder>
+</info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@1526e3" ratio="0.75" ratioLeft="486" ratioRight="162" relationship="4" relative="left">
+<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
+</mainWindow>
+</layout>
+</perspective>
+</perspectives>
+<workingSets/>
+<navigationHistory>
+<editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.erb.html" path="/Encuesta-Projekt/app/views/shared/_feed_item.html.erb"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.ruby" path="/Encuesta-Projekt/app/controllers/surveys_controller.rb"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.erb.html" path="/Encuesta-Projekt/app/views/shared/_feed.html.erb"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.ruby" path="/Encuesta-Projekt/app/controllers/sessions_controller.rb"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.ruby" path="/Encuesta-Projekt/app/controllers/users_controller.rb"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.ruby" path="/Encuesta-Projekt/app/models/user.rb"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.ruby" path="/Encuesta-Projekt/app/controllers/pages_controller.rb"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.erb.html" path="/Encuesta-Projekt/app/views/surveys/delete.html.erb"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.erb.html" path="/Encuesta-Projekt/app/views/surveys/_survey.html.erb"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.erb.html" path="/Encuesta-Projekt/app/views/layouts/application.html.erb"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.erb.html" path="/Encuesta-Projekt/app/views/pages/home.html.erb"/>
+</editors>
+<item historyLabel="sessions_controller.rb" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="surveys_controller.rb" index="1">
+<position info="not_deleted" x="185" y="0"/>
+</item>
+<item historyLabel="users_controller.rb" index="4">
+<position/>
+</item>
+<item historyLabel="surveys_controller.rb" index="1">
+<position info="not_deleted" x="657" y="0"/>
+</item>
+<item historyLabel="users_controller.rb" index="4">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="surveys_controller.rb" index="1">
+<position info="not_deleted" x="657" y="0"/>
+</item>
+<item historyLabel="user.rb" index="5">
+<position info="not_deleted" x="313" y="0"/>
+</item>
+<item historyLabel="pages_controller.rb" index="6">
+<position info="not_deleted" x="126" y="26"/>
+</item>
+<item historyLabel="user.rb" index="5">
+<position info="not_deleted" x="313" y="0"/>
+</item>
+<item historyLabel="pages_controller.rb" index="6">
+<position info="not_deleted" x="160" y="0"/>
+</item>
+<item historyLabel="user.rb" index="5">
+<position info="not_deleted" x="2680" y="2"/>
+</item>
+<item historyLabel="pages_controller.rb" index="6">
+<position info="not_deleted" x="126" y="26"/>
+</item>
+<item historyLabel="_feed.html.erb" index="2">
+<position/>
+</item>
+<item historyLabel="_feed_item.html.erb" index="0">
+<position info="not_deleted" x="489" y="0"/>
+</item>
+<item historyLabel="delete.html.erb" index="7">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="_feed_item.html.erb" index="0">
+<position info="not_deleted" x="489" y="0"/>
+</item>
+<item historyLabel="_survey.html.erb" index="8">
+<position info="not_deleted" x="308" y="0"/>
+</item>
+<item historyLabel="_feed_item.html.erb" index="0">
+<position info="not_deleted" x="270" y="0"/>
+</item>
+<item historyLabel="_feed.html.erb" index="2">
+<position/>
+</item>
+<item historyLabel="_feed_item.html.erb" index="0">
+<position info="not_deleted" x="270" y="0"/>
+</item>
+<item historyLabel="_feed.html.erb" index="2">
+<position/>
+</item>
+<item historyLabel="user.rb" index="5">
+<position info="not_deleted" x="2680" y="2"/>
+</item>
+<item historyLabel="pages_controller.rb" index="6">
+<position info="not_deleted" x="132" y="0"/>
+</item>
+<item historyLabel="user.rb" index="5">
+<position info="not_deleted" x="2680" y="2"/>
+</item>
+<item historyLabel="_survey.html.erb" index="8">
+<position info="not_deleted" x="308" y="0"/>
+</item>
+<item historyLabel="_feed.html.erb" index="2">
+<position/>
+</item>
+<item historyLabel="_feed_item.html.erb" index="0">
+<position info="not_deleted" x="93" y="0"/>
+</item>
+<item historyLabel="_feed.html.erb" index="2">
+<position/>
+</item>
+<item historyLabel="surveys_controller.rb" index="1">
+<position info="not_deleted" x="657" y="0"/>
+</item>
+<item historyLabel="_feed.html.erb" index="2">
+<position/>
+</item>
+<item historyLabel="_feed_item.html.erb" index="0">
+<position info="not_deleted" x="395" y="0"/>
+</item>
+<item historyLabel="_survey.html.erb" index="8">
+<position info="not_deleted" x="308" y="0"/>
+</item>
+<item historyLabel="pages_controller.rb" index="6">
+<position info="not_deleted" x="132" y="0"/>
+</item>
+<item historyLabel="user.rb" index="5">
+<position info="not_deleted" x="2680" y="2"/>
+</item>
+<item historyLabel="_feed.html.erb" index="2">
+<position/>
+</item>
+<item historyLabel="_feed_item.html.erb" index="0">
+<position info="not_deleted" x="0" y="523"/>
+</item>
+<item historyLabel="surveys_controller.rb" index="1">
+<position info="not_deleted" x="657" y="0"/>
+</item>
+<item historyLabel="_feed.html.erb" index="2">
+<position/>
+</item>
+<item historyLabel="application.html.erb" index="9">
+<position info="not_deleted" x="570" y="0"/>
+</item>
+<item historyLabel="surveys_controller.rb" index="1">
+<position info="not_deleted" x="906" y="0"/>
+</item>
+<item historyLabel="application.html.erb" index="9">
+<position info="not_deleted" x="570" y="0"/>
+</item>
+<item historyLabel="_feed_item.html.erb" index="0">
+<position info="not_deleted" x="521" y="0"/>
+</item>
+<item historyLabel="_feed.html.erb" index="2">
+<position info="not_deleted" x="790" y="0"/>
+</item>
+<item historyLabel="_feed_item.html.erb" index="0">
+<position info="not_deleted" x="521" y="0"/>
+</item>
+<item historyLabel="_feed.html.erb" index="2">
+<position info="not_deleted" x="790" y="0"/>
+</item>
+<item historyLabel="_survey.html.erb" index="8">
+<position info="not_deleted" x="289" y="153"/>
+</item>
+<item historyLabel="_feed.html.erb" index="2">
+<position info="not_deleted" x="1011" y="0"/>
+</item>
+<item historyLabel="_survey.html.erb" index="8">
+<position info="not_deleted" x="245" y="0"/>
+</item>
+<item historyLabel="home.html.erb" index="10">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item active="true" historyLabel="_feed.html.erb" index="2">
+<position info="not_deleted" x="1011" y="0"/>
+</item>
+</navigationHistory>
+<input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
+</page>
+<workbenchWindowAdvisor/>
+<actionBarAdvisor/>
+<trimLayout>
+<trimArea IMemento.internal.id="128">
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
+</trimArea>
+<trimArea IMemento.internal.id="1024">
+<trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
+<trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+</trimArea>
+</trimLayout>
+</window>
+<mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.erb.html" name="_survey.html.erb" tooltip="Encuesta-Projekt/app/views/surveys/_survey.html.erb">
+<persistable path="/Encuesta-Projekt/app/views/surveys/_survey.html.erb"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.erb.html" name="delete.html.erb" tooltip="Encuesta-Projekt/app/views/surveys/delete.html.erb">
+<persistable path="/Encuesta-Projekt/app/views/surveys/delete.html.erb"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.ruby" name="pages_controller.rb" tooltip="Encuesta-Projekt/app/controllers/pages_controller.rb">
+<persistable path="/Encuesta-Projekt/app/controllers/pages_controller.rb"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.ruby" name="user.rb" tooltip="Encuesta-Projekt/app/models/user.rb">
+<persistable path="/Encuesta-Projekt/app/models/user.rb"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.ruby" name="users_controller.rb" tooltip="Encuesta-Projekt/app/controllers/users_controller.rb">
+<persistable path="/Encuesta-Projekt/app/controllers/users_controller.rb"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.ruby" name="sessions_controller.rb" tooltip="Encuesta-Projekt/app/controllers/sessions_controller.rb">
+<persistable path="/Encuesta-Projekt/app/controllers/sessions_controller.rb"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.erb.html" name="_feed.html.erb" tooltip="Encuesta-Projekt/app/views/shared/_feed.html.erb">
+<persistable path="/Encuesta-Projekt/app/views/shared/_feed.html.erb"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.erb.html" name="_error_messages.html.erb" tooltip="Encuesta-Projekt/app/views/shared/_error_messages.html.erb">
+<persistable path="/Encuesta-Projekt/app/views/shared/_error_messages.html.erb"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.ruby" name="routes.rb" tooltip="Encuesta-Projekt/config/routes.rb">
+<persistable path="/Encuesta-Projekt/config/routes.rb"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.ruby" name="surveys_controller.rb" tooltip="Encuesta-Projekt/app/controllers/surveys_controller.rb">
+<persistable path="/Encuesta-Projekt/app/controllers/surveys_controller.rb"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.erb.html" name="new.html.erb" tooltip="Encuesta-Projekt/app/views/surveys/new.html.erb">
+<persistable path="/Encuesta-Projekt/app/views/surveys/new.html.erb"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.erb.html" name="home.html.erb" tooltip="Encuesta-Projekt/app/views/pages/home.html.erb">
+<persistable path="/Encuesta-Projekt/app/views/pages/home.html.erb"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.erb.html" name="_feed_item.html.erb" tooltip="Encuesta-Projekt/app/views/shared/_feed_item.html.erb">
+<persistable path="/Encuesta-Projekt/app/views/shared/_feed_item.html.erb"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.erb.html" name="_user_info.html.erb" tooltip="Encuesta-Projekt/app/views/shared/_user_info.html.erb">
+<persistable path="/Encuesta-Projekt/app/views/shared/_user_info.html.erb"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.aptana.editor.ruby" name="sessions_helper.rb" tooltip="Encuesta-Projekt/app/helpers/sessions_helper.rb">
+<persistable path="/Encuesta-Projekt/app/helpers/sessions_helper.rb"/>
+</file>
+</mruList>
+</workbench>

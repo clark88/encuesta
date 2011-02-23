@@ -1,0 +1,17 @@
+<tr>
+  <td class="survey">
+    <span class="user">
+      <%= link_to feed.user.login, feeds.user %>
+    </span>
+    <span class="bezeichnung"><%= feed.bezeichnung %></span>
+    <span class="Surveytype"> <%= feed.surveytype_id %></span>
+    <span class="timestamp">
+      Erstellungszeitraum: <%= time_ago_in_words(feed.created_at) %> ago.
+    </span>
+  </td>
+  <% if current_user?(feeds.user) %>
+  <td>
+    <%= link_to "Löschen", feed, {:action=> :destroy},{ :method => :delete} %>
+  </td>
+  <% end %>
+</tr>

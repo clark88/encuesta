@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;Encuesta-Projekt/app/views/shared/_feed_item.html.erb&apos;" deleteContents="false" description="Delete resource &apos;Encuesta-Projekt/app/views/shared/_feed_item.html.erb&apos;" element1="/Encuesta-Projekt/app/views/shared/_feed_item.html.erb" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1298455774268"/>
+</session>

@@ -1,0 +1,29 @@
+<% unless @feeds.empty? %>
+
+<table class="surveys" summary="User surveys">
+	<% for feed in @feeds %>
+    <tr>
+        <td class="survey">
+        <span class="user"><%= link_to feed.user.login, feed.user %></span>
+        <span class="bezeichnung"><%= feed.bezeichnung %></span>
+        <span class="Surveytype"><% feed.surveytype_id 
+        	if feed.surveytype_id == 1
+     			print "Simple-Umfrage"
+     		else
+     			print "Advanced-Umfrage"
+			end
+			
+			print “The variable is ” + (feed.surveytype_id  == 1 ? "Simple" : "Advanced")
+        %>
+        </span>
+        <span class="timestamp">Erstellungszeitraum: <%= time_ago_in_words(feed.created_at) %> ago.</span>
+        </td>
+        <% if current_user?(feed.user) %>
+        <td><%= link_to "Löschen", feed, :method => :delete,
+                                     :confirm => "Sind Sie sicher?",
+                                     :title => feed.bezeichnung %></td>
+        <% end %>
+    </tr>
+    <% end %>
+</table>
+<% end %>
