@@ -3,14 +3,16 @@ class SurveysController < ApplicationController
 	before_filter :authenticate, :only => [:create, :destroy]
 	before_filter :authorized_user, :only => :destroy
 
-
+def show
+	render :text=> "test"
+end
   
   def index
 		flash[:notice] = "You did it"
 	end
   
- def new
- end
+
+
   
   def create
 		@survey = current_user.surveys.build(params[:survey])
@@ -46,7 +48,7 @@ class SurveysController < ApplicationController
 	private
 
     def authorized_user
-      @survey = survey.find(params[:id])
+      @survey = Survey.find(params[:id])
       redirect_to home_path unless current_user?(@survey.user)
     end
 

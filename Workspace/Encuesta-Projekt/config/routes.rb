@@ -7,7 +7,6 @@ EncuestaProjekt::Application.routes.draw do
 
   get "sessions/new"
 
-  get "surveys/new"
 
   get "users/new"
   
@@ -16,12 +15,11 @@ EncuestaProjekt::Application.routes.draw do
 
   resources :users
   resources :sessions, :only => [:new, :create, :destroy]
-  resources :surveys, :only => [:create, :destroy]
+  resources :surveys
   resources :surveytypes
   
   get "surveys/new"
   get "surveys/edit"
-  get "surveys/delete"
 
   get "pages/home"
   root :to => 'pages#home'

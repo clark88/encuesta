@@ -15602,3 +15602,1314 @@ ActionController::RoutingError (No route matches "/surveys/10"):
   
 
 Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 10:04:55 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+Rendered pages/home.html.erb within layouts/application (145.0ms)
+Completed 200 OK in 680ms (Views: 172.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 10:05:05 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+Rendered pages/home.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 92ms (Views: 39.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-02-23 10:08:01 +0100
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cw1AwXzbakccPkUAFEWtoE0lA8cKd7cMiwXWLOfm32Q=", "session"=>{"login"=>"VanZan", "passwort"=>"kitsune"}, "x"=>"0", "y"=>"0"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."login" = 'VanZan') LIMIT 1
+Redirected to http://127.0.0.1:3000/users/1
+Completed 302 Found in 191ms
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-02-23 10:08:01 +0100
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)
+  [1m[36mSurvey Load (4.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE ("surveys".user_id = 1) ORDER BY surveys.created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered surveys/_survey.html.erb (32.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)[0m
+Rendered users/show.html.erb within layouts/application (71.0ms)
+Completed 200 OK in 279ms (Views: 91.0ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 10:08:04 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSurveytype Load (2.0ms)[0m  [1mSELECT "surveytypes".* FROM "surveytypes"[0m
+Rendered shared/_survey_form.html.erb (97.0ms)
+  [1m[35mSQL (1.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE (user_id = 1)
+  [1m[36mSurvey Load (5.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE (user_id = 1) ORDER BY surveys.created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered shared/_feed_item.html.erb (42.0ms)
+Rendered shared/_feed.html.erb (57.0ms)
+  [1m[35mSQL (1.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)
+Rendered shared/_user_info.html.erb (14.0ms)
+Rendered pages/home.html.erb within layouts/application (199.0ms)
+Completed 200 OK in 347ms (Views: 214.0ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 10:21:48 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSurveytype Load (1.0ms)[0m  SELECT "surveytypes".* FROM "surveytypes"
+Rendered shared/_survey_form.html.erb (95.0ms)
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE (user_id = 1)[0m
+  [1m[35mSurvey Load (5.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE (user_id = 1) ORDER BY surveys.created_at DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered shared/_feed_item.html.erb (39.0ms)
+Rendered shared/_feed.html.erb (54.0ms)
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)[0m
+Rendered shared/_user_info.html.erb (14.0ms)
+Rendered pages/home.html.erb within layouts/application (197.0ms)
+Completed 200 OK in 313ms (Views: 215.0ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2011-02-23 10:22:26 +0100
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (2.0ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/index.html.erb within layouts/application (43.0ms)
+Completed 200 OK in 105ms (Views: 65.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 10:22:32 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSurveytype Load (2.0ms)[0m  [1mSELECT "surveytypes".* FROM "surveytypes"[0m
+Rendered shared/_survey_form.html.erb (92.0ms)
+  [1m[35mSQL (1.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE (user_id = 1)
+  [1m[36mSurvey Load (5.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE (user_id = 1) ORDER BY surveys.created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered shared/_feed_item.html.erb (39.0ms)
+Rendered shared/_feed.html.erb (55.0ms)
+  [1m[35mSQL (0.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)
+Rendered shared/_user_info.html.erb (14.0ms)
+Rendered pages/home.html.erb within layouts/application (194.0ms)
+Completed 200 OK in 322ms (Views: 211.0ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/surveys/6" for 127.0.0.1 at 2011-02-23 10:23:49 +0100
+
+ActionController::RoutingError (No route matches "/surveys/6"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 10:26:34 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSurveytype Load (2.0ms)[0m  SELECT "surveytypes".* FROM "surveytypes"
+Rendered shared/_survey_form.html.erb (57.0ms)
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE (user_id = 1)[0m
+  [1m[35mSurvey Load (5.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE (user_id = 1) ORDER BY surveys.created_at DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered shared/_feed_item.html.erb (40.0ms)
+Rendered shared/_feed.html.erb (55.0ms)
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)[0m
+Rendered shared/_user_info.html.erb (14.0ms)
+Rendered pages/home.html.erb within layouts/application (160.0ms)
+Completed 200 OK in 324ms (Views: 176.0ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/surveys/8" for 127.0.0.1 at 2011-02-23 10:26:55 +0100
+
+ActionController::RoutingError (No route matches "/surveys/8"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 10:30:29 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSurveytype Load (2.0ms)[0m  [1mSELECT "surveytypes".* FROM "surveytypes"[0m
+Rendered shared/_survey_form.html.erb (90.0ms)
+  [1m[35mSQL (0.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE (user_id = 1)
+  [1m[36mSurvey Load (4.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE (user_id = 1) ORDER BY surveys.created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered shared/_feed_item.html.erb (127.0ms)
+Rendered shared/_feed.html.erb (142.0ms)
+  [1m[35mSQL (1.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)
+Rendered shared/_user_info.html.erb (13.0ms)
+Rendered pages/home.html.erb within layouts/application (280.0ms)
+Completed 200 OK in 948ms (Views: 296.0ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/surveys/4" for 127.0.0.1 at 2011-02-23 10:30:42 +0100
+
+AbstractController::ActionNotFound (The action 'show' could not be found for SurveysController):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/unknown_action.erb within rescues/layout (1.0ms)
+
+
+Started GET "/surveys/4" for 127.0.0.1 at 2011-02-23 10:33:06 +0100
+  Processing by SurveysController#show as HTML
+  Parameters: {"id"=>"4"}
+Completed   in 68ms
+
+ActionView::MissingTemplate (Missing template surveys/show with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "D:/Studium/Semester 4/Projekt Umfragesystem/Workspace/Encuesta-Projekt/app/views"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.0ms)
+
+
+Started GET "/surveys/4" for 127.0.0.1 at 2011-02-23 10:33:35 +0100
+  Processing by SurveysController#show as HTML
+  Parameters: {"id"=>"4"}
+Completed   in 19ms
+
+ActionView::MissingTemplate (Missing template surveys/show with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "D:/Studium/Semester 4/Projekt Umfragesystem/Workspace/Encuesta-Projekt/app/views"):
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (2.0ms)
+
+
+Started GET "/surveys/4" for 127.0.0.1 at 2011-02-23 10:33:45 +0100
+  Processing by SurveysController#show as HTML
+  Parameters: {"id"=>"4"}
+Completed   in 18ms
+
+ActionView::MissingTemplate (Missing template surveys/test with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "D:/Studium/Semester 4/Projekt Umfragesystem/Workspace/Encuesta-Projekt/app/views"):
+  app/controllers/surveys_controller.rb:7:in `show'
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (2.0ms)
+
+
+Started GET "/surveys/4" for 127.0.0.1 at 2011-02-23 10:33:47 +0100
+  Processing by SurveysController#show as HTML
+  Parameters: {"id"=>"4"}
+Completed   in 21ms
+
+ActionView::MissingTemplate (Missing template surveys/test with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "D:/Studium/Semester 4/Projekt Umfragesystem/Workspace/Encuesta-Projekt/app/views"):
+  app/controllers/surveys_controller.rb:7:in `show'
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (1.0ms)
+
+
+Started GET "/surveys/4" for 127.0.0.1 at 2011-02-23 10:34:01 +0100
+  Processing by SurveysController#show as HTML
+  Parameters: {"id"=>"4"}
+Rendered text template (0.0ms)
+Completed 200 OK in 21ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 10:47:15 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSurveytype Load (2.0ms)[0m  SELECT "surveytypes".* FROM "surveytypes"
+Rendered shared/_survey_form.html.erb (124.0ms)
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE (user_id = 1)[0m
+  [1m[35mSurvey Load (4.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE (user_id = 1) ORDER BY surveys.created_at DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered shared/_feed_item.html.erb (39.0ms)
+Rendered shared/_feed.html.erb (55.0ms)
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)[0m
+Rendered shared/_user_info.html.erb (14.0ms)
+Rendered pages/home.html.erb within layouts/application (233.0ms)
+Completed 200 OK in 351ms (Views: 251.0ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 10:50:32 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSurveytype Load (2.0ms)[0m  [1mSELECT "surveytypes".* FROM "surveytypes"[0m
+Rendered shared/_survey_form.html.erb (58.0ms)
+  [1m[35mSQL (0.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE (user_id = 1)
+  [1m[36mSurvey Load (5.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE (user_id = 1) ORDER BY surveys.created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered shared/_feed_item.html.erb (39.0ms)
+Rendered shared/_feed.html.erb (55.0ms)
+  [1m[35mSQL (0.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)
+Rendered shared/_user_info.html.erb (14.0ms)
+Rendered pages/home.html.erb within layouts/application (158.0ms)
+Completed 200 OK in 316ms (Views: 178.0ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/surveys/4" for 127.0.0.1 at 2011-02-23 10:50:36 +0100
+  Processing by SurveysController#show as HTML
+  Parameters: {"id"=>"4"}
+Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 10:51:25 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSurveytype Load (2.0ms)[0m  SELECT "surveytypes".* FROM "surveytypes"
+Rendered shared/_survey_form.html.erb (94.0ms)
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE (user_id = 1)[0m
+  [1m[35mSurvey Load (5.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE (user_id = 1) ORDER BY surveys.created_at DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered shared/_feed_item.html.erb (46.0ms)
+Rendered shared/_feed.html.erb (60.0ms)
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)[0m
+Rendered shared/_user_info.html.erb (15.0ms)
+Rendered pages/home.html.erb within layouts/application (202.0ms)
+Completed 200 OK in 324ms (Views: 221.0ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/surveys/5" for 127.0.0.1 at 2011-02-23 10:51:29 +0100
+  Processing by SurveysController#show as HTML
+  Parameters: {"id"=>"5"}
+Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 10:54:01 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSurveytype Load (1.0ms)[0m  [1mSELECT "surveytypes".* FROM "surveytypes"[0m
+Rendered shared/_survey_form.html.erb (92.0ms)
+  [1m[35mSQL (1.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE (user_id = 1)
+  [1m[36mSurvey Load (5.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE (user_id = 1) ORDER BY surveys.created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered shared/_feed_item.html.erb (39.0ms)
+Rendered shared/_feed.html.erb (52.0ms)
+  [1m[35mSQL (1.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)
+Rendered shared/_user_info.html.erb (13.0ms)
+Rendered pages/home.html.erb within layouts/application (189.0ms)
+Completed 200 OK in 308ms (Views: 205.0ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 10:55:36 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSurveytype Load (2.0ms)[0m  SELECT "surveytypes".* FROM "surveytypes"
+Rendered shared/_survey_form.html.erb (62.0ms)
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE (user_id = 1)[0m
+  [1m[35mSurvey Load (5.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE (user_id = 1) ORDER BY surveys.created_at DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered shared/_feed_item.html.erb (38.0ms)
+Rendered shared/_feed.html.erb (54.0ms)
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)[0m
+Rendered shared/_user_info.html.erb (14.0ms)
+Rendered pages/home.html.erb within layouts/application (160.0ms)
+Completed 200 OK in 310ms (Views: 178.0ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/surveys/6" for 127.0.0.1 at 2011-02-23 10:55:39 +0100
+  Processing by SurveysController#show as HTML
+  Parameters: {"id"=>"6"}
+Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 10:57:57 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSurveytype Load (2.0ms)[0m  [1mSELECT "surveytypes".* FROM "surveytypes"[0m
+Rendered shared/_survey_form.html.erb (119.0ms)
+  [1m[35mSQL (0.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE (user_id = 1)
+  [1m[36mSurvey Load (5.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE (user_id = 1) ORDER BY surveys.created_at DESC[0m
+Rendered shared/_feed_item.html.erb (37.0ms)
+Rendered shared/_feed.html.erb (50.0ms)
+Rendered pages/home.html.erb within layouts/application (186.0ms)
+Completed   in 305ms
+
+ActionView::Template::Error (undefined local variable or method `feeds' for #<#<Class:0x32d5be0>:0x32d3e58>):
+    1: <tr>
+    2:   <td class="survey">
+    3:     <span class="user">
+    4:       <%= link_to feeds.user.login, feeds.user %>
+    5:     </span>
+    6:     <span class="bezeichnung"><%= feeds.bezeichnung %></span>
+    7:     <span class="Surveytype"> <%= feeds.surveytype_id %></span>
+  app/views/shared/_feed_item.html.erb:4:in `_app_views_shared__feed_item_html_erb__905182601_30288132_18531601'
+  app/views/shared/_feed.html.erb:3:in `_app_views_shared__feed_html_erb__397223206_30892704_381891690'
+  app/views/pages/home.html.erb:12:in `_app_views_pages_home_html_erb___808686016_26645976_884024935'
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.0ms)
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (26.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 10:59:53 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSurveytype Load (1.0ms)[0m  [1mSELECT "surveytypes".* FROM "surveytypes"[0m
+Rendered shared/_survey_form.html.erb (90.0ms)
+  [1m[35mSQL (0.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE (user_id = 1)
+  [1m[36mSurvey Load (5.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE (user_id = 1) ORDER BY surveys.created_at DESC[0m
+Rendered shared/_feed_item.html.erb (36.0ms)
+Rendered shared/_feed.html.erb (51.0ms)
+Rendered pages/home.html.erb within layouts/application (156.0ms)
+Completed   in 272ms
+
+ActionView::Template::Error (undefined local variable or method `feed' for #<#<Class:0x32e1dc0>:0x32d9c48>):
+    1: <tr>
+    2:   <td class="survey">
+    3:     <span class="user">
+    4:       <%= link_to feed.user.login, feed.user %>
+    5:     </span>
+    6:     <span class="bezeichnung"><%= feed.bezeichnung %></span>
+    7:     <span class="Surveytype"> <%= feed.surveytype_id %></span>
+  app/views/shared/_feed_item.html.erb:4:in `_app_views_shared__feed_item_html_erb__905182601_30143688_18531601'
+  app/views/shared/_feed.html.erb:3:in `_app_views_shared__feed_html_erb__397223206_30319788_381891690'
+  app/views/pages/home.html.erb:12:in `_app_views_pages_home_html_erb___808686016_26657628_884024935'
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.0ms)
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (26.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 11:01:19 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSurveytype Load (2.0ms)[0m  [1mSELECT "surveytypes".* FROM "surveytypes"[0m
+Rendered shared/_survey_form.html.erb (91.0ms)
+  [1m[35mSQL (1.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE (user_id = 1)
+  [1m[36mSurvey Load (4.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE (user_id = 1) ORDER BY surveys.created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered shared/_feed.html.erb (44.0ms)
+  [1m[35mSQL (1.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)
+Rendered shared/_user_info.html.erb (16.0ms)
+Rendered pages/home.html.erb within layouts/application (187.0ms)
+Completed 200 OK in 308ms (Views: 202.0ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 11:01:50 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSurveytype Load (2.0ms)[0m  SELECT "surveytypes".* FROM "surveytypes"
+Rendered shared/_survey_form.html.erb (57.0ms)
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE (user_id = 1)[0m
+  [1m[35mSurvey Load (4.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE (user_id = 1) ORDER BY surveys.created_at DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered shared/_feed.html.erb (45.0ms)
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)[0m
+Rendered shared/_user_info.html.erb (15.0ms)
+Rendered pages/home.html.erb within layouts/application (148.0ms)
+Completed 200 OK in 300ms (Views: 170.0ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 11:01:58 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSurveytype Load (2.0ms)[0m  [1mSELECT "surveytypes".* FROM "surveytypes"[0m
+Rendered shared/_survey_form.html.erb (56.0ms)
+  [1m[35mSQL (0.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE (user_id = 1)
+  [1m[36mSurvey Load (4.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE (user_id = 1) ORDER BY surveys.created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered shared/_feed.html.erb (45.0ms)
+  [1m[35mSQL (1.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)
+Rendered shared/_user_info.html.erb (15.0ms)
+Rendered pages/home.html.erb within layouts/application (150.0ms)
+Completed 200 OK in 323ms (Views: 193.0ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 11:01:58 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSurveytype Load (2.0ms)[0m  SELECT "surveytypes".* FROM "surveytypes"
+Rendered shared/_survey_form.html.erb (128.0ms)
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE (user_id = 1)[0m
+  [1m[35mSurvey Load (4.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE (user_id = 1) ORDER BY surveys.created_at DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered shared/_feed.html.erb (46.0ms)
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)[0m
+Rendered shared/_user_info.html.erb (15.0ms)
+Rendered pages/home.html.erb within layouts/application (275.0ms)
+Completed 200 OK in 455ms (Views: 295.0ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 11:01:59 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSurveytype Load (4.0ms)[0m  [1mSELECT "surveytypes".* FROM "surveytypes"[0m
+Rendered shared/_survey_form.html.erb (60.0ms)
+  [1m[35mSQL (1.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE (user_id = 1)
+  [1m[36mSurvey Load (4.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE (user_id = 1) ORDER BY surveys.created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered shared/_feed.html.erb (47.0ms)
+  [1m[35mSQL (1.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)
+Rendered shared/_user_info.html.erb (14.0ms)
+Rendered pages/home.html.erb within layouts/application (192.0ms)
+Completed 200 OK in 373ms (Views: 205.0ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 11:01:59 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSurveytype Load (2.0ms)[0m  SELECT "surveytypes".* FROM "surveytypes"
+Rendered shared/_survey_form.html.erb (62.0ms)
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE (user_id = 1)[0m
+  [1m[35mSurvey Load (5.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE (user_id = 1) ORDER BY surveys.created_at DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered shared/_feed.html.erb (49.0ms)
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)[0m
+Rendered shared/_user_info.html.erb (15.0ms)
+Rendered pages/home.html.erb within layouts/application (157.0ms)
+Completed 200 OK in 341ms (Views: 202.0ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/surveys/8" for 127.0.0.1 at 2011-02-23 11:02:09 +0100
+  Processing by SurveysController#show as HTML
+  Parameters: {"id"=>"8"}
+Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 11:06:38 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSurveytype Load (1.0ms)[0m  [1mSELECT "surveytypes".* FROM "surveytypes"[0m
+Rendered shared/_survey_form.html.erb (95.0ms)
+  [1m[35mSQL (0.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE (user_id = 1)
+  [1m[36mSurvey Load (5.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE (user_id = 1) ORDER BY surveys.created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered shared/_feed.html.erb (46.0ms)
+  [1m[35mSQL (1.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)
+Rendered shared/_user_info.html.erb (14.0ms)
+Rendered pages/home.html.erb within layouts/application (214.0ms)
+Completed 200 OK in 328ms (Views: 231.0ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 11:06:59 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSurveytype Load (2.0ms)[0m  SELECT "surveytypes".* FROM "surveytypes"
+Rendered shared/_survey_form.html.erb (185.0ms)
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE (user_id = 1)[0m
+  [1m[35mSurvey Load (5.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE (user_id = 1) ORDER BY surveys.created_at DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered shared/_feed.html.erb (46.0ms)
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)[0m
+Rendered shared/_user_info.html.erb (15.0ms)
+Rendered pages/home.html.erb within layouts/application (281.0ms)
+Completed 200 OK in 403ms (Views: 299.0ms | ActiveRecord: 8.0ms)
+
+
+Started POST "/surveys/5" for 127.0.0.1 at 2011-02-23 11:07:20 +0100
+  Processing by SurveysController#destroy as HTML
+  Parameters: {"authenticity_token"=>"cw1AwXzbakccPkUAFEWtoE0lA8cKd7cMiwXWLOfm32Q=", "id"=>"5"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Completed   in 95ms
+
+NameError (undefined local variable or method `survey' for #<SurveysController:0x39962d0>):
+  app/controllers/surveys_controller.rb:51:in `authorized_user'
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.0ms)
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 11:08:36 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSurveytype Load (2.0ms)[0m  SELECT "surveytypes".* FROM "surveytypes"
+Rendered shared/_survey_form.html.erb (92.0ms)
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE (user_id = 1)[0m
+  [1m[35mSurvey Load (4.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE (user_id = 1) ORDER BY surveys.created_at DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered shared/_feed.html.erb (45.0ms)
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)[0m
+Rendered shared/_user_info.html.erb (14.0ms)
+Rendered pages/home.html.erb within layouts/application (186.0ms)
+Completed 200 OK in 306ms (Views: 203.0ms | ActiveRecord: 8.0ms)
+
+
+Started POST "/surveys/6" for 127.0.0.1 at 2011-02-23 11:08:41 +0100
+  Processing by SurveysController#destroy as HTML
+  Parameters: {"authenticity_token"=>"cw1AwXzbakccPkUAFEWtoE0lA8cKd7cMiwXWLOfm32Q=", "id"=>"6"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSurvey Load (1.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 6) ORDER BY surveys.created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mAREL (2.0ms)[0m  [1mDELETE FROM "surveys" WHERE ("surveys"."id" = 6)[0m
+Redirected to http://127.0.0.1:3000/home
+Completed 302 Found in 160ms
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 11:08:42 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSurveytype Load (2.0ms)[0m  [1mSELECT "surveytypes".* FROM "surveytypes"[0m
+Rendered shared/_survey_form.html.erb (156.0ms)
+  [1m[35mSQL (0.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE (user_id = 1)
+  [1m[36mSurvey Load (4.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE (user_id = 1) ORDER BY surveys.created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered shared/_feed.html.erb (42.0ms)
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)[0m
+Rendered shared/_user_info.html.erb (14.0ms)
+Rendered pages/home.html.erb within layouts/application (253.0ms)
+Completed 200 OK in 401ms (Views: 281.0ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 11:10:05 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSurveytype Load (2.0ms)[0m  [1mSELECT "surveytypes".* FROM "surveytypes"[0m
+Rendered shared/_survey_form.html.erb (60.0ms)
+  [1m[35mSQL (0.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE (user_id = 1)
+  [1m[36mSurvey Load (4.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE (user_id = 1) ORDER BY surveys.created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered shared/_feed.html.erb (42.0ms)
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)[0m
+Rendered shared/_user_info.html.erb (15.0ms)
+Rendered pages/home.html.erb within layouts/application (152.0ms)
+Completed 200 OK in 299ms (Views: 168.0ms | ActiveRecord: 8.0ms)
+
+
+Started POST "/surveys/5" for 127.0.0.1 at 2011-02-23 11:10:12 +0100
+  Processing by SurveysController#destroy as HTML
+  Parameters: {"authenticity_token"=>"cw1AwXzbakccPkUAFEWtoE0lA8cKd7cMiwXWLOfm32Q=", "id"=>"5"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSurvey Load (1.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 5) ORDER BY surveys.created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mAREL (2.0ms)[0m  [1mDELETE FROM "surveys" WHERE ("surveys"."id" = 5)[0m
+Redirected to http://127.0.0.1:3000/home
+Completed 302 Found in 219ms
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 11:10:13 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSurveytype Load (2.0ms)[0m  [1mSELECT "surveytypes".* FROM "surveytypes"[0m
+Rendered shared/_survey_form.html.erb (60.0ms)
+  [1m[35mSQL (1.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE (user_id = 1)
+  [1m[36mSurvey Load (4.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE (user_id = 1) ORDER BY surveys.created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered shared/_feed.html.erb (50.0ms)
+  [1m[35mSQL (0.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)
+Rendered shared/_user_info.html.erb (14.0ms)
+Rendered pages/home.html.erb within layouts/application (195.0ms)
+Completed 200 OK in 424ms (Views: 215.0ms | ActiveRecord: 8.0ms)
+
+
+Started POST "/surveys/1" for 127.0.0.1 at 2011-02-23 11:18:08 +0100
+  Processing by SurveysController#destroy as HTML
+  Parameters: {"authenticity_token"=>"zqjYRkxMgnLZy6BAVfjmeRvcrj6yxBXgCdxeR5tHDSE=", "id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSurvey Load (1.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 1) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mAREL (2.0ms)[0m  DELETE FROM "surveys" WHERE ("surveys"."id" = 1)
+Redirected to http://127.0.0.1:3000/home
+Completed 302 Found in 156ms
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 11:18:08 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSurveytype Load (2.0ms)[0m  SELECT "surveytypes".* FROM "surveytypes"
+Rendered shared/_survey_form.html.erb (91.0ms)
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE (user_id = 1)[0m
+  [1m[35mSurvey Load (3.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE (user_id = 1) ORDER BY surveys.created_at DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered shared/_feed.html.erb (41.0ms)
+  [1m[35mSQL (0.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)
+Rendered shared/_user_info.html.erb (14.0ms)
+Rendered pages/home.html.erb within layouts/application (181.0ms)
+Completed 200 OK in 296ms (Views: 197.0ms | ActiveRecord: 7.0ms)
+
+
+Started POST "/surveys/4" for 127.0.0.1 at 2011-02-23 11:18:24 +0100
+  Processing by SurveysController#destroy as HTML
+  Parameters: {"authenticity_token"=>"cw1AwXzbakccPkUAFEWtoE0lA8cKd7cMiwXWLOfm32Q=", "id"=>"4"}
+  [1m[36mUser Load (4.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSurvey Load (1.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 4) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mAREL (1.0ms)[0m  DELETE FROM "surveys" WHERE ("surveys"."id" = 4)
+Redirected to http://127.0.0.1:3000/home
+Completed 302 Found in 249ms
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 11:18:24 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSurveytype Load (2.0ms)[0m  SELECT "surveytypes".* FROM "surveytypes"
+Rendered shared/_survey_form.html.erb (152.0ms)
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE (user_id = 1)[0m
+  [1m[35mSurvey Load (3.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE (user_id = 1) ORDER BY surveys.created_at DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered shared/_feed.html.erb (34.0ms)
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)[0m
+Rendered shared/_user_info.html.erb (15.0ms)
+Rendered pages/home.html.erb within layouts/application (241.0ms)
+Completed 200 OK in 405ms (Views: 264.0ms | ActiveRecord: 13.0ms)
+
+
+Started POST "/surveys/9" for 127.0.0.1 at 2011-02-23 11:18:29 +0100
+  Processing by SurveysController#destroy as HTML
+  Parameters: {"authenticity_token"=>"cw1AwXzbakccPkUAFEWtoE0lA8cKd7cMiwXWLOfm32Q=", "id"=>"9"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSurvey Load (1.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 9) ORDER BY surveys.created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mAREL (2.0ms)[0m  [1mDELETE FROM "surveys" WHERE ("surveys"."id" = 9)[0m
+Redirected to http://127.0.0.1:3000/home
+Completed 302 Found in 225ms
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 11:18:30 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSurveytype Load (2.0ms)[0m  [1mSELECT "surveytypes".* FROM "surveytypes"[0m
+Rendered shared/_survey_form.html.erb (92.0ms)
+  [1m[35mSQL (0.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE (user_id = 1)
+  [1m[36mSurvey Load (2.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE (user_id = 1) ORDER BY surveys.created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered shared/_feed.html.erb (72.0ms)
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)[0m
+Rendered shared/_user_info.html.erb (20.0ms)
+Rendered pages/home.html.erb within layouts/application (229.0ms)
+Completed 200 OK in 448ms (Views: 249.0ms | ActiveRecord: 4.0ms)
+
+
+Started POST "/surveys/2" for 127.0.0.1 at 2011-02-23 11:18:36 +0100
+  Processing by SurveysController#destroy as HTML
+  Parameters: {"authenticity_token"=>"cw1AwXzbakccPkUAFEWtoE0lA8cKd7cMiwXWLOfm32Q=", "id"=>"2"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSurvey Load (2.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mAREL (2.0ms)[0m  [1mDELETE FROM "surveys" WHERE ("surveys"."id" = 2)[0m
+Redirected to http://127.0.0.1:3000/home
+Completed 302 Found in 249ms
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 11:18:36 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSurveytype Load (3.0ms)[0m  [1mSELECT "surveytypes".* FROM "surveytypes"[0m
+Rendered shared/_survey_form.html.erb (174.0ms)
+  [1m[35mSQL (0.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE (user_id = 1)
+  [1m[36mSurvey Load (2.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE (user_id = 1) ORDER BY surveys.created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered shared/_feed.html.erb (30.0ms)
+  [1m[35mSQL (1.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)
+Rendered shared/_user_info.html.erb (16.0ms)
+Rendered pages/home.html.erb within layouts/application (351.0ms)
+Completed 200 OK in 537ms (Views: 382.0ms | ActiveRecord: 7.0ms)
+
+
+Started POST "/surveys/3" for 127.0.0.1 at 2011-02-23 11:18:41 +0100
+  Processing by SurveysController#destroy as HTML
+  Parameters: {"authenticity_token"=>"cw1AwXzbakccPkUAFEWtoE0lA8cKd7cMiwXWLOfm32Q=", "id"=>"3"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSurvey Load (1.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 3) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mAREL (2.0ms)[0m  DELETE FROM "surveys" WHERE ("surveys"."id" = 3)
+Redirected to http://127.0.0.1:3000/home
+Completed 302 Found in 283ms
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 11:18:42 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSurveytype Load (2.0ms)[0m  SELECT "surveytypes".* FROM "surveytypes"
+Rendered shared/_survey_form.html.erb (61.0ms)
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE (user_id = 1)[0m
+  [1m[35mSurvey Load (1.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE (user_id = 1) ORDER BY surveys.created_at DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered shared/_feed.html.erb (23.0ms)
+  [1m[35mSQL (0.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)
+Rendered shared/_user_info.html.erb (15.0ms)
+Rendered pages/home.html.erb within layouts/application (133.0ms)
+Completed 200 OK in 321ms (Views: 155.0ms | ActiveRecord: 9.0ms)
+
+
+Started POST "/surveys/7" for 127.0.0.1 at 2011-02-23 11:18:47 +0100
+  Processing by SurveysController#destroy as HTML
+  Parameters: {"authenticity_token"=>"cw1AwXzbakccPkUAFEWtoE0lA8cKd7cMiwXWLOfm32Q=", "id"=>"7"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSurvey Load (1.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 7) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mAREL (2.0ms)[0m  DELETE FROM "surveys" WHERE ("surveys"."id" = 7)
+Redirected to http://127.0.0.1:3000/home
+Completed 302 Found in 245ms
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 11:18:48 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSurveytype Load (2.0ms)[0m  SELECT "surveytypes".* FROM "surveytypes"
+Rendered shared/_survey_form.html.erb (64.0ms)
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE (user_id = 1)[0m
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE (user_id = 1) ORDER BY surveys.created_at DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered shared/_feed.html.erb (53.0ms)
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)[0m
+Rendered shared/_user_info.html.erb (15.0ms)
+Rendered pages/home.html.erb within layouts/application (167.0ms)
+Completed 200 OK in 367ms (Views: 188.0ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/surveys/8" for 127.0.0.1 at 2011-02-23 11:18:53 +0100
+  Processing by SurveysController#destroy as HTML
+  Parameters: {"authenticity_token"=>"cw1AwXzbakccPkUAFEWtoE0lA8cKd7cMiwXWLOfm32Q=", "id"=>"8"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSurvey Load (0.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 8) ORDER BY surveys.created_at DESC LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mAREL (2.0ms)[0m  [1mDELETE FROM "surveys" WHERE ("surveys"."id" = 8)[0m
+Redirected to http://127.0.0.1:3000/home
+Completed 302 Found in 156ms
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 11:18:53 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSurveytype Load (2.0ms)[0m  [1mSELECT "surveytypes".* FROM "surveytypes"[0m
+Rendered shared/_survey_form.html.erb (63.0ms)
+  [1m[35mSQL (2.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE (user_id = 1)
+  [1m[36mSurvey Load (1.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE (user_id = 1) ORDER BY surveys.created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered shared/_feed.html.erb (24.0ms)
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)[0m
+Rendered shared/_user_info.html.erb (13.0ms)
+Rendered pages/home.html.erb within layouts/application (140.0ms)
+Completed 200 OK in 344ms (Views: 158.0ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 11:21:25 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSurveytype Load (2.0ms)[0m  [1mSELECT "surveytypes".* FROM "surveytypes"[0m
+Rendered shared/_survey_form.html.erb (60.0ms)
+  [1m[35mSQL (0.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE (user_id = 1)
+  [1m[36mSurvey Load (1.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE (user_id = 1) ORDER BY surveys.created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered shared/_feed.html.erb (57.0ms)
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)[0m
+Rendered shared/_user_info.html.erb (16.0ms)
+Rendered pages/home.html.erb within layouts/application (175.0ms)
+Completed 200 OK in 330ms (Views: 197.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 11:21:52 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSurveytype Load (2.0ms)[0m  [1mSELECT "surveytypes".* FROM "surveytypes"[0m
+Rendered shared/_survey_form.html.erb (98.0ms)
+  [1m[35mSQL (0.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE (user_id = 1)
+  [1m[36mSurvey Load (1.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE (user_id = 1) ORDER BY surveys.created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered shared/_feed.html.erb (59.0ms)
+Rendered pages/home.html.erb within layouts/application (171.0ms)
+Completed   in 294ms
+
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::Simple):
+    8:         <span class="bezeichnung"><%= feed.bezeichnung %></span>
+    9:         <span class="Surveytype"><%= feed.surveytype_id 
+    10:         	if feed.surveytype_id == 1
+    11:      			print Simple-Umfrage
+    12:      		else
+    13:      			print Advanced-Umfrage
+    14: 			end
+  app/views/shared/_feed.html.erb:11:in `block in _app_views_shared__feed_html_erb__397223206_31393692_381891690'
+  app/views/shared/_feed.html.erb:4:in `_app_views_shared__feed_html_erb__397223206_31393692_381891690'
+  app/views/pages/home.html.erb:12:in `_app_views_pages_home_html_erb___808686016_26652576_884024935'
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.0ms)
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (25.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 11:22:11 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSurveytype Load (2.0ms)[0m  SELECT "surveytypes".* FROM "surveytypes"
+Rendered shared/_survey_form.html.erb (63.0ms)
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE (user_id = 1)[0m
+  [1m[35mSurvey Load (1.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE (user_id = 1) ORDER BY surveys.created_at DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered shared/_feed.html.erb (54.0ms)
+  [1m[35mSQL (1.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)
+Rendered shared/_user_info.html.erb (12.0ms)
+Rendered pages/home.html.erb within layouts/application (164.0ms)
+Completed 200 OK in 322ms (Views: 183.0ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 11:23:54 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSurveytype Load (5.0ms)[0m  SELECT "surveytypes".* FROM "surveytypes"
+Rendered shared/_survey_form.html.erb (66.0ms)
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE (user_id = 1)[0m
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE (user_id = 1) ORDER BY surveys.created_at DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered shared/_feed.html.erb (64.0ms)
+Rendered pages/home.html.erb within layouts/application (145.0ms)
+Completed   in 307ms
+
+ActionView::Template::Error (undefined local variable or method `”' for #<#<Class:0x35ef740>:0x38be2a0>):
+    13:      			print "Advanced-Umfrage"
+    14: 			end
+    15: 			
+    16: 			print “The variable is ” + (feed.surveytype_id  == 1 ? “Simple″ : “Advanced″)
+    17:         %>
+    18:         </span>
+    19:         <span class="timestamp">Erstellungszeitraum: <%= time_ago_in_words(feed.created_at) %> ago.</span>
+  app/views/shared/_feed.html.erb:16:in `block in _app_views_shared__feed_html_erb__397223206_29230440_381891690'
+  app/views/shared/_feed.html.erb:4:in `_app_views_shared__feed_html_erb__397223206_29230440_381891690'
+  app/views/pages/home.html.erb:12:in `_app_views_pages_home_html_erb___808686016_30188208_884024935'
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.0ms)
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (23.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 11:24:10 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSurveytype Load (2.0ms)[0m  [1mSELECT "surveytypes".* FROM "surveytypes"[0m
+Rendered shared/_survey_form.html.erb (124.0ms)
+ERROR: compiling _app_views_shared__feed_html_erb__397223206_31257984_381891690 RAISED D:/Studium/Semester 4/Projekt Umfragesystem/Workspace/Encuesta-Projekt/app/views/shared/_feed.html.erb:16: syntax error, unexpected tCONSTANT, expecting keyword_end
+...d.surveytype_id  == 1 ? "Simple" : "Advanced")
+...                               ^
+D:/Studium/Semester 4/Projekt Umfragesystem/Workspace/Encuesta-Projekt/app/views/shared/_feed.html.erb:16: syntax error, unexpected tCONSTANT, expecting keyword_end
+...id  == 1 ? "Simple" : "Advanced")
+...                               ^
+D:/Studium/Semester 4/Projekt Umfragesystem/Workspace/Encuesta-Projekt/app/views/shared/_feed.html.erb:19: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+        <span class="timestamp">Erstellungszeitraum: ');@ou...
+                              ^
+D:/Studium/Semester 4/Projekt Umfragesystem/Workspace/Encuesta-Projekt/app/views/shared/_feed.html.erb:22: syntax error, unexpected tCONSTANT, expecting keyword_end
+...fer.append= ( link_to "Löschen", feed, :method => :delete,
+...                               ^
+D:/Studium/Semester 4/Projekt Umfragesystem/Workspace/Encuesta-Projekt/app/views/shared/_feed.html.erb:23: syntax error, unexpected tCONSTANT, expecting keyword_end
+                                     :confirm => "Sind Sie sicher?",
+                                                      ^
+D:/Studium/Semester 4/Projekt Umfragesystem/Workspace/Encuesta-Projekt/app/views/shared/_feed.html.erb:23: unterminated string meets end of file
+D:/Studium/Semester 4/Projekt Umfragesystem/Workspace/Encuesta-Projekt/app/views/shared/_feed.html.erb:23: syntax error, unexpected $end, expecting keyword_end
+Function body:           def _app_views_shared__feed_html_erb__397223206_31257984_381891690(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "shared/_feed";_old_output_buffer = @output_buffer;feed = local_assigns[:feed];;@output_buffer = ActionView::OutputBuffer.new; unless @feeds.empty? 
+@output_buffer.safe_concat('
+<table class="surveys" summary="User surveys">
+');	 for feed in @feeds 
+@output_buffer.safe_concat('    <tr>
+        <td class="survey">
+        <span class="user">');@output_buffer.append= ( link_to feed.user.login, feed.user );@output_buffer.safe_concat('</span>
+        <span class="bezeichnung">');@output_buffer.append= ( feed.bezeichnung );@output_buffer.safe_concat('</span>
+        <span class="Surveytype">'); feed.surveytype_id 
+        	if feed.surveytype_id == 1
+     			print "Simple-Umfrage"
+     		else
+     			print "Advanced-Umfrage"
+			end
+			"
+			print “The variable is ” + (feed.surveytype_id  == 1 ? "Simple" : "Advanced")
+        ;@output_buffer.safe_concat('
+');@output_buffer.safe_concat('        </span>
+        <span class="timestamp">Erstellungszeitraum: ');@output_buffer.append= ( time_ago_in_words(feed.created_at) );@output_buffer.safe_concat(' ago.</span>
+        </td>
+');         if current_user?(feed.user) 
+@output_buffer.safe_concat('        <td>');@output_buffer.append= ( link_to "Löschen", feed, :method => :delete,
+                                     :confirm => "Sind Sie sicher?",
+                                     :title => feed.bezeichnung );@output_buffer.safe_concat('</td>
+');         end 
+@output_buffer.safe_concat('    </tr>
+');     end 
+@output_buffer.safe_concat('</table>
+'); end 
+@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/template.rb:255:in `module_eval'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/template.rb:255:in `compile'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/template.rb:134:in `block in render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications.rb:54:in `instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/template.rb:127:in `render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/render/partials.rb:333:in `render_partial'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/render/partials.rb:262:in `block in render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/render/partials.rb:260:in `render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/render/partials.rb:378:in `_render_partial'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:31:in `render'
+D:/Studium/Semester 4/Projekt Umfragesystem/Workspace/Encuesta-Projekt/app/views/pages/home.html.erb:12:in `_app_views_pages_home_html_erb___808686016_26709048_884024935'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/template.rb:135:in `block in render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications.rb:54:in `instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/template.rb:127:in `render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:59:in `block in _render_template'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:56:in `_render_template'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:26:in `render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:114:in `_render_template'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:108:in `render_to_body'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:101:in `render_to_string'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:92:in `render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/rendering.rb:17:in `render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+d:/Ruby192/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.3/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:39:in `render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/base.rb:151:in `process_action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/rendering.rb:11:in `process_action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:435:in `_run__220649504__process_action__162712028__callbacks'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:93:in `run_callbacks'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/callbacks.rb:17:in `process_action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/rescue.rb:17:in `process_action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/base.rb:120:in `process'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:40:in `process'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal.rb:138:in `dispatch'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal.rb:178:in `block in action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:62:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:27:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `block in call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:492:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/head.rb:14:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/flash.rb:182:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/cookies.rb:295:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:32:in `block in call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:12:in `cache'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:31:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:353:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/railties-3.0.3/lib/rails/rack/logger.rb:13:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/static.rb:30:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/railties-3.0.3/lib/rails/application.rb:168:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/railties-3.0.3/lib/rails/application.rb:77:in `method_missing'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/railties-3.0.3/lib/rails/rack/log_tailer.rb:14:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+d:/Ruby192/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+d:/Ruby192/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+d:/Ruby192/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered shared/_feed.html.erb (2.0ms)
+Rendered pages/home.html.erb within layouts/application (140.0ms)
+Completed   in 257ms
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 11:24:23 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSurveytype Load (2.0ms)[0m  [1mSELECT "surveytypes".* FROM "surveytypes"[0m
+Rendered shared/_survey_form.html.erb (59.0ms)
+  [1m[35mSQL (1.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE (user_id = 1)
+  [1m[36mSurvey Load (1.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE (user_id = 1) ORDER BY surveys.created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered shared/_feed.html.erb (36.0ms)
+Rendered pages/home.html.erb within layouts/application (109.0ms)
+Completed   in 283ms
+
+ActionView::Template::Error (undefined local variable or method `”' for #<#<Class:0x394f2d8>:0x3920f88>):
+    13:      			print "Advanced-Umfrage"
+    14: 			end
+    15: 			
+    16: 			print “The variable is ” + (feed.surveytype_id  == 1 ? "Simple" : "Advanced")
+    17:         %>
+    18:         </span>
+    19:         <span class="timestamp">Erstellungszeitraum: <%= time_ago_in_words(feed.created_at) %> ago.</span>
+  app/views/shared/_feed.html.erb:16:in `block in _app_views_shared__feed_html_erb__397223206_27031164_381891690'
+  app/views/shared/_feed.html.erb:4:in `_app_views_shared__feed_html_erb__397223206_27031164_381891690'
+  app/views/pages/home.html.erb:12:in `_app_views_pages_home_html_erb___808686016_29948496_884024935'
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (41.0ms)
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (63.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 11:24:54 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSurveytype Load (1.0ms)[0m  SELECT "surveytypes".* FROM "surveytypes"
+Rendered shared/_survey_form.html.erb (61.0ms)
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE (user_id = 1)[0m
+  [1m[35mSurvey Load (1.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE (user_id = 1) ORDER BY surveys.created_at DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered shared/_feed.html.erb (18.0ms)
+  [1m[35mSQL (0.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)
+Rendered shared/_user_info.html.erb (13.0ms)
+Rendered pages/home.html.erb within layouts/application (127.0ms)
+Completed 200 OK in 274ms (Views: 148.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-23 11:26:33 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSurveytype Load (2.0ms)[0m  SELECT "surveytypes".* FROM "surveytypes"
+Rendered shared/_survey_form.html.erb (117.0ms)
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE (user_id = 1)[0m
+  [1m[35mSurvey Load (1.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE (user_id = 1) ORDER BY surveys.created_at DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered shared/_feed.html.erb (21.0ms)
+  [1m[35mSQL (1.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)
+Rendered shared/_user_info.html.erb (15.0ms)
+Rendered pages/home.html.erb within layouts/application (201.0ms)
+Completed 200 OK in 330ms (Views: 225.0ms | ActiveRecord: 5.0ms)

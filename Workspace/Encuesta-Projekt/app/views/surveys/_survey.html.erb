@@ -7,7 +7,7 @@
   </td>
   <% if current_user?(survey.user) %>
   <td>
-    <%= link_to "Löschen", survey, :method => :destroy,
+    <%= link_to "Löschen", survey, :method => :delete,
                                      :confirm => "You sure?",
                                      :title => survey.bezeichnung %>
   </td>
