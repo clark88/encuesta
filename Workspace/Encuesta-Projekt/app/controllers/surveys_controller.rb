@@ -22,6 +22,7 @@ end
 		
 		if @survey.save
       		flash[:success] = "Umfrage erstellt!"
+      		cookies[:surveyid] = @survey.id
 			redirect_to(home_path)
     	else
     		flash[:failure] = "Umfragetyp oder Bezeichnung fehlt!"
