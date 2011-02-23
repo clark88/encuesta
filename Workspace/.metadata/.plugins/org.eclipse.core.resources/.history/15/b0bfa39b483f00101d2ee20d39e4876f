@@ -1,0 +1,15 @@
+Legen sie hier eine neue Umfrage an!
+
+<% form_for :survey, Survey.new, :url => { :action => "create" } do |form| %>
+
+<%= form.text_field :name %><br />
+Vorname
+<%= form.text_field :vorname %><br />
+Login-Name
+<%= form.text_field :login %><br />
+Passwort
+<%= form.text_field :passwort %><br />
+Email-Adresse
+<%= form.text_field :email %><br />
+<%= form.submit "Create" %>
+<% end %>

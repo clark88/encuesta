@@ -1,0 +1,19 @@
+gewollt ist:
+
+im SurveysController beim create einen Cookie erstellen, welcher die ID des Surveys speichert. Dieses ist nötig um darauf im QuestionsController die neu zu erstellende Frage mit der ID des Surveys zu versehen... der gedachte Befehl dafür wäre in etwa:  @question = Survey.find_by[:id].question.create([:params][:question])
+Problem:
+beim Test in der Kommandozeile ist es uns nicht möglich mit dem gedachten Befehl
+"cookies[:lastsurveyid] = @survey.id "  einen cookie anzulegen
+
+Fehlermeldung:
+cookies[:test] = "123"
+NameError: undefined local variable or method `cookies' for main:Object
+        from (irb):7
+        from d:/Ruby192/lib/ruby/gems/1.9.1/gems/railties-3.0.3/lib/rails/commands
+/console.rb:44:in `start'
+        from d:/Ruby192/lib/ruby/gems/1.9.1/gems/railties-3.0.3/lib/rails/commands
+/console.rb:8:in `start'
+        from d:/Ruby192/lib/ruby/gems/1.9.1/gems/railties-3.0.3/lib/rails/commands
+.rb:23:in `<top (required)>'
+        from script/rails:6:in `require'
+        from script/rails:6:in `<main>'
