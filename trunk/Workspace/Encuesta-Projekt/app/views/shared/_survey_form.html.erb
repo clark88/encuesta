@@ -7,7 +7,7 @@
   <div class="field">
     <% Surveytype.all.each do |surveytype| %>
     <br><%= #radio_button_tag 'surveytype', surveytype.id, @survey.surveytype_id == surveytype.id 
-    radio_button_tag(@survey.surveytype_id, "surveytype.id")
+    f.radio_button(:surveytype, surveytype.id)
     %>
     <%= label_tag "surveytype_#{surveytype}", surveytype.bezeichnung
     %>
