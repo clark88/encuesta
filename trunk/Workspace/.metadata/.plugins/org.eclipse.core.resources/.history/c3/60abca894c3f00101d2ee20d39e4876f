@@ -1,0 +1,16 @@
+class QuestionsController < ApplicationController
+  def show
+    render :text=> "test"
+  end
+
+  def new
+  	@question = current_user.surveys.question.build(params[:survey])
+  end
+
+  def edit
+  end
+
+  def delete
+  end
+
+end
