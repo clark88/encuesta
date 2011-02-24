@@ -16,13 +16,13 @@ header img {
 /* Die Sidebox */
 #sidebox {
     width:13em;
-    background:#dcdcdc;
+    background:#3c9aa6;
     margin:0 ;
     padding:0.5em;
     position:relative;
     margin:30px auto;
     margin-top:100px;
-    left:410px;
+    left:350px;
 }
 
 .round {
@@ -52,7 +52,11 @@ header img {
     right:0;
 }
 
+#menuebar {
 
+	 position: absolute;
+	 
+}
 
 
 
@@ -79,7 +83,7 @@ a:visited {
 nav {
     position:relative;
     margin: 0 auto;
-    left:370px;
+    left:390px;
     padding: 0 0.8em;
     white-space: nowrap;
 }
