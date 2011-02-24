@@ -30,7 +30,7 @@ end
 		if @survey.save
       		flash[:success] = "Umfrage erstellt!"
       		cookies[:surveyid] = @survey.id
-			redirect_to(home_path)
+			redirect_to(edit_survey_path(@survey))
     	else
     		flash[:failure] = "Umfragetyp oder Bezeichnung fehlt!"
     		@feed_items = []
@@ -43,8 +43,10 @@ end
 	end
 # Edit-Methode soll aus der übergebenen ID das Survey aus der Datenbank holen
   def edit
-  	
+    @survey = Survey.find(params[:id])
+    @title = "Edit Survey"
   end
+
  #Löschen Funktions  
   def destroy
   	@survey.destroy

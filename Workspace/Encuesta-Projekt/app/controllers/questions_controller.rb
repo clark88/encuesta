@@ -35,7 +35,20 @@ class QuestionsController < ApplicationController
 		
 	end
 
-  def edit
+   def edit
+    @question = Question.find(params[:id])
+    @title = "Edit Question"
+  end
+  
+  def update
+  	@question = Question.find(params[:id])
+    if @question.update_attributes(params[:survey])
+      flash[:success] = "Profile updated."
+      redirect_to @survey
+    else
+      @title = "Edit Survey"
+      render 'edit'
+    end
   end
 
   def delete
