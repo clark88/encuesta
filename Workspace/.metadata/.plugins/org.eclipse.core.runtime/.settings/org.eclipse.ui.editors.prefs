@@ -1,16 +1,16 @@
-#Wed Feb 23 09:56:30 CET 2011
-xmlTagPairOccurrenceIndicationColor=182,182,182
+#Thu Feb 24 04:19:11 VET 2011
+xmlTagPairOccurrenceIndicationColor=104,104,104
 xmlTagPairOccurrenceIndicationHighlighting=false
-htmlTagPairOccurrenceIndicationTextStyle=BOX
 xmlTagPairOccurrenceIndication=true
+htmlTagPairOccurrenceIndicationTextStyle=BOX
 xmlTagPairOccurrenceIndicationTextStyle=BOX
 htmlTagPairOccurrenceIndicationHighlighting=false
 rubyBlockPairOccurrenceIndication=true
-rubyBlockPairOccurrenceIndicationColor=182,182,182
+rubyBlockPairOccurrenceIndicationColor=104,104,104
 eclipse.preferences.version=1
 rubyBlockPairOccurrenceIndicationHighlighting=false
-htmlTagPairOccurrenceIndication=true
 rubyBlockPairOccurrenceIndicationTextStyle=BOX
 searchResultIndicationColor=100,106,110
-htmlTagPairOccurrenceIndicationColor=182,182,182
+htmlTagPairOccurrenceIndication=true
+htmlTagPairOccurrenceIndicationColor=104,104,104
 overviewRuler_migration=migrated_3.1

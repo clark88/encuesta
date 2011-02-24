@@ -17616,3 +17616,953 @@ Rendered shared/_feed.html.erb (62.4ms)
 Rendered shared/_user_info.html.erb (15.6ms)
 Rendered pages/home.html.erb within layouts/application (187.2ms)
 Completed 200 OK in 421ms (Views: 280.8ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-24 09:51:27 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered pages/home.html.erb within layouts/application (140.6ms)
+Completed 200 OK in 1000ms (Views: 187.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-02-24 09:51:48 +0100
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Ee2NQQL8YR1UnTKDKgGq5U0X12eXk3N0uJAo0Bpw9Q=", "session"=>{"login"=>"DALLAS", "passwort"=>"penis"}, "x"=>"0", "y"=>"0"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."login" = 'DALLAS') LIMIT 1
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+Rendered sessions/new.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 219ms (Views: 62.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-02-24 09:51:59 +0100
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Ee2NQQL8YR1UnTKDKgGq5U0X12eXk3N0uJAo0Bpw9Q=", "session"=>{"login"=>"DALLAS", "passwort"=>"penis"}, "x"=>"0", "y"=>"0"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."login" = 'DALLAS') LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered sessions/new.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 125ms (Views: 62.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-02-24 09:53:52 +0100
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Ee2NQQL8YR1UnTKDKgGq5U0X12eXk3N0uJAo0Bpw9Q=", "session"=>{"login"=>"max.mustermann@olb.de", "passwort"=>"penis"}, "x"=>"0", "y"=>"0"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."login" = 'max.mustermann@olb.de') LIMIT 1
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+Rendered sessions/new.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 125ms (Views: 62.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-24 09:53:59 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+Rendered pages/home.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 141ms (Views: 62.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-02-24 09:54:11 +0100
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Ee2NQQL8YR1UnTKDKgGq5U0X12eXk3N0uJAo0Bpw9Q=", "session"=>{"login"=>"max.mustermann@olb.de", "passwort"=>"Penis"}, "x"=>"0", "y"=>"0"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."login" = 'max.mustermann@olb.de') LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered sessions/new.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 141ms (Views: 62.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2011-02-24 10:16:22 +0100
+  Processing by UsersController#new as HTML
+Completed   in 47ms
+
+ArgumentError (Unknown validator: 'mesage'):
+  app/models/user.rb:35:in `<class:User>'
+  app/models/user.rb:16:in `<top (required)>'
+  app/controllers/users_controller.rb:18:in `new'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.3ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2011-02-24 10:16:38 +0100
+  Processing by UsersController#new as HTML
+Completed   in 31ms
+
+ArgumentError (Unknown validator: 'message'):
+  app/models/user.rb:35:in `<class:User>'
+  app/models/user.rb:16:in `<top (required)>'
+  app/controllers/users_controller.rb:18:in `new'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.3ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2011-02-24 10:17:36 +0100
+  Processing by UsersController#new as HTML
+Completed   in 31ms
+
+ArgumentError (Unknown validator: 'message'):
+  app/models/user.rb:35:in `<class:User>'
+  app/models/user.rb:16:in `<top (required)>'
+  app/controllers/users_controller.rb:18:in `new'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.3ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2011-02-24 10:17:38 +0100
+  Processing by UsersController#new as HTML
+Completed   in 47ms
+
+ArgumentError (Unknown validator: 'message'):
+  app/models/user.rb:35:in `<class:User>'
+  app/models/user.rb:16:in `<top (required)>'
+  app/controllers/users_controller.rb:18:in `new'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (15.6ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.3ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2011-02-24 10:18:30 +0100
+  Processing by UsersController#new as HTML
+Rendered shared/_error_messages.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered users/new.html.erb within layouts/application (46.9ms)
+Completed 200 OK in 125ms (Views: 93.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-02-24 10:19:04 +0100
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Ee2NQQL8YR1UnTKDKgGq5U0X12eXk3N0uJAo0Bpw9Q=", "user"=>{"login"=>"DALLAS", "name"=>"Stefan ", "vorname"=>"Willenborg", "email"=>"max.klausen@ewetel.net", "passwort"=>"test", "passwort_confirmation"=>"test"}, "commit"=>"Sign up"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('max.klausen@ewetel.net')) LIMIT 1
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."login") = LOWER('DALLAS')) LIMIT 1[0m
+Rendered shared/_error_messages.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered users/new.html.erb within layouts/application (31.3ms)
+Completed 200 OK in 328ms (Views: 78.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-02-24 10:28:33 +0100
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Ee2NQQL8YR1UnTKDKgGq5U0X12eXk3N0uJAo0Bpw9Q=", "user"=>{"login"=>"DALLAS", "name"=>"Stefan ", "vorname"=>"Willenborg", "email"=>"max.klausen@ewetel.net", "passwort"=>"test", "passwort_confirmation"=>"test"}, "commit"=>"Sign up"}
+Completed   in 47ms
+
+ArgumentError (Unknown validator: 'message'):
+  app/models/user.rb:35:in `<class:User>'
+  app/models/user.rb:16:in `<top (required)>'
+  app/controllers/users_controller.rb:37:in `create'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-02-24 10:28:46 +0100
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Ee2NQQL8YR1UnTKDKgGq5U0X12eXk3N0uJAo0Bpw9Q=", "user"=>{"login"=>"DALLAS", "name"=>"Stefan ", "vorname"=>"Willenborg", "email"=>"max.klausen@ewetel.net", "passwort"=>"test", "passwort_confirmation"=>"test"}, "commit"=>"Sign up"}
+Completed   in 31ms
+
+SyntaxError (C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:104: syntax error, unexpected keyword_end, expecting $end):
+  app/controllers/users_controller.rb:37:in `create'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-02-24 10:28:47 +0100
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Ee2NQQL8YR1UnTKDKgGq5U0X12eXk3N0uJAo0Bpw9Q=", "user"=>{"login"=>"DALLAS", "name"=>"Stefan ", "vorname"=>"Willenborg", "email"=>"max.klausen@ewetel.net", "passwort"=>"test", "passwort_confirmation"=>"test"}, "commit"=>"Sign up"}
+Completed   in 0ms
+
+SyntaxError (C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:104: syntax error, unexpected keyword_end, expecting $end):
+  app/controllers/users_controller.rb:37:in `create'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (15.6ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-02-24 10:30:56 +0100
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Ee2NQQL8YR1UnTKDKgGq5U0X12eXk3N0uJAo0Bpw9Q=", "user"=>{"login"=>"DALLAS", "name"=>"Stefan ", "vorname"=>"Willenborg", "email"=>"max.klausen@ewetel.net", "passwort"=>"test", "passwort_confirmation"=>"test"}, "commit"=>"Sign up"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('max.klausen@ewetel.net')) LIMIT 1
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."login") = LOWER('DALLAS')) LIMIT 1[0m
+Completed   in 47ms
+
+NoMethodError (undefined method `keyword' for #<User:0x1e02640>):
+  app/controllers/users_controller.rb:38:in `create'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (15.6ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-02-24 10:31:18 +0100
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Ee2NQQL8YR1UnTKDKgGq5U0X12eXk3N0uJAo0Bpw9Q=", "user"=>{"login"=>"DALLAS", "name"=>"Stefan ", "vorname"=>"Willenborg", "email"=>"max.klausen@ewetel.net", "passwort"=>"test", "passwort_confirmation"=>"test"}, "commit"=>"Sign up"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('max.klausen@ewetel.net')) LIMIT 1
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."login") = LOWER('DALLAS')) LIMIT 1[0m
+Rendered shared/_error_messages.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered users/new.html.erb within layouts/application (31.2ms)
+Completed 200 OK in 156ms (Views: 78.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-02-24 10:31:31 +0100
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Ee2NQQL8YR1UnTKDKgGq5U0X12eXk3N0uJAo0Bpw9Q=", "user"=>{"login"=>"DALLAS", "name"=>"Stefan ", "vorname"=>"Willenborg", "email"=>"max.klausen@ewetel.net", "passwort"=>"", "passwort_confirmation"=>""}, "commit"=>"Sign up"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('max.klausen@ewetel.net')) LIMIT 1
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."login") = LOWER('DALLAS')) LIMIT 1[0m
+Rendered shared/_error_messages.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered users/new.html.erb within layouts/application (46.9ms)
+Completed 200 OK in 141ms (Views: 78.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-02-24 10:32:14 +0100
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Ee2NQQL8YR1UnTKDKgGq5U0X12eXk3N0uJAo0Bpw9Q=", "user"=>{"login"=>"DALLAS", "name"=>"Stefan ", "vorname"=>"Willenborg", "email"=>"max.klausen@ewetel.net", "passwort"=>"", "passwort_confirmation"=>""}, "commit"=>"Sign up"}
+Completed   in 16ms
+
+SyntaxError (C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:44: syntax error, unexpected tASSOC, expecting keyword_end
+                       :confirmation => true,
+                                       ^
+C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:44: Can't assign to true
+C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:45: syntax error, unexpected tASSOC, expecting tCOLON2 or '[' or '.'
+                       :length       => { :within => 6..40 }
+                                       ^):
+  app/controllers/users_controller.rb:37:in `create'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (15.6ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (46.9ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-02-24 10:32:34 +0100
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Ee2NQQL8YR1UnTKDKgGq5U0X12eXk3N0uJAo0Bpw9Q=", "user"=>{"login"=>"DALLAS", "name"=>"Stefan ", "vorname"=>"Willenborg", "email"=>"max.klausen@ewetel.net", "passwort"=>"", "passwort_confirmation"=>""}, "commit"=>"Sign up"}
+Completed   in 31ms
+
+ArgumentError (Unknown validator: 'message'):
+  app/models/user.rb:43:in `<class:User>'
+  app/models/user.rb:16:in `<top (required)>'
+  app/controllers/users_controller.rb:37:in `create'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (62.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-02-24 10:33:20 +0100
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Ee2NQQL8YR1UnTKDKgGq5U0X12eXk3N0uJAo0Bpw9Q=", "user"=>{"login"=>"DALLAS", "name"=>"Stefan ", "vorname"=>"Willenborg", "email"=>"max.klausen@ewetel.net", "passwort"=>"", "passwort_confirmation"=>""}, "commit"=>"Sign up"}
+Completed   in 31ms
+
+ArgumentError (Unknown validator: 'message'):
+  app/models/user.rb:43:in `<class:User>'
+  app/models/user.rb:16:in `<top (required)>'
+  app/controllers/users_controller.rb:37:in `create'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (31.2ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (62.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-02-24 10:33:28 +0100
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Ee2NQQL8YR1UnTKDKgGq5U0X12eXk3N0uJAo0Bpw9Q=", "user"=>{"login"=>"DALLAS", "name"=>"Stefan ", "vorname"=>"Willenborg", "email"=>"max.klausen@ewetel.net", "passwort"=>"", "passwort_confirmation"=>""}, "commit"=>"Sign up"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('max.klausen@ewetel.net')) LIMIT 1
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."login") = LOWER('DALLAS')) LIMIT 1[0m
+Rendered shared/_error_messages.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered users/new.html.erb within layouts/application (31.2ms)
+Completed 200 OK in 172ms (Views: 78.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-02-24 10:41:25 +0100
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Ee2NQQL8YR1UnTKDKgGq5U0X12eXk3N0uJAo0Bpw9Q=", "user"=>{"login"=>"DALLAS", "name"=>"Stefan ", "vorname"=>"Willenborg", "email"=>"max.klausen@ewetel.net", "passwort"=>"", "passwort_confirmation"=>""}, "commit"=>"Sign up"}
+  [1m[35mUser Load (15.6ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('max.klausen@ewetel.net')) LIMIT 1
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."login") = LOWER('DALLAS')) LIMIT 1[0m
+Rendered shared/_error_messages.html.erb (15.6ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered users/new.html.erb within layouts/application (31.2ms)
+Completed 200 OK in 141ms (Views: 78.1ms | ActiveRecord: 15.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-02-24 10:41:37 +0100
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Ee2NQQL8YR1UnTKDKgGq5U0X12eXk3N0uJAo0Bpw9Q=", "user"=>{"login"=>"", "name"=>"Stefan ", "vorname"=>"Willenborg", "email"=>"max.klausen@ewetel.net", "passwort"=>"testen", "passwort_confirmation"=>"testen"}, "commit"=>"Sign up"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('max.klausen@ewetel.net')) LIMIT 1
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."login") = LOWER('')) LIMIT 1[0m
+Rendered shared/_error_messages.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered users/new.html.erb within layouts/application (31.2ms)
+Completed 200 OK in 156ms (Views: 78.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-02-24 10:41:42 +0100
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Ee2NQQL8YR1UnTKDKgGq5U0X12eXk3N0uJAo0Bpw9Q=", "user"=>{"login"=>"", "name"=>"", "vorname"=>"Willenborg", "email"=>"max.klausen@ewetel.net", "passwort"=>"testen", "passwort_confirmation"=>"testen"}, "commit"=>"Sign up"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('max.klausen@ewetel.net')) LIMIT 1
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."login") = LOWER('')) LIMIT 1[0m
+Rendered shared/_error_messages.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered users/new.html.erb within layouts/application (31.2ms)
+Completed 200 OK in 172ms (Views: 62.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-02-24 10:42:15 +0100
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Ee2NQQL8YR1UnTKDKgGq5U0X12eXk3N0uJAo0Bpw9Q=", "user"=>{"login"=>"", "name"=>"Stefan", "vorname"=>"", "email"=>"max.klausen@ewetel.net", "passwort"=>"testen", "passwort_confirmation"=>"testen"}, "commit"=>"Sign up"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('max.klausen@ewetel.net')) LIMIT 1
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."login") = LOWER('')) LIMIT 1[0m
+Rendered shared/_error_messages.html.erb (0.0ms)
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered users/new.html.erb within layouts/application (93.7ms)
+Completed 200 OK in 203ms (Views: 140.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-02-24 10:44:35 +0100
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Ee2NQQL8YR1UnTKDKgGq5U0X12eXk3N0uJAo0Bpw9Q=", "user"=>{"login"=>"", "name"=>"Stefan", "vorname"=>"", "email"=>"max.klausen@ewetel.net", "passwort"=>"testen", "passwort_confirmation"=>"testen"}, "commit"=>"Sign up"}
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+Completed   in 62ms
+
+NoMethodError (undefined method `validates_presnce_of' for #<Class:0x1c5a470>):
+  app/models/user.rb:44:in `<class:User>'
+  app/models/user.rb:16:in `<top (required)>'
+  app/controllers/users_controller.rb:37:in `create'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-02-24 10:45:07 +0100
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Ee2NQQL8YR1UnTKDKgGq5U0X12eXk3N0uJAo0Bpw9Q=", "user"=>{"login"=>"", "name"=>"Stefan", "vorname"=>"", "email"=>"max.klausen@ewetel.net", "passwort"=>"testen", "passwort_confirmation"=>"testen"}, "commit"=>"Sign up"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('max.klausen@ewetel.net')) LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."login") = LOWER('')) LIMIT 1
+Rendered shared/_error_messages.html.erb (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+Rendered users/new.html.erb within layouts/application (31.2ms)
+Completed 200 OK in 172ms (Views: 78.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-02-24 10:45:18 +0100
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Ee2NQQL8YR1UnTKDKgGq5U0X12eXk3N0uJAo0Bpw9Q=", "user"=>{"login"=>"", "name"=>"", "vorname"=>"", "email"=>"", "passwort"=>"", "passwort_confirmation"=>""}, "commit"=>"Sign up"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('')) LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."login") = LOWER('')) LIMIT 1
+Rendered shared/_error_messages.html.erb (46.9ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+Rendered users/new.html.erb within layouts/application (62.5ms)
+Completed 200 OK in 172ms (Views: 109.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-02-24 10:55:43 +0100
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Ee2NQQL8YR1UnTKDKgGq5U0X12eXk3N0uJAo0Bpw9Q=", "user"=>{"login"=>"", "name"=>"", "vorname"=>"", "email"=>"", "passwort"=>"", "passwort_confirmation"=>""}, "commit"=>"Sign up"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('')) LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."login") = LOWER('')) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."login") = LOWER('')) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('')) LIMIT 1
+Rendered shared/_error_messages.html.erb (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+Rendered users/new.html.erb within layouts/application (31.2ms)
+Completed 200 OK in 156ms (Views: 78.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-02-24 10:56:17 +0100
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Ee2NQQL8YR1UnTKDKgGq5U0X12eXk3N0uJAo0Bpw9Q=", "user"=>{"login"=>"DALLAS", "name"=>"", "vorname"=>"", "email"=>"max.mustermann@olb.de", "passwort"=>"", "passwort_confirmation"=>""}, "commit"=>"Sign up"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('max.mustermann@olb.de')) LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."login") = LOWER('DALLAS')) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."login") = LOWER('DALLAS')) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('max.mustermann@olb.de')) LIMIT 1
+Rendered shared/_error_messages.html.erb (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+Rendered users/new.html.erb within layouts/application (31.2ms)
+Completed 200 OK in 156ms (Views: 78.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-02-24 11:00:11 +0100
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Ee2NQQL8YR1UnTKDKgGq5U0X12eXk3N0uJAo0Bpw9Q=", "user"=>{"login"=>"DALLAS", "name"=>"", "vorname"=>"", "email"=>"max.mustermann@olb.de", "passwort"=>"", "passwort_confirmation"=>""}, "commit"=>"Sign up"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."login") = LOWER('DALLAS')) LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('max.mustermann@olb.de')) LIMIT 1
+Rendered shared/_error_messages.html.erb (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+Rendered users/new.html.erb within layouts/application (31.2ms)
+Completed 200 OK in 156ms (Views: 78.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-02-24 11:06:20 +0100
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Ee2NQQL8YR1UnTKDKgGq5U0X12eXk3N0uJAo0Bpw9Q=", "user"=>{"login"=>"DALLAS", "name"=>"", "vorname"=>"", "email"=>"max.mustermann@olb.de", "passwort"=>"", "passwort_confirmation"=>""}, "commit"=>"Sign up"}
+Completed   in 16ms
+
+SyntaxError (C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:27: invalid multibyte char (US-ASCII)
+C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:27: invalid multibyte char (US-ASCII)
+C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:27: syntax error, unexpected $end, expecting keyword_end
+... => "Bitte nehmen sie einen kürzeren Namen"
+...                               ^):
+  app/controllers/users_controller.rb:37:in `create'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (15.6ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (156.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-24 11:06:33 +0100
+  Processing by PagesController#home as HTML
+Completed   in 16ms
+
+SyntaxError (C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:27: invalid multibyte char (US-ASCII)
+C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:27: invalid multibyte char (US-ASCII)
+C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:27: syntax error, unexpected $end, expecting keyword_end
+... => "Bitte nehmen sie einen kürzeren Namen"
+...                               ^):
+  app/helpers/sessions_helper.rb:55:in `user_from_remember_token'
+  app/helpers/sessions_helper.rb:49:in `current_user'
+  app/helpers/sessions_helper.rb:24:in `signed_in?'
+  app/controllers/pages_controller.rb:4:in `home'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.6ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-24 11:07:13 +0100
+  Processing by PagesController#home as HTML
+Completed   in 16ms
+
+SyntaxError (C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:28: invalid multibyte char (US-ASCII)
+C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:28: invalid multibyte char (US-ASCII)
+C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:28: syntax error, unexpected $end, expecting keyword_end
+...rt => "Bitte nehmen sie ein längeres Passwort"
+...                               ^):
+  app/helpers/sessions_helper.rb:55:in `user_from_remember_token'
+  app/helpers/sessions_helper.rb:49:in `current_user'
+  app/helpers/sessions_helper.rb:24:in `signed_in?'
+  app/controllers/pages_controller.rb:4:in `home'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (15.6ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (15.6ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-24 11:07:29 +0100
+  Processing by PagesController#home as HTML
+Completed   in 16ms
+
+SyntaxError (C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:28: invalid multibyte char (US-ASCII)
+C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:28: invalid multibyte char (US-ASCII)
+C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:28: syntax error, unexpected $end, expecting keyword_end
+...rt => "Bitte nehmen sie ein längeres Passwort"
+...                               ^):
+  app/helpers/sessions_helper.rb:55:in `user_from_remember_token'
+  app/helpers/sessions_helper.rb:49:in `current_user'
+  app/helpers/sessions_helper.rb:24:in `signed_in?'
+  app/controllers/pages_controller.rb:4:in `home'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (15.6ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (15.6ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-24 11:07:31 +0100
+  Processing by PagesController#home as HTML
+Completed   in 16ms
+
+SyntaxError (C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:28: invalid multibyte char (US-ASCII)
+C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:28: invalid multibyte char (US-ASCII)
+C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:28: syntax error, unexpected $end, expecting keyword_end
+...rt => "Bitte nehmen sie ein längeres Passwort"
+...                               ^):
+  app/helpers/sessions_helper.rb:55:in `user_from_remember_token'
+  app/helpers/sessions_helper.rb:49:in `current_user'
+  app/helpers/sessions_helper.rb:24:in `signed_in?'
+  app/controllers/pages_controller.rb:4:in `home'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (15.6ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.2ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-02-24 11:07:46 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+Rendered pages/home.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 125ms (Views: 62.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at 2011-02-24 11:07:48 +0100
+  Processing by UsersController#new as HTML
+Rendered shared/_error_messages.html.erb (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+Rendered users/new.html.erb within layouts/application (46.9ms)
+Completed 200 OK in 125ms (Views: 93.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-02-24 11:08:11 +0100
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Ee2NQQL8YR1UnTKDKgGq5U0X12eXk3N0uJAo0Bpw9Q=", "user"=>{"login"=>"", "name"=>"Willenborg", "vorname"=>"Stefan", "email"=>"", "passwort"=>"", "passwort_confirmation"=>""}, "commit"=>"Sign up"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."login") = LOWER('')) LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('')) LIMIT 1
+Rendered shared/_error_messages.html.erb (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+Rendered users/new.html.erb within layouts/application (31.2ms)
+Completed 200 OK in 125ms (Views: 78.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-02-24 11:10:01 +0100
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Ee2NQQL8YR1UnTKDKgGq5U0X12eXk3N0uJAo0Bpw9Q=", "user"=>{"login"=>"", "name"=>"Willenborg", "vorname"=>"Stefan", "email"=>"", "passwort"=>"", "passwort_confirmation"=>""}, "commit"=>"Sign up"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."login") = LOWER('')) LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('')) LIMIT 1
+Rendered shared/_error_messages.html.erb (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+Rendered users/new.html.erb within layouts/application (31.2ms)
+Completed 200 OK in 156ms (Views: 62.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-02-24 11:10:07 +0100
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Ee2NQQL8YR1UnTKDKgGq5U0X12eXk3N0uJAo0Bpw9Q=", "user"=>{"login"=>"", "name"=>"", "vorname"=>"Stefan", "email"=>"", "passwort"=>"", "passwort_confirmation"=>""}, "commit"=>"Sign up"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."login") = LOWER('')) LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('')) LIMIT 1
+Rendered shared/_error_messages.html.erb (15.6ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+Rendered users/new.html.erb within layouts/application (46.9ms)
+Completed 200 OK in 156ms (Views: 93.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-02-24 11:12:53 +0100
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Ee2NQQL8YR1UnTKDKgGq5U0X12eXk3N0uJAo0Bpw9Q=", "user"=>{"login"=>"", "name"=>"", "vorname"=>"Stefan", "email"=>"", "passwort"=>"", "passwort_confirmation"=>""}, "commit"=>"Sign up"}
+Completed   in 16ms
+
+SyntaxError (C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:28: invalid multibyte char (US-ASCII)
+C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:28: invalid multibyte char (US-ASCII)
+C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:28: syntax error, unexpected $end, expecting keyword_end
+  					  :message => "Bitte geben sie einen kürzeren Namen ein"
+  					                                        ^):
+  app/controllers/users_controller.rb:37:in `create'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-02-24 11:13:20 +0100
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Ee2NQQL8YR1UnTKDKgGq5U0X12eXk3N0uJAo0Bpw9Q=", "user"=>{"login"=>"", "name"=>"", "vorname"=>"Stefan", "email"=>"", "passwort"=>"", "passwort_confirmation"=>""}, "commit"=>"Sign up"}
+Completed   in 16ms
+
+SyntaxError (C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:28: invalid multibyte char (US-ASCII)
+C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:28: invalid multibyte char (US-ASCII)
+C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:28: syntax error, unexpected $end, expecting keyword_end
+  					  :too_long => "Bitte geben sie einen kürzeren Namen ein"
+  					                                         ^):
+  app/controllers/users_controller.rb:37:in `create'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-02-24 11:13:21 +0100
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Ee2NQQL8YR1UnTKDKgGq5U0X12eXk3N0uJAo0Bpw9Q=", "user"=>{"login"=>"", "name"=>"", "vorname"=>"Stefan", "email"=>"", "passwort"=>"", "passwort_confirmation"=>""}, "commit"=>"Sign up"}
+Completed   in 0ms
+
+SyntaxError (C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:28: invalid multibyte char (US-ASCII)
+C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:28: invalid multibyte char (US-ASCII)
+C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:28: syntax error, unexpected $end, expecting keyword_end
+  					  :too_long => "Bitte geben sie einen kürzeren Namen ein"
+  					                                         ^):
+  app/controllers/users_controller.rb:37:in `create'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-02-24 11:17:46 +0100
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Ee2NQQL8YR1UnTKDKgGq5U0X12eXk3N0uJAo0Bpw9Q=", "user"=>{"login"=>"", "name"=>"", "vorname"=>"Stefan", "email"=>"", "passwort"=>"", "passwort_confirmation"=>""}, "commit"=>"Sign up"}
+Completed   in 16ms
+
+SyntaxError (C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:28: invalid multibyte char (US-ASCII)
+C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:28: invalid multibyte char (US-ASCII)
+C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:28: syntax error, unexpected $end, expecting keyword_end
+  					  :message => "Bitte geben sie einen kürzeren Namen ein"
+  					                                        ^):
+  app/controllers/users_controller.rb:37:in `create'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-02-24 11:18:06 +0100
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Ee2NQQL8YR1UnTKDKgGq5U0X12eXk3N0uJAo0Bpw9Q=", "user"=>{"login"=>"", "name"=>"", "vorname"=>"Stefan", "email"=>"", "passwort"=>"", "passwort_confirmation"=>""}, "commit"=>"Sign up"}
+Completed   in 16ms
+
+SyntaxError (C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:29: syntax error, unexpected tSYMBEG, expecting keyword_do or '{' or '('
+  validates_length_of :passwort, :within => 6..40, :...
+                       ^
+C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:29: syntax error, unexpected ',', expecting keyword_end
+...of :passwort, :within => 6..40, :allow_blank => true,
+...                               ^
+C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:29: Can't assign to true
+C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:30: syntax error, unexpected tASSOC, expecting tCOLON2 or '[' or '.'
+  					  :too_short => "Bitte längeres Passwort angeben",
+  					               ^
+C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:30: invalid multibyte char (US-ASCII)
+C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:30: invalid multibyte char (US-ASCII)):
+  app/controllers/users_controller.rb:37:in `create'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-02-24 11:18:28 +0100
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Ee2NQQL8YR1UnTKDKgGq5U0X12eXk3N0uJAo0Bpw9Q=", "user"=>{"login"=>"", "name"=>"", "vorname"=>"Stefan", "email"=>"", "passwort"=>"", "passwort_confirmation"=>""}, "commit"=>"Sign up"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."login") = LOWER('')) LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('')) LIMIT 1
+Rendered shared/_error_messages.html.erb (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+Rendered users/new.html.erb within layouts/application (31.3ms)
+Completed 200 OK in 156ms (Views: 78.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-02-24 11:18:35 +0100
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Ee2NQQL8YR1UnTKDKgGq5U0X12eXk3N0uJAo0Bpw9Q=", "user"=>{"login"=>"", "name"=>"", "vorname"=>"Stefan", "email"=>"", "passwort"=>"test", "passwort_confirmation"=>""}, "commit"=>"Sign up"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."login") = LOWER('')) LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('')) LIMIT 1
+Rendered shared/_error_messages.html.erb (15.6ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+Rendered users/new.html.erb within layouts/application (46.9ms)
+Completed 200 OK in 141ms (Views: 78.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-02-24 11:19:11 +0100
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Ee2NQQL8YR1UnTKDKgGq5U0X12eXk3N0uJAo0Bpw9Q=", "user"=>{"login"=>"", "name"=>"hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhafjaifjasifjisfjsaifjsafijiasifjasifjasifjasifjsiofjifjasifjawifjjwj i vjflasfas ", "vorname"=>"Stefan", "email"=>"", "passwort"=>"test", "passwort_confirmation"=>""}, "commit"=>"Sign up"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."login") = LOWER('')) LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('')) LIMIT 1
+Rendered shared/_error_messages.html.erb (15.6ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+Rendered users/new.html.erb within layouts/application (31.3ms)
+Completed 200 OK in 172ms (Views: 78.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-02-24 11:20:24 +0100
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Ee2NQQL8YR1UnTKDKgGq5U0X12eXk3N0uJAo0Bpw9Q=", "user"=>{"login"=>"", "name"=>"hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhafjaifjasifjisfjsaifjsafijiasifjasifjasifjasifjsiofjifjasifjawifjjwj i vjflasfas ", "vorname"=>"Stefan", "email"=>"", "passwort"=>"test", "passwort_confirmation"=>""}, "commit"=>"Sign up"}
+Completed   in 16ms
+
+SyntaxError (C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:30: invalid multibyte char (US-ASCII)
+C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:30: invalid multibyte char (US-ASCII)
+C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:30: syntax error, unexpected $end, expecting keyword_end
+  					  :too_short => "Bitte längeres Passwort angeben",
+  					                          ^):
+  app/controllers/users_controller.rb:37:in `create'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-02-24 11:22:45 +0100
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Ee2NQQL8YR1UnTKDKgGq5U0X12eXk3N0uJAo0Bpw9Q=", "user"=>{"login"=>"", "name"=>"hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhafjaifjasifjisfjsaifjsafijiasifjasifjasifjasifjsiofjifjasifjawifjjwj i vjflasfas ", "vorname"=>"Stefan", "email"=>"", "passwort"=>"test", "passwort_confirmation"=>""}, "commit"=>"Sign up"}
+Completed   in 47ms
+
+SyntaxError (C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:30: invalid multibyte char (US-ASCII)
+C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:30: invalid multibyte char (US-ASCII)
+C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:30: syntax error, unexpected $end, expecting keyword_end
+  					  :too_short => "Bitte längeres Passwort angeben",
+  					                          ^):
+  app/controllers/users_controller.rb:37:in `create'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-02-24 11:22:46 +0100
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Ee2NQQL8YR1UnTKDKgGq5U0X12eXk3N0uJAo0Bpw9Q=", "user"=>{"login"=>"", "name"=>"hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhafjaifjasifjisfjsaifjsafijiasifjasifjasifjasifjsiofjifjasifjawifjjwj i vjflasfas ", "vorname"=>"Stefan", "email"=>"", "passwort"=>"test", "passwort_confirmation"=>""}, "commit"=>"Sign up"}
+Completed   in 16ms
+
+SyntaxError (C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:30: invalid multibyte char (US-ASCII)
+C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:30: invalid multibyte char (US-ASCII)
+C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:30: syntax error, unexpected $end, expecting keyword_end
+  					  :too_short => "Bitte längeres Passwort angeben",
+  					                          ^):
+  app/controllers/users_controller.rb:37:in `create'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-02-24 11:22:46 +0100
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Ee2NQQL8YR1UnTKDKgGq5U0X12eXk3N0uJAo0Bpw9Q=", "user"=>{"login"=>"", "name"=>"hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhafjaifjasifjisfjsaifjsafijiasifjasifjasifjasifjsiofjifjasifjawifjjwj i vjflasfas ", "vorname"=>"Stefan", "email"=>"", "passwort"=>"test", "passwort_confirmation"=>""}, "commit"=>"Sign up"}
+Completed   in 0ms
+
+SyntaxError (C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:30: invalid multibyte char (US-ASCII)
+C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:30: invalid multibyte char (US-ASCII)
+C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:30: syntax error, unexpected $end, expecting keyword_end
+  					  :too_short => "Bitte längeres Passwort angeben",
+  					                          ^):
+  app/controllers/users_controller.rb:37:in `create'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (15.6ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-02-24 11:22:58 +0100
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Ee2NQQL8YR1UnTKDKgGq5U0X12eXk3N0uJAo0Bpw9Q=", "user"=>{"login"=>"", "name"=>"hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhafjaifjasifjisfjsaifjsafijiasifjasifjasifjasifjsiofjifjasifjawifjjwj i vjflasfas ", "vorname"=>"Stefan", "email"=>"", "passwort"=>"test", "passwort_confirmation"=>""}, "commit"=>"Sign up"}
+Completed   in 16ms
+
+SyntaxError (C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:30: invalid multibyte char (US-ASCII)
+C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:30: invalid multibyte char (US-ASCII)
+C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:30: syntax error, unexpected $end, expecting keyword_end
+  					  :too_short => "Bitte längeres Passwort angeben",
+  					                          ^):
+  app/controllers/users_controller.rb:37:in `create'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-02-24 11:23:31 +0100
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Ee2NQQL8YR1UnTKDKgGq5U0X12eXk3N0uJAo0Bpw9Q=", "user"=>{"login"=>"", "name"=>"hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhafjaifjasifjisfjsaifjsafijiasifjasifjasifjasifjsiofjifjasifjawifjjwj i vjflasfas ", "vorname"=>"Stefan", "email"=>"", "passwort"=>"test", "passwort_confirmation"=>""}, "commit"=>"Sign up"}
+Completed   in 0ms
+
+SyntaxError (C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:30: invalid multibyte char (US-ASCII)
+C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:30: invalid multibyte char (US-ASCII)
+C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:30: syntax error, unexpected $end, expecting keyword_end
+  					  :too_short => "Bitte längeres Passwort angeben",
+  					                          ^):
+  app/controllers/users_controller.rb:37:in `create'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-02-24 12:19:50 +0100
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Ee2NQQL8YR1UnTKDKgGq5U0X12eXk3N0uJAo0Bpw9Q=", "user"=>{"login"=>"", "name"=>"hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhafjaifjasifjisfjsaifjsafijiasifjasifjasifjasifjsiofjifjasifjawifjjwj i vjflasfas ", "vorname"=>"Stefan", "email"=>"", "passwort"=>"test", "passwort_confirmation"=>""}, "commit"=>"Sign up"}
+Completed   in 16ms
+
+SyntaxError (C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:30: invalid multibyte char (US-ASCII)
+C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:30: invalid multibyte char (US-ASCII)
+C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:30: syntax error, unexpected $end, expecting keyword_end
+  					  :too_short => "länger",
+  					                    ^):
+  app/controllers/users_controller.rb:37:in `create'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (15.6ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-02-24 12:19:51 +0100
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Ee2NQQL8YR1UnTKDKgGq5U0X12eXk3N0uJAo0Bpw9Q=", "user"=>{"login"=>"", "name"=>"hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhafjaifjasifjisfjsaifjsafijiasifjasifjasifjasifjsiofjifjasifjawifjjwj i vjflasfas ", "vorname"=>"Stefan", "email"=>"", "passwort"=>"test", "passwort_confirmation"=>""}, "commit"=>"Sign up"}
+Completed   in 16ms
+
+SyntaxError (C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:30: invalid multibyte char (US-ASCII)
+C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:30: invalid multibyte char (US-ASCII)
+C:/Dokumente und Einstellungen/sWillenborg/Desktop/Encuesta/Workspace/Encuesta-Projekt/app/models/user.rb:30: syntax error, unexpected $end, expecting keyword_end
+  					  :too_short => "länger",
+  					                    ^):
+  app/controllers/users_controller.rb:37:in `create'
+
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (15.6ms)
+Rendered c:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-02-24 12:28:20 +0100
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Ee2NQQL8YR1UnTKDKgGq5U0X12eXk3N0uJAo0Bpw9Q=", "user"=>{"login"=>"", "name"=>"hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhafjaifjasifjisfjsaifjsafijiasifjasifjasifjasifjsiofjifjasifjawifjjwj i vjflasfas ", "vorname"=>"Stefan", "email"=>"", "passwort"=>"test", "passwort_confirmation"=>""}, "commit"=>"Sign up"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."login") = LOWER('')) LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('')) LIMIT 1
+Rendered shared/_error_messages.html.erb (15.6ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+Rendered users/new.html.erb within layouts/application (46.9ms)
+Completed 200 OK in 219ms (Views: 93.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-02-24 12:29:16 +0100
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Ee2NQQL8YR1UnTKDKgGq5U0X12eXk3N0uJAo0Bpw9Q=", "user"=>{"login"=>"", "name"=>"hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhafjaifjasifjisfjsaifjsafijiasifjasifjasifjasifjsiofjifjasifjawifjjwj i vjflasfas ", "vorname"=>"Stefan", "email"=>"", "passwort"=>"test", "passwort_confirmation"=>""}, "commit"=>"Sign up"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."login") = LOWER('')) LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('')) LIMIT 1
+Rendered shared/_error_messages.html.erb (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+Rendered users/new.html.erb within layouts/application (31.2ms)
+Completed 200 OK in 172ms (Views: 78.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-02-24 12:36:18 +0100
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Ee2NQQL8YR1UnTKDKgGq5U0X12eXk3N0uJAo0Bpw9Q=", "user"=>{"login"=>"", "name"=>"hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhafjaifjasifjisfjsaifjsafijiasifjasifjasifjasifjsiofjifjasifjawifjjwj i vjflasfas ", "vorname"=>"Stefan", "email"=>"", "passwort"=>"test", "passwort_confirmation"=>""}, "commit"=>"Sign up"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."login") = LOWER('')) LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('')) LIMIT 1
+Rendered shared/_error_messages.html.erb (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+Rendered users/new.html.erb within layouts/application (31.2ms)
+Completed 200 OK in 172ms (Views: 78.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-02-24 12:36:51 +0100
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Ee2NQQL8YR1UnTKDKgGq5U0X12eXk3N0uJAo0Bpw9Q=", "user"=>{"login"=>"", "name"=>"hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhafjaifjasifjisfjsaifjsafijiasifjasifjasifjasifjsiofjifjasifjawifjjwj i vjflasfas ", "vorname"=>"Stefan", "email"=>"", "passwort"=>"test", "passwort_confirmation"=>""}, "commit"=>"Sign up"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."login") = LOWER('')) LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('')) LIMIT 1
+Rendered shared/_error_messages.html.erb (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+Rendered users/new.html.erb within layouts/application (46.9ms)
+Completed 200 OK in 187ms (Views: 93.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2011-02-24 12:37:37 +0100
+  Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Ee2NQQL8YR1UnTKDKgGq5U0X12eXk3N0uJAo0Bpw9Q=", "user"=>{"login"=>"", "name"=>"hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhafjaifjasifjisfjsaifjsafijiasifjasifjasifjasifjsiofjifjasifjawifjjwj i vjflasfas ", "vorname"=>"Stefan", "email"=>"", "passwort"=>"test", "passwort_confirmation"=>""}, "commit"=>"Sign up"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."login") = LOWER('')) LIMIT 1[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('')) LIMIT 1
+Rendered shared/_error_messages.html.erb (0.0ms)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
+Rendered users/new.html.erb within layouts/application (46.9ms)
+Completed 200 OK in 172ms (Views: 93.7ms | ActiveRecord: 0.0ms)
