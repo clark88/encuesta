@@ -33,18 +33,22 @@ class User < ActiveRecord::Base
   					  :allow_blank => true
   					 
   #Überprüft, ob die Email das richtige Format anhand der Regex hat
-  validates :email, :format   => { :with => email_regex },
-  					:allow_blank => true
+  validates_format_of :email, 
+  					  :with => email_regex,
+  					  :message => "Format ist falsch. Format: test@xyz.de",
+  					  :allow_blank => true
                    
   # Automatically create the virtual attribute 'passwort_confirmation'.
 
   # Prüfung, ob zu Passwort eine Bestätigung (confirmation) ebenfalls existiert
   # zudem wird geprüft
-  validates :passwort, :confirmation => true
-                       
- 
+
+  validates_confirmation_of :passwort,
+  						   :message => "ist nicht gleich. Die Passwoerter muessen &uuml;bereinstimmen",
+                           :on => :create
+                          
   #Prüft, ob die Eingabefelder leer sind                
-  validates_presence_of :passwort, :vorname, :email, :name, 
+  validates_presence_of :login, :passwort, :vorname, :email, :name, 
   						:message => "darf nicht leer sein." 
 
   #Prüft, ob der Login und die E-Mail schon vorhanden sind
