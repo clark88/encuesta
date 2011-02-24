@@ -1,8 +1,8 @@
 <% if @user.errors.any? %>
   <div id="error_explanation">
-    <h2><%= pluralize(@user.errors.count, "error") %> 
-        prohibited this user from being saved:</h2>
-    <p>There were problems with the following fields:</p>
+    <h2><%= @user.errors.count  %> 
+        Fehler sind vorhanden, der Benutzer konnte nicht angelegt werden: </h2>
+    <p>Die Fehler sind in folgenden Feldern vorhanden:</p>
     <ul>
     <% @user.errors.full_messages.each do |msg| %>
       <li><%= msg %></li>
