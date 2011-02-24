@@ -4,6 +4,9 @@
     Dies ist die Home-Page des Encuesta-Umfragen-Systems. Erstellt in Unterstützung mit
     <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
 </p>
+<% cookies.delete :answertype %>
+<% cookies.delete :questionid %>
+<% cookies.delete :surveyid %>
 <% if signed_in? %>
 <table class="front" summary="For signed-in users">
     <tr>
@@ -11,7 +14,7 @@
         <h1 class="survey">Umfragen</h1>
         <%= render 'shared/survey_form' %>
         <%= render 'shared/feed' %>
-#test
+
       </td>
       <td class="sidebar round">
         <%= render 'shared/user_info' %>

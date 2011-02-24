@@ -1,2 +1,43 @@
 <h1>Surveys#edit</h1>
-<p>Find me in app/views/surveys/edit.html.erb</p>
+<%= form_for(@survey) do |f| %>
+<%= #render 'shared/error_messages', :object => f.object
+%>
+<div class="field">
+    <%= f.label :bezeichnung %>
+    <br />
+    <%= f.text_field :bezeichnung %>
+</div>
+<div class="field">
+
+    <% Surveytype.all.each do |surveytype| %>
+    <br>
+    <%= #radio_button_tag 'surveytype', surveytype.id, @survey.surveytype_id == surveytype.id
+      f.radio_button(:surveytype, surveytype.id)
+    %>
+    <%= label_tag "surveytype_#{surveytype}", surveytype.bezeichnung
+    %>
+    <% end %>
+</div>
+<div class="actions">
+    <%= f.submit "Update" %>
+</div>
+
+
+<div class="field">
+
+    <% Question.find_all_by_survey_id(@survey.id).each do |question| %>
+    <br>
+    
+    <%= label_tag "question_#{question}", question.questiontext
+    %><br>
+    
+    	<% Answer.find_all_by_question_id(question.id).each do |answer| %>
+    	<%= label_tag "answer_#{answer}", answer.answertext
+    	%><br>
+    	<% end %>
+    <% end %>
+</div>
+<% end %>
+
+
+
