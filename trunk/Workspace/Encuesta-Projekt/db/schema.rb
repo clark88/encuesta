@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(:version => 20110224123050) do
   end
 
   create_table "forms", :force => true do |t|
+    t.integer  "survey_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -66,6 +67,8 @@ ActiveRecord::Schema.define(:version => 20110224123050) do
     t.boolean  "AnswerBoolean"
     t.string   "AnswerText"
     t.float    "AnswerRate"
+    t.integer  "answer_id"
+    t.integer  "form_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
