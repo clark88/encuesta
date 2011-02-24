@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     user = User.authenticate(params[:session][:login],
     params[:session][:passwort])
     if user.nil?
-      flash.now[:error] = "Sie failen mal wieder richtig. Geben sie den richtigen Namen oder das richtie Passwort ein."
+      flash.now[:error] = "Der Name oder das Passwort sind falsch. Bitte geben Sie den richtigen Namen oder das richtie Passwort ein."
       @title = "Sign in"
       render 'new'
     else
