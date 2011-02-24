@@ -1,16 +1,18 @@
 class QuestionsController < ApplicationController
   def show
-    render :text=> "test"
+    render :text => cookies[:surveyid]
   end
 
   def new
-  	@question = current_survey.question.build(params[:question])
+  	#render :text => cookies[:surveyid]
+  	@question = Question.new
+  	@title = "Neue Frage"
   end
   
   def create
 		#@question = current_survey.questions.build(params[:question])
-		@question = Survey.find(:survey_id).questions.create(params[:question])
-		#@survey.gesperrt = params[:survey][:gesperrt]
+		
+		@question = Survey.find(cookies[:surveyid]).questions.create(params[:question])
 		
 		if @question.save
       		flash[:success] = "Frage erstellt!"
@@ -20,8 +22,7 @@ class QuestionsController < ApplicationController
     		@feed_items = []
     	end
 
-		#survey.save
-		#redirect_to(home_path)
+		
 	end
 
   def edit

@@ -2147,3 +2147,58 @@ org.eclipse.core.internal.resources.ResourceException: Resource is out of sync w
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
 !SUBENTRY 2 org.eclipse.core.resources 4 274 2011-02-23 14:07:50.887
 !MESSAGE Resource is out of sync with the file system: '/Encuesta-Projekt/log/development.log'.
+!SESSION 2011-02-24 08:30:40.096 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.6.0_20
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=de_DE
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.core.resources 2 10035 2011-02-24 08:30:42.295
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.aptana.scripting 1 0 2011-02-24 08:30:54.058
+!MESSAGE D:\Users\Marvin\AppData\Local\Aptana Studio 3\configuration\org.eclipse.osgi\bundles\70\1\.cp\bundles\bundle-development.ruble\commands\install_bundle.rb is newer than cache file, invalidating cache
+
+!ENTRY com.aptana.scripting 4 0 2011-02-24 08:31:09.907
+!MESSAGE Cannot create property=children for JavaBean=bundle "html" {
+  bundle_precedence: APPLICATION
+  path: D:\Users\Marvin\AppData\Local\Aptana Studio 3\configuration\org.eclipse.osgi\bundles\70\1\.cp\bundles\html.ruble\bundle.rb
+  author: Christopher Williams
+  copyright: null
+  description: null
+  repository: null
+}
+; org.yaml.snakeyaml.nodes.MappingNode cannot be cast to org.yaml.snakeyaml.nodes.ScalarNode
+!STACK 0
+org.yaml.snakeyaml.error.YAMLException: Cannot create property=children for JavaBean=bundle "html" {
+  bundle_precedence: APPLICATION
+  path: D:\Users\Marvin\AppData\Local\Aptana Studio 3\configuration\org.eclipse.osgi\bundles\70\1\.cp\bundles\html.ruble\bundle.rb
+  author: Christopher Williams
+  copyright: null
+  description: null
+  repository: null
+}
+; org.yaml.snakeyaml.nodes.MappingNode cannot be cast to org.yaml.snakeyaml.nodes.ScalarNode
+	at org.yaml.snakeyaml.constructor.Constructor$ConstructMapping.constructJavaBean2ndStep(Constructor.java:291)
+	at org.yaml.snakeyaml.constructor.Constructor$ConstructMapping.construct2ndStep(Constructor.java:191)
+	at com.aptana.scripting.model.BundleCacher$BundleElementsContructor$ConstructBundleElement.construct(BundleCacher.java:593)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.constructObject(BaseConstructor.java:184)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.constructDocument(BaseConstructor.java:143)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.getSingleData(BaseConstructor.java:129)
+	at org.yaml.snakeyaml.Yaml.load(Yaml.java:264)
+	at com.aptana.scripting.model.BundleCacher.load(BundleCacher.java:201)
+	at com.aptana.scripting.model.BundleManager$BundleLoadJob.run(BundleManager.java:99)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.lang.ClassCastException: org.yaml.snakeyaml.nodes.MappingNode cannot be cast to org.yaml.snakeyaml.nodes.ScalarNode
+	at com.aptana.scripting.model.BundleCacher$BundleElementsContructor$ConstructSmartTypingPairsElement.construct(BundleCacher.java:737)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.constructObject(BaseConstructor.java:184)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.constructSequenceStep2(BaseConstructor.java:278)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.constructSequence(BaseConstructor.java:249)
+	at org.yaml.snakeyaml.constructor.Constructor$ConstructSequence.construct(Constructor.java:503)
+	at org.yaml.snakeyaml.constructor.BaseConstructor.constructObject(BaseConstructor.java:184)
+	at org.yaml.snakeyaml.constructor.Constructor$ConstructMapping.constructJavaBean2ndStep(Constructor.java:288)
+	... 9 more
+
+!ENTRY com.aptana.scripting 1 0 2011-02-24 08:31:09.923
+!MESSAGE Due to error loading YAML, bundle at D:\Users\Marvin\AppData\Local\Aptana Studio 3\configuration\org.eclipse.osgi\bundles\70\1\.cp\bundles\html.ruble will not be loaded from cache
