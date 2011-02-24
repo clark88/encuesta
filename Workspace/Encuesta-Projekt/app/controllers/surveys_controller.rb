@@ -4,16 +4,23 @@ class SurveysController < ApplicationController
 	before_filter :authorized_user, :only => :destroy
 
 def show
-	render :text=> "test"
+	#Testshow für die Surveys.. zeigt den im Cookie gespeicherten Id-Wert an
+	render :text=> cookies[:surveyid]
 end
-  
+ #Unwichtig 
   def index
 		flash[:notice] = "You did it"
 	end
   
 
 
-  
+ #Die Create-Methode, welche von dem _survey_form aufgerufen wird
+ # erstellt ein neues Survey über aufruf des aktuellen Users und der übergebenen Parameter
+ # gesperrt wird das Survey noch nicht
+ # der SurveyType wird über die übergebenen Parameter aus dem Formular ebenfalls eingefügt
+ # wenn das Speichert erfolgt ist, wird eine Nachricht ausgeben und das Survey im cookie gespeichert
+ # Grund für cookie: diese ID wird für die folgenden Fragen gebraucht
+ # darauf wird wieder auf die Home-Seite geleitet
   def create
 		@survey = current_user.surveys.build(params[:survey])
 		#@survey.gesperrt = params[:survey][:gesperrt]
@@ -34,16 +41,27 @@ end
 		#survey.save
 		#redirect_to(home_path)
 	end
-
+# Edit-Methode soll aus der übergebenen ID das Survey aus der Datenbank holen
   def edit
+  	
   end
-  
+ #Löschen Funktions  
   def destroy
   	@survey.destroy
     redirect_back_or home_path
   end
 
-  def delete
+
+  
+  def update
+  	@survey = Survey.find(params[:id])
+    if @survey.update_attributes(params[:survey])
+      flash[:success] = "Profile updated."
+      redirect_to @survey
+    else
+      @title = "Edit Survey"
+      render 'edit'
+    end
   end
 
 	private

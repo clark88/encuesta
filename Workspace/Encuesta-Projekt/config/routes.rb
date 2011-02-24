@@ -29,6 +29,7 @@ EncuestaProjekt::Application.routes.draw do
   resources :sessions, :only => [:new, :create, :destroy]
   resources :surveys
   resources :surveytypes
+  resources :questions
   
   get "surveys/new"
   get "surveys/edit"
