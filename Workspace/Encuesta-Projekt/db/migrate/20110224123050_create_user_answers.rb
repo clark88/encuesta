@@ -4,6 +4,8 @@ class CreateUserAnswers < ActiveRecord::Migration
       t.boolean :AnswerBoolean
       t.string :AnswerText
       t.float :AnswerRate
+      t.references :answer
+      t.references :form
 
       t.timestamps
     end

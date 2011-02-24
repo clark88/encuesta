@@ -30,6 +30,7 @@ EncuestaProjekt::Application.routes.draw do
   resources :surveys
   resources :surveytypes
   resources :questions
+  resources :answers
   
   get "surveys/new"
   get "surveys/edit"

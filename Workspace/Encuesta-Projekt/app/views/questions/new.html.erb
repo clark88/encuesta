@@ -5,6 +5,14 @@
   <div class="field">
     <%= f.text_field :questiontext %>
   </div>
+  <div class="field">
+    <% Answertype.all.each do |answertype| %>
+    <br><%= radio_button_tag(:answertype, answertype.id)
+    %>
+    <%= label_tag "answertype_#{answertype}", answertype.bezeichnung
+    %>
+  <% end %>
+  </div>
   <div class="actions">
     <%= f.submit "Fragen erstellen" %>
   </div>
