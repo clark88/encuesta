@@ -18566,3 +18566,132 @@ Rendered shared/_error_messages.html.erb (0.0ms)
   [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 3) LIMIT 1
 Rendered users/new.html.erb within layouts/application (46.9ms)
 Completed 200 OK in 172ms (Views: 93.7ms | ActiveRecord: 0.0ms)
+  [1m[36mSQL (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (2.5ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (141.0ms)[0m  [1mCREATE TABLE "answers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "answertext" varchar(255), "question_id" integer, "answertype_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (127.5ms)[0m  [1mCREATE TABLE "answertypes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "bezeichnung" varchar(255), "beschreibung" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (130.0ms)[0m  [1mCREATE TABLE "questions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "questiontext" varchar(255), "survey_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (2.5ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (122.5ms)[0m  [1mCREATE TABLE "rolls" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "bezeichnung" varchar(255), "beschreibung" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (145.0ms)[0m  [1mCREATE TABLE "surveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "bezeichnung" varchar(255), "gesperrt" boolean, "surveytype_id" integer, "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (2.5ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (295.0ms)[0m  [1mCREATE TABLE "surveytypes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "bezeichnung" varchar(255), "beschreibung" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (2.5ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (125.0ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "vorname" varchar(255), "login" varchar(255), "email" varchar(255), "roll_id" integer, "created_at" datetime, "updated_at" datetime, "encrypted_passwort" varchar(255), "salt" varchar(255)) [0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("users")
+  [1m[36mSQL (163.5ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (135.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36mSQL (182.5ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (132.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110214083411')
+  [1m[36mSQL (132.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110211112857')[0m
+  [1m[35mSQL (132.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110211114025')
+  [1m[36mSQL (127.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110211114108')[0m
+  [1m[35mSQL (135.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110211114751')
+  [1m[36mSQL (112.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110211115030')[0m
+  [1m[35mSQL (130.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110211115633')
+  [1m[36mSQL (130.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110211120045')[0m
+  [1m[35mSQL (217.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20110212201140')
+  [1m[36mSQL (172.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20110214081321')[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (152.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36mSQL (127.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+Migrating to CreateUsers (20110211112857)
+  [1m[36mSQL (2.5ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "vorname" varchar(255), "login" varchar(255), "email" varchar(255), "roll_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110211112857')
+Migrating to CreateRolls (20110211114025)
+  [1m[36mSQL (5.0ms)[0m  [1mCREATE TABLE "rolls" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "bezeichnung" varchar(255), "beschreibung" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (2.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110211114025')
+Migrating to CreateSurveys (20110211114108)
+  [1m[36mSQL (0.0ms)[0m  [1mCREATE TABLE "surveys" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "bezeichnung" varchar(255), "gesperrt" boolean, "surveytype_id" integer, "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (2.5ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110211114108')
+Migrating to CreateSurveytypes (20110211114751)
+  [1m[36mSQL (2.5ms)[0m  [1mCREATE TABLE "surveytypes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "bezeichnung" varchar(255), "beschreibung" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110211114751')
+Migrating to CreateQuestions (20110211115030)
+  [1m[36mSQL (0.0ms)[0m  [1mCREATE TABLE "questions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "questiontext" varchar(255), "survey_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110211115030')
+Migrating to CreateAnswers (20110211115633)
+  [1m[36mSQL (5.0ms)[0m  [1mCREATE TABLE "answers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "answertext" varchar(255), "question_id" integer, "answertype_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110211115633')
+Migrating to CreateAnswertypes (20110211120045)
+  [1m[36mSQL (5.0ms)[0m  [1mCREATE TABLE "answertypes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "bezeichnung" varchar(255), "beschreibung" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20110211120045')
+Migrating to AddEmailUniquenessIndex (20110212201140)
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35mSQL (2.5ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110212201140')[0m
+Migrating to AddPasswortToUsers (20110214081321)
+  [1m[35mSQL (2.5ms)[0m  ALTER TABLE "users" ADD "encrypted_passwort" varchar(255)
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110214081321')[0m
+Migrating to AddSaltToUsers (20110214083411)
+  [1m[35mSQL (4.0ms)[0m  ALTER TABLE "users" ADD "salt" varchar(255)
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110214083411')[0m
+Migrating to CreateForms (20110224121642)
+  [1m[35mSQL (5.0ms)[0m  CREATE TABLE "forms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110224121642')[0m
+Migrating to CreateUserAnswers (20110224123050)
+  [1m[35mSQL (2.5ms)[0m  CREATE TABLE "user_answers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "AnswerBoolean" boolean, "AnswerText" varchar(255), "AnswerRate" float, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20110224123050')[0m
+  [1m[35mSQL (0.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[35mSQL (1.0ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("answers")[0m
+  [1m[35mSQL (1.0ms)[0m  PRAGMA index_list("answertypes")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("forms")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("questions")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("rolls")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("surveys")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("surveytypes")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_list("user_answers")
+  [1m[36mSQL (0.0ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35mSQL (0.0ms)[0m  PRAGMA index_info('index_users_on_email')

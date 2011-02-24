@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  AnswerBoolean: false
+  AnswerText: 
+  AnswerRate: 1.5
+
+two:
+  AnswerBoolean: false
+  AnswerText: 
+  AnswerRate: 1.5

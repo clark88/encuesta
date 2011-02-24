@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110214083411) do
+ActiveRecord::Schema.define(:version => 20110224123050) do
 
   create_table "answers", :force => true do |t|
     t.string   "answertext"
@@ -23,6 +23,11 @@ ActiveRecord::Schema.define(:version => 20110214083411) do
   create_table "answertypes", :force => true do |t|
     t.string   "bezeichnung"
     t.string   "beschreibung"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "forms", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -53,6 +58,14 @@ ActiveRecord::Schema.define(:version => 20110214083411) do
   create_table "surveytypes", :force => true do |t|
     t.string   "bezeichnung"
     t.string   "beschreibung"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "user_answers", :force => true do |t|
+    t.boolean  "AnswerBoolean"
+    t.string   "AnswerText"
+    t.float    "AnswerRate"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
