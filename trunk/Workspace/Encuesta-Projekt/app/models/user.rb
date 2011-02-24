@@ -22,26 +22,37 @@ class User < ActiveRecord::Base
   attr_accessible :name, :vorname, :email, :login, :passwort, :passwort_confirmation
 
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
-  #Überprüft, ob der Name vorhanden ist und die richtige Länge aufweist
-  validates :name,  :presence => true,
-                  :length   => { :maximum => 50 }
-  #Überprüft, ob der Vorname vorhanden ist
-  validates :vorname, :presence => true
-  #Überprüft, ob die Email vorhanden ist, sie das richtige Format anhand der Regex hat und einmalig ist
-  validates :email, :presence => true,
-                   :format   => { :with => email_regex },
-                   :uniqueness => { :case_sensitive => false }
-  #Überprüft, ob ein Login-Name vorhanden ist
-  validates :login, :presence => true
-
+  
+  #Überprüft, ob der Name und das Passwort die richtige Länge aufweist
+  validates_length_of :name, :maximum => 50,
+  					  :message => "ist zu lang. Bitte k&uuml;rzeren eingeben"
+  					  
+  validates_length_of :passwort, :within => 6..40, 
+  					  :too_short => "ist zu kurz. Bitte l&auml;ngers eingeben",
+  					  :too_long => "ist zu lang. Bitte k&uuml;rzers eingeben", 
+  					  :allow_blank => true
+  					 
+  #Überprüft, ob die Email das richtige Format anhand der Regex hat
+  validates :email, :format   => { :with => email_regex },
+  					:allow_blank => true
+                   
   # Automatically create the virtual attribute 'passwort_confirmation'.
 
-  # Prüfung, ob Passwort vorhanden ist und ob eine Bestätigung (confirmation) ebenfalls existiert
-  # zudem wird geprüft, ob die Länge des Passwortes ausreicht
-  validates :passwort, :presence     => true,
-                       :confirmation => true,
-                       :length       => { :within => 6..40 }
+  # Prüfung, ob zu Passwort eine Bestätigung (confirmation) ebenfalls existiert
+  # zudem wird geprüft
+  validates :passwort, :confirmation => true
+                       
+ 
+  #Prüft, ob die Eingabefelder leer sind                
+  validates_presence_of :passwort, :vorname, :email, :name, 
+  						:message => "darf nicht leer sein." 
 
+  #Prüft, ob der Login und die E-Mail schon vorhanden sind
+  validates_uniqueness_of :login, :email,
+ 						  :case_sensitive => false,
+                          :message => "ist schon vorhanden. Bitte neues eintragen"
+                         
+                        	
 # 'before_save' ruft die folgende Methode zum encrypten/verschlüsseln des Passwortes auf, bevor der Datensatz zum User in die Datenbank gespeichert wird
   before_save :encrypt_passwort
   
