@@ -13,16 +13,48 @@
     <!--[if lt IE 8]><%= stylesheet_link_tag 'blueprint/ie' %><![endif]-->
     <%= stylesheet_link_tag 'custom', :media => 'screen' %>
    <%= javascript_include_tag :defaults %>
+   <%= javascript_include_tag "EffeckteButtons.js" %>
   </head>
 
   <body>
   	<!-- Hier beginnt die Hauptseite mit einer Kopfzeile, einem Hauptteil und der Fußzeile -->
       <header>
   		<%= link_to logo, home_path %><br>
-  		<nav class="round">
-   		<ul>
-      		<li><%= link_to "Home", home_path %></li>
+  		<!--><nav class="round">-->
+   		</header>
+   		<br><br>
+   		<br><br>
+   		<br><br>
+   		<br><br>
+      		<center><table border = "0" >
+      			<td><tr>
+					<a href="www.google.de" onmouseover="a1.src='/images/HomeButtonON.png';" 
+					onmouseout="a1.src='/images/HomeButton.png';" 
+					target="www.google.de" name="a1">
+					<img src="/images/HomeButton.png" border="0" alt="" name="a1"></a>
+					</tr>	 	
+					<tr>	<a href="www.google.de" onmouseover="a2.src='/images/HilfeButtonON.png';" 
+					onmouseout="a2.src='/images/HilfeButton.png';" 
+					target="www.google.de" name="a1" >
+					<img src="/images/HilfeButton.png"   border="0" alt="" name="a2"></a>
+					</tr>
+					<tr>
+					<a href="www.google.de" onmouseover="a3.src='/images/KontaktButtonON.png';" 
+					onmouseout="a3.src='/images/KontaktButton.png';" 
+					target="www.google.de" name="a3">
+					<img src="/images/KontaktButton.png" border="0" alt="" name="a3"></a>
+					</tr>
+					<tr>
+					<a href="www.google.de" onmouseover="a1.src='/images/ImpressumButtonON.png';" 
+					onmouseout="a4.src='/images/ImpressumButton.png';" 
+					target="www.google.de" name="a1">
+					<img src="/images/ImpressumButton.png" border="0" alt="" name="a4"></a>
+					</tr>	 		 			
+				</td>
+			</table></center>						
+
       		<% if signed_in? %>
+      			<li><%= link_to "Home", home_path %></li>
       			<li><%= link_to "Benutzer", users_path %></li>
       			<li><%= link_to "Mein Profil", current_user %></li>
       			<li><%= link_to "Einstellungen", edit_user_path(current_user) %></li>
@@ -48,10 +80,11 @@
   <tr><td><br></tr></td>
   </table>
  <br><br>
+
  
   <%= form_for(:session, :url => sessions_path) do |f| %>
   <div class="field">
-    <%= f.label :login %><br />
+    <%= f.label :Benutzername %><br />
     <%= f.text_field :login %>
   </div>
   <div class="field">
@@ -69,7 +102,6 @@
 	<br><br> 
 </div>
 <% end %>
-</header>
 
       <section class="round">
         <% flash.each do |key, value| %>

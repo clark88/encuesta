@@ -1,24 +1,7 @@
 module ApplicationHelper
 	
-	
-def logo
-    image_tag("logo.jpg", :alt => "Encuesta-Umfragen", :class => "round")
- end
- 
- def greyroundtopleft
- 	image_tag("roundedcornr_335844_tl.png")
- end
- 
- def greyroundtopright
- 	image_tag("roundedcornr_335844_tr.png")
- end
- 
- def greyroundbottomleft
- 	image_tag("roundedcornr_335844_bl.png")
- end
- 
- def greyroundbottomright
- 	image_tag("roundedcornr_335844_br.png")
+ def logo
+    image_tag("LogoNeu.png", :alt => "Encuesta-Umfragen", :class => "round")
  end
  
  def loginPic
@@ -32,4 +15,37 @@ def logo
  def registerPic
  	image_tag("Neuregistieren.png", :alt => "Hier registrieren", :class => "round")
  end
+
+ def homeButton
+	image_tag("HomeButton.png", :alt => "HomeButton", :class => "round")
+ end
+ 
+ def homeButtonON
+	image_tag("HomeButtonON.png", :alt => "HomeButtonON", :class => "round")
+ end
+ 
+ def hilfeButton
+	image_tag("HilfeButton.png", :alt => "HilfeButton", :class => "round")
+ end
+ 
+ def hilfeButtonON
+	image_tag("HilfeButtonON.png", :alt => "HilfeButtonON", :class => "round")
+ end
+ 	
+ def kontaktButton
+	image_tag("KontaktButton.png", :alt => "KontaktButton", :class => "round")
+ end
+ 
+ def kontaktButtonON
+	image_tag("KontaktButtonON.png", :alt => "KontaktButtonON", :class => "round")	
+ end
+ 
+ def impressumButton
+	image_tag("HilfeButton.png", :alt => "ImpressumButton", :class => "round")
+ end
+ 
+ def impressumButtonON
+	image_tag("ImpressumButtonON.png", :alt => "ImpressumButtonON", :class => "round")	
+ end
 end
+ 
