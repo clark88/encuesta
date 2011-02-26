@@ -1,6 +1,7 @@
 <h1>Surveys#edit</h1>
 <%= form_for(@survey) do |f| %>
 <%= #render 'shared/error_messages', :object => f.object
+cookies[:surveyid] = @survey.id
 %>
 <div class="field">
     <%= f.label :bezeichnung %>
@@ -39,6 +40,9 @@
     	%><br>
     	<% end %>
     <% end %>
+    
+    <%=	link_to "Neue Frage anlegen", new_question_path 
+    	%><br>
 </div>
 <% end %>
 

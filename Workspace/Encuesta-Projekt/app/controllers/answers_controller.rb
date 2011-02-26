@@ -19,7 +19,7 @@ class AnswersController < ApplicationController
 		
 		if @answer.save
       		flash[:success] = "Frage erstellt!"
-			redirect_to(new_answer_path)
+			redirect_to edit_survey_path(cookies[:surveyid])
     	else
     		flash[:failure] = "Fehler!"
     		@feed_items = []
@@ -40,13 +40,11 @@ class AnswersController < ApplicationController
   	@answer = Answer.find(params[:id])
   	
   	
-  
-  	
-    if @answer.update_attributes(params[:question])
-      flash[:success] = "Frage geändert."
-      redirect_to edit_survey_path
+    if @question.update_attributes(params[:question])
+      flash[:success] = "Profile updated."
+      redirect_to new_answer_path
     else
-      @title = "Edit Answer"
+      @title = "Edit Question"
       render 'edit'
     end
   end

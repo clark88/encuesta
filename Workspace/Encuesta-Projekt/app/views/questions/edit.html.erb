@@ -6,6 +6,19 @@
     <%= f.label :questiontext %>
     <br>
     <%= f.text_field :questiontext %>
+    
+    <br>
+    
+    	<% Answer.find_all_by_question_id(@question.id).each do |answer| %>
+    	<%= label_tag "answer_#{answer}", answer.answertext %>
+    	<%=	link_to "Antwort bearbeiten", edit_answer_path(answer) 
+    	%><br>
+    	
+    	<% end %>
+    	
+    	<%=	link_to "Neue Antwort anlegen", new_answer_path 
+    	%><br>
+  
 </div>
 <div class="field">
   <% Answertype.all.each do |answertype| %>
