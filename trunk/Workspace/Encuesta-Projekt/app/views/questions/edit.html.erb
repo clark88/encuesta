@@ -2,6 +2,7 @@
 <%= form_for(@question) do |f| %>
 <%= #render 'shared/error_messages', :object => f.object
 %>
+<%cookies[:questionid] = @question.id %>
 <div class="field">
     <%= f.label :questiontext %>
     <br>

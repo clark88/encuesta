@@ -1,8 +1,8 @@
 class QuestionsController < ApplicationController
   def show
     #render :text => cookies[:surveyid]
-    render  :text => cookies[:answertype]
-    #render :text => cookies[:questionid]
+    #render  :text => cookies[:answertype]
+    render :text => cookies[:questionid]
   end
 
   def new
