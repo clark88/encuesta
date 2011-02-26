@@ -11,6 +11,12 @@
                                      :confirm => "You sure?",
                                      :title => survey.bezeichnung %>
   </td>
+  <% if survey.gesperrt = "f" %>
+  <td><%= link_to "Bearbeiten", edit_survey_path(survey) %> </td>
+  <% else %>
+  <td><%= "Bearbeiten" %>
+  <% end %>
+  <td><%= link_to "Sperren", survey_path %></td>
   <% end %>
 
 </tr>
