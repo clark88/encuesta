@@ -5,7 +5,7 @@ class SurveysController < ApplicationController
 
 def show
 	#Testshow für die Surveys.. zeigt den im Cookie gespeicherten Id-Wert an
-	render :text=> cookies[:surveyid]
+	#render :text=> cookies[:surveyid]
 end
  #Unwichtig 
   def index
@@ -57,6 +57,7 @@ end
   
   def update
   	@survey = Survey.find(params[:id])
+  	cookies[:surveyid] = @survey.id
     if @survey.update_attributes(params[:survey])
       flash[:success] = "Profile updated."
       redirect_to @survey

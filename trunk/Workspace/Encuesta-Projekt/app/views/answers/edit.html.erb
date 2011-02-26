@@ -1,2 +1,12 @@
 <h1>Answers#edit</h1>
-<p>Find me in app/views/answers/edit.html.erb</p>
+<%= form_for @answer do |f| %>
+  <%= #render 'shared/error_messages', :object => f.object 
+  %>
+  <div class="field">
+    <%= f.text_field :answertext %>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit "Update" %>
+  </div>
+<% end %>
