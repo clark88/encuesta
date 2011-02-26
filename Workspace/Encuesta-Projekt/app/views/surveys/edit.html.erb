@@ -28,11 +28,14 @@
     <% Question.find_all_by_survey_id(@survey.id).each do |question| %>
     <br>
     
-    <%= label_tag "question_#{question}", question.questiontext
-    %><br>
+    <%= label_tag "question_#{question}", question.questiontext %>  
+    <%=	link_to "Frage bearbeiten", edit_question_path(question) %>
+    Achtung, wenn Sie eine Frage bearbeiten, werden die zugehörigen Antworten gelöscht
+    <br>
     
     	<% Answer.find_all_by_question_id(question.id).each do |answer| %>
-    	<%= label_tag "answer_#{answer}", answer.answertext
+    	<%= label_tag "answer_#{answer}", answer.answertext %>
+    	<%=	link_to "Antwort bearbeiten", edit_answer_path(answer) 
     	%><br>
     	<% end %>
     <% end %>
