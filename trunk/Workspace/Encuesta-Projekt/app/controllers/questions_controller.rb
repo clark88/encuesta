@@ -40,18 +40,40 @@ class QuestionsController < ApplicationController
     @title = "Edit Question"
   end
   
+#  def deleteanswers
+#  	
+#  	@question = Question.find(params[:id])
+#  		Answer.delete_all_by_question_id(@question.id)
+#  		
+#  		
+ # 		cookies[:answertype] = answertype.id
+ #		
+ # 		
+ # 		redirect_to answer_new_path
+ #	end
+  
   def update
   	@question = Question.find(params[:id])
-    if @question.update_attributes(params[:survey])
+  	
+  	answertype = Answertype.find(params[:answertype])
+  	cookies[:answertype] = answertype.id
+  	cookies[:questionid] = @question.id
+  	
+  	#Answer.delete_all( "question_id = ")
+  	
+  	Answer.find_all_by_question_id(@question.id).each do |answer|
+  		Answer.destroy(answer.id)
+  	end
+  	
+    if @question.update_attributes(params[:question])
       flash[:success] = "Profile updated."
-      redirect_to @survey
+      redirect_to new_answer_path
     else
-      @title = "Edit Survey"
+      @title = "Edit Question"
       render 'edit'
     end
   end
 
-  def delete
-  end
+ 
 
 end

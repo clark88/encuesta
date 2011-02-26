@@ -19,7 +19,7 @@ class AnswersController < ApplicationController
 		
 		if @answer.save
       		flash[:success] = "Frage erstellt!"
-			redirect_to(home_path)
+			redirect_to(new_answer_path)
     	else
     		flash[:failure] = "Fehler!"
     		@feed_items = []
@@ -30,7 +30,25 @@ class AnswersController < ApplicationController
 		
   end
 
-  def edit
+ def edit
+    @answer = Answer.find(params[:id])
+    @title = "Edit Answer"
+  end
+  
+  
+  def update
+  	@answer = Answer.find(params[:id])
+  	
+  	
+  
+  	
+    if @answer.update_attributes(params[:question])
+      flash[:success] = "Frage geändert."
+      redirect_to edit_survey_path
+    else
+      @title = "Edit Answer"
+      render 'edit'
+    end
   end
 
   def delete
