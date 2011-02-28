@@ -6,10 +6,14 @@ class EvaluationController < ApplicationController
   end
 	 
 	# Diese Methode Ruft die jeweilige Umfrage auf und zeigt die Ergebniswerte neben den Fragen an
+	### Es handelt sich hier um einen Entwurf, die ganze Funktionalität lässt sich vermutlich leichter in der
+	### View umsetzten.
 	def evaluate
 		survey = Survey.find(params[:id])
 		q = Question.where(:servayid => params[:id])
 		q.each do |question|
+			#Umfragename ausgeben
+			flash[:success] = survay.name
 			#Frage wird ausgegeben
 			flash[:success] = question.questiontext
 			
@@ -19,6 +23,7 @@ class EvaluationController < ApplicationController
 			flash[:success] = answer.answertext
 				
 			###Prüfund des Fragetyps ###
+			
 			 if a.answertype_id = 1 || a.answertype_id = 2
 				#Count über die Anworten der User
 				c = user_answer.Count.Where(:answer_id => answer.id, :AnswerBoolean => "t")
