@@ -1,8 +1,7 @@
 class EvaluationController < ApplicationController
 	 
   def show
-    #render  :text => cookies[:answertype]
-    #render :text => cookies[:questionid]
+      flash[:success] = "Hallo!"
   end
 	 
 	# Diese Methode Ruft die jeweilige Umfrage auf und zeigt die Ergebniswerte neben den Fragen an
