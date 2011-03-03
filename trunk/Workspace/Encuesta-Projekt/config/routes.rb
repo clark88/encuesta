@@ -36,7 +36,7 @@ EncuestaProjekt::Application.routes.draw do
   resources :sessions, :only => [:new, :create, :destroy]
   resources :surveys do
    member do
-    get 'lock'
+    get "lock"
    end
   end 
   resources :surveytypes
