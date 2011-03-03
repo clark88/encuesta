@@ -6,7 +6,7 @@ class SurveysController < ApplicationController
     #Testshow für die Surveys.. zeigt den im Cookie gespeicherten Id-Wert an
     #render :text=> cookies[:surveyid]
     @survey = Survey.find(params[:id])
-    @title = "Edit Survey"
+    @title = "Show Survey"
   end
 
   #Unwichtig

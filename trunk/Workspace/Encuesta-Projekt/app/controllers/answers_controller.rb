@@ -13,7 +13,7 @@ class AnswersController < ApplicationController
   def create
 		
 	if params[:answer]
-		@answer = Question.find(cookies[:questionid]).answers.create(params[:answer])
+		@form = Question.find(cookies[:questionid]).answers.create(params[:answer])
 		
 		@answer.answertype = Answertype.find(cookies[:answertype])
 		
@@ -40,7 +40,7 @@ class AnswersController < ApplicationController
   	@answer = Answer.find(params[:id])
   	
   	
-    if @question.update_attributes(params[:question])
+    if @answer.update_attributes(params[:answer])
       flash[:success] = "Profile updated."
       redirect_to new_answer_path
     else
