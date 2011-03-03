@@ -72,5 +72,10 @@ class SurveysController < ApplicationController
     @survey = Survey.find(params[:id])
     redirect_to home_path unless current_user?(@survey.user)
   end
+  
+    def lock
+	@survey = Survey.find(params[:id])
+	@survey.gesperrt = true
+	redirect_to :back
 
 end
