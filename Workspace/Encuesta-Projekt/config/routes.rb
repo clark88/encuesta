@@ -1,4 +1,8 @@
 EncuestaProjekt::Application.routes.draw do
+  get "user_answers/new"
+
+  get "forms/new"
+
   get "answers/new"
 
   get "answers/edit"
@@ -38,9 +42,9 @@ EncuestaProjekt::Application.routes.draw do
   resources :surveytypes
   resources :questions
   resources :answers
-  
-  get "surveys/new"
-  get "surveys/edit"
+  resources :forms
+  resources :user_answers
+
 
   get "pages/home"
   root :to => 'pages#home'
