@@ -27,30 +27,28 @@
    		<br><br>
    		<br><br>
       		<center><table border = "0" >
-      			<td><tr>
-					<a href="www.google.de" onmouseover="a1.src='/images/HomeButtonON.png';" 
-					onmouseout="a1.src='/images/HomeButton.png';" 
-					target="www.google.de" name="a1">
+      			<tr><td>
+					<a href="http://127.0.0.1:3000/home" onmouseover="a1.src='/images/HomeButtonON.png';" 
+					onmouseout="a1.src='/images/HomeButton.png';" name="a1">
 					<img src="/images/HomeButton.png" border="0" alt="" name="a1"></a>
-					</tr>	 	
-					<tr>	<a href="www.google.de" onmouseover="a2.src='/images/HilfeButtonON.png';" 
-					onmouseout="a2.src='/images/HilfeButton.png';" 
-					target="www.google.de" name="a1" >
+					</td>	 	
+					<td>	<a href="http://127.0.0.1:3000/help/" onmouseover="a2.src='/images/HilfeButtonON.png';" 
+					onmouseout="a2.src='/images/HilfeButton.png';" name="a1" >
 					<img src="/images/HilfeButton.png"   border="0" alt="" name="a2"></a>
-					</tr>
-					<tr>
+					</td>
+					<td>
 					<a href="www.google.de" onmouseover="a3.src='/images/KontaktButtonON.png';" 
 					onmouseout="a3.src='/images/KontaktButton.png';" 
 					target="www.google.de" name="a3">
 					<img src="/images/KontaktButton.png" border="0" alt="" name="a3"></a>
-					</tr>
-					<tr>
+					</td>
+					<td>
 					<a href="www.google.de" onmouseover="a4.src='/images/ImpressumButtonON.png';" 
 					onmouseout="a4.src='/images/ImpressumButton.png';" 
 					target="www.google.de" name="a4">
 					<img src="/images/ImpressumButton.png" border="0" alt="" name="a4"></a>
-					</tr>	 		 			
-				</td>
+					</td>	 		 			
+				</tr>
 			</table></center>						
 
       		<% if signed_in? %>
@@ -59,11 +57,8 @@
       			<li><%= link_to "Mein Profil", current_user %></li>
       			<li><%= link_to "Einstellungen", edit_user_path(current_user) %></li>
       		<% end %>
-      		<li><%= link_to "Hilfe", help_path %></li>
       		<% if signed_in? %>
       			<li><%= link_to "Ausloggen", signout_path, :method => :delete %></li>
-      		<% else %>
-      			<li><%= link_to "Einloggen", signin_path %></li>
       		<% end %>
       		<% if signed_in? %>
       			<li>Eingeloggt als:<%= @current_user.login %></li>
@@ -74,14 +69,7 @@
  
  <% else %>
   <div id = "sidebox" class= "round">
-  <br>
-   <table border="0">
-  <tr><td><center><%= image_tag("Login.png") %></center></tr></td>
-  <tr><td><br></tr></td>
-  </table>
- <br><br>
-
- 
+  <br> 
   <%= form_for(:session, :url => sessions_path) do |f| %>
   <div class="field">
     <%= f.label :Benutzername %><br />
@@ -102,7 +90,7 @@
 	<br><br> 
 </div>
 <% end %>
-
+	
       <section class="round">
         <% flash.each do |key, value| %>
           <div class="flash <%= key %>"><%= value %></div>
@@ -113,14 +101,6 @@
 
     
  <footer>
-  <nav class="round">
-    <ul>
-      <li><%= link_to "Über uns", about_path %></li>
-      <li><%= link_to "Kontakt", contact_path %></li>
-      <li><a href="http://news.railstutorial.org/">News von Rails Tutorial</a></li>
-      <li><a href="http://www.railstutorial.org/">Rails Tutorial</a></li>
-    </ul>
-  </nav>
 </footer>
 
   </body>
