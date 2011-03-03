@@ -26,10 +26,15 @@ EncuestaProjekt::Application.routes.draw do
   
   get "users/edit"
   
+  get "surveys/8/lock"
 
-  resources :users
+  resources :users 
   resources :sessions, :only => [:new, :create, :destroy]
-  resources :surveys
+  resources :surveys do
+   member do
+    get 'lock'
+   end
+  end 
   resources :surveytypes
   resources :questions
   resources :answers
