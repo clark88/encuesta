@@ -1,6 +1,7 @@
 body {
     
    font-family:Arial;
+ 
     }
 
 header {
@@ -21,9 +22,20 @@ header img {
     padding:0.5em;
     position:relative;
     margin:30px auto;
-    margin-top:100px;
-    left:350px;
+    margin-top:10px;
+    left:400px;
 }
+
+#middlebox {
+    width:46em;
+    background:#3c9aa6;
+    margin: 0em ;
+    padding:0.5em;
+    position:relative;
+    margin-top:-245px;
+    left:160px;
+}
+
 
 .round {
     -moz-border-radius:    30px;
@@ -34,23 +46,8 @@ header img {
 
 #sidebox img {
     position:absolute;
-}
-#sidebox img.eck5 {
-    top:0;
-    left:0;
-}
-#sidebox img.eck6 {
-    top:0;
-    right:0;
-}
-#sidebox img.eck7 {
-    bottom:0;
-    left:0;
-}
-#sidebox img.eck8 {
-    bottom:0;
-    right:0;
-}
+    border: 0;
+
 
 #menuebar {
 
@@ -82,10 +79,12 @@ a:visited {
 
 nav {
     position:relative;
-    margin: 0 auto;
+    margin: 100px auto;
+    margin-top:100px;
     left:390px;
     padding: 0 0.8em;
     white-space: nowrap;
+    
 }
 nav ul {
     margin: 0;
