@@ -1,10 +1,11 @@
+<div id = "middlebox" class= "round">
 Legen sie hier einen neuen User an!
 
 
 
 <%= form_for(@user) do |f| %>
   <%= render 'shared/error_messages', :object => f.object %>
-
+	<br>
   <div class="field">
     <%= f.label :login %><br />
     <%= f.text_field :login %>
@@ -29,8 +30,10 @@ Legen sie hier einen neuen User an!
     <%= f.label :passwort_confirmation, "Confirmation" %><br />
     <%= f.password_field :passwort_confirmation %>
   </div>
+  <br>
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>
+  <br>
 <% end %>
-
+</div>
