@@ -6,6 +6,7 @@ body {
 
 header {
     padding-top: 20px;
+     
 }
 header img {
     padding: 0em;
@@ -23,17 +24,17 @@ header img {
     position:relative;
     margin:30px auto;
     margin-top:10px;
-    left:400px;
+    left:350px;
 }
 
 #middlebox {
-    width:46em;
+    width:45em;
     background:#3c9aa6;
     margin: 0em ;
-    padding:0.5em;
+    padding:1em;
     position:relative;
     margin-top:-245px;
-    left:160px;
+    left:170px;
 }
 
 
@@ -43,6 +44,9 @@ header img {
     border-radius:         30px;
 }
 
+.abstand {
+	margin-top:10em;
+}
 
 #sidebox img {
     position:absolute;
