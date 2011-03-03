@@ -59,7 +59,8 @@ class UsersController < ApplicationController
     @user =User.find(params[:id])
 
     if session [:user_id] != @user.user_id
-      flash[:notice] = "Sorry du bist nicht der richtige User"
+    	               
+      flash[:notice] = "Sie haben keine Berechtigung den Benutzer zu l&ouml;schen" 
       redirect_to(users_path)
     end
 
@@ -73,7 +74,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update_attributes(params[:user])
-      flash[:success] = "Profile updated."
+      flash[:success] = "Der Benutzer wurde aktualisiert."
       redirect_to @user
     else
       @title = "Edit user"

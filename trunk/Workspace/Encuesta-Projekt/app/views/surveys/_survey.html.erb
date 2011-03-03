@@ -8,15 +8,17 @@
   <% if current_user?(survey.user) %>
   <td>
     <%= link_to "Löschen", survey, :method => :delete,
-                                     :confirm => "You sure?",
+                                     :confirm => "Sind sie sich sicher?",
                                      :title => survey.bezeichnung %>
   </td>
-  <% if survey.gesperrt = "f" %>
+  <% if !survey.gesperrt%>
   <td><%= link_to "Bearbeiten", edit_survey_path(survey) %> </td>
   <% else %>
-  <td><%= "Bearbeiten" %>
+  <td>Bearbeiten</td>
   <% end %>
-  <td><%= link_to "Sperren", survey_path %></td>
+  <td><%= link_to "Sperren", survey, :method => :lock,
+  									 :confirm => "Sind sie sich sicher?",
+                                     :title => survey.bezeichnung %></td>
   <% end %>
   
   <td><%= link_to "Auswerten" %></td>
