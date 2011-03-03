@@ -1,16 +1,21 @@
 class QuestionsController < ApplicationController
+  
+  #Die Show-methodde ... wird nicht viel machen
   def show
     #render :text => cookies[:surveyid]
     #render  :text => cookies[:answertype]
     render :text => cookies[:questionid]
   end
-
+	
+	# New-Methode  wird über das new-View initialisiert, ohne wird das view-template nicht geöffnet
   def new
   	#render :text => cookies[:surveyid]
   	@question = Question.new
   	@title = "Neue Frage"
   end
   
+  
+  # Legt die neue Frage in die Datenbank, dabei ruft das Mutter-Survey die create Methode auf.
   def create
   	
   		

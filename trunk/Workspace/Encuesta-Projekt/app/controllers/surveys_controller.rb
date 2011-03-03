@@ -77,5 +77,6 @@ class SurveysController < ApplicationController
 	@survey = Survey.find(params[:id])
 	@survey.gesperrt = true
 	redirect_to :back
+	end
 
 end
