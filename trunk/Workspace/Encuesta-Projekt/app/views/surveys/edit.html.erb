@@ -1,6 +1,7 @@
 <h1>Surveys#edit</h1>
 <%= form_for(@survey) do |f| %>
-<%= #render 'shared/error_messages', :object => f.object
+<% #render 'shared/error_messages', :object => f.object
+
 cookies[:surveyid] = @survey.id
 %>
 <div class="field">
@@ -31,7 +32,7 @@ cookies[:surveyid] = @survey.id
     
     <%= label_tag "question_#{question}", question.questiontext %>  
     <%=	link_to "Frage bearbeiten", edit_question_path(question) %>
-    Achtung, wenn Sie eine Frage bearbeiten, werden die zugehörigen Antworten gelöscht
+    <br>Achtung, wenn Sie eine Frage bearbeiten, werden die zugehörigen Antworten gelöscht
     <%#BK: Und wenn nur ein Rechtschreibfehler vorliegt??%>
     <br>
     
