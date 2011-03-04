@@ -34,9 +34,8 @@
 					<img src="/images/HilfeButton.png"   border="0" alt="" name="a2"></a>
 					</td>
 					<td>
-					<a href="www.google.de" onmouseover="a3.src='/images/KontaktButtonON.png';" 
-					onmouseout="a3.src='/images/KontaktButton.png';" 
-					target="www.google.de" name="a3">
+					<a href="http://127.0.0.1:3000/contact/" onmouseover="a3.src='/images/KontaktButtonON.png';" 
+					onmouseout="a3.src='/images/KontaktButton.png';"  name="a3">
 					<img src="/images/KontaktButton.png" border="0" alt="" name="a3"></a>
 					</td>
 					<td>
@@ -78,7 +77,8 @@
     <%= f.password_field :passwort %>
   </div>
   <div class="actions">
-    <%= link_to "Passwort vergessen?", home_path,  :class => "forgottenpw" %><br>
+    <%= #link_to "Passwort vergessen?", home_path,  :class => "forgottenpw" 
+    %><br>
   </div>
   <div class="actions">
     <%= image_submit_tag("GO.png") %>
@@ -88,7 +88,7 @@
 	<br><br> 
 </div>
 <% end %>
-	<>
+	
       <section class="round">
         <% flash.each do |key, value| %>
           <div class="flash <%= key %>"><%= value %></div>
