@@ -22,10 +22,7 @@
   		<%= link_to logo, home_path %><br>
   		<!--><nav class="round">-->
    		</header>
-   		<br><br>
-   		<br><br>
-   		<br><br>
-   		<br><br>
+   		<div class = "abstand">
       		<center><table border = "0" >
       			<tr><td>
 					<a href="http://127.0.0.1:3000/home" onmouseover="a1.src='/images/HomeButtonON.png';" 
@@ -49,7 +46,8 @@
 					<img src="/images/ImpressumButton.png" border="0" alt="" name="a4"></a>
 					</td>	 		 			
 				</tr>
-			</table></center>						
+			</table></center>
+			</div>						
 
       		<% if signed_in? %>
       			<li><%= link_to "Home", home_path %></li>
@@ -90,7 +88,7 @@
 	<br><br> 
 </div>
 <% end %>
-	
+	<>
       <section class="round">
         <% flash.each do |key, value| %>
           <div class="flash <%= key %>"><%= value %></div>

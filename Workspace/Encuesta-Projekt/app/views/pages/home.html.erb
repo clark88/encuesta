@@ -1,4 +1,6 @@
-<div id = "middlebox" class= "round">
+<% if signed_in? %>
+<div class ="abstand">
+<div id = "middlebox" class= "round">		
 <h1>Encuesta</h1>
 <p>
     Dies ist die Home-Page des Encuesta-Umfragen-Systems. Erstellt in Unterstützung mit
@@ -7,7 +9,7 @@
 <% cookies.delete :answertype %>
 <% cookies.delete :questionid %>
 <% cookies.delete :surveyid %>
-<% if signed_in? %>
+
 <table class="front" summary="For signed-in users">
     <tr>
       <td class="main">
@@ -22,9 +24,19 @@
       </td>
     </tr>
   </table>
-
+</div>
+</div>
 <!--><p>Sie sind eingelogt als  <%= @current_user.login %> !   </p>-->
     <% else %>
+    <div id = "middlebox" class= "round">
+<% cookies.delete :answertype %>
+<% cookies.delete :questionid %>
+<% cookies.delete :surveyid %>
+    <p>
+    Dies ist die Home-Page des Encuesta-Umfragen-Systems. Erstellt in Unterstützung mit
+    <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
+	</p>
     <%= link_to "Jetzt registrieren!", signup_path, :class => "signup_button round" %>
     <% end %>
 </div>
+
