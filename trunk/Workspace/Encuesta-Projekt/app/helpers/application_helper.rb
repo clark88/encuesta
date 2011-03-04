@@ -1,7 +1,7 @@
 module ApplicationHelper
 	
  def logo
-    image_tag("LogoNeu.png", :alt => "Encuesta-Umfragen", :class => "round")
+    image_tag("Logo.png", :alt => "Encuesta-Umfragen", :class => "round")
  end
  
  def loginPic
