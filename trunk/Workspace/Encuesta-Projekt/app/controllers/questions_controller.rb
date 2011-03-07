@@ -30,7 +30,7 @@ class QuestionsController < ApplicationController
       		cookies[:questionid] = @question.id
       		
       		cookies[:answertype] = answertype.id
-			redirect_to(home_path)
+			redirect_to new_answer_path(:question_id =>@question.id, :answertype => answertype.id)
     	else
     		flash[:failure] = "Fehler!"
     		@feed_items = []

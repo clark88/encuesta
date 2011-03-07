@@ -41,6 +41,13 @@ end %> <br>    Das Funzt so nicht
   <% end %>
 </div>
 
+<% Survey.all.each do |survey| %>
+    <br>
+    <%= label_tag "survey_#{survey}", survey.bezeichnung %><br>
+    <%=    	link_to "Teilnehmen", new_form_path(:survey_id => survey.id)
+    %>
+  <% end %>
+
 
 <div class="form_row">
   <p>Theme:</p>
