@@ -47,5 +47,10 @@ module ApplicationHelper
  def impressumButtonON
 	image_tag("ImpressumButtonON.png", :alt => "ImpressumButtonON", :class => "round")	
  end
+ 
+  def menue
+ 	image_tag("Menue.png", :alt => "Menue", :class => "round")
+ end
+ 
 end
  
