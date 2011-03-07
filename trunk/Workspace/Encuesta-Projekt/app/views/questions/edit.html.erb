@@ -7,9 +7,14 @@
     <%= f.label :questiontext %>
     <br>
     <%= f.text_field :questiontext %>
-    
+</div>
+<br>
+<div class="actions">
+    <%= f.submit "Text Ändern" %>
+</div>
     <br>
     
+    <div class="field">
     	<% Answer.find_all_by_question_id(@question.id).each do |answer| %>
     	<%= label_tag "answer_#{answer}", answer.answertext %>
     	<%=	link_to "Antwort bearbeiten", edit_answer_path(answer) 
