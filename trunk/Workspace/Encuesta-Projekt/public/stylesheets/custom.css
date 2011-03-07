@@ -21,10 +21,10 @@ header img {
     background:#3c9aa6;
     margin:0 ;
     padding:0.5em;
-    position:relative;
+    position:absolute;
     margin:30px auto;
     margin-top:10px;
-    left:350px;
+    left:67%;
 }
 
 #middlebox {
@@ -33,9 +33,34 @@ header img {
     margin: 0em ;
     padding:1em;
     position:relative;
-    margin-top:-245px;
-    left:170px;
+    margin-top:10px;
+    position: absolute ;
+    left: 13%;
 }
+
+#middleboxSignIn {
+	width:45em;
+    background:#3c9aa6;
+    margin: 0em ;
+    padding:1em;
+    position:relative;
+    margin-top:10px;
+    position: absolute ;
+    left: 29%;
+}
+
+#menuebox {
+    width:12em;
+    background:#3c9aa6;
+    margin:0 ;
+    padding:0.5em;
+    margin-right: 15%;
+    position:absolute;
+    margin:30px auto;
+    margin-top:10px;
+    left: 13%;
+ } 
+
 
 
 .round {
@@ -51,14 +76,6 @@ header img {
 #sidebox img {
     position:absolute;
     border: 0;
-
-
-#menuebar {
-
-	 position: absolute;
-	 
-}
-
 
 
 a {
