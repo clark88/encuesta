@@ -21,7 +21,7 @@ class QuestionsController < ApplicationController
   		
 		#@question = current_survey.questions.build(params[:question])
 		
-		@question = Survey.find(cookies[:surveyid]).questions.create(params[:question])
+		@question = Survey.find(params[:survey_id]).questions.create(params[:question])
 		
 		answertype = Answertype.find(params[:answertype])
 		
@@ -61,8 +61,8 @@ class QuestionsController < ApplicationController
   	@question = Question.find(params[:id])
   	
   	answertype = Answertype.find(params[:answertype])
-  	cookies[:answertype] = answertype.id
-  	cookies[:questionid] = @question.id
+  	#cookies[:answertype] = answertype.id
+  	#cookies[:questionid] = @question.id
   	
   	#Answer.delete_all( "question_id = ")
   	
@@ -72,7 +72,7 @@ class QuestionsController < ApplicationController
   	
     if @question.update_attributes(params[:question])
       flash[:success] = "Profile updated."
-      redirect_to new_answer_path
+      redirect_to new_answer_path(:question_id => @question.id, :answertype => answertype.id)
     else
       @title = "Edit Question"
       render 'edit'

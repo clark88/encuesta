@@ -17,7 +17,7 @@
     	
     	<% end %>
     	
-    	<%=	link_to "Neue Antwort anlegen", new_answer_path 
+    	<%=	link_to "Neue Antwort anlegen", new_answer_path(:question_id => @question.id) 
     	%><br>
   
 </div>
