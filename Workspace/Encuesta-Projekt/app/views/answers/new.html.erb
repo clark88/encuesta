@@ -1,6 +1,5 @@
-<h1>Answers#new <%=render :text => params[:answertype]%>
+<h1>Answers#new <%=render :text => params[:question_id]%>
 	</h1>
-<h1>Answers#new</h1>
 <%= form_for @answer do |f| %>
   <%= #render 'shared/error_messages', :object => f.object 
   %>
@@ -8,6 +7,8 @@
     <%= f.text_field :answertext %>
   </div>
   <div class="actions">
+  	<%= hidden_field_tag :question_id, params[:question_id]%>
+  	<%= hidden_field_tag :answertype, params[:answertype]%>
     <%= f.submit "Hinzufügen" %>
   </div>
 <% end %>

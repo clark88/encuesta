@@ -2,7 +2,7 @@
 <%= #render 'shared/error_messages', :object => f.object
 %>
 
-<%survey = Survey.find(cookies[:surveyid]) %>
+<%survey = Survey.find(params[:survey_id]) %>
 
 <h1><%= survey.bezeichnung %></h1>
 <div class="field">
