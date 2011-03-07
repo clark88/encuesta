@@ -29,8 +29,9 @@ class SurveysController < ApplicationController
 
     if @survey.save
       flash[:success] = "Umfrage erstellt!"
-      cookies[:surveyid] = @survey.id
-      redirect_to(edit_survey_path(@survey))
+      #cookies[:surveyid] = @survey.id
+      #redirect_to(edit_survey_path(@survey))
+      redirect_to new_question_path(:survey_id => @survey.id)
     else
       flash[:failure] = "Umfragetyp oder Bezeichnung fehlt!"
       @feed_items = []

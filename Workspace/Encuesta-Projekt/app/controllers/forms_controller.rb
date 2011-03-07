@@ -11,11 +11,10 @@ class FormsController < ApplicationController
 		
 	
 		if @form.save
-      		flash[:success] = "Frage erstellt!"
-			redirect_to edit_survey_path(cookies[:surveyid])
+      		flash[:success] = "Umfrage vollendet"
+			redirect_to home_path
     	else
     		flash[:failure] = "Fehler!"
-    		@feed_items = []
     	end
     	
     end
