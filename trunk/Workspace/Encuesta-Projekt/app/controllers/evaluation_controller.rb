@@ -8,7 +8,7 @@ class EvaluationController < ApplicationController
 	### Es handelt sich hier um einen Entwurf, die ganze Funktionalität lässt sich vermutlich leichter in der
 	### View umsetzten.
 	def evaluate
-		survey = Survey.find(params[:id])
+		#survey = Survey.find(params[:id])
 		q = Question.where(:servayid => params[:id])
 		q.each do |question|
 			#Umfragename ausgeben
