@@ -74,9 +74,10 @@ class SurveysController < ApplicationController
   end
   
     def lock
-	@survey = Survey.find(params[:id])
-	@survey.gesperrt = true
-	redirect_to :back
+	@survey = Survey.find([:id])
+	@survey.gesperrt = "t"
+	redirect_to user_path
 	end
+
 
 end

@@ -16,9 +16,9 @@
   <% else %>
   <td>Bearbeiten</td>
   <% end %>
-  <td><%= link_to "Freigeben", survey, :method => :lock,
-  									 :confirm => "Wollen Sie die Datei wirklich freigeben?",
-                                     :title => survey.bezeichnung %></td>
+  <td><%= link_to "Freigeben", survey, :controller => 'lock',
+  									   :confirm => "Wollen Sie die Umfrage wirklich freigeben?",
+                                       :title => survey.bezeichnung %></td>
   <td><%= link_to "Auswerten",  %></td>
   <% end %>
   
