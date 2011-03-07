@@ -96,6 +96,10 @@ class UsersController < ApplicationController
       redirect_to(root_path) unless current_user?(@user)
     end
 
-
+  def lock
+	@survey = Survey.find(params[:id])
+	@survey.gesperrt = 't'
+	redirect_to user_path
+  end
 
 end
