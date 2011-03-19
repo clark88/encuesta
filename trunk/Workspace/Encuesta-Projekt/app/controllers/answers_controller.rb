@@ -15,12 +15,17 @@ class AnswersController < ApplicationController
 	if params[:answer]
 		@answer = Question.find(params[:question_id]).answers.create(params[:answer])
 		
+		question_id = Question.find(params[:question_id]) 
+		
 		@answer.answertype = Answertype.find(params[:answertype])
 		
 		if @answer.save
       		flash[:success] = "Frage erstellt!"
 			#redirect_to edit_survey_path(params[:survey_id])
-			redirect_to new_answer_path(params[:question_id])
+			redirect_to new_answer_path(:question_id => question_id, :answertype => @answer.answertype)
+
+			#redirect_to new_answer_path(:question_id, :answertype) 
+
     	else
     		flash[:failure] = "Fehler!"
     		@feed_items = []

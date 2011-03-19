@@ -27,9 +27,9 @@ class QuestionsController < ApplicationController
 		
 		if @question.save
       		flash[:success] = "Frage erstellt!"
-      		cookies[:questionid] = @question.id
+      		#cookies[:questionid] = @question.id
       		
-      		cookies[:answertype] = answertype.id
+      		#cookies[:answertype] = answertype.id
 			redirect_to new_answer_path(:question_id =>@question.id, :answertype => answertype.id)
     	else
     		flash[:failure] = "Fehler!"
