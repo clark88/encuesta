@@ -6,9 +6,11 @@ class FormsController < ApplicationController
   end
 
   def create
-    if params[:form]
-      @form = survey.find(cookies[:surveyid]).forms.create(params[:form])
-
+  	render :text => params.inspect
+    if params[:commit]
+      params.each{|x| p x if x[0].to_i != 0}
+      @form = Survey.find(cookies[:surveyid]).forms.create(params[:form])
+	  render :text => @form.inspect
       survey = Survey.find(params[:surveyid])
 
      
@@ -17,16 +19,18 @@ class FormsController < ApplicationController
 
         Question.find_all_by_survey_id(survey.id).each do |f|
           Answer.find_all_by_question_id(question.id).each do |answer|
-				User_Answer.new
+				#Hier User_Ansers.create einfügen (wie genau noch unklar, auf Daten warten)
           end
         end
 
-        redirect_to home_path
       else
         flash[:failure] = "Fehler!"
       end
-
+     
     end
-  end
+#	redirect_to home_path
 
+  end
+  
+ 
 end

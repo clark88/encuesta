@@ -2,7 +2,7 @@
 <%= form_for(@survey) do |f| %>
 <% #render 'shared/error_messages', :object => f.object
 
-cookies[:surveyid] = @survey.id
+#cookies[:surveyid] = @survey.id
 %>
 <div class="field">
     <%= f.label :bezeichnung %>
@@ -43,7 +43,10 @@ cookies[:surveyid] = @survey.id
     	<% end %>
     <% end %>
     
-    <%=	link_to "Neue Frage anlegen", new_question_path 
+    <%=	#link_to "Neue Frage anlegen", new_question_path 
+    %>
+        	<%=	link_to "Neue Frage anlegen", new_question_path(:survey_id => @survey.id) 
+
     	%><br>
 </div>
 <% end %>

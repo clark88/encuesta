@@ -1,4 +1,4 @@
-<%= form_for(@form) do |f| %>
+<%= form_for @form do |f| %>
 <%= #render 'shared/error_messages', :object => f.object
 %>
 
@@ -12,9 +12,7 @@
    
     <%= label_tag "surveytype_#{surveytype}", surveytype.bezeichnung%>
 </div>
-<!--><div class="actions">
-    <%= f.submit "Update" %>
-</div> -->
+
 
 
 <div class="field">
@@ -25,18 +23,17 @@
     <br>
     	<% Answer.find_all_by_question_id(question.id).each do |answer| %>
     	
+    	
     	<%case answer.answertype_id 
 		when 1 %>
-  		  <%= radio_button_tag(:answer, :id) %>
+  		  <%= radio_button_tag("question_id_" + question.id.to_s, "answer_id_" + answer.id.to_s) %>
 		<% when 2 %>
-		  <%= check_box_tag(:answer, :id) %>
+		  <%= check_box("question_id_" + question.id.to_s, "answer_id_" + answer.id.to_s) %>
 		<% when 3 %>
-		  <%= text_field_tag(:answer, :bezeichnung) %>
-		<% else %>
-		  <%= radio_button_tag(:answer, answer) %>
+		  <%= text_field_tag("question_id_" + question.id.to_s) %>
 		<% end %>
     	
-    	<%= label_tag "answer_#{answer}", answer.answertext %>
+    	<%= label_tag question, answer.answertext %>
     	<br>
     	<% end %>
     <% end %>
