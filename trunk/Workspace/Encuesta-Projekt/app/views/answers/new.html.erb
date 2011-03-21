@@ -1,4 +1,4 @@
-<h1>Answers#new <%=render :text => params[:question_id]%>
+<h1>Neue Antwort zu Frage: <%=render :text => Question.find(params[:question_id]).questiontext%>
 	</h1>
 <%= form_for @answer do |f| %>
   <%= #render 'shared/error_messages', :object => f.object 
@@ -11,4 +11,6 @@
   	<%= hidden_field_tag :answertype, params[:answertype]%>
     <%= f.submit "Hinzufügen" %>
   </div>
+  <% survey_id = params[:survey_id]%>
+  <%=	link_to "Zurück zur Umfrage", edit_survey_path(survey_id) %>
 <% end %>
