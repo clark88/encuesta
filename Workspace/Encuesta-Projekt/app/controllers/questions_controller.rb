@@ -4,7 +4,7 @@ class QuestionsController < ApplicationController
   def show
     #render :text => cookies[:surveyid]
     #render  :text => cookies[:answertype]
-    render :text => cookies[:questionid]
+    #render :text => cookies[:questionid]
   end
 	
 	# New-Methode  wird über das new-View initialisiert, ohne wird das view-template nicht geöffnet
@@ -23,6 +23,8 @@ class QuestionsController < ApplicationController
 		
 		@question = Survey.find(params[:survey_id]).questions.create(params[:question])
 		
+		surveyid = Survey.find(params[:survey_id]).id
+		
 		answertype = Answertype.find(params[:answertype])
 		
 		if @question.save
@@ -30,7 +32,7 @@ class QuestionsController < ApplicationController
       		#cookies[:questionid] = @question.id
       		
       		#cookies[:answertype] = answertype.id
-			redirect_to new_answer_path(:question_id =>@question.id, :answertype => answertype.id)
+			redirect_to new_answer_path(:survey_id => surveyid, :question_id =>@question.id, :answertype => answertype.id)
     	else
     		flash[:failure] = "Fehler!"
     		@feed_items = []

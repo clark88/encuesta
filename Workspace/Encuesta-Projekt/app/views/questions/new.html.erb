@@ -1,4 +1,4 @@
-<h1>Questions#new</h1>
+<h1>Neue Frage</h1>
 <%= form_for @question do |f| %>
   <%= #render 'shared/error_messages', :object => f.object 
   %>
@@ -17,4 +17,6 @@
   		<%= hidden_field_tag :survey_id, params[:survey_id]%>
     <%= f.submit "Frage erstellen" %>
   </div>
+  
+  <%=	link_to "Zurück zur Umfrage", edit_survey_path(:survey_id) %>
 <% end %>
