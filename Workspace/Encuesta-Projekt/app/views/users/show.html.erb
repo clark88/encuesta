@@ -4,12 +4,12 @@
       <h1>
         <%= @user.login %>
       </h1>
+      
       <% unless @user.surveys.empty? %>
         <table class="surveys" summary="User surveys">
+          <%= link_to "Neue Umfrage",new_survey_path()%>
           <%= render @surveys %>
         </table>
-        <%= #will_paginate @microposts
-         %>
       <% end %>
 
     </td>

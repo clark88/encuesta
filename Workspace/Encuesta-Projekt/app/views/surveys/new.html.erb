@@ -1,15 +1,22 @@
-Legen sie hier eine neue Umfrage an!
 
-<% form_for :survey, Survey.new, :url => { :action => "create" } do |form| %>
+<h1>Neue Umfrage erstellen</h1>
 
-<%= form.text_field :name %><br />
-Vorname
-<%= form.text_field :vorname %><br />
-Login-Name
-<%= form.text_field :login %><br />
-Passwort
-<%= form.text_field :passwort %><br />
-Email-Adresse
-<%= form.text_field :email %><br />
-<%= form.submit "Create" %>
+<%= form_for @survey do |f| %>
+  <%= #render 'shared/error_messages', :object => f.object 
+  %>
+  <div class="field">
+    <%= f.text_field :bezeichnung %>
+  </div>
+  <div class="field">
+    <% Surveytype.all.each do |surveytype| %>
+    <br><%= #radio_button_tag 'surveytype', surveytype.id, @survey.surveytype_id == surveytype.id 
+    f.radio_button(:surveytype, surveytype.id)
+    %>
+    <%= label_tag "surveytype_#{surveytype}", surveytype.bezeichnung
+    %>
+  <% end %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Umfrage erstellen" %>
+  </div>
 <% end %>
