@@ -57,10 +57,7 @@
       				<td>Eingeloggt als:<%= @current_user.login %></td>
       			</tr>
       			<tr>	
-      				<td><%= link_to " Andere Benutzer", users_path %></td>
-      			</tr>
-      			<tr>	
-      				<td><%= link_to "Mein Profil", current_user %></td>
+      				<td><%= link_to "Meine Umfragen", current_user %></td>
       			</tr>
       			<tr>
       				<td><%= link_to "Einstellungen", edit_user_path(current_user) %></td>

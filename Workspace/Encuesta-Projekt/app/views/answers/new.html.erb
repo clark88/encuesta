@@ -11,6 +11,7 @@
   	<%= hidden_field_tag :answertype, params[:answertype]%>
     <%= f.submit "Hinzufügen" %>
   </div>
-  <% survey_id = params[:survey_id]%>
+  <%= hidden_field_tag :survey_id, params[:survey_id]%>
+  <% survey_id = params[:survey_id] %>
   <%=	link_to "Zurück zur Umfrage", edit_survey_path(survey_id) %>
 <% end %>
