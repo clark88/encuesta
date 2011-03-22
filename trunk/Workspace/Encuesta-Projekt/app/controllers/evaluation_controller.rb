@@ -1,15 +1,16 @@
 class EvaluationController < ApplicationController
 	 
-  def show1
-    render :text => params[:id]
+  def show
+    @survey = Survey.find(params[:id])
+     
   end
 	 
 	# Diese Methode Ruft die jeweilige Umfrage auf und zeigt die Ergebniswerte neben den Fragen an
 	### Es handelt sich hier um einen Entwurf, die ganze Funktionalität lässt sich vermutlich leichter in der
 	### View umsetzten.
-	def show
+	def show1
 		#survey = Survey.find(params[:id])
-		q = Question.where(:servayid => params[:id])
+		q = Question.where(:survey_id => params[:id])
 		q.each do |question|
 			#Umfragename ausgeben
 			render :text =>  survay.name
