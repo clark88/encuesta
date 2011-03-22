@@ -38789,3 +38789,1111 @@ Rendered shared/_survey_form.html.erb (93.6ms)
 Rendered shared/_user_info.html.erb (15.6ms)
 Rendered pages/home.html.erb within layouts/application (140.4ms)
 Completed 200 OK in 250ms (Views: 156.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-03-22 19:13:15 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSurveytype Load (0.0ms)[0m  [1mSELECT "surveytypes".* FROM "surveytypes"[0m
+Rendered shared/_survey_form.html.erb (50.0ms)
+  [1m[35mSQL (0.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)
+Rendered shared/_user_info.html.erb (20.0ms)
+Rendered pages/home.html.erb within layouts/application (100.0ms)
+Completed 200 OK in 790ms (Views: 120.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-03-22 19:13:26 +0100
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)
+  [1m[36mSurvey Load (1.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE ("surveys".user_id = 1) ORDER BY surveys.created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered surveys/_survey.html.erb (100.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)[0m
+Rendered users/show.html.erb within layouts/application (242.0ms)
+Completed 200 OK in 384ms (Views: 295.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/help/" for 127.0.0.1 at 2011-03-22 19:13:42 +0100
+  Processing by PagesController#help as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mSurveytype Load (0.0ms)[0m  SELECT "surveytypes".* FROM "surveytypes"
+  [1m[36mSurvey Load (0.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" ORDER BY surveys.created_at DESC[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered pages/help.html.erb within layouts/application (230.0ms)
+Completed 200 OK in 260ms (Views: 260.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/forms/new?survey_id=2" for 127.0.0.1 at 2011-03-22 19:16:24 +0100
+  Processing by FormsController#new as HTML
+  Parameters: {"survey_id"=>"2"}
+  [1m[36mSQL (10.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mSurveytype Load (0.0ms)[0m  [1mSELECT "surveytypes".* FROM "surveytypes" WHERE ("surveytypes"."id" = 2) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "surveytypes".* FROM "surveytypes" WHERE ("surveytypes"."id" = 2) LIMIT 1
+  [1m[36mQuestion Load (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."survey_id" = 2)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 5)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 6)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 7)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 12)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 13)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 14)[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered forms/new.html.erb within layouts/application (660.0ms)
+Completed 200 OK in 920ms (Views: 670.0ms | ActiveRecord: 10.0ms)
+
+
+Started POST "/forms" for 127.0.0.1 at 2011-03-22 19:19:38 +0100
+  Processing by FormsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bmv18WPWEKInC/J3GVzpAloRenAGYp+WyRi9FMTMW0g=", "question_6,answer_6"=>"Blablub", "question_7"=>{"18"=>"1", "19"=>"0"}, "question_13"=>"32", "question_14"=>"42", "survey_id"=>"2", "commit"=>"Ergebnis abschicken"}
+  [1m[36mSurvey Load (0.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1[0m
+  [1m[35mAREL (5050.0ms)[0m  INSERT INTO "forms" ("survey_id", "created_at", "updated_at") VALUES (2, '2011-03-22 18:19:38.981000', '2011-03-22 18:19:38.981000')
+SQLite3::BusyException: database is locked: INSERT INTO "forms" ("survey_id", "created_at", "updated_at") VALUES (2, '2011-03-22 18:19:38.981000', '2011-03-22 18:19:38.981000')
+Completed   in 5240ms
+
+ActiveRecord::StatementInvalid (SQLite3::BusyException: database is locked: INSERT INTO "forms" ("survey_id", "created_at", "updated_at") VALUES (2, '2011-03-22 18:19:38.981000', '2011-03-22 18:19:38.981000')):
+  app/controllers/forms_controller.rb:12:in `create'
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.0ms)
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.0ms)
+
+
+Started POST "/forms" for 127.0.0.1 at 2011-03-22 19:20:03 +0100
+  Processing by FormsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bmv18WPWEKInC/J3GVzpAloRenAGYp+WyRi9FMTMW0g=", "question_6,answer_6"=>"Blablub", "question_7"=>{"18"=>"1", "19"=>"0"}, "question_13"=>"32", "question_14"=>"42", "survey_id"=>"2", "commit"=>"Ergebnis abschicken"}
+  [1m[36mSurvey Load (0.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO "forms" ("survey_id", "created_at", "updated_at") VALUES (2, '2011-03-22 18:20:03.378200', '2011-03-22 18:20:03.378200')
+  [1m[36mSurvey Load (0.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1[0m
+Completed   in 144ms
+
+ActiveRecord::RecordNotFound (Couldn't find Answer without an ID):
+  app/controllers/forms_controller.rb:46:in `create'
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (7.0ms)
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.0ms)
+
+
+Started POST "/forms" for 127.0.0.1 at 2011-03-22 19:25:06 +0100
+  Processing by FormsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bmv18WPWEKInC/J3GVzpAloRenAGYp+WyRi9FMTMW0g=", "question_6,answer_6"=>"Blablub", "question_7"=>{"18"=>"1", "19"=>"0"}, "question_13"=>"32", "question_14"=>"42", "survey_id"=>"2", "commit"=>"Ergebnis abschicken"}
+Completed   in 10ms
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.save):
+  app/controllers/forms_controller.rb:46:in `create'
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (3.0ms)
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (9.0ms)
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (27.0ms)
+
+
+Started GET "/forms/new?survey_id=2" for 127.0.0.1 at 2011-03-22 19:25:17 +0100
+  Processing by FormsController#new as HTML
+  Parameters: {"survey_id"=>"2"}
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mSurveytype Load (0.0ms)[0m  [1mSELECT "surveytypes".* FROM "surveytypes" WHERE ("surveytypes"."id" = 2) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "surveytypes".* FROM "surveytypes" WHERE ("surveytypes"."id" = 2) LIMIT 1
+  [1m[36mQuestion Load (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."survey_id" = 2)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 5)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 6)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 7)
+  [1m[36mAnswer Load (10.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 12)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 13)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 14)[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered forms/new.html.erb within layouts/application (380.0ms)
+Completed 200 OK in 430ms (Views: 400.0ms | ActiveRecord: 10.0ms)
+
+
+Started POST "/forms" for 127.0.0.1 at 2011-03-22 19:25:25 +0100
+  Processing by FormsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bmv18WPWEKInC/J3GVzpAloRenAGYp+WyRi9FMTMW0g=", "question_6,answer_6"=>"Blablub", "question_7"=>{"18"=>"1", "19"=>"0"}, "question_13"=>"32", "question_14"=>"42", "survey_id"=>"2", "commit"=>"Ergebnis abschicken"}
+  [1m[36mSurvey Load (0.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO "forms" ("survey_id", "created_at", "updated_at") VALUES (2, '2011-03-22 18:25:25.571600', '2011-03-22 18:25:25.571600')
+  [1m[36mSurvey Load (0.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1[0m
+  [1m[35mQuestion Load (1.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."survey_id" = 2)
+  [1m[36mAnswer Load (1.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 5)[0m
+  [1m[35mAnswer Load (1.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 6)
+  [1m[36mAnswer Load (1.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 7)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 12)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 13)[0m
+  [1m[35mAnswer Load (1.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 14)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered forms/create.html.erb within layouts/application (77.0ms)
+Completed 200 OK in 336ms (Views: 100.0ms | ActiveRecord: 6.0ms)
+
+
+Started POST "/forms" for 127.0.0.1 at 2011-03-22 19:38:16 +0100
+  Processing by FormsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bmv18WPWEKInC/J3GVzpAloRenAGYp+WyRi9FMTMW0g=", "question_6,answer_6"=>"Blablub", "question_7"=>{"18"=>"1", "19"=>"0"}, "question_13"=>"32", "question_14"=>"42", "survey_id"=>"2", "commit"=>"Ergebnis abschicken"}
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO "forms" ("survey_id", "created_at", "updated_at") VALUES (2, '2011-03-22 18:38:16.338200', '2011-03-22 18:38:16.338200')[0m
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mForm Load (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."id" = 40) LIMIT 1[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO "user_answers" ("AnswerBoolean", "AnswerText", "AnswerRate", "answer_id", "form_id", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, 40, '2011-03-22 18:38:16.438200', '2011-03-22 18:38:16.438200')
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."id" = 6) LIMIT 1[0m
+Completed   in 250ms
+
+NoMethodError (undefined method `answertext=' for #<UserAnswer:0x2432040>):
+  app/controllers/forms_controller.rb:43:in `block in create'
+  app/controllers/forms_controller.rb:24:in `each'
+  app/controllers/forms_controller.rb:24:in `create'
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (10.0ms)
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.0ms)
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.0ms)
+
+
+Started POST "/forms" for 127.0.0.1 at 2011-03-22 19:39:14 +0100
+  Processing by FormsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bmv18WPWEKInC/J3GVzpAloRenAGYp+WyRi9FMTMW0g=", "question_6,answer_6"=>"Blablub", "question_7"=>{"18"=>"1", "19"=>"0"}, "question_13"=>"32", "question_14"=>"42", "survey_id"=>"2", "commit"=>"Ergebnis abschicken"}
+  [1m[35mSurvey Load (15.6ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO "forms" ("survey_id", "created_at", "updated_at") VALUES (2, '2011-03-22 18:39:15.010600', '2011-03-22 18:39:15.010600')[0m
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mForm Load (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."id" = 41) LIMIT 1[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO "user_answers" ("AnswerBoolean", "AnswerText", "AnswerRate", "answer_id", "form_id", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, 41, '2011-03-22 18:39:15.073000', '2011-03-22 18:39:15.073000')
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."id" = 6) LIMIT 1[0m
+  [1m[35mQuestion Load (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."survey_id" = 2)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 5)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 6)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 7)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 12)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 13)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 14)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered forms/create.html.erb within layouts/application (78.0ms)
+Completed 200 OK in 421ms (Views: 109.2ms | ActiveRecord: 15.6ms)
+
+
+Started POST "/forms" for 127.0.0.1 at 2011-03-22 19:42:43 +0100
+  Processing by FormsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bmv18WPWEKInC/J3GVzpAloRenAGYp+WyRi9FMTMW0g=", "question_6,answer_6"=>"Blablub", "question_7"=>{"18"=>"1", "19"=>"0"}, "question_13"=>"32", "question_14"=>"42", "survey_id"=>"2", "commit"=>"Ergebnis abschicken"}
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO "forms" ("survey_id", "created_at", "updated_at") VALUES (2, '2011-03-22 18:42:43.807600', '2011-03-22 18:42:43.807600')[0m
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mForm Load (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."id" = 42) LIMIT 1[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO "user_answers" ("AnswerBoolean", "AnswerText", "AnswerRate", "answer_id", "form_id", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, 42, '2011-03-22 18:42:43.870000', '2011-03-22 18:42:43.870000')
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."id" = 0) LIMIT 1[0m
+Completed   in 218ms
+
+ActiveRecord::RecordNotFound (Couldn't find Answer with ID=0):
+  app/controllers/forms_controller.rb:42:in `block in create'
+  app/controllers/forms_controller.rb:24:in `each'
+  app/controllers/forms_controller.rb:24:in `create'
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.2ms)
+
+
+Started POST "/forms" for 127.0.0.1 at 2011-03-22 19:43:12 +0100
+  Processing by FormsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bmv18WPWEKInC/J3GVzpAloRenAGYp+WyRi9FMTMW0g=", "question_6,answer_6"=>"Blablub", "question_7"=>{"18"=>"1", "19"=>"0"}, "question_13"=>"32", "question_14"=>"42", "survey_id"=>"2", "commit"=>"Ergebnis abschicken"}
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO "forms" ("survey_id", "created_at", "updated_at") VALUES (2, '2011-03-22 18:43:12.637400', '2011-03-22 18:43:12.637400')[0m
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mForm Load (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."id" = 43) LIMIT 1[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO "user_answers" ("AnswerBoolean", "AnswerText", "AnswerRate", "answer_id", "form_id", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, 43, '2011-03-22 18:43:12.700800', '2011-03-22 18:43:12.700800')
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."id" = 0) LIMIT 1[0m
+Completed   in 297ms
+
+ActiveRecord::RecordNotFound (Couldn't find Answer with ID=0):
+  app/controllers/forms_controller.rb:43:in `block in create'
+  app/controllers/forms_controller.rb:24:in `each'
+  app/controllers/forms_controller.rb:24:in `create'
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (15.6ms)
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.2ms)
+
+
+Started POST "/forms" for 127.0.0.1 at 2011-03-22 19:44:09 +0100
+  Processing by FormsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bmv18WPWEKInC/J3GVzpAloRenAGYp+WyRi9FMTMW0g=", "question_6,answer_6"=>"Blablub", "question_7"=>{"18"=>"1", "19"=>"0"}, "question_13"=>"32", "question_14"=>"42", "survey_id"=>"2", "commit"=>"Ergebnis abschicken"}
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mAREL (15.6ms)[0m  [1mINSERT INTO "forms" ("survey_id", "created_at", "updated_at") VALUES (2, '2011-03-22 18:44:09.406800', '2011-03-22 18:44:09.406800')[0m
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mForm Load (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."id" = 44) LIMIT 1[0m
+  [1m[35mAREL (15.6ms)[0m  INSERT INTO "user_answers" ("AnswerBoolean", "AnswerText", "AnswerRate", "answer_id", "form_id", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, 44, '2011-03-22 18:44:09.470200', '2011-03-22 18:44:09.470200')
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."id" = 0) LIMIT 1[0m
+Completed   in 266ms
+
+ActiveRecord::RecordNotFound (Couldn't find Answer with ID=0):
+  app/controllers/forms_controller.rb:43:in `block in create'
+  app/controllers/forms_controller.rb:24:in `each'
+  app/controllers/forms_controller.rb:24:in `create'
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.2ms)
+
+
+Started POST "/forms" for 127.0.0.1 at 2011-03-22 19:45:04 +0100
+  Processing by FormsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bmv18WPWEKInC/J3GVzpAloRenAGYp+WyRi9FMTMW0g=", "question_6,answer_6"=>"Blablub", "question_7"=>{"18"=>"1", "19"=>"0"}, "question_13"=>"32", "question_14"=>"42", "survey_id"=>"2", "commit"=>"Ergebnis abschicken"}
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO "forms" ("survey_id", "created_at", "updated_at") VALUES (2, '2011-03-22 18:45:04.772200', '2011-03-22 18:45:04.772200')[0m
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mForm Load (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."id" = 45) LIMIT 1[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO "user_answers" ("AnswerBoolean", "AnswerText", "AnswerRate", "answer_id", "form_id", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, 45, '2011-03-22 18:45:04.866800', '2011-03-22 18:45:04.866800')
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."id" = 6) LIMIT 1[0m
+  [1m[35mQuestion Load (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."survey_id" = 2)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 5)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 6)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 7)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 12)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 13)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 14)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered forms/create.html.erb within layouts/application (93.6ms)
+Completed 200 OK in 485ms (Views: 187.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/forms" for 127.0.0.1 at 2011-03-22 19:45:32 +0100
+  Processing by FormsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bmv18WPWEKInC/J3GVzpAloRenAGYp+WyRi9FMTMW0g=", "question_6,answer_6"=>"Blablub", "question_7"=>{"18"=>"1", "19"=>"0"}, "question_13"=>"32", "question_14"=>"42", "survey_id"=>"2", "commit"=>"Ergebnis abschicken"}
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mAREL (15.6ms)[0m  [1mINSERT INTO "forms" ("survey_id", "created_at", "updated_at") VALUES (2, '2011-03-22 18:45:33.180800', '2011-03-22 18:45:33.180800')[0m
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mForm Load (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."id" = 46) LIMIT 1[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO "user_answers" ("AnswerBoolean", "AnswerText", "AnswerRate", "answer_id", "form_id", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, 46, '2011-03-22 18:45:33.244200', '2011-03-22 18:45:33.244200')
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."id" = 6) LIMIT 1[0m
+  [1m[35mQuestion Load (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."survey_id" = 2)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 5)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 6)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 7)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 12)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 13)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 14)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered forms/create.html.erb within layouts/application (124.8ms)
+Completed 200 OK in 516ms (Views: 156.0ms | ActiveRecord: 15.6ms)
+
+
+Started POST "/forms" for 127.0.0.1 at 2011-03-22 19:46:11 +0100
+  Processing by FormsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bmv18WPWEKInC/J3GVzpAloRenAGYp+WyRi9FMTMW0g=", "question_6,answer_6"=>"Blablub", "question_7"=>{"18"=>"1", "19"=>"0"}, "question_13"=>"32", "question_14"=>"42", "survey_id"=>"2", "commit"=>"Ergebnis abschicken"}
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO "forms" ("survey_id", "created_at", "updated_at") VALUES (2, '2011-03-22 18:46:12.025800', '2011-03-22 18:46:12.025800')[0m
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mForm Load (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."id" = 47) LIMIT 1[0m
+  [1m[35mAREL (15.6ms)[0m  INSERT INTO "user_answers" ("AnswerBoolean", "AnswerText", "AnswerRate", "answer_id", "form_id", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, 47, '2011-03-22 18:46:12.088200', '2011-03-22 18:46:12.088200')
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."id" = 6) LIMIT 1[0m
+  [1m[35mQuestion Load (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."survey_id" = 2)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 5)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 6)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 7)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 12)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 13)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 14)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered forms/create.html.erb within layouts/application (93.6ms)
+Completed 200 OK in 437ms (Views: 124.8ms | ActiveRecord: 15.6ms)
+
+
+Started POST "/forms" for 127.0.0.1 at 2011-03-22 19:47:59 +0100
+  Processing by FormsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bmv18WPWEKInC/J3GVzpAloRenAGYp+WyRi9FMTMW0g=", "question_6,answer_6"=>"Blablub", "question_7"=>{"18"=>"1", "19"=>"0"}, "question_13"=>"32", "question_14"=>"42", "survey_id"=>"2", "commit"=>"Ergebnis abschicken"}
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO "forms" ("survey_id", "created_at", "updated_at") VALUES (2, '2011-03-22 18:47:59.391600', '2011-03-22 18:47:59.391600')[0m
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mForm Load (15.6ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."id" = 48) LIMIT 1[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO "user_answers" ("AnswerBoolean", "AnswerText", "AnswerRate", "answer_id", "form_id", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, 48, '2011-03-22 18:47:59.501800', '2011-03-22 18:47:59.501800')
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."id" = 6) LIMIT 1[0m
+  [1m[35mQuestion Load (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."survey_id" = 2)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 5)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 6)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 7)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 12)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 13)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 14)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered forms/create.html.erb within layouts/application (109.2ms)
+Completed 200 OK in 438ms (Views: 140.4ms | ActiveRecord: 15.6ms)
+
+
+Started POST "/forms" for 127.0.0.1 at 2011-03-22 19:49:14 +0100
+  Processing by FormsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bmv18WPWEKInC/J3GVzpAloRenAGYp+WyRi9FMTMW0g=", "question_6,answer_6"=>"Blablub", "question_7"=>{"18"=>"1", "19"=>"0"}, "question_13"=>"32", "question_14"=>"42", "survey_id"=>"2", "commit"=>"Ergebnis abschicken"}
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO "forms" ("survey_id", "created_at", "updated_at") VALUES (2, '2011-03-22 18:49:14.326000', '2011-03-22 18:49:14.326000')[0m
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mForm Load (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."id" = 49) LIMIT 1[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO "user_answers" ("AnswerBoolean", "AnswerText", "AnswerRate", "answer_id", "form_id", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, 49, '2011-03-22 18:49:14.373800', '2011-03-22 18:49:14.373800')
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."id" = 6) LIMIT 1[0m
+  [1m[35mQuestion Load (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."survey_id" = 2)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 5)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 6)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 7)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 12)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 13)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 14)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered forms/create.html.erb within layouts/application (171.6ms)
+Completed 200 OK in 563ms (Views: 187.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/forms" for 127.0.0.1 at 2011-03-22 19:51:28 +0100
+  Processing by FormsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bmv18WPWEKInC/J3GVzpAloRenAGYp+WyRi9FMTMW0g=", "question_6,answer_6"=>"Blablub", "question_7"=>{"18"=>"1", "19"=>"0"}, "question_13"=>"32", "question_14"=>"42", "survey_id"=>"2", "commit"=>"Ergebnis abschicken"}
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO "forms" ("survey_id", "created_at", "updated_at") VALUES (2, '2011-03-22 18:51:28.331000', '2011-03-22 18:51:28.331000')[0m
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+Completed   in 156ms
+
+NoMethodError (undefined method `value' for ["question_6,answer_6", "Blablub"]:Array):
+  app/controllers/forms_controller.rb:45:in `block in create'
+  app/controllers/forms_controller.rb:24:in `each'
+  app/controllers/forms_controller.rb:24:in `create'
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (15.6ms)
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.2ms)
+
+
+Started POST "/forms" for 127.0.0.1 at 2011-03-22 19:51:43 +0100
+  Processing by FormsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bmv18WPWEKInC/J3GVzpAloRenAGYp+WyRi9FMTMW0g=", "question_6,answer_6"=>"Blablub", "question_7"=>{"18"=>"1", "19"=>"0"}, "question_13"=>"32", "question_14"=>"42", "survey_id"=>"2", "commit"=>"Ergebnis abschicken"}
+  [1m[36mSurvey Load (0.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO "forms" ("survey_id", "created_at", "updated_at") VALUES (2, '2011-03-22 18:51:44.197200', '2011-03-22 18:51:44.197200')
+  [1m[36mSurvey Load (0.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1[0m
+  [1m[35mForm Load (0.0ms)[0m  SELECT "forms".* FROM "forms" WHERE ("forms"."id" = 51) LIMIT 1
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO "user_answers" ("AnswerBoolean", "AnswerText", "AnswerRate", "answer_id", "form_id", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, 51, '2011-03-22 18:51:44.229400', '2011-03-22 18:51:44.229400')[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."id" = 6) LIMIT 1
+  [1m[36mQuestion Load (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."survey_id" = 2)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 5)
+  [1m[36mAnswer Load (15.6ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 6)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 7)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 12)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 13)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 14)[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered forms/create.html.erb within layouts/application (124.8ms)
+Completed 200 OK in 469ms (Views: 140.4ms | ActiveRecord: 15.6ms)
+
+
+Started POST "/forms" for 127.0.0.1 at 2011-03-22 19:53:36 +0100
+  Processing by FormsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bmv18WPWEKInC/J3GVzpAloRenAGYp+WyRi9FMTMW0g=", "question_6,answer_6"=>"Blablub", "question_7"=>{"18"=>"1", "19"=>"0"}, "question_13"=>"32", "question_14"=>"42", "survey_id"=>"2", "commit"=>"Ergebnis abschicken"}
+  [1m[36mSurvey Load (0.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO "forms" ("survey_id", "created_at", "updated_at") VALUES (2, '2011-03-22 18:53:36.711000', '2011-03-22 18:53:36.711000')
+  [1m[36mSurvey Load (0.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1[0m
+  [1m[35mForm Load (0.0ms)[0m  SELECT "forms".* FROM "forms" WHERE ("forms"."id" = 52) LIMIT 1
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO "user_answers" ("AnswerBoolean", "AnswerText", "AnswerRate", "answer_id", "form_id", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, 52, '2011-03-22 18:53:36.758800', '2011-03-22 18:53:36.758800')[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."id" = 6) LIMIT 1
+  [1m[36mQuestion Load (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."survey_id" = 2)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 5)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 6)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 7)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 12)[0m
+  [1m[35mAnswer Load (15.6ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 13)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 14)[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered forms/create.html.erb within layouts/application (78.0ms)
+Completed 200 OK in 453ms (Views: 93.6ms | ActiveRecord: 15.6ms)
+
+
+Started POST "/forms" for 127.0.0.1 at 2011-03-22 19:54:51 +0100
+  Processing by FormsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bmv18WPWEKInC/J3GVzpAloRenAGYp+WyRi9FMTMW0g=", "question_6,answer_6"=>"Blablub", "question_7"=>{"18"=>"1", "19"=>"0"}, "question_13"=>"32", "question_14"=>"42", "survey_id"=>"2", "commit"=>"Ergebnis abschicken"}
+  [1m[36mSurvey Load (0.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO "forms" ("survey_id", "created_at", "updated_at") VALUES (2, '2011-03-22 18:54:52.127000', '2011-03-22 18:54:52.127000')
+  [1m[36mSurvey Load (0.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1[0m
+  [1m[35mForm Load (0.0ms)[0m  SELECT "forms".* FROM "forms" WHERE ("forms"."id" = 53) LIMIT 1
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO "user_answers" ("AnswerBoolean", "AnswerText", "AnswerRate", "answer_id", "form_id", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, 53, '2011-03-22 18:54:52.221600', '2011-03-22 18:54:52.221600')[0m
+  [1m[35mQuestion Load (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."survey_id" = 2)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 5)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 6)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 7)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 12)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 13)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 14)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered forms/create.html.erb within layouts/application (124.8ms)
+Completed 200 OK in 422ms (Views: 156.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/forms" for 127.0.0.1 at 2011-03-22 19:58:28 +0100
+  Processing by FormsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bmv18WPWEKInC/J3GVzpAloRenAGYp+WyRi9FMTMW0g=", "question_6,answer_6"=>"Blablub", "question_7"=>{"18"=>"1", "19"=>"0"}, "question_13"=>"32", "question_14"=>"42", "survey_id"=>"2", "commit"=>"Ergebnis abschicken"}
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO "forms" ("survey_id", "created_at", "updated_at") VALUES (2, '2011-03-22 18:58:29.028000', '2011-03-22 18:58:29.028000')[0m
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mForm Load (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."id" = 54) LIMIT 1[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO "user_answers" ("AnswerBoolean", "AnswerText", "AnswerRate", "answer_id", "form_id", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, 54, '2011-03-22 18:58:29.075800', '2011-03-22 18:58:29.075800')
+  [1m[36mQuestion Load (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."survey_id" = 2)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 5)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 6)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 7)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 12)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 13)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 14)[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered forms/create.html.erb within layouts/application (156.0ms)
+Completed 200 OK in 563ms (Views: 171.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/forms" for 127.0.0.1 at 2011-03-22 20:01:08 +0100
+  Processing by FormsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bmv18WPWEKInC/J3GVzpAloRenAGYp+WyRi9FMTMW0g=", "question_6,answer_6"=>"Blablub", "question_7"=>{"18"=>"1", "19"=>"0"}, "question_13"=>"32", "question_14"=>"42", "survey_id"=>"2", "commit"=>"Ergebnis abschicken"}
+  [1m[36mSurvey Load (15.6ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1[0m
+  [1m[35mAREL (15.6ms)[0m  INSERT INTO "forms" ("survey_id", "created_at", "updated_at") VALUES (2, '2011-03-22 19:01:08.549600', '2011-03-22 19:01:08.549600')
+  [1m[36mSurvey Load (0.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1[0m
+  [1m[35mForm Load (0.0ms)[0m  SELECT "forms".* FROM "forms" WHERE ("forms"."id" = 55) LIMIT 1
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO "user_answers" ("AnswerBoolean", "AnswerText", "AnswerRate", "answer_id", "form_id", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, 55, '2011-03-22 19:01:08.597400', '2011-03-22 19:01:08.597400')[0m
+  [1m[35mQuestion Load (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."survey_id" = 2)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 5)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 6)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 7)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 12)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 13)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 14)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered forms/create.html.erb within layouts/application (93.6ms)
+Completed 200 OK in 485ms (Views: 124.8ms | ActiveRecord: 31.2ms)
+
+
+Started POST "/forms" for 127.0.0.1 at 2011-03-22 20:02:08 +0100
+  Processing by FormsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bmv18WPWEKInC/J3GVzpAloRenAGYp+WyRi9FMTMW0g=", "question_6,answer_6"=>"Blablub", "question_7"=>{"18"=>"1", "19"=>"0"}, "question_13"=>"32", "question_14"=>"42", "survey_id"=>"2", "commit"=>"Ergebnis abschicken"}
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO "forms" ("survey_id", "created_at", "updated_at") VALUES (2, '2011-03-22 19:02:08.902000', '2011-03-22 19:02:08.902000')[0m
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mForm Load (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."id" = 56) LIMIT 1[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO "user_answers" ("AnswerBoolean", "AnswerText", "AnswerRate", "answer_id", "form_id", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, 56, '2011-03-22 19:02:08.965400', '2011-03-22 19:02:08.965400')
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."id" = 6) LIMIT 1[0m
+  [1m[35mQuestion Load (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."survey_id" = 2)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 5)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 6)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 7)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 12)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 13)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 14)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered forms/create.html.erb within layouts/application (109.2ms)
+Completed 200 OK in 516ms (Views: 140.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/forms" for 127.0.0.1 at 2011-03-22 20:25:42 +0100
+  Processing by FormsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bmv18WPWEKInC/J3GVzpAloRenAGYp+WyRi9FMTMW0g=", "question_6,answer_6"=>"Blablub", "question_7"=>{"18"=>"1", "19"=>"0"}, "question_13"=>"32", "question_14"=>"42", "survey_id"=>"2", "commit"=>"Ergebnis abschicken"}
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO "forms" ("survey_id", "created_at", "updated_at") VALUES (2, '2011-03-22 19:25:42.249800', '2011-03-22 19:25:42.249800')[0m
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mForm Load (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."id" = 57) LIMIT 1[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO "user_answers" ("AnswerBoolean", "AnswerText", "AnswerRate", "answer_id", "form_id", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, 57, '2011-03-22 19:25:42.282000', '2011-03-22 19:25:42.282000')
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."id" = 6) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."id" = 6) LIMIT 1
+  [1m[36mQuestion Load (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."survey_id" = 2)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 5)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 6)[0m
+  [1m[35mAnswer Load (15.6ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 7)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 12)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 13)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 14)[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered forms/create.html.erb within layouts/application (93.6ms)
+Completed 200 OK in 438ms (Views: 109.2ms | ActiveRecord: 15.6ms)
+
+
+Started POST "/forms" for 127.0.0.1 at 2011-03-22 20:39:57 +0100
+  Processing by FormsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bmv18WPWEKInC/J3GVzpAloRenAGYp+WyRi9FMTMW0g=", "question_6,answer_6"=>"Blablub", "question_7"=>{"18"=>"1", "19"=>"0"}, "question_13"=>"32", "question_14"=>"42", "survey_id"=>"2", "commit"=>"Ergebnis abschicken"}
+  [1m[36mSurvey Load (0.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1[0m
+  [1m[35mAREL (31.2ms)[0m  INSERT INTO "forms" ("survey_id", "created_at", "updated_at") VALUES (2, '2011-03-22 19:39:57.295600', '2011-03-22 19:39:57.295600')
+  [1m[36mSurvey Load (0.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1[0m
+  [1m[35mForm Load (0.0ms)[0m  SELECT "forms".* FROM "forms" WHERE ("forms"."id" = 58) LIMIT 1
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO "user_answers" ("AnswerBoolean", "AnswerText", "AnswerRate", "answer_id", "form_id", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, 58, '2011-03-22 19:39:57.390200', '2011-03-22 19:39:57.390200')[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."id" = 6) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."id" = 6) LIMIT 1[0m
+  [1m[35mQuestion Load (46.8ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."survey_id" = 2)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 5)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 6)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 7)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 12)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 13)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 14)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered forms/create.html.erb within layouts/application (93.6ms)
+Completed 200 OK in 500ms (Views: 124.8ms | ActiveRecord: 78.0ms)
+
+
+Started POST "/forms" for 127.0.0.1 at 2011-03-22 20:40:38 +0100
+  Processing by FormsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bmv18WPWEKInC/J3GVzpAloRenAGYp+WyRi9FMTMW0g=", "question_6,answer_6"=>"Blablub", "question_7"=>{"18"=>"1", "19"=>"0"}, "question_13"=>"32", "question_14"=>"42", "survey_id"=>"2", "commit"=>"Ergebnis abschicken"}
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO "forms" ("survey_id", "created_at", "updated_at") VALUES (2, '2011-03-22 19:40:38.667800', '2011-03-22 19:40:38.667800')[0m
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mForm Load (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."id" = 59) LIMIT 1[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO "user_answers" ("AnswerBoolean", "AnswerText", "AnswerRate", "answer_id", "form_id", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, 59, '2011-03-22 19:40:38.731200', '2011-03-22 19:40:38.731200')
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."id" = 6) LIMIT 1[0m
+  [1m[35mQuestion Load (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."survey_id" = 2)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 5)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 6)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 7)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 12)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 13)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 14)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered forms/create.html.erb within layouts/application (140.4ms)
+Completed 200 OK in 563ms (Views: 156.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/forms" for 127.0.0.1 at 2011-03-22 20:40:57 +0100
+  Processing by FormsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bmv18WPWEKInC/J3GVzpAloRenAGYp+WyRi9FMTMW0g=", "question_6,answer_6"=>"Blablub", "question_7"=>{"18"=>"1", "19"=>"0"}, "question_13"=>"32", "question_14"=>"42", "survey_id"=>"2", "commit"=>"Ergebnis abschicken"}
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mAREL (15.6ms)[0m  [1mINSERT INTO "forms" ("survey_id", "created_at", "updated_at") VALUES (2, '2011-03-22 19:40:57.279600', '2011-03-22 19:40:57.279600')[0m
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mForm Load (15.6ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."id" = 60) LIMIT 1[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO "user_answers" ("AnswerBoolean", "AnswerText", "AnswerRate", "answer_id", "form_id", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, 60, '2011-03-22 19:40:57.405400', '2011-03-22 19:40:57.405400')
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."id" = 6) LIMIT 1[0m
+  [1m[35mQuestion Load (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."survey_id" = 2)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 5)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 6)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 7)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 12)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 13)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 14)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered forms/create.html.erb within layouts/application (124.8ms)
+Completed 200 OK in 469ms (Views: 140.4ms | ActiveRecord: 31.2ms)
+
+
+Started POST "/forms" for 127.0.0.1 at 2011-03-22 20:41:22 +0100
+  Processing by FormsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bmv18WPWEKInC/J3GVzpAloRenAGYp+WyRi9FMTMW0g=", "question_6,answer_6"=>"Blablub", "question_7"=>{"18"=>"1", "19"=>"0"}, "question_13"=>"32", "question_14"=>"42", "survey_id"=>"2", "commit"=>"Ergebnis abschicken"}
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO "forms" ("survey_id", "created_at", "updated_at") VALUES (2, '2011-03-22 19:41:22.849000', '2011-03-22 19:41:22.849000')[0m
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mForm Load (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."id" = 61) LIMIT 1[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO "user_answers" ("AnswerBoolean", "AnswerText", "AnswerRate", "answer_id", "form_id", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, 61, '2011-03-22 19:41:23.006000', '2011-03-22 19:41:23.006000')
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."id" = 6) LIMIT 1[0m
+  [1m[35mQuestion Load (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."survey_id" = 2)
+  [1m[36mAnswer Load (15.6ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 5)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 6)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 7)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 12)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 13)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 14)
+  [1m[36mUser Load (15.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered forms/create.html.erb within layouts/application (93.6ms)
+Completed 200 OK in 578ms (Views: 93.6ms | ActiveRecord: 31.2ms)
+
+
+Started POST "/forms" for 127.0.0.1 at 2011-03-22 20:42:10 +0100
+  Processing by FormsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bmv18WPWEKInC/J3GVzpAloRenAGYp+WyRi9FMTMW0g=", "question_6,answer_6"=>"Blablub", "question_7"=>{"18"=>"1", "19"=>"0"}, "question_13"=>"32", "question_14"=>"42", "survey_id"=>"2", "commit"=>"Ergebnis abschicken"}
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO "forms" ("survey_id", "created_at", "updated_at") VALUES (2, '2011-03-22 19:42:10.866800', '2011-03-22 19:42:10.866800')[0m
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mForm Load (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."id" = 62) LIMIT 1[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO "user_answers" ("AnswerBoolean", "AnswerText", "AnswerRate", "answer_id", "form_id", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, 62, '2011-03-22 19:42:10.914600', '2011-03-22 19:42:10.914600')
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."id" = 6) LIMIT 1[0m
+  [1m[35mQuestion Load (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."survey_id" = 2)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 5)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 6)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 7)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 12)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 13)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 14)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered forms/create.html.erb within layouts/application (140.4ms)
+Completed 200 OK in 516ms (Views: 171.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/forms" for 127.0.0.1 at 2011-03-22 20:42:29 +0100
+  Processing by FormsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bmv18WPWEKInC/J3GVzpAloRenAGYp+WyRi9FMTMW0g=", "question_6,answer_6"=>"Blablub", "question_7"=>{"18"=>"1", "19"=>"0"}, "question_13"=>"32", "question_14"=>"42", "survey_id"=>"2", "commit"=>"Ergebnis abschicken"}
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mAREL (15.6ms)[0m  [1mINSERT INTO "forms" ("survey_id", "created_at", "updated_at") VALUES (2, '2011-03-22 19:42:29.260200', '2011-03-22 19:42:29.260200')[0m
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mForm Load (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."id" = 63) LIMIT 1[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO "user_answers" ("AnswerBoolean", "AnswerText", "AnswerRate", "answer_id", "form_id", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, 63, '2011-03-22 19:42:29.386000', '2011-03-22 19:42:29.386000')
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."id" = 6) LIMIT 1[0m
+  [1m[35mQuestion Load (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."survey_id" = 2)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 5)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 6)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 7)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 12)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 13)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 14)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered forms/create.html.erb within layouts/application (109.2ms)
+Completed 200 OK in 516ms (Views: 140.4ms | ActiveRecord: 15.6ms)
+
+
+Started POST "/forms" for 127.0.0.1 at 2011-03-22 20:43:06 +0100
+  Processing by FormsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bmv18WPWEKInC/J3GVzpAloRenAGYp+WyRi9FMTMW0g=", "question_6,answer_6"=>"Blablub", "question_7"=>{"18"=>"1", "19"=>"0"}, "question_13"=>"32", "question_14"=>"42", "survey_id"=>"2", "commit"=>"Ergebnis abschicken"}
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO "forms" ("survey_id", "created_at", "updated_at") VALUES (2, '2011-03-22 19:43:06.498400', '2011-03-22 19:43:06.498400')[0m
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mForm Load (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."id" = 64) LIMIT 1[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO "user_answers" ("AnswerBoolean", "AnswerText", "AnswerRate", "answer_id", "form_id", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, 64, '2011-03-22 19:43:06.561800', '2011-03-22 19:43:06.561800')
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."id" = 6) LIMIT 1[0m
+  [1m[35mQuestion Load (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."survey_id" = 2)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 5)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 6)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 7)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 12)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 13)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 14)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered forms/create.html.erb within layouts/application (156.0ms)
+Completed 200 OK in 578ms (Views: 171.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/forms" for 127.0.0.1 at 2011-03-22 20:43:45 +0100
+  Processing by FormsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bmv18WPWEKInC/J3GVzpAloRenAGYp+WyRi9FMTMW0g=", "question_6,answer_6"=>"Blablub", "question_7"=>{"18"=>"1", "19"=>"0"}, "question_13"=>"32", "question_14"=>"42", "survey_id"=>"2", "commit"=>"Ergebnis abschicken"}
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mAREL (15.6ms)[0m  [1mINSERT INTO "forms" ("survey_id", "created_at", "updated_at") VALUES (2, '2011-03-22 19:43:46.107800', '2011-03-22 19:43:46.107800')[0m
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mForm Load (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."id" = 65) LIMIT 1[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO "user_answers" ("AnswerBoolean", "AnswerText", "AnswerRate", "answer_id", "form_id", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, 65, '2011-03-22 19:43:46.202400', '2011-03-22 19:43:46.202400')
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."id" = 6) LIMIT 1[0m
+  [1m[35mQuestion Load (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."survey_id" = 2)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 5)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 6)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 7)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 12)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 13)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 14)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered forms/create.html.erb within layouts/application (124.8ms)
+Completed 200 OK in 500ms (Views: 156.0ms | ActiveRecord: 15.6ms)
+
+
+Started POST "/forms" for 127.0.0.1 at 2011-03-22 20:44:58 +0100
+  Processing by FormsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bmv18WPWEKInC/J3GVzpAloRenAGYp+WyRi9FMTMW0g=", "question_6,answer_6"=>"Blablub", "question_7"=>{"18"=>"1", "19"=>"0"}, "question_13"=>"32", "question_14"=>"42", "survey_id"=>"2", "commit"=>"Ergebnis abschicken"}
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO "forms" ("survey_id", "created_at", "updated_at") VALUES (2, '2011-03-22 19:44:58.555200', '2011-03-22 19:44:58.555200')[0m
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mForm Load (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."id" = 66) LIMIT 1[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO "user_answers" ("AnswerBoolean", "AnswerText", "AnswerRate", "answer_id", "form_id", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, 66, '2011-03-22 19:44:58.603000', '2011-03-22 19:44:58.603000')
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."id" = 6) LIMIT 1[0m
+  [1m[35mQuestion Load (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."survey_id" = 2)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 5)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 6)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 7)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 12)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 13)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 14)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered forms/create.html.erb within layouts/application (140.4ms)
+Completed 200 OK in 547ms (Views: 171.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/forms" for 127.0.0.1 at 2011-03-22 20:45:23 +0100
+  Processing by FormsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bmv18WPWEKInC/J3GVzpAloRenAGYp+WyRi9FMTMW0g=", "question_6,answer_6"=>"Blablub", "question_7"=>{"18"=>"1", "19"=>"0"}, "question_13"=>"32", "question_14"=>"42", "survey_id"=>"2", "commit"=>"Ergebnis abschicken"}
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO "forms" ("survey_id", "created_at", "updated_at") VALUES (2, '2011-03-22 19:45:23.531800', '2011-03-22 19:45:23.531800')[0m
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mForm Load (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."id" = 67) LIMIT 1[0m
+  [1m[35mAREL (15.6ms)[0m  INSERT INTO "user_answers" ("AnswerBoolean", "AnswerText", "AnswerRate", "answer_id", "form_id", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, 67, '2011-03-22 19:45:23.642000', '2011-03-22 19:45:23.642000')
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."id" = 6) LIMIT 1[0m
+  [1m[35mQuestion Load (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."survey_id" = 2)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 5)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 6)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 7)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 12)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 13)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 14)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered forms/create.html.erb within layouts/application (78.0ms)
+Completed 200 OK in 563ms (Views: 109.2ms | ActiveRecord: 15.6ms)
+
+
+Started POST "/forms" for 127.0.0.1 at 2011-03-22 20:45:55 +0100
+  Processing by FormsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bmv18WPWEKInC/J3GVzpAloRenAGYp+WyRi9FMTMW0g=", "question_6,answer_6"=>"Blablub", "question_7"=>{"18"=>"1", "19"=>"0"}, "question_13"=>"32", "question_14"=>"42", "survey_id"=>"2", "commit"=>"Ergebnis abschicken"}
+  [1m[35mSurvey Load (15.6ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO "forms" ("survey_id", "created_at", "updated_at") VALUES (2, '2011-03-22 19:45:55.684400', '2011-03-22 19:45:55.684400')[0m
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mForm Load (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."id" = 68) LIMIT 1[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO "user_answers" ("AnswerBoolean", "AnswerText", "AnswerRate", "answer_id", "form_id", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, 68, '2011-03-22 19:45:55.779000', '2011-03-22 19:45:55.779000')
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."id" = 6) LIMIT 1[0m
+  [1m[35mQuestion Load (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."survey_id" = 2)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 5)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 6)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 7)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 12)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 13)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 14)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered forms/create.html.erb within layouts/application (140.4ms)
+Completed 200 OK in 485ms (Views: 156.0ms | ActiveRecord: 15.6ms)
+
+
+Started POST "/forms" for 127.0.0.1 at 2011-03-22 20:46:19 +0100
+  Processing by FormsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bmv18WPWEKInC/J3GVzpAloRenAGYp+WyRi9FMTMW0g=", "question_6,answer_6"=>"Blablub", "question_7"=>{"18"=>"1", "19"=>"0"}, "question_13"=>"32", "question_14"=>"42", "survey_id"=>"2", "commit"=>"Ergebnis abschicken"}
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO "forms" ("survey_id", "created_at", "updated_at") VALUES (2, '2011-03-22 19:46:19.206200', '2011-03-22 19:46:19.206200')[0m
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mForm Load (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."id" = 69) LIMIT 1[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO "user_answers" ("AnswerBoolean", "AnswerText", "AnswerRate", "answer_id", "form_id", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, 69, '2011-03-22 19:46:19.316400', '2011-03-22 19:46:19.316400')
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."id" = 6) LIMIT 1[0m
+  [1m[35mQuestion Load (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."survey_id" = 2)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 5)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 6)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 7)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 12)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 13)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 14)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered forms/create.html.erb within layouts/application (93.6ms)
+Completed 200 OK in 469ms (Views: 109.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/forms" for 127.0.0.1 at 2011-03-22 20:46:38 +0100
+  Processing by FormsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bmv18WPWEKInC/J3GVzpAloRenAGYp+WyRi9FMTMW0g=", "question_6,answer_6"=>"Blablub", "question_7"=>{"18"=>"1", "19"=>"0"}, "question_13"=>"32", "question_14"=>"42", "survey_id"=>"2", "commit"=>"Ergebnis abschicken"}
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO "forms" ("survey_id", "created_at", "updated_at") VALUES (2, '2011-03-22 19:46:38.894400', '2011-03-22 19:46:38.894400')[0m
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mForm Load (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."id" = 70) LIMIT 1[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO "user_answers" ("AnswerBoolean", "AnswerText", "AnswerRate", "answer_id", "form_id", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, 70, '2011-03-22 19:46:38.942200', '2011-03-22 19:46:38.942200')
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."id" = 6) LIMIT 1[0m
+  [1m[35mQuestion Load (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."survey_id" = 2)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 5)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 6)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 7)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 12)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 13)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 14)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered forms/create.html.erb within layouts/application (109.2ms)
+Completed 200 OK in 609ms (Views: 140.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/forms" for 127.0.0.1 at 2011-03-22 20:47:28 +0100
+  Processing by FormsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bmv18WPWEKInC/J3GVzpAloRenAGYp+WyRi9FMTMW0g=", "question_6,answer_6"=>"Blablub", "question_7"=>{"18"=>"1", "19"=>"0"}, "question_13"=>"32", "question_14"=>"42", "survey_id"=>"2", "commit"=>"Ergebnis abschicken"}
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO "forms" ("survey_id", "created_at", "updated_at") VALUES (2, '2011-03-22 19:47:28.799800', '2011-03-22 19:47:28.799800')[0m
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mForm Load (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."id" = 71) LIMIT 1[0m
+  [1m[35mAREL (15.6ms)[0m  INSERT INTO "user_answers" ("AnswerBoolean", "AnswerText", "AnswerRate", "answer_id", "form_id", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, 71, '2011-03-22 19:47:28.925600', '2011-03-22 19:47:28.925600')
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."id" = 6) LIMIT 1[0m
+  [1m[35mQuestion Load (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."survey_id" = 2)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 5)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 6)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 7)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 12)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 13)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 14)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered forms/create.html.erb within layouts/application (93.6ms)
+Completed 200 OK in 516ms (Views: 124.8ms | ActiveRecord: 15.6ms)
+
+
+Started POST "/forms" for 127.0.0.1 at 2011-03-22 20:47:51 +0100
+  Processing by FormsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bmv18WPWEKInC/J3GVzpAloRenAGYp+WyRi9FMTMW0g=", "question_6,answer_6"=>"Blablub", "question_7"=>{"18"=>"1", "19"=>"0"}, "question_13"=>"32", "question_14"=>"42", "survey_id"=>"2", "commit"=>"Ergebnis abschicken"}
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO "forms" ("survey_id", "created_at", "updated_at") VALUES (2, '2011-03-22 19:47:52.091600', '2011-03-22 19:47:52.091600')[0m
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mForm Load (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."id" = 72) LIMIT 1[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO "user_answers" ("AnswerBoolean", "AnswerText", "AnswerRate", "answer_id", "form_id", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, 72, '2011-03-22 19:47:52.154000', '2011-03-22 19:47:52.154000')
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."id" = 6) LIMIT 1[0m
+  [1m[35mQuestion Load (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."survey_id" = 2)
+  [1m[36mAnswer Load (15.6ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 5)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 6)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 7)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 12)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 13)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 14)
+  [1m[36mUser Load (15.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered forms/create.html.erb within layouts/application (140.4ms)
+Completed 200 OK in 516ms (Views: 156.0ms | ActiveRecord: 31.2ms)
+
+
+Started POST "/forms" for 127.0.0.1 at 2011-03-22 20:48:34 +0100
+  Processing by FormsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bmv18WPWEKInC/J3GVzpAloRenAGYp+WyRi9FMTMW0g=", "question_6,answer_6"=>"Blablub", "question_7"=>{"18"=>"1", "19"=>"0"}, "question_13"=>"32", "question_14"=>"42", "survey_id"=>"2", "commit"=>"Ergebnis abschicken"}
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mAREL (15.6ms)[0m  [1mINSERT INTO "forms" ("survey_id", "created_at", "updated_at") VALUES (2, '2011-03-22 19:48:34.399800', '2011-03-22 19:48:34.399800')[0m
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mForm Load (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."id" = 73) LIMIT 1[0m
+  [1m[35mAREL (15.6ms)[0m  INSERT INTO "user_answers" ("AnswerBoolean", "AnswerText", "AnswerRate", "answer_id", "form_id", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, 73, '2011-03-22 19:48:34.493400', '2011-03-22 19:48:34.493400')
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."id" = 6) LIMIT 1[0m
+  [1m[35mQuestion Load (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."survey_id" = 2)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 5)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 6)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 7)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 12)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 13)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 14)
+  [1m[36mUser Load (15.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered forms/create.html.erb within layouts/application (78.0ms)
+Completed 200 OK in 469ms (Views: 93.6ms | ActiveRecord: 46.8ms)
+
+
+Started POST "/forms" for 127.0.0.1 at 2011-03-22 21:05:18 +0100
+  Processing by FormsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bmv18WPWEKInC/J3GVzpAloRenAGYp+WyRi9FMTMW0g=", "question_6,answer_6"=>"Blablub", "question_7"=>{"18"=>"1", "19"=>"0"}, "question_13"=>"32", "question_14"=>"42", "survey_id"=>"2", "commit"=>"Ergebnis abschicken"}
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO "forms" ("survey_id", "created_at", "updated_at") VALUES (2, '2011-03-22 20:05:18.581400', '2011-03-22 20:05:18.581400')[0m
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mForm Load (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."id" = 74) LIMIT 1[0m
+  [1m[35mAREL (15.6ms)[0m  INSERT INTO "user_answers" ("AnswerBoolean", "AnswerText", "AnswerRate", "answer_id", "form_id", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, 74, '2011-03-22 20:05:18.644800', '2011-03-22 20:05:18.644800')
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."id" = 6) LIMIT 1[0m
+  [1m[35mForm Load (0.0ms)[0m  SELECT "forms".* FROM "forms" WHERE ("forms"."id" = 74) LIMIT 1
+  [1m[36mAREL (15.6ms)[0m  [1mINSERT INTO "user_answers" ("AnswerBoolean", "AnswerText", "AnswerRate", "answer_id", "form_id", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, 74, '2011-03-22 20:05:18.707200', '2011-03-22 20:05:18.707200')[0m
+Completed   in 282ms
+
+ActiveRecord::RecordNotFound (Couldn't find Answer without an ID):
+  app/controllers/forms_controller.rb:43:in `block (2 levels) in create'
+  app/controllers/forms_controller.rb:36:in `each'
+  app/controllers/forms_controller.rb:36:in `block in create'
+  app/controllers/forms_controller.rb:24:in `each'
+  app/controllers/forms_controller.rb:24:in `create'
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (15.6ms)
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.2ms)
+
+
+Started POST "/forms" for 127.0.0.1 at 2011-03-22 21:09:53 +0100
+  Processing by FormsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bmv18WPWEKInC/J3GVzpAloRenAGYp+WyRi9FMTMW0g=", "question_6,answer_6"=>"Blablub", "question_7"=>{"18"=>"1", "19"=>"0"}, "question_13"=>"32", "question_14"=>"42", "survey_id"=>"2", "commit"=>"Ergebnis abschicken"}
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO "forms" ("survey_id", "created_at", "updated_at") VALUES (2, '2011-03-22 20:09:53.392000', '2011-03-22 20:09:53.392000')[0m
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mForm Load (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."id" = 75) LIMIT 1[0m
+  [1m[35mAREL (15.6ms)[0m  INSERT INTO "user_answers" ("AnswerBoolean", "AnswerText", "AnswerRate", "answer_id", "form_id", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, 75, '2011-03-22 20:09:53.502200', '2011-03-22 20:09:53.502200')
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."id" = 6) LIMIT 1[0m
+  [1m[35mForm Load (0.0ms)[0m  SELECT "forms".* FROM "forms" WHERE ("forms"."id" = 75) LIMIT 1
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO "user_answers" ("AnswerBoolean", "AnswerText", "AnswerRate", "answer_id", "form_id", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, 75, '2011-03-22 20:09:53.580200', '2011-03-22 20:09:53.580200')[0m
+Completed   in 282ms
+
+ActiveRecord::RecordNotFound (Couldn't find Answer without an ID):
+  app/controllers/forms_controller.rb:43:in `block (2 levels) in create'
+  app/controllers/forms_controller.rb:36:in `each'
+  app/controllers/forms_controller.rb:36:in `block in create'
+  app/controllers/forms_controller.rb:24:in `each'
+  app/controllers/forms_controller.rb:24:in `create'
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (15.6ms)
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (31.2ms)
+
+
+Started POST "/forms" for 127.0.0.1 at 2011-03-22 21:12:07 +0100
+  Processing by FormsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bmv18WPWEKInC/J3GVzpAloRenAGYp+WyRi9FMTMW0g=", "question_6,answer_6"=>"Blablub", "question_7"=>{"18"=>"1", "19"=>"0"}, "question_13"=>"32", "question_14"=>"42", "survey_id"=>"2", "commit"=>"Ergebnis abschicken"}
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO "forms" ("survey_id", "created_at", "updated_at") VALUES (2, '2011-03-22 20:12:07.943000', '2011-03-22 20:12:07.943000')[0m
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mForm Load (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."id" = 76) LIMIT 1[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO "user_answers" ("AnswerBoolean", "AnswerText", "AnswerRate", "answer_id", "form_id", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, 76, '2011-03-22 20:12:08.006400', '2011-03-22 20:12:08.006400')
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."id" = 6) LIMIT 1[0m
+  [1m[35mForm Load (0.0ms)[0m  SELECT "forms".* FROM "forms" WHERE ("forms"."id" = 76) LIMIT 1
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO "user_answers" ("AnswerBoolean", "AnswerText", "AnswerRate", "answer_id", "form_id", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, 76, '2011-03-22 20:12:08.146800', '2011-03-22 20:12:08.146800')[0m
+  [1m[35mQuestion Load (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."survey_id" = 2)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 5)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 6)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 7)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 12)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 13)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 14)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered forms/create.html.erb within layouts/application (109.2ms)
+Completed 200 OK in 531ms (Views: 140.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/forms" for 127.0.0.1 at 2011-03-22 21:14:33 +0100
+  Processing by FormsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bmv18WPWEKInC/J3GVzpAloRenAGYp+WyRi9FMTMW0g=", "question_6,answer_6"=>"Blablub", "question_7"=>{"18"=>"1", "19"=>"0"}, "question_13"=>"32", "question_14"=>"42", "survey_id"=>"2", "commit"=>"Ergebnis abschicken"}
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mAREL (15.6ms)[0m  [1mINSERT INTO "forms" ("survey_id", "created_at", "updated_at") VALUES (2, '2011-03-22 20:14:33.538800', '2011-03-22 20:14:33.538800')[0m
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mForm Load (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."id" = 77) LIMIT 1[0m
+  [1m[35mAREL (15.6ms)[0m  INSERT INTO "user_answers" ("AnswerBoolean", "AnswerText", "AnswerRate", "answer_id", "form_id", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, 77, '2011-03-22 20:14:33.632400', '2011-03-22 20:14:33.632400')
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."id" = 6) LIMIT 1[0m
+  [1m[35mForm Load (0.0ms)[0m  SELECT "forms".* FROM "forms" WHERE ("forms"."id" = 77) LIMIT 1
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO "user_answers" ("AnswerBoolean", "AnswerText", "AnswerRate", "answer_id", "form_id", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, 77, '2011-03-22 20:14:33.694800', '2011-03-22 20:14:33.694800')[0m
+  [1m[35mQuestion Load (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."survey_id" = 2)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 5)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 6)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 7)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 12)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 13)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 14)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered forms/create.html.erb within layouts/application (78.0ms)
+Completed 200 OK in 500ms (Views: 109.2ms | ActiveRecord: 31.2ms)
+
+
+Started POST "/forms" for 127.0.0.1 at 2011-03-22 21:17:15 +0100
+  Processing by FormsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bmv18WPWEKInC/J3GVzpAloRenAGYp+WyRi9FMTMW0g=", "question_6,answer_6"=>"Blablub", "question_7"=>{"18"=>"1", "19"=>"0"}, "question_13"=>"32", "question_14"=>"42", "survey_id"=>"2", "commit"=>"Ergebnis abschicken"}
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO "forms" ("survey_id", "created_at", "updated_at") VALUES (2, '2011-03-22 20:17:15.421000', '2011-03-22 20:17:15.421000')[0m
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mForm Load (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."id" = 78) LIMIT 1[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO "user_answers" ("AnswerBoolean", "AnswerText", "AnswerRate", "answer_id", "form_id", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, 78, '2011-03-22 20:17:15.561400', '2011-03-22 20:17:15.561400')
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."id" = 6) LIMIT 1[0m
+  [1m[35mForm Load (15.6ms)[0m  SELECT "forms".* FROM "forms" WHERE ("forms"."id" = 78) LIMIT 1
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO "user_answers" ("AnswerBoolean", "AnswerText", "AnswerRate", "answer_id", "form_id", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, 78, '2011-03-22 20:17:15.655000', '2011-03-22 20:17:15.655000')[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."id" = 1) LIMIT 1
+  [1m[36mQuestion Load (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."survey_id" = 2)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 5)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 6)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 7)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 12)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 13)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 14)[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered forms/create.html.erb within layouts/application (124.8ms)
+Completed 200 OK in 547ms (Views: 156.0ms | ActiveRecord: 15.6ms)
+
+
+Started POST "/forms" for 127.0.0.1 at 2011-03-22 21:18:47 +0100
+  Processing by FormsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bmv18WPWEKInC/J3GVzpAloRenAGYp+WyRi9FMTMW0g=", "question_6,answer_6"=>"Blablub", "question_7"=>{"18"=>"1", "19"=>"0"}, "question_13"=>"32", "question_14"=>"42", "survey_id"=>"2", "commit"=>"Ergebnis abschicken"}
+  [1m[36mSurvey Load (0.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO "forms" ("survey_id", "created_at", "updated_at") VALUES (2, '2011-03-22 20:18:47.614000', '2011-03-22 20:18:47.614000')
+  [1m[36mSurvey Load (15.6ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1[0m
+  [1m[35mForm Load (0.0ms)[0m  SELECT "forms".* FROM "forms" WHERE ("forms"."id" = 79) LIMIT 1
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO "user_answers" ("AnswerBoolean", "AnswerText", "AnswerRate", "answer_id", "form_id", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, 79, '2011-03-22 20:18:47.676400', '2011-03-22 20:18:47.676400')[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."id" = 6) LIMIT 1
+  [1m[36mForm Load (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."id" = 79) LIMIT 1[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO "user_answers" ("AnswerBoolean", "AnswerText", "AnswerRate", "answer_id", "form_id", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, 79, '2011-03-22 20:18:47.785600', '2011-03-22 20:18:47.785600')
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."id" = 1) LIMIT 1[0m
+  [1m[35mForm Load (0.0ms)[0m  SELECT "forms".* FROM "forms" WHERE ("forms"."id" = 79) LIMIT 1
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO "user_answers" ("AnswerBoolean", "AnswerText", "AnswerRate", "answer_id", "form_id", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, 79, '2011-03-22 20:18:47.801200', '2011-03-22 20:18:47.801200')[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."id" = 32) LIMIT 1
+  [1m[36mForm Load (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."id" = 79) LIMIT 1[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO "user_answers" ("AnswerBoolean", "AnswerText", "AnswerRate", "answer_id", "form_id", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, 79, '2011-03-22 20:18:47.863600', '2011-03-22 20:18:47.863600')
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."id" = 42) LIMIT 1[0m
+  [1m[35mQuestion Load (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."survey_id" = 2)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 5)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 6)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 7)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 12)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 13)[0m
+  [1m[35mAnswer Load (15.6ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 14)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered forms/create.html.erb within layouts/application (124.8ms)
+Completed 200 OK in 640ms (Views: 140.4ms | ActiveRecord: 31.2ms)
+
+
+Started POST "/forms" for 127.0.0.1 at 2011-03-22 21:23:41 +0100
+  Processing by FormsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bmv18WPWEKInC/J3GVzpAloRenAGYp+WyRi9FMTMW0g=", "question_6,answer_6"=>"Blablub", "question_7"=>{"18"=>"1", "19"=>"0"}, "question_13"=>"32", "question_14"=>"42", "survey_id"=>"2", "commit"=>"Ergebnis abschicken"}
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO "forms" ("survey_id", "created_at", "updated_at") VALUES (2, '2011-03-22 20:23:41.505800', '2011-03-22 20:23:41.505800')[0m
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+Completed   in 156ms
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.save):
+  app/controllers/forms_controller.rb:67:in `block in create'
+  app/controllers/forms_controller.rb:24:in `each'
+  app/controllers/forms_controller.rb:24:in `create'
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.0ms)
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (15.6ms)
+
+
+Started POST "/forms" for 127.0.0.1 at 2011-03-22 21:23:59 +0100
+  Processing by FormsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bmv18WPWEKInC/J3GVzpAloRenAGYp+WyRi9FMTMW0g=", "question_6,answer_6"=>"Blablub", "question_7"=>{"18"=>"1", "19"=>"0"}, "question_13"=>"32", "question_14"=>"42", "survey_id"=>"2", "commit"=>"Ergebnis abschicken"}
+  [1m[36mSurvey Load (0.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO "forms" ("survey_id", "created_at", "updated_at") VALUES (2, '2011-03-22 20:23:59.992800', '2011-03-22 20:23:59.992800')
+  [1m[36mSurvey Load (0.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1[0m
+  [1m[35mForm Load (0.0ms)[0m  SELECT "forms".* FROM "forms" WHERE ("forms"."id" = 81) LIMIT 1
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO "user_answers" ("AnswerBoolean", "AnswerText", "AnswerRate", "answer_id", "form_id", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, 81, '2011-03-22 20:24:00.039600', '2011-03-22 20:24:00.039600')[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."id" = 6) LIMIT 1
+  [1m[36mAREL (31.2ms)[0m  [1mUPDATE "user_answers" SET "answer_id" = 6, "AnswerText" = 'Blablub', "updated_at" = '2011-03-22 20:24:00.117600' WHERE ("user_answers"."id" = 49)[0m
+  [1m[35mForm Load (0.0ms)[0m  SELECT "forms".* FROM "forms" WHERE ("forms"."id" = 81) LIMIT 1
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO "user_answers" ("AnswerBoolean", "AnswerText", "AnswerRate", "answer_id", "form_id", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, 81, '2011-03-22 20:24:00.195600', '2011-03-22 20:24:00.195600')[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."id" = 1) LIMIT 1
+  [1m[36mAREL (0.0ms)[0m  [1mUPDATE "user_answers" SET "answer_id" = 1, "updated_at" = '2011-03-22 20:24:00.211200' WHERE ("user_answers"."id" = 50)[0m
+  [1m[35mForm Load (0.0ms)[0m  SELECT "forms".* FROM "forms" WHERE ("forms"."id" = 81) LIMIT 1
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO "user_answers" ("AnswerBoolean", "AnswerText", "AnswerRate", "answer_id", "form_id", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, 81, '2011-03-22 20:24:00.226800', '2011-03-22 20:24:00.226800')[0m
+  [1m[35mAnswer Load (15.6ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."id" = 32) LIMIT 1
+  [1m[36mAREL (0.0ms)[0m  [1mUPDATE "user_answers" SET "answer_id" = 32, "updated_at" = '2011-03-22 20:24:00.242400' WHERE ("user_answers"."id" = 51)[0m
+  [1m[35mForm Load (0.0ms)[0m  SELECT "forms".* FROM "forms" WHERE ("forms"."id" = 81) LIMIT 1
+  [1m[36mAREL (0.0ms)[0m  [1mINSERT INTO "user_answers" ("AnswerBoolean", "AnswerText", "AnswerRate", "answer_id", "form_id", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, 81, '2011-03-22 20:24:00.289200', '2011-03-22 20:24:00.289200')[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."id" = 42) LIMIT 1
+  [1m[36mAREL (0.0ms)[0m  [1mUPDATE "user_answers" SET "answer_id" = 42, "updated_at" = '2011-03-22 20:24:00.304800' WHERE ("user_answers"."id" = 52)[0m
+  [1m[35mQuestion Load (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."survey_id" = 2)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 5)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 6)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 7)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 12)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 13)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 14)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered forms/create.html.erb within layouts/application (109.2ms)
+Completed 200 OK in 608ms (Views: 140.4ms | ActiveRecord: 46.8ms)
+
+
+Started POST "/forms" for 127.0.0.1 at 2011-03-22 21:25:04 +0100
+  Processing by FormsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Bmv18WPWEKInC/J3GVzpAloRenAGYp+WyRi9FMTMW0g=", "question_6,answer_6"=>"BlAAAAA", "question_7"=>{"18"=>"1", "19"=>"1"}, "question_13"=>"33", "question_14"=>"40", "survey_id"=>"2", "commit"=>"Ergebnis abschicken"}
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mAREL (15.6ms)[0m  [1mINSERT INTO "forms" ("survey_id", "created_at", "updated_at") VALUES (2, '2011-03-22 20:25:04.619600', '2011-03-22 20:25:04.619600')[0m
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 2) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mForm Load (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."id" = 82) LIMIT 1[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO "user_answers" ("AnswerBoolean", "AnswerText", "AnswerRate", "answer_id", "form_id", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, 82, '2011-03-22 20:25:04.744400', '2011-03-22 20:25:04.744400')
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."id" = 6) LIMIT 1[0m
+  [1m[35mAREL (0.0ms)[0m  UPDATE "user_answers" SET "answer_id" = 6, "AnswerText" = 'BlAAAAA', "updated_at" = '2011-03-22 20:25:04.822400' WHERE ("user_answers"."id" = 53)
+  [1m[36mForm Load (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."id" = 82) LIMIT 1[0m
+  [1m[35mAREL (15.6ms)[0m  INSERT INTO "user_answers" ("AnswerBoolean", "AnswerText", "AnswerRate", "answer_id", "form_id", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, 82, '2011-03-22 20:25:04.822400', '2011-03-22 20:25:04.822400')
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."id" = 1) LIMIT 1[0m
+  [1m[35mAREL (0.0ms)[0m  UPDATE "user_answers" SET "answer_id" = 1, "updated_at" = '2011-03-22 20:25:04.838000' WHERE ("user_answers"."id" = 54)
+  [1m[36mForm Load (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."id" = 82) LIMIT 1[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO "user_answers" ("AnswerBoolean", "AnswerText", "AnswerRate", "answer_id", "form_id", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, 82, '2011-03-22 20:25:04.853600', '2011-03-22 20:25:04.853600')
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."id" = 1) LIMIT 1[0m
+  [1m[35mAREL (0.0ms)[0m  UPDATE "user_answers" SET "answer_id" = 1, "updated_at" = '2011-03-22 20:25:04.869200' WHERE ("user_answers"."id" = 55)
+  [1m[36mForm Load (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."id" = 82) LIMIT 1[0m
+  [1m[35mAREL (0.0ms)[0m  INSERT INTO "user_answers" ("AnswerBoolean", "AnswerText", "AnswerRate", "answer_id", "form_id", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, 82, '2011-03-22 20:25:04.884800', '2011-03-22 20:25:04.884800')
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."id" = 33) LIMIT 1[0m
+  [1m[35mAREL (0.0ms)[0m  UPDATE "user_answers" SET "answer_id" = 33, "updated_at" = '2011-03-22 20:25:04.900400' WHERE ("user_answers"."id" = 56)
+  [1m[36mForm Load (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."id" = 82) LIMIT 1[0m
+  [1m[35mAREL (15.6ms)[0m  INSERT INTO "user_answers" ("AnswerBoolean", "AnswerText", "AnswerRate", "answer_id", "form_id", "created_at", "updated_at") VALUES (NULL, NULL, NULL, NULL, 82, '2011-03-22 20:25:04.900400', '2011-03-22 20:25:04.900400')
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."id" = 40) LIMIT 1[0m
+  [1m[35mAREL (0.0ms)[0m  UPDATE "user_answers" SET "answer_id" = 40, "updated_at" = '2011-03-22 20:25:04.931600' WHERE ("user_answers"."id" = 57)
+  [1m[36mQuestion Load (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."survey_id" = 2)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 5)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 6)[0m
+  [1m[35mAnswer Load (15.6ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 7)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 12)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 13)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 14)[0m
+  [1m[35mUser Load (15.6ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered forms/create.html.erb within layouts/application (78.0ms)
+Completed 200 OK in 577ms (Views: 78.0ms | ActiveRecord: 78.0ms)
