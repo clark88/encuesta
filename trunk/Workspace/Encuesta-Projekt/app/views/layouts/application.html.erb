@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <!DOCTYPE html>
+ <!DOCTYPE html>
 <html>
   <head>
     <title>Encuesta Projekt</title>
@@ -15,15 +15,14 @@
    <%= javascript_include_tag :defaults %>
    <%= javascript_include_tag "EffeckteButtons.js" %>
   </head>
-
+  	   		<header>
+  					<%= link_to logo, home_path %><br>
+  					<!--><nav class="round">-->
+   			</header>
   <body>
   	<!-- Hier beginnt die Hauptseite mit einer Kopfzeile, einem Hauptteil und der Fußzeile -->
-      <header>
-  		<%= link_to logo, home_path %><br>
-  		<!--><nav class="round">-->
-   		</header>
-   		<div class = "abstand">
-      		<center><table border = "0" >
+   
+      		<center><div class = "menuebuttons"><table border = "0">
       			<tr><td>
 					<a href="http://127.0.0.1:3000/home" onmouseover="a1.src='/images/HomeButtonON.png';" 
 					onmouseout="a1.src='/images/HomeButton.png';" name="a1">
@@ -45,21 +44,35 @@
 					<img src="/images/ImpressumButton.png" border="0" alt="" name="a4"></a>
 					</td>	 		 			
 				</tr>
-			</table></center>
+			</table></div></center>
 			</div>						
-
+   		<div class = "abstand">
       		<% if signed_in? %>
-      		<!--	<li><%= link_to "Home", home_path %></li> 
-      			<li><%= link_to "Benutzer", users_path %></li> -->
-      			<li><%= link_to "Mein Umfragen", current_user %></li>
-      			<li><%= link_to "Einstellungen", edit_user_path(current_user) %></li>
+      		<div id = "menuebox" class ="round">
+      		<center><table border = "0" >
+      			<tr>
+      				<td><%=menue%><td>
+      			</tr>
+      			<tr>
+      				<td>Eingeloggt als:<%= @current_user.login %></td>
+      			</tr>
+      			<tr>	
+      				<td><%= link_to " Andere Benutzer", users_path %></td>
+      			</tr>
+      			<tr>	
+      				<td><%= link_to "Mein Profil", current_user %></td>
+      			</tr>
+      			<tr>
+      				<td><%= link_to "Einstellungen", edit_user_path(current_user) %></td>
+      			</tr>
+      			<tr>
+      				<td><%= link_to "Ausloggen", signout_path, :method => :delete %></td>
+      			</tr>      			
+      		</table></center>
+      		
+      			
       		<% end %>
-      		<% if signed_in? %>
-      			<li><%= link_to "Ausloggen", signout_path, :method => :delete %></li>
-      		<% end %>
-      		<% if signed_in? %>
-      			<li>Eingeloggt als:<%= @current_user.login %></li>
-      		<% end %>
+      		</div>
     	</ul>
  </nav>
   <% if signed_in? %>
@@ -88,16 +101,28 @@
 	<br><br> 
 </div>
 <% end %>
-	
+<% if signed_in? %>
+<div id = "middleboxSignIn" class ="round">
+	      <section class="round">
+        <% flash.each do |key, value| %>
+          <div class="flash <%= key %>"><%= value %></div>
+        <% end %>
+        <!-- an dieser Stelle werden die anderen Seiten in die Hauptseite eingefügt -->
+        <%= yield %>
+      </section>    
+</div>    
+ <% else %>
+ <div id = "middlebox" class= "round">		
+
       <section class="round">
         <% flash.each do |key, value| %>
           <div class="flash <%= key %>"><%= value %></div>
         <% end %>
         <!-- an dieser Stelle werden die anderen Seiten in die Hauptseite eingefügt -->
         <%= yield %>
-      </section>
-      
- 
+      </section>    
+</div> 
+ <% end %>
     
 
     
