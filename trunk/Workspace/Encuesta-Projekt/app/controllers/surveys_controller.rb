@@ -13,6 +13,10 @@ class SurveysController < ApplicationController
   def index
     flash[:notice] = "You did it"
   end
+  
+  def new
+  	@survey = Survey.new
+  end
 
   #Die Create-Methode, welche von dem _survey_form aufgerufen wird
   # erstellt ein neues Survey über aufruf des aktuellen Users und der übergebenen Parameter
