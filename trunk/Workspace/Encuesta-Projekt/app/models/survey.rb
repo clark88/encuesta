@@ -2,7 +2,7 @@ class Survey < ActiveRecord::Base
 	
 	belongs_to :user
 	has_many :questions
-	has_many :form
+	has_many :forms
 	belongs_to :surveytype
 	
 	attr_accessible :bezeichnung, :gesperrt, :surveytype_id
