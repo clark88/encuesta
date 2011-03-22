@@ -56,7 +56,7 @@ class SurveysController < ApplicationController
   #Löschen Funktions
   def destroy
     @survey.destroy
-    redirect_back_or home_path
+    redirect_to :back
   end
 
   def update
