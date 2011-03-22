@@ -26,11 +26,11 @@
     	
     	<%case answer.answertype_id 
 		when 1 %>
-  		  <%= radio_button_tag("question_id_" + question.id.to_s, "answer_id_" + answer.id.to_s) %>
+  		  <%= radio_button_tag("question_" + question.id.to_s, answer.id) %>
 		<% when 2 %>
-		  <%= check_box("question_id_" + question.id.to_s, "answer_id_" + answer.id.to_s) %>
+		  <%= check_box("question_" + question.id.to_s,answer.id) %>
 		<% when 3 %>
-		  <%= text_field_tag("question_id_" + question.id.to_s) %>
+		  <%= text_field_tag("question_" + question.id.to_s+ "," + "answer_" + answer.id.to_s) %>
 		<% end %>
     	
     	<%= label_tag question, answer.answertext %>
@@ -40,6 +40,7 @@
     <br>
 </div>
 <div class="actions">
+	 <%= hidden_field_tag :survey_id, params[:survey_id]%>
     <%= f.submit "Ergebnis abschicken" %>
   </div>
   <br>

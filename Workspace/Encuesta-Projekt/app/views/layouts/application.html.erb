@@ -49,9 +49,9 @@
 			</div>						
 
       		<% if signed_in? %>
-      			<li><%= link_to "Home", home_path %></li>
-      			<li><%= link_to "Benutzer", users_path %></li>
-      			<li><%= link_to "Mein Profil", current_user %></li>
+      		<!--	<li><%= link_to "Home", home_path %></li> 
+      			<li><%= link_to "Benutzer", users_path %></li> -->
+      			<li><%= link_to "Mein Umfragen", current_user %></li>
       			<li><%= link_to "Einstellungen", edit_user_path(current_user) %></li>
       		<% end %>
       		<% if signed_in? %>
