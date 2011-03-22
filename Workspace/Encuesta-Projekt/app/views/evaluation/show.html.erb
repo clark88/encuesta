@@ -9,6 +9,18 @@
 		<% 	a.each do |answer| %>
 			<!--  #Antwort wird ausgegeben -->	 
 			<p><%=  answer.answertext %><p>
-									
+		<!--  ##Prüfund des Fragetyps --> 	
+		   <!--  Radiobutton oder Checkbox -->
+			 <% if answer.answertype_id = 1 || answer.answertype_id = 2 %>
+             <p>Checkbox oder Radiobutton, Frage ID: <%=answer.id %></p>                    
+             <% end %>
+             
+             <% if answer.answertype_id = 3%>
+             
+             <% end %>
+             
+             <% if answer.answertype_id = 4%>
+             <% end %>
+             
         <% end %>  
   <% end %>		

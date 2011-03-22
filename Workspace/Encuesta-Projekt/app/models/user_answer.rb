@@ -1,9 +1,4 @@
 class UserAnswer < ActiveRecord::Base
 	belongs_to :form
-	belongs_to :answer
-	
-	
-	
-	
-	
+	belongs_to :answer	
 end
