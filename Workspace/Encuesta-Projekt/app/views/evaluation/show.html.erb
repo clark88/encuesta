@@ -1,0 +1,15 @@
+  	<h1>Auswertung</h1>
+  	<h2>Umfrage: <%= @survey.bezeichnung%></h2><br>
+  	
+  <% q = Question.find_all_by_survey_id(@survey.id) %>
+  <% q.each do |question|%>
+  		<!--  #Frage wird ausgegeben-->
+  		<p><%= question.questiontext%></p><br>
+        <% a = Answer.find_all_by_question_id(question.id) %>
+		<% 	a.each do |answer| %>
+			<!--  #Antwort wird ausgegeben -->	 
+			<p><%=  answer.answertext %><p>
+		
+									
+        <% end %>  
+  <% end %>		
