@@ -1,6 +1,8 @@
 body {
     
    font-family:Arial;
+   font-size: 13pt;
+   color:#FFFFFF;
  
     }
 
@@ -37,7 +39,7 @@ header img {
     padding:1em;
     margin-top:3em;
     position: absolute ;
-    left:22%;
+    left:20%;
 }
 
 #middleboxSignIn {
@@ -48,7 +50,7 @@ header img {
     position:relative;
     margin-top:3em;
     position: absolute ;
-    left: 22%;
+    left: 20%;
 }
 
 #menuebox {
@@ -62,6 +64,18 @@ header img {
     margin-top:3em;
     left:0em;
  } 
+
+#userbox {
+    width:10em;
+    background:#3c9aa6;
+    margin:0 ;
+    padding:0.5em;
+    position:absolute;
+    margin:30px auto;
+    margin-top:3em;
+    left:68em;
+ } 
+
 
 
 
