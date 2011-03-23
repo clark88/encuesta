@@ -8,15 +8,21 @@
            <col width="450">
            <col width="100">
         </colgroup>
-  		<tr align="left">	
-  		<th><h3><%= question.questiontext%></h3>
+  		<tr align="left">
+  		<% %>		
+  		<th><h3><%= question.questiontext%></h3>  			
+  			
         <% a = Answer.find_all_by_question_id(question.id) %></th>
         <th>Ergebnis</th>
         </tr>     
 	 <%	a.each do |answer| %>
 		<tr>
 	 <!--  #Antwort wird ausgegeben -->	 
-		<td><p><%=  answer.answertext %>  </p></td>
+		<td><p><%=  answer.answertext %>  
+			<% if answer.answertype_id == 3%>
+  			<input name="suchstring" type="text" size="30" maxlength="30" value="Suchstring"></p>
+  		<% end %>
+		</td>
 		
 		<!--  ##Prüfund des Fragetyps --> 	
 		    
@@ -33,6 +39,7 @@
             
           <!--  Textfeld -->
              <% if answer.answertype_id == 3%>
+              
              	<% @usranswer = 0%>
              	<% Form.find_all_by_survey_id(@survey.id).each do |form| %>
              		<%@usranswer +=  form.user_answers.find_all_by_answer_id(answer.id).count; %>
@@ -53,7 +60,7 @@
                 <% end %> 
                 <% if @counter != 0 %> 
                     <% p @average = @ergebnis / @counter %> 	
-             	    <%= @avarage %>
+             	 <td> <%= @average %> (Durschnitt)  </td>
              	 <% end %>   
              <% end %>   
   <% end %>	
