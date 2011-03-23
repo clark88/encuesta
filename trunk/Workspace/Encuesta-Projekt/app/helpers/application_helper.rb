@@ -85,7 +85,7 @@ module ApplicationHelper
  end
  
   def auswerten
- 	image_tag("auswertenButton.png", :alt => "Auswerten", :class => "round")
+ 	image_tag("Barchart.png", :alt => "Auswerten", :class => "round")
  end
  
   def freigegebenBearbeiten
