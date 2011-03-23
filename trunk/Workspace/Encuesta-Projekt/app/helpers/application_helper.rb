@@ -52,9 +52,24 @@ module ApplicationHelper
  	image_tag("Menue.png", :alt => "Menue", :class => "round")
  end
  
-   def benutzer
+  def benutzer
  	image_tag("Benutzer.png", :alt => "Benutzer", :class => "round")
  end
  
+ def neueUmfrage
+ 	image_tag("Neue Umfrage.png", :alt => "Neue Umfrage", :class => "round")
+ end
+ 
+  def meineUmfragen
+ 	image_tag("Meine Umfragen.png", :alt => "Meine Umfragen", :class => "round")
+ end
+ 
+   def einstellungen
+ 	image_tag("Einstellungen.png", :alt => "Einstellungen", :class => "round")
+ end
+ 
+    def ausloggen
+ 	image_tag("Ausloggen.png", :alt => "Ausloggen", :class => "round")
+ end
 end
  

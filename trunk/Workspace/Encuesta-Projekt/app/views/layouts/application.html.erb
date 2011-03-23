@@ -56,13 +56,13 @@
       				<td><%=menue%><td>
       			</tr>
       			<tr>	
-      				<td><%= link_to "Meine Umfragen", current_user %></td>
+      				<td><%= link_to meineUmfragen , current_user %></td>
       			</tr>
       			<tr>
-      				<td><%= link_to "Neue Umfrage",new_survey_path()%></td>
+      				<td><%= link_to neueUmfrage ,new_survey_path()%></td>
       			</tr>	
       			<tr>
-      				<td><%= link_to "Einstellungen", edit_user_path(current_user) %></td>
+      				<td><%= link_to einstellungen, edit_user_path(current_user) %></td>
       			</tr>
       			     			
       		</table></center>	
@@ -132,7 +132,7 @@
       				<td>hat <%= current_user.surveys.count %> Umfrage(n)</td>
       			</tr>	
       			<tr>
-      				<td><%= link_to "Ausloggen", signout_path, :method => :delete %></td>
+      				<td><%= link_to ausloggen, signout_path, :method => :delete %></td>
       			</tr> 
       			<tr>
       				</center></div> 
