@@ -25,11 +25,11 @@ class User < ActiveRecord::Base
   
   #Überprüft, ob der Name und das Passwort die richtige Länge aufweist
   validates_length_of :name, :maximum => 50,
-  					  :message => "ist zu lang. Bitte k&uuml;rzeren eingeben"
+  					  :message => "ist zu lang. Bitte kleineres eingeben"
   					  
   validates_length_of :passwort, :within => 6..40, 
-  					  :too_short => "ist zu kurz. Bitte l&auml;ngers eingeben",
-  					  :too_long => "ist zu lang. Bitte k&uuml;rzers eingeben", 
+  					  :too_short => "ist zu kurz. Bitte laengers eingeben",
+  					  :too_long => "ist zu lang. Bitte kleineres eingeben", 
   					  :allow_blank => true
   					 
   #Überprüft, ob die Email das richtige Format anhand der Regex hat
@@ -44,7 +44,7 @@ class User < ActiveRecord::Base
   # zudem wird geprüft
 
   validates_confirmation_of :passwort,
-  						   :message => "ist nicht gleich. Die Passwoerter muessen &uuml;bereinstimmen",
+  						   :message => "ist nicht gleich. Das Passwort muss gleich sein",
                            :on => :create
                           
   #Prüft, ob die Eingabefelder leer sind                
