@@ -2,9 +2,8 @@
   <tr>
     <td class="main">
       <h1>
-        <%= @user.login %>
+        <b>Meine Umfragen</b>
       </h1>
-      <%= link_to "Neue Umfrage",new_survey_path()%>
       <% unless @user.surveys.empty? %>
         <table class="surveys" summary="User surveys">
           <%= render @surveys %>
