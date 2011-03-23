@@ -69,7 +69,7 @@ class FormsController < ApplicationController
       }
 
       if @form.save
-        flash[:success] = "Umfrage vollendet"
+        flash[:success] = "Vielen Dank fuer Ihre Teilnahme."
 
        # Question.find_all_by_survey_id(params[:survey_id]).each do |question|
        #   Answer.find_all_by_question_id(question.id).each do |answer|

@@ -1,9 +1,15 @@
 <h1>Neue Antwort zu Frage: <%=render :text => Question.find(params[:question_id]).questiontext%>
 	</h1>
+	
+	Geben Sie hier Ihre Antwort ein.<br> (Bei Textantworten können Sie hier eine Anweisung für den Teilnehmer einfügen.)<br>
+	Mit dem Link "Neue Frage anlegen" verlassen Sie die Antworten für diese Frage und erstellen eine Neue.
 <%= form_for @answer do |f| %>
   <%= #render 'shared/error_messages', :object => f.object 
   %>
-  <div class="field">
+  <table>
+  	<tr>
+  		<td>
+  			<div class="field">
     <%= f.text_field :answertext %>
   </div>
   <div class="actions">
@@ -14,4 +20,17 @@
   <%= hidden_field_tag :survey_id, params[:survey_id]%>
   <% survey_id = params[:survey_id] %>
   <%=	link_to "Zurück zur Umfrage", edit_survey_path(survey_id) %>
+  <%=	link_to "Neue Frage anlegen", new_question_path(:survey_id => params[:survey_id]) %>
+  		</td>
+  		<td>
+  			<ul>
+  				<% Answer.find_all_by_question_id(params[:question_id]).each do |answer|%>
+  					<li><%= answer.answertext %></li>
+  				<%end%>
+			</ul>
+  		</td>
+  	</tr>
+  </table>
+  
+  
 <% end %>
