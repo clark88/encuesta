@@ -1,7 +1,7 @@
 <h1>Registrieren</h1>
 
 
-Legen sie hier einen neuen User an!
+Legen sie hier einen neuen Benutzer an!
 
 
 
@@ -9,9 +9,13 @@ Legen sie hier einen neuen User an!
   <%= render 'shared/error_messages', :object => f.object %>
 	<br>
   <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+ <!-- <div class="field">
     <%= f.label :login %><br />
     <%= f.text_field :login %>
-  </div>
+ </div> -->
   <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name %>

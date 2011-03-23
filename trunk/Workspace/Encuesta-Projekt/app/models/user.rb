@@ -19,7 +19,8 @@ class User < ActiveRecord::Base
   belongs_to :roll
 
   attr_accessor :passwort
-  attr_accessible :name, :vorname, :email, :login, :passwort, :passwort_confirmation
+  attr_accessible :name, :vorname, :email,# :login,
+   :passwort, :passwort_confirmation
 
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   
@@ -49,11 +50,11 @@ class User < ActiveRecord::Base
                            :on => :create
                           
   #Prüft, ob die Eingabefelder leer sind                
-  validates_presence_of :login, :passwort, :vorname, :email, :name, 
+  validates_presence_of :passwort, :vorname, :email, :name, #:login, 
   						:message => "darf nicht leer sein." 
 
   #Prüft, ob der Login und die E-Mail schon vorhanden sind
-  validates_uniqueness_of :login, :email,
+  validates_uniqueness_of :email,# :login, 
  						  :case_sensitive => false,
                           :message => "ist schon vorhanden. Bitte neues eintragen"
                          
@@ -70,8 +71,8 @@ class User < ActiveRecord::Base
 #Methode überprüft, ob ein Unser mit dem 'login' vorhanden ist
 # wenn nicht, wird ein null-wert ausgegeben
 # wenn ja wird der User ausgegeben, sofern das passwort über die methode has_password? erkannt wurde
-  def self.authenticate(login, submitted_passwort)
-    user = find_by_login(login)
+  def self.authenticate(email, submitted_passwort)
+    user = find_by_email(email)
     return nil  if user.nil?
     return user if user.has_password?(submitted_passwort)
   end

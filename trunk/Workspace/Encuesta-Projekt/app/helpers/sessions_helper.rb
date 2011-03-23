@@ -30,7 +30,7 @@ module SessionsHelper
 
   def deny_access
   	store_location
-    flash[:notice] = "Oh nein, erst loggst du dich ein!"
+    flash[:notice] = "Sie muessen sich erst einloggen"
 	redirect_to signin_path
 
   end
