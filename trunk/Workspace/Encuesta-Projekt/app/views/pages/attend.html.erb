@@ -1,0 +1,16 @@
+<h1>Teilnahme</h1>
+
+<p>Hier können Sie den Link zum Formular für Ihre Umfrage kopieren und über "Teilnehmen" auf das Formular zugreifen.</p>
+
+<table>
+	<tr>
+		<td>
+			http://127.0.0.1:3000<%= new_form_path(:survey_id => params[:survey_id])%>
+		</td>
+		<td>
+			<%=    	link_to "Teilnehmen", new_form_path(:survey_id => params[:survey_id])%>
+		</td>
+	</tr>
+</table>
+	
+
