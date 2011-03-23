@@ -3,23 +3,31 @@
   <% q = Question.find_all_by_survey_id(@survey.id) %>
   <% q.each do |question|%>
   		<!--  #Frage wird ausgegeben-->
-  		<table border="7" align="center" cellpadding="2" cellspacing="1">
+  		<table border="1" align="center" >
   	    <colgroup>
            <col width="450">
            <col width="100">
         </colgroup>
   		<tr align="left">		
-  		 <th><h3><%= question.questiontext%></h3>  			
-  			
+  		 <th><h3><%= question.questiontext%></h3> 
+		
         <% a = Answer.find_all_by_question_id(question.id) %></th>
         <th>Ergebnis</th>
         </tr>
              
-	      <%a.each do |answer| %>
+	    <%a.each do |answer| %>
 	
 	   <!--  #Antwort wird ausgegeben -->
-	 		
-       <tr><td><p><%=  answer.answertext %></p></td>
+	   
+	 	<!-- Suchfeld für Textantworten-->	
+       <tr><td><p><%=  answer.answertext %>
+       	<% if answer.answertype_id == 3%>
+       	  <form>
+       	     <input name="search" type="text" size="30" maxlength="40" value="Suche"></p>
+          </form>
+       	<% end %> 
+       	 <p> Sucheingabe: <%= params[:search]%></p>
+       </td>
 		<!--  ##Prüfund des Fragetyps --> 
 					    
           <!--  Radiobutton oder Checkbox -->
@@ -32,12 +40,13 @@
                  <% end %>
             		
           <!--  Textfeld -->
-          
              <% if answer.answertype_id == 3%>
-                <tr><td>
+                <tr><td>	  
              	<% Form.find_all_by_survey_id(@survey.id).each do |form|%>		      
-             		<%form.user_answers.find_all_by_answer_id(answer.id).each do |useranswer|; %>            		
-             		<p><%= useranswer.AnswerText %></p>     			
+             		<%form.user_answers.find_all_by_answer_id(answer.id).each do |useranswer|; %>    
+             		  <% if useranswer.AnswerText.include?(params[:search])%>        		
+             		    <p><%= useranswer.AnswerText %></p> 
+             		  <% end%>      			
              	    <% end %>
                 <% end %></td></tr>
              <% end %>
@@ -52,7 +61,7 @@
              			 <%  @counter = @counter +1 %>  	
              		<% end %>
                 <% end %> 
-                
+
                 <% if @counter != 0 %> 
                    <% p @average = @ergebnis / @counter %> 	
              	   <td align"center"><b><%= @average%></b>(Durchschnitt)</td>
