@@ -40,20 +40,22 @@
              <% end %>
              
           <!--  Nummernfeld -->
-              <% if answer.answertype_id == 4%>
+              <% if answer.answertype_id == 4 %>
              	
              	<% @ergebnis = 0%>
              	<% @counter = 0%>
              	<% Form.find_all_by_survey_id(@survey.id).each do |form|%>		      
              		<%form.user_answers.find_all_by_answer_id(answer.id).each do |useranswer|; %>
              			<%= @ergebnis += useranswer.answertext.to_i
-             			   @counter = @counter +1
+             			   @counter = @counter +1   
              			%>
+             			
              		<% end %>
-             		
                 <% end %> 
-                <%= average = @ergebnis / @counter 
-             	%> 	
+                <% if @counter != 0 %> 
+                    <%  average = @ergebnis / @counter %> 	
+             	    <%= avarage %>
+             	 <% end %>   
              <% end %>   
   <% end %>	
    </tr>
