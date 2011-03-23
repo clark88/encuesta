@@ -12,13 +12,17 @@
   <% else %>
   <td>Bearbeiten</td>
   <% end %>
+  <% if !survey.gesperrt%>
   <td><%= link_to "Freigeben", survey, :controller => 'lock',
   									   :confirm => "Wollen Sie die Umfrage wirklich freigeben?",
                                        :title => survey.bezeichnung %></td>
-                                 
+  <% else %>
+  <td>Freigeben </td>          
+  <% end %> 
+                        
   <td><%= link_to "Auswerten", evaluation_path(survey)  %></td>
-  <td>
-    <%= link_to "Löschen", survey, :method => :delete,
+  
+  <td><%= link_to "Löschen", survey, :method => :delete,
                                      :confirm => "Sind sie sich sicher?",
                                      :title => survey.bezeichnung %>
   </td>   
