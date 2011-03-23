@@ -47412,3 +47412,595 @@ Started GET "/home" for 127.0.0.1 at 2011-03-23 17:11:09 +0100
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
 Rendered pages/home.html.erb within layouts/application (15.6ms)
 Completed 200 OK in 94ms (Views: 46.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-03-23 17:13:26 +0100
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BQVZYNSZPnIJIag4eXDzFr1Y42oB1IMBLIZ44p/dytU=", "session"=>{"login"=>"Test", "passwort"=>"test123"}, "x"=>"0", "y"=>"0"}
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."login" = 'Test') LIMIT 1
+Redirected to http://127.0.0.1:3000/users/1
+Completed 302 Found in 593ms
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-03-23 17:13:35 +0100
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)
+  [1m[36mSurvey Load (0.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE ("surveys".user_id = 1) ORDER BY surveys.created_at DESC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered surveys/_survey.html.erb (109.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)
+Rendered users/show.html.erb within layouts/application (140.4ms)
+Completed 200 OK in 328ms (Views: 156.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/evaluation/17" for 127.0.0.1 at 2011-03-23 17:13:39 +0100
+  Processing by EvaluationController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mSurvey Load (0.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 17) ORDER BY surveys.created_at DESC LIMIT 1[0m
+  [1m[35mQuestion Load (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."survey_id" = 17)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 25)[0m
+  [1m[35mForm Load (0.0ms)[0m  SELECT "forms".* FROM "forms" WHERE ("forms"."survey_id" = 17)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 85) AND ("user_answers"."answer_id" = 65)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 86) AND ("user_answers"."answer_id" = 65)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 87) AND ("user_answers"."answer_id" = 65)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "forms".* FROM "forms" WHERE ("forms"."survey_id" = 17)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 85) AND ("user_answers"."answer_id" = 66)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 86) AND ("user_answers"."answer_id" = 66)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 87) AND ("user_answers"."answer_id" = 66)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "forms".* FROM "forms" WHERE ("forms"."survey_id" = 17)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 85) AND ("user_answers"."answer_id" = 67)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 86) AND ("user_answers"."answer_id" = 67)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 87) AND ("user_answers"."answer_id" = 67)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 26)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."survey_id" = 17)[0m
+  [1m[35mUserAnswer Load (15.6ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 85) AND ("user_answers"."answer_id" = 68)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 86) AND ("user_answers"."answer_id" = 68)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 87) AND ("user_answers"."answer_id" = 68)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."survey_id" = 17)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 85) AND ("user_answers"."answer_id" = 69)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 86) AND ("user_answers"."answer_id" = 69)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 87) AND ("user_answers"."answer_id" = 69)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."survey_id" = 17)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 85) AND ("user_answers"."answer_id" = 70)
+  [1m[36mUserAnswer Load (15.6ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 86) AND ("user_answers"."answer_id" = 70)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 87) AND ("user_answers"."answer_id" = 70)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 27)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "forms".* FROM "forms" WHERE ("forms"."survey_id" = 17)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 85) AND ("user_answers"."answer_id" = 71)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 86) AND ("user_answers"."answer_id" = 71)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 87) AND ("user_answers"."answer_id" = 71)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 28)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."survey_id" = 17)[0m
+  [1m[35mUserAnswer Load (46.8ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 85) AND ("user_answers"."answer_id" = 72)
+Rendered evaluation/show.html.erb within layouts/application (390.0ms)
+Completed   in 484ms
+
+ActionView::Template::Error (undefined method `answertext' for #<UserAnswer:0x3442098>):
+    46:              	<% @counter = 0%>
+    47:              	<% Form.find_all_by_survey_id(@survey.id).each do |form|%>		      
+    48:              		<%form.user_answers.find_all_by_answer_id(answer.id).each do |useranswer|; %>
+    49:              			<%= @ergebnis += useranswer.answertext.to_i
+    50:              			   @counter = @counter +1   
+    51:              			%>
+    52:              			
+  app/views/evaluation/show.html.erb:49:in `block (4 levels) in _app_views_evaluation_show_html_erb__446672238_28981128__495169474'
+  app/views/evaluation/show.html.erb:48:in `each'
+  app/views/evaluation/show.html.erb:48:in `block (3 levels) in _app_views_evaluation_show_html_erb__446672238_28981128__495169474'
+  app/views/evaluation/show.html.erb:47:in `each'
+  app/views/evaluation/show.html.erb:47:in `block (2 levels) in _app_views_evaluation_show_html_erb__446672238_28981128__495169474'
+  app/views/evaluation/show.html.erb:16:in `each'
+  app/views/evaluation/show.html.erb:16:in `block in _app_views_evaluation_show_html_erb__446672238_28981128__495169474'
+  app/views/evaluation/show.html.erb:4:in `each'
+  app/views/evaluation/show.html.erb:4:in `_app_views_evaluation_show_html_erb__446672238_28981128__495169474'
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.0ms)
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (15.6ms)
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (31.2ms)
+
+
+Started GET "/surveys/17/edit" for 127.0.0.1 at 2011-03-23 17:22:53 +0100
+  Processing by SurveysController#edit as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mSurvey Load (0.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 17) ORDER BY surveys.created_at DESC LIMIT 1[0m
+  [1m[35mSurveytype Load (0.0ms)[0m  SELECT "surveytypes".* FROM "surveytypes"
+  [1m[36mSurveytype Load (0.0ms)[0m  [1mSELECT "surveytypes".* FROM "surveytypes" WHERE ("surveytypes"."id" = 2) LIMIT 1[0m
+  [1m[35mQuestion Load (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."survey_id" = 17)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 25)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 26)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 27)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 28)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)
+Rendered surveys/edit.html.erb within layouts/application (343.2ms)
+Completed 200 OK in 406ms (Views: 358.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questions/25/edit?survey_id=17" for 127.0.0.1 at 2011-03-23 17:23:01 +0100
+  Processing by QuestionsController#edit as HTML
+  Parameters: {"survey_id"=>"17", "id"=>"25"}
+  [1m[36mQuestion Load (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."id" = 25) LIMIT 1[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 25)
+  [1m[36mAnswertype Load (0.0ms)[0m  [1mSELECT "answertypes".* FROM "answertypes" WHERE ("answertypes"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answertypes".* FROM "answertypes" WHERE ("answertypes"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answertypes".* FROM "answertypes" WHERE ("answertypes"."id" = 1) LIMIT 1[0m
+  [1m[35mAnswertype Load (0.0ms)[0m  SELECT "answertypes".* FROM "answertypes"
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)
+Rendered questions/edit.html.erb within layouts/application (328.6ms)
+Completed 200 OK in 375ms (Views: 344.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-03-23 17:24:36 +0100
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSQL (0.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)[0m
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys".user_id = 1) ORDER BY surveys.created_at DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered surveys/_survey.html.erb (109.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)[0m
+Rendered users/show.html.erb within layouts/application (140.4ms)
+Completed 200 OK in 796ms (Views: 171.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/evaluation/17" for 127.0.0.1 at 2011-03-23 17:24:59 +0100
+  Processing by EvaluationController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 17) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mQuestion Load (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."survey_id" = 17)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 25)
+  [1m[36mForm Load (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."survey_id" = 17)[0m
+  [1m[35mUserAnswer Load (15.6ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 85) AND ("user_answers"."answer_id" = 65)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 86) AND ("user_answers"."answer_id" = 65)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 87) AND ("user_answers"."answer_id" = 65)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."survey_id" = 17)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 85) AND ("user_answers"."answer_id" = 66)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 86) AND ("user_answers"."answer_id" = 66)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 87) AND ("user_answers"."answer_id" = 66)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."survey_id" = 17)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 85) AND ("user_answers"."answer_id" = 67)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 86) AND ("user_answers"."answer_id" = 67)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 87) AND ("user_answers"."answer_id" = 67)
+  [1m[36mAnswer Load (15.6ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 26)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "forms".* FROM "forms" WHERE ("forms"."survey_id" = 17)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 85) AND ("user_answers"."answer_id" = 68)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 86) AND ("user_answers"."answer_id" = 68)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 87) AND ("user_answers"."answer_id" = 68)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "forms".* FROM "forms" WHERE ("forms"."survey_id" = 17)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 85) AND ("user_answers"."answer_id" = 69)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 86) AND ("user_answers"."answer_id" = 69)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 87) AND ("user_answers"."answer_id" = 69)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "forms".* FROM "forms" WHERE ("forms"."survey_id" = 17)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 85) AND ("user_answers"."answer_id" = 70)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 86) AND ("user_answers"."answer_id" = 70)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 87) AND ("user_answers"."answer_id" = 70)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 27)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."survey_id" = 17)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 85) AND ("user_answers"."answer_id" = 71)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 86) AND ("user_answers"."answer_id" = 71)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 87) AND ("user_answers"."answer_id" = 71)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 28)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "forms".* FROM "forms" WHERE ("forms"."survey_id" = 17)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 85) AND ("user_answers"."answer_id" = 72)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 86) AND ("user_answers"."answer_id" = 72)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 87) AND ("user_answers"."answer_id" = 72)[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)[0m
+Rendered evaluation/show.html.erb within layouts/application (468.0ms)
+Completed 200 OK in 530ms (Views: 468.0ms | ActiveRecord: 31.2ms)
+
+
+Started GET "/evaluation/17" for 127.0.0.1 at 2011-03-23 17:26:00 +0100
+  Processing by EvaluationController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 17) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mQuestion Load (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."survey_id" = 17)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 25)
+  [1m[36mForm Load (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."survey_id" = 17)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 85) AND ("user_answers"."answer_id" = 65)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 86) AND ("user_answers"."answer_id" = 65)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 87) AND ("user_answers"."answer_id" = 65)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."survey_id" = 17)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 85) AND ("user_answers"."answer_id" = 66)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 86) AND ("user_answers"."answer_id" = 66)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 87) AND ("user_answers"."answer_id" = 66)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."survey_id" = 17)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 85) AND ("user_answers"."answer_id" = 67)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 86) AND ("user_answers"."answer_id" = 67)[0m
+  [1m[35mUserAnswer Load (15.6ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 87) AND ("user_answers"."answer_id" = 67)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 26)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "forms".* FROM "forms" WHERE ("forms"."survey_id" = 17)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 85) AND ("user_answers"."answer_id" = 68)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 86) AND ("user_answers"."answer_id" = 68)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 87) AND ("user_answers"."answer_id" = 68)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "forms".* FROM "forms" WHERE ("forms"."survey_id" = 17)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 85) AND ("user_answers"."answer_id" = 69)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 86) AND ("user_answers"."answer_id" = 69)
+  [1m[36mUserAnswer Load (15.6ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 87) AND ("user_answers"."answer_id" = 69)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "forms".* FROM "forms" WHERE ("forms"."survey_id" = 17)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 85) AND ("user_answers"."answer_id" = 70)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 86) AND ("user_answers"."answer_id" = 70)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 87) AND ("user_answers"."answer_id" = 70)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 27)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."survey_id" = 17)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 85) AND ("user_answers"."answer_id" = 71)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 86) AND ("user_answers"."answer_id" = 71)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 87) AND ("user_answers"."answer_id" = 71)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 28)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "forms".* FROM "forms" WHERE ("forms"."survey_id" = 17)
+  [1m[36mUserAnswer Load (31.2ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 85) AND ("user_answers"."answer_id" = 72)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 86) AND ("user_answers"."answer_id" = 72)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 87) AND ("user_answers"."answer_id" = 72)[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)[0m
+Rendered evaluation/show.html.erb within layouts/application (437.8ms)
+Completed 200 OK in 531ms (Views: 391.0ms | ActiveRecord: 62.4ms)
+
+
+Started GET "/evaluation/17" for 127.0.0.1 at 2011-03-23 17:49:07 +0100
+  Processing by EvaluationController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mSurvey Load (15.6ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 17) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mQuestion Load (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."survey_id" = 17)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 25)
+  [1m[36mForm Load (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."survey_id" = 17)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 85) AND ("user_answers"."answer_id" = 65)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 86) AND ("user_answers"."answer_id" = 65)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 87) AND ("user_answers"."answer_id" = 65)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."survey_id" = 17)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 85) AND ("user_answers"."answer_id" = 66)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 86) AND ("user_answers"."answer_id" = 66)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 87) AND ("user_answers"."answer_id" = 66)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."survey_id" = 17)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 85) AND ("user_answers"."answer_id" = 67)
+  [1m[36mUserAnswer Load (15.6ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 86) AND ("user_answers"."answer_id" = 67)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 87) AND ("user_answers"."answer_id" = 67)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 26)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "forms".* FROM "forms" WHERE ("forms"."survey_id" = 17)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 85) AND ("user_answers"."answer_id" = 68)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 86) AND ("user_answers"."answer_id" = 68)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 87) AND ("user_answers"."answer_id" = 68)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "forms".* FROM "forms" WHERE ("forms"."survey_id" = 17)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 85) AND ("user_answers"."answer_id" = 69)[0m
+  [1m[35mUserAnswer Load (15.6ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 86) AND ("user_answers"."answer_id" = 69)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 87) AND ("user_answers"."answer_id" = 69)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "forms".* FROM "forms" WHERE ("forms"."survey_id" = 17)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 85) AND ("user_answers"."answer_id" = 70)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 86) AND ("user_answers"."answer_id" = 70)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 87) AND ("user_answers"."answer_id" = 70)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 27)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."survey_id" = 17)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 85) AND ("user_answers"."answer_id" = 71)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 86) AND ("user_answers"."answer_id" = 71)[0m
+  [1m[35mUserAnswer Load (15.6ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 87) AND ("user_answers"."answer_id" = 71)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 28)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "forms".* FROM "forms" WHERE ("forms"."survey_id" = 17)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 85) AND ("user_answers"."answer_id" = 72)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 86) AND ("user_answers"."answer_id" = 72)
+  [1m[36mUserAnswer Load (15.6ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 87) AND ("user_answers"."answer_id" = 72)[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)[0m
+Rendered evaluation/show.html.erb within layouts/application (453.4ms)
+Completed 200 OK in 516ms (Views: 406.6ms | ActiveRecord: 78.0ms)
+
+
+Started GET "/evaluation/17" for 127.0.0.1 at 2011-03-23 17:49:16 +0100
+  Processing by EvaluationController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 17) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mQuestion Load (15.6ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."survey_id" = 17)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 25)
+  [1m[36mForm Load (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."survey_id" = 17)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 85) AND ("user_answers"."answer_id" = 65)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 86) AND ("user_answers"."answer_id" = 65)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 87) AND ("user_answers"."answer_id" = 65)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."survey_id" = 17)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 85) AND ("user_answers"."answer_id" = 66)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 86) AND ("user_answers"."answer_id" = 66)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 87) AND ("user_answers"."answer_id" = 66)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."survey_id" = 17)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 85) AND ("user_answers"."answer_id" = 67)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 86) AND ("user_answers"."answer_id" = 67)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 87) AND ("user_answers"."answer_id" = 67)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 26)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "forms".* FROM "forms" WHERE ("forms"."survey_id" = 17)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 85) AND ("user_answers"."answer_id" = 68)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 86) AND ("user_answers"."answer_id" = 68)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 87) AND ("user_answers"."answer_id" = 68)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "forms".* FROM "forms" WHERE ("forms"."survey_id" = 17)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 85) AND ("user_answers"."answer_id" = 69)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 86) AND ("user_answers"."answer_id" = 69)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 87) AND ("user_answers"."answer_id" = 69)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "forms".* FROM "forms" WHERE ("forms"."survey_id" = 17)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 85) AND ("user_answers"."answer_id" = 70)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 86) AND ("user_answers"."answer_id" = 70)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 87) AND ("user_answers"."answer_id" = 70)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 27)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."survey_id" = 17)[0m
+  [1m[35mUserAnswer Load (15.6ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 85) AND ("user_answers"."answer_id" = 71)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 86) AND ("user_answers"."answer_id" = 71)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 87) AND ("user_answers"."answer_id" = 71)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 28)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "forms".* FROM "forms" WHERE ("forms"."survey_id" = 17)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 85) AND ("user_answers"."answer_id" = 72)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 86) AND ("user_answers"."answer_id" = 72)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 87) AND ("user_answers"."answer_id" = 72)[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)[0m
+Rendered evaluation/show.html.erb within layouts/application (593.8ms)
+Completed 200 OK in 672ms (Views: 593.8ms | ActiveRecord: 31.2ms)
+
+
+Started GET "/evaluation/17" for 127.0.0.1 at 2011-03-23 17:49:51 +0100
+  Processing by EvaluationController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 17) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mQuestion Load (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."survey_id" = 17)[0m
+  [1m[35mAnswer Load (15.6ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 25)
+  [1m[36mForm Load (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."survey_id" = 17)[0m
+  [1m[35mUserAnswer Load (15.6ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 85) AND ("user_answers"."answer_id" = 65)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 86) AND ("user_answers"."answer_id" = 65)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 87) AND ("user_answers"."answer_id" = 65)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."survey_id" = 17)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 85) AND ("user_answers"."answer_id" = 66)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 86) AND ("user_answers"."answer_id" = 66)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 87) AND ("user_answers"."answer_id" = 66)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."survey_id" = 17)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 85) AND ("user_answers"."answer_id" = 67)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 86) AND ("user_answers"."answer_id" = 67)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 87) AND ("user_answers"."answer_id" = 67)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 26)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "forms".* FROM "forms" WHERE ("forms"."survey_id" = 17)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 85) AND ("user_answers"."answer_id" = 68)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 86) AND ("user_answers"."answer_id" = 68)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 87) AND ("user_answers"."answer_id" = 68)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "forms".* FROM "forms" WHERE ("forms"."survey_id" = 17)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 85) AND ("user_answers"."answer_id" = 69)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 86) AND ("user_answers"."answer_id" = 69)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 87) AND ("user_answers"."answer_id" = 69)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "forms".* FROM "forms" WHERE ("forms"."survey_id" = 17)
+  [1m[36mUserAnswer Load (15.6ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 85) AND ("user_answers"."answer_id" = 70)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 86) AND ("user_answers"."answer_id" = 70)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 87) AND ("user_answers"."answer_id" = 70)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 27)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "forms".* FROM "forms" WHERE ("forms"."survey_id" = 17)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 85) AND ("user_answers"."answer_id" = 71)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 86) AND ("user_answers"."answer_id" = 71)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 87) AND ("user_answers"."answer_id" = 71)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 28)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "forms".* FROM "forms" WHERE ("forms"."survey_id" = 17)
+  [1m[36mUserAnswer Load (15.6ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 85) AND ("user_answers"."answer_id" = 72)[0m
+  [1m[35mUserAnswer Load (0.0ms)[0m  SELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 86) AND ("user_answers"."answer_id" = 72)
+  [1m[36mUserAnswer Load (0.0ms)[0m  [1mSELECT "user_answers".* FROM "user_answers" WHERE ("user_answers".form_id = 87) AND ("user_answers"."answer_id" = 72)[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)[0m
+Rendered evaluation/show.html.erb within layouts/application (453.4ms)
+Completed 200 OK in 516ms (Views: 422.2ms | ActiveRecord: 62.4ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-03-23 17:49:57 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSurveytype Load (0.0ms)[0m  [1mSELECT "surveytypes".* FROM "surveytypes"[0m
+Rendered shared/_survey_form.html.erb (62.4ms)
+  [1m[35mSQL (0.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)
+Rendered shared/_user_info.html.erb (31.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)[0m
+Rendered pages/home.html.erb within layouts/application (109.2ms)
+Completed 200 OK in 296ms (Views: 124.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-03-23 17:49:59 +0100
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)[0m
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys".user_id = 1) ORDER BY surveys.created_at DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered surveys/_survey.html.erb (15.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)[0m
+Rendered users/show.html.erb within layouts/application (46.8ms)
+Completed 200 OK in 296ms (Views: 187.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-03-23 17:52:25 +0100
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)[0m
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys".user_id = 1) ORDER BY surveys.created_at DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered surveys/_survey.html.erb (31.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)[0m
+Rendered users/show.html.erb within layouts/application (62.4ms)
+Completed 200 OK in 203ms (Views: 78.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-03-23 17:56:24 +0100
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)[0m
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys".user_id = 1) ORDER BY surveys.created_at DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered surveys/_survey.html.erb (15.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)[0m
+Rendered users/show.html.erb within layouts/application (46.8ms)
+Completed 200 OK in 187ms (Views: 78.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-03-23 17:58:58 +0100
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)[0m
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys".user_id = 1) ORDER BY surveys.created_at DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered surveys/_survey.html.erb (60.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)[0m
+Rendered users/show.html.erb within layouts/application (100.0ms)
+Completed 200 OK in 210ms (Views: 120.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-03-23 17:59:11 +0100
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)[0m
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys".user_id = 1) ORDER BY surveys.created_at DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered surveys/_survey.html.erb (78.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)[0m
+Rendered users/show.html.erb within layouts/application (109.2ms)
+Completed 200 OK in 218ms (Views: 140.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-03-23 17:59:23 +0100
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSQL (15.6ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)[0m
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys".user_id = 1) ORDER BY surveys.created_at DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered surveys/_survey.html.erb (93.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)[0m
+Rendered users/show.html.erb within layouts/application (124.8ms)
+Completed 200 OK in 234ms (Views: 124.8ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-03-23 17:59:54 +0100
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)[0m
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys".user_id = 1) ORDER BY surveys.created_at DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered surveys/_survey.html.erb (31.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)[0m
+Rendered users/show.html.erb within layouts/application (62.4ms)
+Completed 200 OK in 234ms (Views: 109.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-03-23 18:03:36 +0100
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)[0m
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys".user_id = 1) ORDER BY surveys.created_at DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered surveys/_survey.html.erb (30.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)[0m
+Rendered users/show.html.erb within layouts/application (90.0ms)
+Completed 200 OK in 230ms (Views: 120.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-03-23 18:04:23 +0100
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)[0m
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys".user_id = 1) ORDER BY surveys.created_at DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered surveys/_survey.html.erb (31.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)[0m
+Rendered users/show.html.erb within layouts/application (62.4ms)
+Completed 200 OK in 234ms (Views: 109.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-03-23 18:08:03 +0100
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)[0m
+  [1m[35mSurvey Load (15.6ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys".user_id = 1) ORDER BY surveys.created_at DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered surveys/_survey.html.erb (31.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)[0m
+Rendered users/show.html.erb within layouts/application (109.2ms)
+Completed 200 OK in 265ms (Views: 124.8ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-03-23 18:08:28 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSurveytype Load (0.0ms)[0m  [1mSELECT "surveytypes".* FROM "surveytypes"[0m
+Rendered shared/_survey_form.html.erb (62.4ms)
+  [1m[35mSQL (0.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)
+Rendered shared/_user_info.html.erb (15.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)[0m
+Rendered pages/home.html.erb within layouts/application (93.6ms)
+Completed 200 OK in 296ms (Views: 124.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-03-23 18:08:30 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSurveytype Load (15.6ms)[0m  [1mSELECT "surveytypes".* FROM "surveytypes"[0m
+Rendered shared/_survey_form.html.erb (46.8ms)
+  [1m[35mSQL (0.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)
+Rendered shared/_user_info.html.erb (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)[0m
+Rendered pages/home.html.erb within layouts/application (93.6ms)
+Completed 200 OK in 281ms (Views: 171.6ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2011-03-23 18:08:45 +0100
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)[0m
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys".user_id = 1) ORDER BY surveys.created_at DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered surveys/_survey.html.erb (31.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 1)[0m
+Rendered users/show.html.erb within layouts/application (62.4ms)
+Completed 200 OK in 265ms (Views: 140.4ms | ActiveRecord: 0.0ms)
