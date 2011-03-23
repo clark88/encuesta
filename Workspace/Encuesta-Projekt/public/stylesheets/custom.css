@@ -76,13 +76,16 @@ header img {
     left:68em;
  } 
 
-
-
-
 .round {
     -moz-border-radius:    30px;
     -webkit-border-radius: 30px;
     border-radius:         30px;
+}
+
+.round2 {
+    -moz-border-radius:    5px;
+    -webkit-border-radius: 5px;
+    border-radius:         5px;
 }
 
 .abstand {
