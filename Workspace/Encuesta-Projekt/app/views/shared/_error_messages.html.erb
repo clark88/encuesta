@@ -1,12 +1,16 @@
 <% if @user.errors.any? %>
+  <div class="error">
   <div id="error_explanation">
     <h2><%= @user.errors.count  %> 
         Fehler sind vorhanden, der Benutzer konnte nicht angelegt werden: </h2>
     <p>Die Fehler sind in folgenden Feldern vorhanden:</p>
     <ul>
     <% @user.errors.full_messages.each do |msg| %>
+    <font color="#c30000">
       <li><%= msg %></li>
+      </font>
     <% end %>
     </ul>
+  </div>
   </div>
 <% end %>

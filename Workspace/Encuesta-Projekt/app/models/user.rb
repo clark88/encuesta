@@ -24,6 +24,7 @@ class User < ActiveRecord::Base
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   
   #Überprüft, ob der Name und das Passwort die richtige Länge aufweist
+ 
   validates_length_of :name, :maximum => 50,
   					  :message => "ist zu lang. Bitte kleineres eingeben"
   					  

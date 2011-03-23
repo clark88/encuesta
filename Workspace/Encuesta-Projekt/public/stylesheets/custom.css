@@ -112,6 +112,14 @@ a {
 	font-size:13px;
 }
 
+.fieldWithErrors {
+  background-color: red;
+}
+
+.error{
+	fontcolor: #F00;
+}
+
 a:hover {
     color: #069;
     text-decoration: underline;
