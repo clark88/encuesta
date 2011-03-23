@@ -71,11 +71,11 @@ class FormsController < ApplicationController
       if @form.save
         flash[:success] = "Umfrage vollendet"
 
-        Question.find_all_by_survey_id(params[:survey_id]).each do |question|
-          Answer.find_all_by_question_id(question.id).each do |answer|
+       # Question.find_all_by_survey_id(params[:survey_id]).each do |question|
+       #   Answer.find_all_by_question_id(question.id).each do |answer|
           #Hier User_Ansers.create einfügen (wie genau noch unklar, auf Daten warten)
-          end
-        end
+        #  end
+       # end
 
       #Question.find_by_id(params[])
 
