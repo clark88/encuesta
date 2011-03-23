@@ -8,9 +8,7 @@
 <div class="field">
 
     <% surveytype = Surveytype.find(survey.surveytype.id)%>
-    <br>
-   
-    <%= label_tag "surveytype_#{surveytype}", surveytype.bezeichnung%>
+    <h2><%= label_tag "surveytype_#{surveytype}", surveytype.bezeichnung%></h2>
 </div>
 
 
@@ -18,9 +16,7 @@
 <div class="field">
 
     <% Question.find_all_by_survey_id(survey.id).each do |question| %>
-    <br>
-    <%= label_tag "question_#{question}", question.questiontext %>  
-    <br>
+    <h3><%= label_tag "question_#{question}", question.questiontext %></h3>  
     	<% Answer.find_all_by_question_id(question.id).each do |answer| %>
     	
     	
@@ -31,6 +27,9 @@
 		  <%= check_box("question_" + question.id.to_s,answer.id) %>
 		<% when 3 %>
 		  <%= text_field_tag("question_" + question.id.to_s+ "," + "answer_" + answer.id.to_s) %>
+		<% when 4 %>
+		  <%= text_field_tag("question_" + question.id.to_s+ "," + "answer_" + answer.id.to_s) %>
+		  <b>Geben Sie hier nur Zahlen ein!</b>
 		<% end %>
     	
     	<%= label_tag question, answer.answertext %>

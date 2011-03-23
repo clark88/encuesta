@@ -1,4 +1,14 @@
 <h1>Neue Frage</h1>
+
+Geben Sie eine Fragestellung ein und wählen Sie die Art der Frage aus.<br>
+<ul>
+	<li>Eine Radio-Frage beschreibt eine Einmalauswahl der Antworten zu der Frage.</li>
+	<li>Eine Checkbox-Frage beschreibt die Mehrfachauswahl der Antworten zu der Frage.</li>
+	<li>Bei einer Text-Feld-Frage kann der Teilnehmer in seine Antwort in eine Textfeld eintragen</li>
+	<li>Bei der Nummern-Feld-Frage kann der Teilnehmer eine Zahl eintragen.</li>
+</ul>
+
+
 <%= form_for @question do |f| %>
   <%= #render 'shared/error_messages', :object => f.object 
   %>
