@@ -76,7 +76,6 @@ ActiveRecord::Schema.define(:version => 20110224123050) do
   create_table "users", :force => true do |t|
     t.string   "name"
     t.string   "vorname"
-    t.string   "login"
     t.string   "email"
     t.integer  "roll_id"
     t.datetime "created_at"
