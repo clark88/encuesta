@@ -52,6 +52,7 @@ EncuestaProjekt::Application.routes.draw do
   get "pages/contact"
   get "pages/help"
   get "pages/impressum"
+  get "pages/attend"
 
   match '/signup',  :to => 'users#new'
   match '/edit',	:to => 'users#edit'
@@ -64,6 +65,7 @@ EncuestaProjekt::Application.routes.draw do
   match '/about',   :to => 'pages#about'
   match '/help',    :to => 'pages#help'
   match '/impressum', :to => 'pages#impressum'
+  match '/attend',  :to => 'pages#attend'
   
 
 # The priority is based upon order of creation:

@@ -25,6 +25,10 @@
   <td><%= link_to "Löschen", survey, :method => :delete,
                                      :confirm => "Sind sie sich sicher?",
                                      :title => survey.bezeichnung %>
+  </td>
+  
+  <td>
+  	<%=link_to "Veroeffentlichen", attend_path(:survey_id => survey.id) %>
   </td>   
   <% end %> 
   
