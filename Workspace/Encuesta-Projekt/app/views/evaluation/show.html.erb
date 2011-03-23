@@ -1,70 +1,62 @@
-  	<h1>Auswertung von  <%= @survey.bezeichnung%></h1>
+  	<h1>Auswertung von  "<%= @survey.bezeichnung%>"</h1>
   	
   <% q = Question.find_all_by_survey_id(@survey.id) %>
   <% q.each do |question|%>
   		<!--  #Frage wird ausgegeben-->
-  		<table border="9" align="center" cellpadding="2" cellspacing="1">
+  		<table border="7" align="center" cellpadding="2" cellspacing="1">
   	    <colgroup>
            <col width="450">
            <col width="100">
         </colgroup>
-  		<tr>	
+  		<tr align="left">	
   		<th><h3><%= question.questiontext%></h3>
         <% a = Answer.find_all_by_question_id(question.id) %></th>
         <th>Ergebnis</th>
-        </tr>
-              
-		<% 	a.each do |answer| %>
+        </tr>     
+	 <%	a.each do |answer| %>
 		<tr>
-			<!--  #Antwort wird ausgegeben -->	 
+	 <!--  #Antwort wird ausgegeben -->	 
 		<td><p><%=  answer.answertext %>  </p></td>
+		
 		<!--  ##Prüfund des Fragetyps --> 	
-		    <!--  Radiobutton oder Checkbox -->
-			 <% if answer.answertype == 1 || answer.answertype == 2 %>
-             	  
+		    
+          <!--  Radiobutton oder Checkbox -->
+			     <% if answer.answertype_id == 1 || answer.answertype_id == 2 %>
+
+	      				<% @usranswer = 0%>
+             			<% Form.find_all_by_survey_id(@survey.id).each do |form| %>     
+                           <% @usranswer +=  form.user_answers.find_all_by_answer_id(answer.id).count; %>
+                        <% end %> 
+                        <td><%= @usranswer%> </td>
+                        <% @usranswer = 0%>		
+                 <% end %>
+            
+          <!--  Textfeld -->
+             <% if answer.answertype_id == 3%>
              	<% @usranswer = 0%>
              	<% Form.find_all_by_survey_id(@survey.id).each do |form| %>
-             		       
-             		<%@usranswer +=  form.user_answers.find_all_by_answer_id(answer.id).count;  %>
-             		<% end %>        
-             <% end %>
-              <!--  Textfeld -->
-             <% if answer.answertype == 3%>
-             	<% @usranswer = 0%>
-             	<% Form.find_all_by_survey_id(@survey.id).each do |form|
-             		#p form
-             	%>
-             		<%=   # Form.find(form.id).user_answer.find_all_by_answer_id(answer.id).count  
-             		%>       
-             		<%@usranswer +=  form.user_answers.find_all_by_answer_id(answer.id).count;
-                             %>
+             		<%@usranswer +=  form.user_answers.find_all_by_answer_id(answer.id).count; %>
              		<% end %>
              <% end %>
              
-             <% if answer.answertype == 4%>
-             	<% @usranswer = 0%>
-             	<% Form.find_all_by_survey_id(@survey.id).each do |form|
-             		#p form
-             	%>
-             		<%=   # Form.find(form.id).user_answer.find_all_by_answer_id(answer.id).count  
-             		%>       
-             		<%@usranswer +=  form.user_answers.find_all_by_answer_id(answer.id).count;
-                             %>
+          <!--  Nummernfeld -->
+              <% if answer.answertype_id == 4%>
+             	
+             	<% @ergebnis = 0%>
+             	<% @counter = 0%>
+             	<% Form.find_all_by_survey_id(@survey.id).each do |form|%>		      
+             		<%form.user_answers.find_all_by_answer_id(answer.id).each do |useranswer|; %>
+             			<%= @ergebnis += useranswer.answertext.to_i
+             			   @counter = @counter +1
+             			%>
              		<% end %>
-             <% end %>
-            
-            
-             <% @usranswer = 0%>
-             <% Form.find_all_by_survey_id(@survey.id).each do |form| %>
-                   
-             <% @usranswer +=  form.user_answers.find_all_by_answer_id(answer.id).count;  %>
-             <% end %> 
-         <td><%= @usranswer%> </td>
-             <% @usranswer = 0%>
-       
-       
-        <% end %>
-        </tr>
-        </table> 
-        <br> 
-  <% end %>		
+             		
+                <% end %> 
+                <%= average = @ergebnis / @counter 
+             	%> 	
+             <% end %>   
+  <% end %>	
+   </tr>
+   </table> 
+   <br> 
+<% end %>  	
