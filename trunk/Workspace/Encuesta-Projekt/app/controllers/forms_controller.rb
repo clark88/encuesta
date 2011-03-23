@@ -38,7 +38,7 @@ class FormsController < ApplicationController
               if v.to_i != 0
               #puts k
               @usranswer = Form.find(@form.id).user_answers.create()
-              @usranswer.answer = Answer.find(v)
+              @usranswer.answer = Answer.find(k)
               @usranswer.save
               end
             end

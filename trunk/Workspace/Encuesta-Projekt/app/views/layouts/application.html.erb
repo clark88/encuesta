@@ -129,7 +129,7 @@
       				<td><%= @current_user.login %></td>
       			</tr>
       			<tr>
-      				<td><%= pluralize(current_user.surveys.count, "Umfragen")%></td>
+      				<td>hat <%= current_user.surveys.count %> Umfrage(n)</td>
       			</tr>	
       			<tr>
       				<td><%= link_to "Ausloggen", signout_path, :method => :delete %></td>
