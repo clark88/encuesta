@@ -1,46 +1,48 @@
-<tr>
-<% if current_user?(survey.user) 
-%>
 
+<tr>
 
   <td class="survey">
-    <span class="content"><%= survey.bezeichnung %></span>
+    <span class="content">
+  	<b>Umfrage:</b><%= survey.bezeichnung %></span> </td>
+    <td class="survey">
     <span class="timestamp">
-     Erstellzeit:<%= time_ago_in_words(survey.created_at) %> ago.
-    </span>
-  </td>
+     <b>Erstellzeit:</b><%= time_ago_in_words(survey.created_at) %> ago.
+    </span></td>
+ 
   <% if current_user?(survey.user) %>
 
-  <% if !survey.gesperrt%>
-  <td><%= link_to bearbeiten, edit_survey_path(survey),
-  							  :title => "Umfrage bearbeiten" %> </td>
-  <% else %>
-  <td><%= freigegebenBearbeiten %></td>
-  <% end %>
-  <% if !survey.gesperrt%>
-  <td><%= link_to freigeben, lock_survey_path(survey),
+	 <% if !survey.gesperrt%>
+ 		 <td><%= link_to bearbeiten, edit_survey_path(survey),
+  							  		:title => "Umfrage bearbeiten" %> </td>
+  	 <% else %>
+  		<td><%= freigegebenBearbeiten %></td>
+ 	 <% end %>
+  
+ 	 <% if !survey.gesperrt%>
+  		<td><%= link_to freigeben, lock_survey_path(survey),
   									   :confirm => "Wollen Sie die Umfrage wirklich freigeben?",
                                        :title => "Umfrage freigeben" %></td>
-  <% else %>
-  <td><%= freigegebenFreigabe%> </td>          
-  <% end %> 
-                        
-  <td><%= link_to auswerten, evaluation_path(survey),  
-  						     :title => "Umfrage auswerten" %></td>
+ 	 <% else %>
+    	<td><%= freigegebenFreigabe%> </td> 
+  	 <% end %> 
   
-  <td><%= link_to loeschen, survey, :method => :delete,
-                                     :confirm => "Sind sie sich sicher?",
-                                     :title => "Umfrage löschen" %>
-  </td>
-  
-  <td>
-  	<%=link_to "Veroeffentlichen", attend_path(:survey_id => survey.id) %>
-  </td>   
-  <% end %>
-
-<% else 
-%>
-Sie sind nicht befugt, die Umfragen anzusehen -->
-<% end 
-%>
-</tr>
+  	 <% if !survey.gesperrt%>                      
+  		<td><%= nichtAuswerten%> </td> 
+     <% else %>
+ 		 <td><%= link_to auswerten, evaluation_path(survey),  
+  						     		:title => "Umfrage auswerten" %></td>    
+  	 <% end %> 						     
+  	 
+  		<td><%= link_to loeschen, survey, :method => :delete,
+                                  		   :confirm => "Sind sie sich sicher?",
+                                    		 :title => "Umfrage löschen" %>
+  		</td>
+ 
+  	 <% if !survey.gesperrt%> 
+  		<td><%= nichtVeroeffentlichen%> </td> 
+  	 <% else %>
+  		<td><%=link_to veroeffentlichen, attend_path(:survey_id => survey.id),
+  								 :title => "Umfrage und Link ansehen"%></td>   
+  	 <% end %>
+ <% end %>
+</tr>  
