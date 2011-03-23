@@ -52,5 +52,9 @@ module ApplicationHelper
  	image_tag("Menue.png", :alt => "Menue", :class => "round")
  end
  
+   def benutzer
+ 	image_tag("Benutzer.png", :alt => "Benutzer", :class => "round")
+ end
+ 
 end
  
