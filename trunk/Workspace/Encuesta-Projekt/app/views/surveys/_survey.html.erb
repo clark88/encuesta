@@ -13,7 +13,7 @@
   <td>Bearbeiten</td>
   <% end %>
   <% if !survey.gesperrt%>
-  <td><%= link_to "Freigeben", survey, :controller => 'lock',
+  <td><%= link_to "Freigeben", lock_survey_path(survey),
   									   :confirm => "Wollen Sie die Umfrage wirklich freigeben?",
                                        :title => survey.bezeichnung %></td>
   <% else %>
