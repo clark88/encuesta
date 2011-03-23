@@ -24,7 +24,7 @@
 
         <tr>
             <td><%= label_tag "answer_#{answer}", answer.answertext %></td>
-            <td><%= link_to bearbeiten, edit_answer_path(answer) %></td>
+            <td><%= link_to bearbeiten, edit_answer_path(answer,:question_id => @question.id) %></td>
         </tr>
         <% @answertype = answer.answertype%>
         <% p @answertype.id %>
@@ -47,6 +47,7 @@
     <% end %>
 </div>
 <div class="actions">
-    <%= f.submit "Hinzufügen" %>
+	<%= hidden_field_tag :survey_id, params[:survey_id]%>
+    <%= f.submit "Frage bearbeiten" %>
 </div>
 <% end %>

@@ -3,8 +3,8 @@
 <%= form_for(@user) do |f| %>
   <%= render 'shared/error_messages', :object => f.object %>
   <div class="field">
-    <%= f.label :login %><br />
-    <%= f.text_field :login %>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
   </div>
   <div class="field">
     <%= f.label :name %><br />
@@ -15,10 +15,7 @@
     <%= f.text_field :vorname %>
   </div>
   
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </div>
+  
   <div class="field">
     <%= f.label :passwort %><br />
     <%= f.password_field :passwort %>

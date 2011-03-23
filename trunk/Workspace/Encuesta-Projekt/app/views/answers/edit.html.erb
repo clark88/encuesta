@@ -1,10 +1,11 @@
-<h1>Answers#edit</h1>
+<h1>Antwort bearbeiten</h1>
 <%= form_for @answer do |f| %>
   <%= #render 'shared/error_messages', :object => f.object 
   %>
   <div class="field">
     <%= f.text_field :answertext %>
   </div>
+  <%= hidden_field_tag :question_id, params[:question_id]%>
   
   <div class="actions">
     <%= f.submit "Ändern" %>

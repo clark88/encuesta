@@ -92,8 +92,8 @@
     <%= image_submit_tag("GO.png") %>
   </div>
 <% end %>
-	<%= link_to registerPic, signup_path %> 
-	<br><br> 
+<br>
+	<%= link_to registerPic, signup_path %> <br><br>
 </div>
 <% end %>
 <% if signed_in? %>
@@ -125,7 +125,7 @@
       				<td><%=benutzer%><td>
       			</tr>
       			<tr>
-      				<td><big><b>Login: </b><%= @current_user.email %></big></td>
+      				<td><big><b>Login: </b></big><%= @current_user.email %></td>
       			</tr>
       			<tr>
       				<td><b>Besitzt:</b> <%= current_user.surveys.count %> Umfrage(n)</td>
