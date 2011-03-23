@@ -1,26 +1,31 @@
-  	<h1>Auswertung</h1>
-  	<h2>Umfrage: <%= @survey.bezeichnung%></h2><br>
+  	<h1>Auswertung von  <%= @survey.bezeichnung%></h1>
   	
   <% q = Question.find_all_by_survey_id(@survey.id) %>
   <% q.each do |question|%>
   		<!--  #Frage wird ausgegeben-->
-  		<p><%= question.questiontext%></p><br>
-        <% a = Answer.find_all_by_question_id(question.id) %>
+  		<table border="9" align="center" cellpadding="2" cellspacing="1">
+  	    <colgroup>
+           <col width="450">
+           <col width="100">
+        </colgroup>
+  		<tr>	
+  		<th><h3><%= question.questiontext%></h3>
+        <% a = Answer.find_all_by_question_id(question.id) %></th>
+        <th>Ergebnis</th>
+        </tr>
+              
 		<% 	a.each do |answer| %>
+		<tr>
 			<!--  #Antwort wird ausgegeben -->	 
-			<p><%=  answer.answertext %>
+		<td><p><%=  answer.answertext %>  </p></td>
 		<!--  ##Prüfund des Fragetyps --> 	
 		    <!--  Radiobutton oder Checkbox -->
 			 <% if answer.answertype == 1 || answer.answertype == 2 %>
-             	: Checkbox oder Radiobutton, Frage ID: <%=answer.id %></p>   
+             	  
              	<% @usranswer = 0%>
-             	<% Form.find_all_by_survey_id(@survey.id).each do |form|
-             		#p form
-             	%>
-             		<%=   # Form.find(form.id).user_answer.find_all_by_answer_id(answer.id).count  
-             		%>       
-             		<%@usranswer +=  form.user_answers.find_all_by_answer_id(answer.id).count;
-                             %>
+             	<% Form.find_all_by_survey_id(@survey.id).each do |form| %>
+             		       
+             		<%@usranswer +=  form.user_answers.find_all_by_answer_id(answer.id).count;  %>
              		<% end %>        
              <% end %>
               <!--  Textfeld -->
@@ -47,17 +52,19 @@
                              %>
              		<% end %>
              <% end %>
-   <!--          <% @usranswer = 0%>
-             <% Form.find_all_by_survey_id(@survey.id).each do |form|
-             	#p form
-             %>
-             <%=   # Form.find(form.id).user_answer.find_all_by_answer_id(answer.id).count  
-             %>       
-             <%               @usranswer +=  form.user_answers.find_all_by_answer_id(answer.id).count;
-                             %>
-             <% end 
-             %> -->
-             <%= @usranswer%>
+            
+            
              <% @usranswer = 0%>
-        <% end %>  
+             <% Form.find_all_by_survey_id(@survey.id).each do |form| %>
+                   
+             <% @usranswer +=  form.user_answers.find_all_by_answer_id(answer.id).count;  %>
+             <% end %> 
+         <td><%= @usranswer%> </td>
+             <% @usranswer = 0%>
+       
+       
+        <% end %>
+        </tr>
+        </table> 
+        <br> 
   <% end %>		
