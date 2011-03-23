@@ -29,7 +29,11 @@ class SurveysController < ApplicationController
     @survey = current_user.surveys.build(params[:survey])
     #@survey.gesperrt = params[:survey][:gesperrt]
     @survey.gesperrt = false
-    @survey.surveytype = Surveytype.find(params[:survey][:surveytype])
+    # Statt den übergebenen Parameter zu übernehmen wird hier als Standart erst einmal immer eine Advanced-Umfrage generiert
+    # Grund ist der zu hohe Zeitaufwand für die Differenzierung
+    #@survey.surveytype = Surveytype.find(params[:survey][:surveytype])
+    @survey.surveytype = Surveytype.find(2)
+    
 
     if @survey.save
       flash[:success] = "Umfrage erstellt!"
@@ -37,7 +41,7 @@ class SurveysController < ApplicationController
       #redirect_to(edit_survey_path(@survey))
       redirect_to new_question_path(:survey_id => @survey.id)
     else
-      flash[:failure] = "Umfragetyp oder Bezeichnung fehlt!"
+      flash[:failure] = "Bezeichnung fehlt!"
       @feed_items = []
 
       render 'pages/home'

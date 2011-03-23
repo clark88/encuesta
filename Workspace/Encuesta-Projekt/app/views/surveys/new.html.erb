@@ -8,14 +8,16 @@ Erstellen sie hier eine neue Umfrage.
     <%= f.text_field :bezeichnung %>
   </div>
   <div class="field">
-    <% Surveytype.all.each do |surveytype| %>
+ <!--  Da die Abgrenzung zwischen Simple und Advanced-Umfrage zu zeitintensiv war, mussten wir uns für einen Standardwert
+ 	   entscheiden und legen immer für jede Umfrage diesen Fest (momentan macht es keinen Unterschied).
+ 	   <% Surveytype.all.each do |surveytype| %>
     <br><%= #radio_button_tag 'surveytype', surveytype.id, @survey.surveytype_id == surveytype.id 
     f.radio_button(:surveytype, surveytype.id)
     %>
     <%= label_tag "surveytype_#{surveytype}", surveytype.bezeichnung
     %>
   <% end %>
-  <br>
+  <br> -->
   </div>
   <br>
   <div class="actions">
