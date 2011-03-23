@@ -23,11 +23,12 @@ Geben Sie eine Fragestellung ein und wählen Sie die Art der Frage aus.<br>
     %>
   <% end %>
   </div>
+  <br>
   <div class="actions">
   		<%= hidden_field_tag :survey_id, params[:survey_id]%>
     <%= f.submit "Frage erstellen" %>
   </div>
-  
+  <br>
   <% survey_id = params[:survey_id] %>
-  <%=	link_to "Zurück zur Umfrage", edit_survey_path(survey_id) %>
+  <%=	link_to "Bearbeitung abschließen", edit_survey_path(survey_id) %>
 <% end %>

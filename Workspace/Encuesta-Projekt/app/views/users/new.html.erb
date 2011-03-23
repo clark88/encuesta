@@ -35,9 +35,8 @@ Legen sie hier einen neuen Benutzer an!
     <%= f.label :passwort_confirmation, "Confirmation" %><br />
     <%= f.password_field :passwort_confirmation %>
   </div>
-  <br>
   <div class="actions">
-    <%= f.submit "Registrieren" %> <%= link_to "Zurück",:back%>
+    <%= f.submit "Registrieren" %> <%= button_to "Zurück",home_path%>
   </div>
   <br>
 <% end %>

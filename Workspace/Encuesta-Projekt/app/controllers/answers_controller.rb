@@ -49,7 +49,7 @@ class AnswersController < ApplicationController
   	
     if @answer.update_attributes(params[:answer])
       flash[:success] = "Profile updated."
-      redirect_to new_answer_path
+      redirect_to edit_question_path(params[:question_id])
     else
       @title = "Edit Question"
       render 'edit'

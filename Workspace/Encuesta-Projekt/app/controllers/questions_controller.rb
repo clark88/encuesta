@@ -62,6 +62,8 @@ class QuestionsController < ApplicationController
   def update
   	@question = Question.find(params[:id])
   	
+  	survey = Survey.find(params[:survey_id])
+  	
   	answertype = Answertype.find(params[:answertype])
   	#cookies[:answertype] = answertype.id
   	#cookies[:questionid] = @question.id
@@ -74,7 +76,7 @@ class QuestionsController < ApplicationController
   	
     if @question.update_attributes(params[:question])
       flash[:success] = "Profile updated."
-      redirect_to new_answer_path(:question_id => @question.id, :answertype => answertype.id)
+      redirect_to edit_survey_path(survey)
     else
       @title = "Edit Question"
       render 'edit'

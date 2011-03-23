@@ -46,7 +46,7 @@
     			<%= label_tag "answer_#{answer}", answer.answertext %>
     		</td>
     		<td>
-    			<%=	link_to bearbeiten, edit_answer_path(answer) %>
+    			<%=	link_to bearbeiten, edit_answer_path(answer, :question_id => question.id) %>
     		</td>	
     	</tr>
     	 
