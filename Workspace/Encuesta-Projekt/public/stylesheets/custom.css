@@ -108,7 +108,7 @@ header img {
 
 a {
     color: #FFFFFF;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 a img{
