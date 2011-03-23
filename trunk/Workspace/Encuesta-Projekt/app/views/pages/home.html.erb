@@ -27,11 +27,13 @@
 <!--><p>Sie sind eingelogt als  <%= @current_user.login %> !   </p>-->
     <% else %>
  
-
+	<h1>Encuesta</h1>
     <p>
-    Dies ist die Home-Page des Encuesta-Umfragen-Systems. Erstellt in Unterstützung mit
-    <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
-	</p>
+	Willkommen auf der Home-Page des Encuesta-Umfragen-Systems. Auf dieser Seite können sie Umfragen nach ihren Vorstellungen erstellen und diese von anderen Nutzern ausfüllen lassen. Nach erfolgreichen Teilnahmen an der Umfrage können Sie diese Umfragen auswerten.<br>
+    Sobald Sie eine neue Umfrage erstellt haben können sie eine Frage für Ihre Umfrage erstellen und diese mit Antworten versehen.<br>
+    Diese Seite wurde in Unterstützung mit
+    <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a> erstellt.
+</p>
     <%= link_to "Jetzt registrieren!", signup_path, :class => "signup_button round" %>
     <% end %>
 

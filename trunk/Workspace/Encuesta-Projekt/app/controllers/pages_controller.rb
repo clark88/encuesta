@@ -17,6 +17,10 @@ class PagesController < ApplicationController
     @title = "Help"
   end
   
+  def impressum
+  	@title = "Impressum"
+  end
+  
 
 
 
