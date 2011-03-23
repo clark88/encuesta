@@ -18,10 +18,12 @@
 	 <%	a.each do |answer| %>
 		<tr>
 	 <!--  #Antwort wird ausgegeben -->	 
-		<td><p><%=  answer.answertext %>  
-			<% if answer.answertype_id == 3%>
-  			<input name="suchstring" type="text" size="30" maxlength="30" value="Suchstring"></p>
-  		<% end %>
+		<td><form><p><%=  answer.answertext %> 
+			
+			 <!--  Wenn Textfeld kann hier das Suchwort eingegeben werden -->	 
+			<% if answer.answertype_id == 3%>	
+  		  	   <input name="Suche" type="text" size="15" value="Suche"></form></p>
+  		    <% end %>
 		</td>
 		
 		<!--  ##Prüfund des Fragetyps --> 	
@@ -59,8 +61,8 @@
              		<% end %>
                 <% end %> 
                 <% if @counter != 0 %> 
-                    <% p @average = @ergebnis / @counter %> 	
-             	 <td> <%= @average %> (Durschnitt)  </td>
+                 <% p @average = @ergebnis / @counter %> 	
+             	 <td align"center"><%= @average %>(Durchschnitt)</td>
              	 <% end %>   
              <% end %>   
   <% end %>	
