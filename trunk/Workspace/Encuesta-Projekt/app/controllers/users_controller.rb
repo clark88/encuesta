@@ -37,8 +37,8 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     if @user.save
       sign_in @user
-      flash[:success] = "Hallo " + @user.login + "."
-      redirect_to @user
+      flash[:success] = "Hallo " + @user.email + ". Hier koennen Sie ihre Umfragen anlegen. Unter dem Menue links koennen sie ihre erstellten Umfragen anzeigen lassen, neue Umfragen erstellen und ihre Benutzerdaten bearbeiten"
+      redirect_to home_path
     else
       @title = "Sign up"
       render 'new'
