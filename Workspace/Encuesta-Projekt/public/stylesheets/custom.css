@@ -5,6 +5,8 @@ body {
    color:#FFFFFF;
  
     }
+    
+
 
 header {
     padding-top: 20px;
@@ -107,6 +109,10 @@ header img {
 a {
     color: #FFFFFF;
     text-decoration: none;
+}
+
+a img{
+	border: none;
 }
 
 .forgottenpw {
