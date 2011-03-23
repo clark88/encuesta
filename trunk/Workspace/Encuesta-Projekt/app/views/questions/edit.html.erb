@@ -1,7 +1,8 @@
 <h1>Frage bearbeiten</h1>
-
-Ändern sie bei Ihrer Frage die Fragestellung und den Fragetypen oder jeweils einzeln die Antworten.<br>
-<b>Achtung:</b>Wenn sie eine Frage grundsätzlich ändern (Fragestellung / Fragetyp) werden aufgrund von Sinnmäßigkeit die bereits erstellten Antworten gelöscht.<br>
+Ändern sie bei Ihrer Frage die Fragestellung und den Fragetypen oder jeweils einzeln die Antworten.
+<br>
+<b>Achtung:</b>Wenn sie eine Frage grundsätzlich ändern (Fragestellung / Fragetyp) werden aufgrund von Sinnmäßigkeit die bereits erstellten Antworten gelöscht.
+<br>
 <br>
 <%= form_for(@question) do |f| %>
 <%= #render 'shared/error_messages', :object => f.object
@@ -18,20 +19,18 @@
 <br>
 
 <div class="field">
-    <% Answer.find_all_by_question_id(@question.id).each do |answer| %>
-    <%= label_tag "answer_#{answer}", answer.answertext %>
-    <%= link_to "Antwort bearbeiten", edit_answer_path(answer)
-    %>
-    
-    
-   
-    
-    <% @answertype = answer.answertype%>
-   <%  p @answertype.id %>
+    <table>
+        <% Answer.find_all_by_question_id(@question.id).each do |answer| %>
 
-    <br>
-    <% end %>
+        <tr>
+            <td><%= label_tag "answer_#{answer}", answer.answertext %></td>
+            <td><%= link_to bearbeiten, edit_answer_path(answer) %></td>
+        </tr>
+        <% @answertype = answer.answertype%>
+        <% p @answertype.id %>
 
+        <% end %>
+    </table>
     <br>
     <% survey_id = params[:survey_id]%>
     <%= link_to "Neue Antwort anlegen", new_answer_path(:question_id => @question.id, :answertype => @answertype.id, :survey_id => survey_id)

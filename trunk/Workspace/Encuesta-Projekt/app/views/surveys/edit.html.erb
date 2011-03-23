@@ -33,16 +33,25 @@
     <br>
     
     <%= label_tag "question_#{question}", question.questiontext %>  
-    <%=	link_to "Frage bearbeiten", edit_question_path(question, :survey_id => @survey.id) %>
+    <%=	link_to bearbeiten, edit_question_path(question, :survey_id => @survey.id) %>
     <br>Achtung, wenn Sie eine Frage bearbeiten, werden die zugehörigen Antworten gelöscht
- <%#BK: Und wenn nur ein Rechtschreibfehler vorliegt??%>
+ <%#BK: Und wenn nur ein Rechtschreibfehler vorliegt??
+ %>
     <br>
+    <table>
+    <% Answer.find_all_by_question_id(question.id).each do |answer| %>
     
-    	<% Answer.find_all_by_question_id(question.id).each do |answer| %>
-    	<%= label_tag "answer_#{answer}", answer.answertext %>
-    	<%=	link_to "Antwort bearbeiten", edit_answer_path(answer) 
-    	%><br>
+    	<tr>
+    		<td>
+    			<%= label_tag "answer_#{answer}", answer.answertext %>
+    		</td>
+    		<td>
+    			<%=	link_to bearbeiten, edit_answer_path(answer) %>
+    		</td>	
+    	</tr>
+    	 
     	<% end %>
+    	</table>
     <% end %>
     
     <%=	#link_to "Neue Frage anlegen", new_question_path 
