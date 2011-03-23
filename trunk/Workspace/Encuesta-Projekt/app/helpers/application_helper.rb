@@ -108,5 +108,9 @@ module ApplicationHelper
  	image_tag("nichtVeroeffentlichen.png", :alt => "nichtVeroeffentlichen", :class => "round")
  end
  
+ def umfrageStartseiteBackround
+ 	image_tag("umfrageStartseiteBackround.png", :alt => "umfrageStartseiteBackround", :class => "round")
+ end
+ 
 end
  
