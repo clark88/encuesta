@@ -4,11 +4,17 @@
       <h1>
         <b>Meine Umfragen</b>
       </h1>
+      <% if signed_in? %>
       <% unless @user.surveys.empty? %>
-        <table class="surveys" summary="User surveys">
+         
+        <table border="1" class="surveys" summary="User surveys">
           <%= render @surveys %>
         </table>
+
       <% end %>
+	<% else %>
+	Sie müssen sich anmelden, um die Umfragen anderer anzuschauen
+   <% end %>
 
     </td>
    <td class="sidebar round"> <!--

@@ -1,4 +1,8 @@
 <tr>
+<% if current_user?(survey.user) 
+%>
+
+
   <td class="survey">
     <span class="content"><%= survey.bezeichnung %></span>
     <span class="timestamp">
@@ -8,29 +12,35 @@
   <% if current_user?(survey.user) %>
 
   <% if !survey.gesperrt%>
-  <td><%= link_to "Bearbeiten", edit_survey_path(survey) %> </td>
+  <td><%= link_to bearbeiten, edit_survey_path(survey),
+  							  :title => "Umfrage bearbeiten" %> </td>
   <% else %>
-  <td>Bearbeiten</td>
+  <td><%= freigegebenBearbeiten %></td>
   <% end %>
   <% if !survey.gesperrt%>
-  <td><%= link_to "Freigeben", lock_survey_path(survey),
+  <td><%= link_to freigeben, lock_survey_path(survey),
   									   :confirm => "Wollen Sie die Umfrage wirklich freigeben?",
-                                       :title => survey.bezeichnung %></td>
+                                       :title => "Umfrage freigeben" %></td>
   <% else %>
-  <td>Freigeben </td>          
+  <td><%= freigegebenFreigabe%> </td>          
   <% end %> 
                         
-  <td><%= link_to "Auswerten", evaluation_path(survey)  %></td>
+  <td><%= link_to auswerten, evaluation_path(survey),  
+  						     :title => "Umfrage auswerten" %></td>
   
-  <td><%= link_to "Löschen", survey, :method => :delete,
+  <td><%= link_to loeschen, survey, :method => :delete,
                                      :confirm => "Sind sie sich sicher?",
-                                     :title => survey.bezeichnung %>
+                                     :title => "Umfrage löschen" %>
   </td>
   
   <td>
   	<%=link_to "Veroeffentlichen", attend_path(:survey_id => survey.id) %>
   </td>   
-  <% end %> 
-  
+  <% end %>
 
+<% else 
+%>
+Sie sind nicht befugt, die Umfragen anzusehen -->
+<% end 
+%>
 </tr>

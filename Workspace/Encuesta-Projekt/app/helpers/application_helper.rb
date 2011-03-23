@@ -71,5 +71,29 @@ module ApplicationHelper
     def ausloggen
  	image_tag("Ausloggen.png", :alt => "Ausloggen", :class => "round")
  end
+ 
+ def loeschen
+ 	image_tag("DeleteButton.png", :alt => "Loeschen", :class => "round")
+ end
+
+ def bearbeiten
+ 	image_tag("BearbeitenButton.png", :alt => "Bearbeiten", :class => "round")
+ end
+ 
+  def freigeben
+ 	image_tag("freigebenButton.png", :alt => "Freigeben", :class => "round")
+ end
+ 
+  def auswerten
+ 	image_tag("auswertenButton.png", :alt => "Auswerten", :class => "round")
+ end
+ 
+  def freigegebenBearbeiten
+ 	image_tag("freigegebenBearbeitenButton.png", :alt => "freigegebenBearbeiten", :class => "round")
+ end
+ 
+   def freigegebenFreigabe
+ 	image_tag("freigebenerFreigegebenButton.png", :alt => "freigegebeneFreigabe", :class => "round")
+ end
 end
  
