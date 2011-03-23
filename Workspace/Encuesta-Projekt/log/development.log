@@ -50838,3 +50838,897 @@ Started GET "/home" for 127.0.0.1 at 2011-03-23 22:14:24 +0100
   [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
 Rendered pages/home.html.erb within layouts/application (18.0ms)
 Completed 200 OK in 153ms (Views: 42.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-03-23 22:17:58 +0100
+  Processing by PagesController#home as HTML
+  [1m[36mSQL (1.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+Rendered pages/home.html.erb within layouts/application (128.0ms)
+Completed 200 OK in 674ms (Views: 152.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2011-03-23 22:18:16 +0100
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sUllMupbQZBMnyfMfyIYLbggIb+vkhsTvqNXwALAFBI=", "session"=>{"email"=>"test.test@test.net", "passwort"=>"test123"}, "x"=>"0", "y"=>"0"}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'test.test@test.net') LIMIT 1
+Redirected to http://127.0.0.1:3000/users/4
+Completed 302 Found in 138ms
+
+
+Started GET "/users/4" for 127.0.0.1 at 2011-03-23 22:18:17 +0100
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 4) LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 4)[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 4)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 4)[0m
+Rendered users/show.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 320ms (Views: 50.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2011-03-23 22:18:33 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 4) LIMIT 1
+  [1m[36mSurveytype Load (0.0ms)[0m  [1mSELECT "surveytypes".* FROM "surveytypes"[0m
+Rendered shared/_survey_form.html.erb (47.0ms)
+  [1m[35mSQL (1.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 4)
+Rendered shared/_user_info.html.erb (14.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 4)[0m
+Rendered pages/home.html.erb within layouts/application (89.0ms)
+Completed 200 OK in 230ms (Views: 111.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/surveys/new" for 127.0.0.1 at 2011-03-23 22:18:56 +0100
+  Processing by SurveysController#new as HTML
+  [1m[35mSurveytype Load (0.0ms)[0m  SELECT "surveytypes".* FROM "surveytypes"
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 4)
+Rendered surveys/new.html.erb within layouts/application (129.0ms)
+Completed 200 OK in 247ms (Views: 150.0ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/surveys" for 127.0.0.1 at 2011-03-23 22:25:02 +0100
+  Processing by SurveysController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sUllMupbQZBMnyfMfyIYLbggIb+vkhsTvqNXwALAFBI=", "survey"=>{"bezeichnung"=>"Autowahl-Umfrage"}, "commit"=>"Umfrage erstellen"}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+  [1m[35mSurveytype Load (0.0ms)[0m  SELECT "surveytypes".* FROM "surveytypes" WHERE ("surveytypes"."id" = 2) LIMIT 1
+Completed   in 154ms
+
+ActiveRecord::RecordNotFound (Couldn't find Surveytype with ID=2):
+  app/controllers/surveys_controller.rb:35:in `create'
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.0ms)
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.0ms)
+
+
+Started POST "/surveys" for 127.0.0.1 at 2011-03-23 22:28:44 +0100
+  Processing by SurveysController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sUllMupbQZBMnyfMfyIYLbggIb+vkhsTvqNXwALAFBI=", "survey"=>{"bezeichnung"=>"Autowahl-Umfrage"}, "commit"=>"Umfrage erstellen"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+  [1m[35mSurveytype Load (1.0ms)[0m  SELECT "surveytypes".* FROM "surveytypes" WHERE ("surveytypes"."id" = 2) LIMIT 1
+  [1m[36mAREL (2.0ms)[0m  [1mINSERT INTO "surveys" ("bezeichnung", "gesperrt", "surveytype_id", "user_id", "created_at", "updated_at") VALUES ('Autowahl-Umfrage', 'f', 2, 4, '2011-03-23 21:28:45.190472', '2011-03-23 21:28:45.190472')[0m
+Redirected to http://127.0.0.1:3000/questions/new?survey_id=1
+Completed 302 Found in 239ms
+
+
+Started GET "/questions/new?survey_id=1" for 127.0.0.1 at 2011-03-23 22:28:45 +0100
+  Processing by QuestionsController#new as HTML
+  Parameters: {"survey_id"=>"1"}
+  [1m[35mAnswertype Load (6.0ms)[0m  SELECT "answertypes".* FROM "answertypes"
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 4)
+Rendered questions/new.html.erb within layouts/application (296.0ms)
+Completed 200 OK in 357ms (Views: 317.0ms | ActiveRecord: 11.0ms)
+
+
+Started POST "/questions" for 127.0.0.1 at 2011-03-23 22:29:43 +0100
+  Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sUllMupbQZBMnyfMfyIYLbggIb+vkhsTvqNXwALAFBI=", "question"=>{"questiontext"=>"Welche Karosserieform bevorzugen Sie?"}, "answertype"=>"1", "survey_id"=>"1", "commit"=>"Frage erstellen"}
+  [1m[36mSurvey Load (0.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 1) ORDER BY surveys.created_at DESC LIMIT 1[0m
+  [1m[35mAREL (5001.0ms)[0m  INSERT INTO "questions" ("questiontext", "survey_id", "created_at", "updated_at") VALUES ('Welche Karosserieform bevorzugen Sie?', 1, '2011-03-23 21:29:44.028472', '2011-03-23 21:29:44.028472')
+SQLite3::BusyException: database is locked: INSERT INTO "questions" ("questiontext", "survey_id", "created_at", "updated_at") VALUES ('Welche Karosserieform bevorzugen Sie?', 1, '2011-03-23 21:29:44.028472', '2011-03-23 21:29:44.028472')
+Completed   in 5125ms
+
+ActiveRecord::StatementInvalid (SQLite3::BusyException: database is locked: INSERT INTO "questions" ("questiontext", "survey_id", "created_at", "updated_at") VALUES ('Welche Karosserieform bevorzugen Sie?', 1, '2011-03-23 21:29:44.028472', '2011-03-23 21:29:44.028472')):
+  app/controllers/questions_controller.rb:24:in `create'
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (7.0ms)
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.0ms)
+
+
+Started POST "/questions" for 127.0.0.1 at 2011-03-23 22:29:56 +0100
+  Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sUllMupbQZBMnyfMfyIYLbggIb+vkhsTvqNXwALAFBI=", "question"=>{"questiontext"=>"Welche Karosserieform bevorzugen Sie?"}, "answertype"=>"1", "survey_id"=>"1", "commit"=>"Frage erstellen"}
+  [1m[36mSurvey Load (0.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 1) ORDER BY surveys.created_at DESC LIMIT 1[0m
+  [1m[35mAREL (3.0ms)[0m  INSERT INTO "questions" ("questiontext", "survey_id", "created_at", "updated_at") VALUES ('Welche Karosserieform bevorzugen Sie?', 1, '2011-03-23 21:29:57.110472', '2011-03-23 21:29:57.110472')
+  [1m[36mSurvey Load (1.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 1) ORDER BY surveys.created_at DESC LIMIT 1[0m
+  [1m[35mAnswertype Load (1.0ms)[0m  SELECT "answertypes".* FROM "answertypes" WHERE ("answertypes"."id" = 1) LIMIT 1
+Redirected to http://127.0.0.1:3000/answers/new?answertype=1&question_id=1&survey_id=1
+Completed 302 Found in 170ms
+
+
+Started GET "/answers/new?answertype=1&question_id=1&survey_id=1" for 127.0.0.1 at 2011-03-23 22:29:57 +0100
+  Processing by AnswersController#new as HTML
+  Parameters: {"answertype"=>"1", "question_id"=>"1", "survey_id"=>"1"}
+  [1m[36mQuestion Load (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."id" = 1) LIMIT 1[0m
+Rendered text template (0.0ms)
+  [1m[35mAnswer Load (1.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 1)
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 4)
+Rendered answers/new.html.erb within layouts/application (263.0ms)
+Completed 200 OK in 368ms (Views: 302.0ms | ActiveRecord: 5008.0ms)
+
+
+Started POST "/answers" for 127.0.0.1 at 2011-03-23 22:30:11 +0100
+  Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sUllMupbQZBMnyfMfyIYLbggIb+vkhsTvqNXwALAFBI=", "answer"=>{"answertext"=>"Kombi"}, "question_id"=>"1", "answertype"=>"1", "commit"=>"Hinzufügen", "survey_id"=>"1"}
+  [1m[36mQuestion Load (1.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."id" = 1) LIMIT 1[0m
+  [1m[35mAREL (2.0ms)[0m  INSERT INTO "answers" ("answertext", "question_id", "answertype_id", "created_at", "updated_at") VALUES ('Kombi', 1, NULL, '2011-03-23 21:30:11.667472', '2011-03-23 21:30:11.667472')
+  [1m[36mQuestion Load (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."id" = 1) LIMIT 1[0m
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 1) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mAnswertype Load (1.0ms)[0m  [1mSELECT "answertypes".* FROM "answertypes" WHERE ("answertypes"."id" = 1) LIMIT 1[0m
+  [1m[35mAREL (2.0ms)[0m  UPDATE "answers" SET "answertype_id" = 1, "updated_at" = '2011-03-23 21:30:11.765472' WHERE ("answers"."id" = 1)
+Redirected to http://127.0.0.1:3000/answers/new?answertype=1&question_id=1&survey_id=1
+Completed 302 Found in 226ms
+
+
+Started GET "/answers/new?answertype=1&question_id=1&survey_id=1" for 127.0.0.1 at 2011-03-23 22:30:12 +0100
+  Processing by AnswersController#new as HTML
+  Parameters: {"answertype"=>"1", "question_id"=>"1", "survey_id"=>"1"}
+  [1m[36mQuestion Load (1.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."id" = 1) LIMIT 1[0m
+Rendered text template (0.0ms)
+  [1m[35mAnswer Load (1.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 1)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 4)
+Rendered answers/new.html.erb within layouts/application (452.0ms)
+Completed 200 OK in 508ms (Views: 473.0ms | ActiveRecord: 4.0ms)
+
+
+Started POST "/answers" for 127.0.0.1 at 2011-03-23 22:30:21 +0100
+  Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sUllMupbQZBMnyfMfyIYLbggIb+vkhsTvqNXwALAFBI=", "answer"=>{"answertext"=>"Cabrio"}, "question_id"=>"1", "answertype"=>"1", "commit"=>"Hinzufügen", "survey_id"=>"1"}
+  [1m[36mQuestion Load (1.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."id" = 1) LIMIT 1[0m
+  [1m[35mAREL (2.0ms)[0m  INSERT INTO "answers" ("answertext", "question_id", "answertype_id", "created_at", "updated_at") VALUES ('Cabrio', 1, NULL, '2011-03-23 21:30:21.574472', '2011-03-23 21:30:21.574472')
+  [1m[36mQuestion Load (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."id" = 1) LIMIT 1[0m
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 1) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mAnswertype Load (1.0ms)[0m  [1mSELECT "answertypes".* FROM "answertypes" WHERE ("answertypes"."id" = 1) LIMIT 1[0m
+  [1m[35mAREL (2.0ms)[0m  UPDATE "answers" SET "answertype_id" = 1, "updated_at" = '2011-03-23 21:30:21.733472' WHERE ("answers"."id" = 2)
+Redirected to http://127.0.0.1:3000/answers/new?answertype=1&question_id=1&survey_id=1
+Completed 302 Found in 254ms
+
+
+Started GET "/answers/new?answertype=1&question_id=1&survey_id=1" for 127.0.0.1 at 2011-03-23 22:30:21 +0100
+  Processing by AnswersController#new as HTML
+  Parameters: {"answertype"=>"1", "question_id"=>"1", "survey_id"=>"1"}
+  [1m[36mQuestion Load (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."id" = 1) LIMIT 1[0m
+Rendered text template (0.0ms)
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 1)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 4)
+Rendered answers/new.html.erb within layouts/application (256.0ms)
+Completed 200 OK in 327ms (Views: 284.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/answers" for 127.0.0.1 at 2011-03-23 22:30:27 +0100
+  Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sUllMupbQZBMnyfMfyIYLbggIb+vkhsTvqNXwALAFBI=", "answer"=>{"answertext"=>"Van"}, "question_id"=>"1", "answertype"=>"1", "commit"=>"Hinzufügen", "survey_id"=>"1"}
+  [1m[36mQuestion Load (1.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."id" = 1) LIMIT 1[0m
+  [1m[35mAREL (2.0ms)[0m  INSERT INTO "answers" ("answertext", "question_id", "answertype_id", "created_at", "updated_at") VALUES ('Van', 1, NULL, '2011-03-23 21:30:27.743472', '2011-03-23 21:30:27.743472')
+  [1m[36mQuestion Load (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."id" = 1) LIMIT 1[0m
+  [1m[35mSurvey Load (1.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 1) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mAnswertype Load (1.0ms)[0m  [1mSELECT "answertypes".* FROM "answertypes" WHERE ("answertypes"."id" = 1) LIMIT 1[0m
+  [1m[35mAREL (3.0ms)[0m  UPDATE "answers" SET "answertype_id" = 1, "updated_at" = '2011-03-23 21:30:27.838472' WHERE ("answers"."id" = 3)
+Redirected to http://127.0.0.1:3000/answers/new?answertype=1&question_id=1&survey_id=1
+Completed 302 Found in 223ms
+
+
+Started GET "/answers/new?answertype=1&question_id=1&survey_id=1" for 127.0.0.1 at 2011-03-23 22:30:28 +0100
+  Processing by AnswersController#new as HTML
+  Parameters: {"answertype"=>"1", "question_id"=>"1", "survey_id"=>"1"}
+  [1m[36mQuestion Load (1.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."id" = 1) LIMIT 1[0m
+Rendered text template (0.0ms)
+  [1m[35mAnswer Load (1.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 1)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 4)
+Rendered answers/new.html.erb within layouts/application (381.0ms)
+Completed 200 OK in 436ms (Views: 402.0ms | ActiveRecord: 4.0ms)
+
+
+Started POST "/answers" for 127.0.0.1 at 2011-03-23 22:30:40 +0100
+  Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sUllMupbQZBMnyfMfyIYLbggIb+vkhsTvqNXwALAFBI=", "answer"=>{"answertext"=>"Limousine"}, "question_id"=>"1", "answertype"=>"1", "commit"=>"Hinzufügen", "survey_id"=>"1"}
+  [1m[36mQuestion Load (1.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."id" = 1) LIMIT 1[0m
+  [1m[35mAREL (3.0ms)[0m  INSERT INTO "answers" ("answertext", "question_id", "answertype_id", "created_at", "updated_at") VALUES ('Limousine', 1, NULL, '2011-03-23 21:30:40.554472', '2011-03-23 21:30:40.554472')
+  [1m[36mQuestion Load (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."id" = 1) LIMIT 1[0m
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 1) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mAnswertype Load (2.0ms)[0m  [1mSELECT "answertypes".* FROM "answertypes" WHERE ("answertypes"."id" = 1) LIMIT 1[0m
+  [1m[35mAREL (2.0ms)[0m  UPDATE "answers" SET "answertype_id" = 1, "updated_at" = '2011-03-23 21:30:40.772472' WHERE ("answers"."id" = 4)
+Redirected to http://127.0.0.1:3000/answers/new?answertype=1&question_id=1&survey_id=1
+Completed 302 Found in 317ms
+
+
+Started GET "/answers/new?answertype=1&question_id=1&survey_id=1" for 127.0.0.1 at 2011-03-23 22:30:41 +0100
+  Processing by AnswersController#new as HTML
+  Parameters: {"answertype"=>"1", "question_id"=>"1", "survey_id"=>"1"}
+  [1m[36mQuestion Load (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."id" = 1) LIMIT 1[0m
+Rendered text template (0.0ms)
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 1)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 4)
+Rendered answers/new.html.erb within layouts/application (266.0ms)
+Completed 200 OK in 335ms (Views: 289.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/questions/new?survey_id=1" for 127.0.0.1 at 2011-03-23 22:30:45 +0100
+  Processing by QuestionsController#new as HTML
+  Parameters: {"survey_id"=>"1"}
+  [1m[36mAnswertype Load (37.0ms)[0m  [1mSELECT "answertypes".* FROM "answertypes"[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 4) LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 4)[0m
+Rendered questions/new.html.erb within layouts/application (276.0ms)
+Completed 200 OK in 328ms (Views: 262.0ms | ActiveRecord: 50.0ms)
+
+
+Started POST "/questions" for 127.0.0.1 at 2011-03-23 22:31:17 +0100
+  Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sUllMupbQZBMnyfMfyIYLbggIb+vkhsTvqNXwALAFBI=", "question"=>{"questiontext"=>"Welche Automarken mögen Sie?"}, "answertype"=>"2", "survey_id"=>"1", "commit"=>"Frage erstellen"}
+  [1m[35mSurvey Load (1.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 1) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mAREL (2.0ms)[0m  [1mINSERT INTO "questions" ("questiontext", "survey_id", "created_at", "updated_at") VALUES ('Welche Automarken mögen Sie?', 1, '2011-03-23 21:31:17.740472', '2011-03-23 21:31:17.740472')[0m
+  [1m[35mSurvey Load (1.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 1) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mAnswertype Load (1.0ms)[0m  [1mSELECT "answertypes".* FROM "answertypes" WHERE ("answertypes"."id" = 2) LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/answers/new?answertype=2&question_id=2&survey_id=1
+Completed 302 Found in 177ms
+
+
+Started GET "/answers/new?answertype=2&question_id=2&survey_id=1" for 127.0.0.1 at 2011-03-23 22:31:18 +0100
+  Processing by AnswersController#new as HTML
+  Parameters: {"answertype"=>"2", "question_id"=>"2", "survey_id"=>"1"}
+  [1m[35mQuestion Load (1.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."id" = 2) LIMIT 1
+Rendered text template (0.0ms)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 2)[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 4) LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 4)[0m
+Rendered answers/new.html.erb within layouts/application (236.0ms)
+Completed 200 OK in 402ms (Views: 334.0ms | ActiveRecord: 8.0ms)
+
+
+Started POST "/answers" for 127.0.0.1 at 2011-03-23 22:31:24 +0100
+  Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sUllMupbQZBMnyfMfyIYLbggIb+vkhsTvqNXwALAFBI=", "answer"=>{"answertext"=>"Audi"}, "question_id"=>"2", "answertype"=>"2", "commit"=>"Hinzufügen", "survey_id"=>"1"}
+  [1m[35mQuestion Load (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."id" = 2) LIMIT 1
+  [1m[36mAREL (1.0ms)[0m  [1mINSERT INTO "answers" ("answertext", "question_id", "answertype_id", "created_at", "updated_at") VALUES ('Audi', 2, NULL, '2011-03-23 21:31:25.063472', '2011-03-23 21:31:25.063472')[0m
+  [1m[35mQuestion Load (1.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."id" = 2) LIMIT 1
+  [1m[36mSurvey Load (1.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 1) ORDER BY surveys.created_at DESC LIMIT 1[0m
+  [1m[35mAnswertype Load (1.0ms)[0m  SELECT "answertypes".* FROM "answertypes" WHERE ("answertypes"."id" = 2) LIMIT 1
+  [1m[36mAREL (2.0ms)[0m  [1mUPDATE "answers" SET "answertype_id" = 2, "updated_at" = '2011-03-23 21:31:25.221472' WHERE ("answers"."id" = 5)[0m
+Redirected to http://127.0.0.1:3000/answers/new?answertype=2&question_id=2&survey_id=1
+Completed 302 Found in 256ms
+
+
+Started GET "/answers/new?answertype=2&question_id=2&survey_id=1" for 127.0.0.1 at 2011-03-23 22:31:25 +0100
+  Processing by AnswersController#new as HTML
+  Parameters: {"answertype"=>"2", "question_id"=>"2", "survey_id"=>"1"}
+  [1m[35mQuestion Load (1.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."id" = 2) LIMIT 1
+Rendered text template (0.0ms)
+  [1m[36mAnswer Load (1.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 2)[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 4) LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 4)[0m
+Rendered answers/new.html.erb within layouts/application (268.0ms)
+Completed 200 OK in 342ms (Views: 301.0ms | ActiveRecord: 4.0ms)
+
+
+Started POST "/answers" for 127.0.0.1 at 2011-03-23 22:31:33 +0100
+  Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sUllMupbQZBMnyfMfyIYLbggIb+vkhsTvqNXwALAFBI=", "answer"=>{"answertext"=>"Volkswagen"}, "question_id"=>"2", "answertype"=>"2", "commit"=>"Hinzufügen", "survey_id"=>"1"}
+  [1m[35mQuestion Load (1.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."id" = 2) LIMIT 1
+  [1m[36mAREL (2.0ms)[0m  [1mINSERT INTO "answers" ("answertext", "question_id", "answertype_id", "created_at", "updated_at") VALUES ('Volkswagen', 2, NULL, '2011-03-23 21:31:33.310472', '2011-03-23 21:31:33.310472')[0m
+  [1m[35mQuestion Load (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."id" = 2) LIMIT 1
+  [1m[36mSurvey Load (1.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 1) ORDER BY surveys.created_at DESC LIMIT 1[0m
+  [1m[35mAnswertype Load (2.0ms)[0m  SELECT "answertypes".* FROM "answertypes" WHERE ("answertypes"."id" = 2) LIMIT 1
+  [1m[36mAREL (2.0ms)[0m  [1mUPDATE "answers" SET "answertype_id" = 2, "updated_at" = '2011-03-23 21:31:33.405472' WHERE ("answers"."id" = 6)[0m
+Redirected to http://127.0.0.1:3000/answers/new?answertype=2&question_id=2&survey_id=1
+Completed 302 Found in 285ms
+
+
+Started GET "/answers/new?answertype=2&question_id=2&survey_id=1" for 127.0.0.1 at 2011-03-23 22:31:33 +0100
+  Processing by AnswersController#new as HTML
+  Parameters: {"answertype"=>"2", "question_id"=>"2", "survey_id"=>"1"}
+  [1m[35mQuestion Load (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."id" = 2) LIMIT 1
+Rendered text template (0.0ms)
+  [1m[36mAnswer Load (1.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 2)[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 4) LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 4)[0m
+Rendered answers/new.html.erb within layouts/application (343.0ms)
+Completed 200 OK in 469ms (Views: 369.0ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/answers" for 127.0.0.1 at 2011-03-23 22:31:43 +0100
+  Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sUllMupbQZBMnyfMfyIYLbggIb+vkhsTvqNXwALAFBI=", "answer"=>{"answertext"=>"Volvo"}, "question_id"=>"2", "answertype"=>"2", "commit"=>"Hinzufügen", "survey_id"=>"1"}
+  [1m[35mQuestion Load (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."id" = 2) LIMIT 1
+  [1m[36mAREL (2.0ms)[0m  [1mINSERT INTO "answers" ("answertext", "question_id", "answertype_id", "created_at", "updated_at") VALUES ('Volvo', 2, NULL, '2011-03-23 21:31:43.706472', '2011-03-23 21:31:43.706472')[0m
+  [1m[35mQuestion Load (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."id" = 2) LIMIT 1
+  [1m[36mSurvey Load (0.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 1) ORDER BY surveys.created_at DESC LIMIT 1[0m
+  [1m[35mAnswertype Load (1.0ms)[0m  SELECT "answertypes".* FROM "answertypes" WHERE ("answertypes"."id" = 2) LIMIT 1
+  [1m[36mAREL (5.0ms)[0m  [1mUPDATE "answers" SET "answertype_id" = 2, "updated_at" = '2011-03-23 21:31:43.838472' WHERE ("answers"."id" = 7)[0m
+Redirected to http://127.0.0.1:3000/answers/new?answertype=2&question_id=2&survey_id=1
+Completed 302 Found in 232ms
+
+
+Started GET "/answers/new?answertype=2&question_id=2&survey_id=1" for 127.0.0.1 at 2011-03-23 22:31:44 +0100
+  Processing by AnswersController#new as HTML
+  Parameters: {"answertype"=>"2", "question_id"=>"2", "survey_id"=>"1"}
+  [1m[35mQuestion Load (1.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."id" = 2) LIMIT 1
+Rendered text template (0.0ms)
+  [1m[36mAnswer Load (1.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 2)[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 4) LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 4)[0m
+Rendered answers/new.html.erb within layouts/application (263.0ms)
+Completed 200 OK in 324ms (Views: 292.0ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/answers" for 127.0.0.1 at 2011-03-23 22:31:49 +0100
+  Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sUllMupbQZBMnyfMfyIYLbggIb+vkhsTvqNXwALAFBI=", "answer"=>{"answertext"=>"BMW"}, "question_id"=>"2", "answertype"=>"2", "commit"=>"Hinzufügen", "survey_id"=>"1"}
+  [1m[35mQuestion Load (1.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."id" = 2) LIMIT 1
+  [1m[36mAREL (2.0ms)[0m  [1mINSERT INTO "answers" ("answertext", "question_id", "answertype_id", "created_at", "updated_at") VALUES ('BMW', 2, NULL, '2011-03-23 21:31:50.241472', '2011-03-23 21:31:50.241472')[0m
+  [1m[35mQuestion Load (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."id" = 2) LIMIT 1
+  [1m[36mSurvey Load (1.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 1) ORDER BY surveys.created_at DESC LIMIT 1[0m
+  [1m[35mAnswertype Load (1.0ms)[0m  SELECT "answertypes".* FROM "answertypes" WHERE ("answertypes"."id" = 2) LIMIT 1
+  [1m[36mAREL (4.0ms)[0m  [1mUPDATE "answers" SET "answertype_id" = 2, "updated_at" = '2011-03-23 21:31:50.373472' WHERE ("answers"."id" = 8)[0m
+Redirected to http://127.0.0.1:3000/answers/new?answertype=2&question_id=2&survey_id=1
+Completed 302 Found in 265ms
+
+
+Started GET "/answers/new?answertype=2&question_id=2&survey_id=1" for 127.0.0.1 at 2011-03-23 22:31:50 +0100
+  Processing by AnswersController#new as HTML
+  Parameters: {"answertype"=>"2", "question_id"=>"2", "survey_id"=>"1"}
+  [1m[35mQuestion Load (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."id" = 2) LIMIT 1
+Rendered text template (0.0ms)
+  [1m[36mAnswer Load (1.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 2)[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 4) LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 4)[0m
+Rendered answers/new.html.erb within layouts/application (310.0ms)
+Completed 200 OK in 376ms (Views: 333.0ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/answers" for 127.0.0.1 at 2011-03-23 22:31:59 +0100
+  Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sUllMupbQZBMnyfMfyIYLbggIb+vkhsTvqNXwALAFBI=", "answer"=>{"answertext"=>"Porsche"}, "question_id"=>"2", "answertype"=>"2", "commit"=>"Hinzufügen", "survey_id"=>"1"}
+  [1m[35mQuestion Load (1.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."id" = 2) LIMIT 1
+  [1m[36mAREL (4.0ms)[0m  [1mINSERT INTO "answers" ("answertext", "question_id", "answertype_id", "created_at", "updated_at") VALUES ('Porsche', 2, NULL, '2011-03-23 21:32:00.076472', '2011-03-23 21:32:00.076472')[0m
+  [1m[35mQuestion Load (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."id" = 2) LIMIT 1
+  [1m[36mSurvey Load (0.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 1) ORDER BY surveys.created_at DESC LIMIT 1[0m
+  [1m[35mAnswertype Load (1.0ms)[0m  SELECT "answertypes".* FROM "answertypes" WHERE ("answertypes"."id" = 2) LIMIT 1
+  [1m[36mAREL (2.0ms)[0m  [1mUPDATE "answers" SET "answertype_id" = 2, "updated_at" = '2011-03-23 21:32:00.294472' WHERE ("answers"."id" = 9)[0m
+Redirected to http://127.0.0.1:3000/answers/new?answertype=2&question_id=2&survey_id=1
+Completed 302 Found in 351ms
+
+
+Started GET "/answers/new?answertype=2&question_id=2&survey_id=1" for 127.0.0.1 at 2011-03-23 22:32:00 +0100
+  Processing by AnswersController#new as HTML
+  Parameters: {"answertype"=>"2", "question_id"=>"2", "survey_id"=>"1"}
+  [1m[35mQuestion Load (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."id" = 2) LIMIT 1
+Rendered text template (0.0ms)
+  [1m[36mAnswer Load (1.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 2)[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 4) LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 4)[0m
+Rendered answers/new.html.erb within layouts/application (244.0ms)
+Completed 200 OK in 307ms (Views: 272.0ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/answers" for 127.0.0.1 at 2011-03-23 22:32:08 +0100
+  Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sUllMupbQZBMnyfMfyIYLbggIb+vkhsTvqNXwALAFBI=", "answer"=>{"answertext"=>"Mazda"}, "question_id"=>"2", "answertype"=>"2", "commit"=>"Hinzufügen", "survey_id"=>"1"}
+  [1m[35mQuestion Load (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."id" = 2) LIMIT 1
+  [1m[36mAREL (3.0ms)[0m  [1mINSERT INTO "answers" ("answertext", "question_id", "answertype_id", "created_at", "updated_at") VALUES ('Mazda', 2, NULL, '2011-03-23 21:32:08.761472', '2011-03-23 21:32:08.761472')[0m
+  [1m[35mQuestion Load (1.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."id" = 2) LIMIT 1
+  [1m[36mSurvey Load (0.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 1) ORDER BY surveys.created_at DESC LIMIT 1[0m
+  [1m[35mAnswertype Load (1.0ms)[0m  SELECT "answertypes".* FROM "answertypes" WHERE ("answertypes"."id" = 2) LIMIT 1
+  [1m[36mAREL (2.0ms)[0m  [1mUPDATE "answers" SET "answertype_id" = 2, "updated_at" = '2011-03-23 21:32:08.858472' WHERE ("answers"."id" = 10)[0m
+Redirected to http://127.0.0.1:3000/answers/new?answertype=2&question_id=2&survey_id=1
+Completed 302 Found in 354ms
+
+
+Started GET "/answers/new?answertype=2&question_id=2&survey_id=1" for 127.0.0.1 at 2011-03-23 22:32:09 +0100
+  Processing by AnswersController#new as HTML
+  Parameters: {"answertype"=>"2", "question_id"=>"2", "survey_id"=>"1"}
+  [1m[35mQuestion Load (1.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."id" = 2) LIMIT 1
+Rendered text template (0.0ms)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 2)[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 4) LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 4)[0m
+Rendered answers/new.html.erb within layouts/application (407.0ms)
+Completed 200 OK in 469ms (Views: 434.0ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/questions/new?survey_id=1" for 127.0.0.1 at 2011-03-23 22:32:13 +0100
+  Processing by QuestionsController#new as HTML
+  Parameters: {"survey_id"=>"1"}
+  [1m[35mAnswertype Load (3.0ms)[0m  SELECT "answertypes".* FROM "answertypes"
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 4)
+Rendered questions/new.html.erb within layouts/application (210.0ms)
+Completed 200 OK in 258ms (Views: 229.0ms | ActiveRecord: 13.0ms)
+
+
+Started POST "/questions" for 127.0.0.1 at 2011-03-23 22:33:24 +0100
+  Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sUllMupbQZBMnyfMfyIYLbggIb+vkhsTvqNXwALAFBI=", "question"=>{"questiontext"=>"Was ist ihnen bei einem Auto am wichtigsten?"}, "answertype"=>"3", "survey_id"=>"1", "commit"=>"Frage erstellen"}
+  [1m[36mSurvey Load (1.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 1) ORDER BY surveys.created_at DESC LIMIT 1[0m
+  [1m[35mAREL (4.0ms)[0m  INSERT INTO "questions" ("questiontext", "survey_id", "created_at", "updated_at") VALUES ('Was ist ihnen bei einem Auto am wichtigsten?', 1, '2011-03-23 21:33:24.314472', '2011-03-23 21:33:24.314472')
+  [1m[36mSurvey Load (1.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 1) ORDER BY surveys.created_at DESC LIMIT 1[0m
+  [1m[35mAnswertype Load (2.0ms)[0m  SELECT "answertypes".* FROM "answertypes" WHERE ("answertypes"."id" = 3) LIMIT 1
+Redirected to http://127.0.0.1:3000/answers/new?answertype=3&question_id=3&survey_id=1
+Completed 302 Found in 176ms
+
+
+Started GET "/answers/new?answertype=3&question_id=3&survey_id=1" for 127.0.0.1 at 2011-03-23 22:33:24 +0100
+  Processing by AnswersController#new as HTML
+  Parameters: {"answertype"=>"3", "question_id"=>"3", "survey_id"=>"1"}
+  [1m[36mQuestion Load (1.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."id" = 3) LIMIT 1[0m
+Rendered text template (0.0ms)
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 3)
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 4)
+Rendered answers/new.html.erb within layouts/application (350.0ms)
+Completed 200 OK in 408ms (Views: 374.0ms | ActiveRecord: 12.0ms)
+
+
+Started POST "/answers" for 127.0.0.1 at 2011-03-23 22:33:31 +0100
+  Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sUllMupbQZBMnyfMfyIYLbggIb+vkhsTvqNXwALAFBI=", "answer"=>{"answertext"=>""}, "question_id"=>"3", "answertype"=>"3", "commit"=>"Hinzufügen", "survey_id"=>"1"}
+  [1m[36mQuestion Load (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."id" = 3) LIMIT 1[0m
+  [1m[35mAREL (2.0ms)[0m  INSERT INTO "answers" ("answertext", "question_id", "answertype_id", "created_at", "updated_at") VALUES ('', 3, NULL, '2011-03-23 21:33:31.529472', '2011-03-23 21:33:31.529472')
+  [1m[36mQuestion Load (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."id" = 3) LIMIT 1[0m
+  [1m[35mSurvey Load (1.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 1) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mAnswertype Load (1.0ms)[0m  [1mSELECT "answertypes".* FROM "answertypes" WHERE ("answertypes"."id" = 3) LIMIT 1[0m
+  [1m[35mAREL (3.0ms)[0m  UPDATE "answers" SET "answertype_id" = 3, "updated_at" = '2011-03-23 21:33:31.698472' WHERE ("answers"."id" = 11)
+Redirected to http://127.0.0.1:3000/answers/new?answertype=3&question_id=3&survey_id=1
+Completed 302 Found in 272ms
+
+
+Started GET "/answers/new?answertype=3&question_id=3&survey_id=1" for 127.0.0.1 at 2011-03-23 22:33:31 +0100
+  Processing by AnswersController#new as HTML
+  Parameters: {"answertype"=>"3", "question_id"=>"3", "survey_id"=>"1"}
+  [1m[36mQuestion Load (1.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."id" = 3) LIMIT 1[0m
+Rendered text template (0.0ms)
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 3)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+  [1m[35mSQL (0.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 4)
+Rendered answers/new.html.erb within layouts/application (383.0ms)
+Completed 200 OK in 444ms (Views: 407.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/questions/new?survey_id=1" for 127.0.0.1 at 2011-03-23 22:33:52 +0100
+  Processing by QuestionsController#new as HTML
+  Parameters: {"survey_id"=>"1"}
+  [1m[36mAnswertype Load (3.0ms)[0m  [1mSELECT "answertypes".* FROM "answertypes"[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 4) LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 4)[0m
+Rendered questions/new.html.erb within layouts/application (214.0ms)
+Completed 200 OK in 301ms (Views: 270.0ms | ActiveRecord: 11.0ms)
+
+
+Started POST "/questions" for 127.0.0.1 at 2011-03-23 22:34:08 +0100
+  Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sUllMupbQZBMnyfMfyIYLbggIb+vkhsTvqNXwALAFBI=", "question"=>{"questiontext"=>"Wieviele Autos haben Sie heute schon gesehen?"}, "answertype"=>"4", "survey_id"=>"1", "commit"=>"Frage erstellen"}
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 1) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mAREL (3.0ms)[0m  [1mINSERT INTO "questions" ("questiontext", "survey_id", "created_at", "updated_at") VALUES ('Wieviele Autos haben Sie heute schon gesehen?', 1, '2011-03-23 21:34:09.050472', '2011-03-23 21:34:09.050472')[0m
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 1) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mAnswertype Load (1.0ms)[0m  [1mSELECT "answertypes".* FROM "answertypes" WHERE ("answertypes"."id" = 4) LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/answers/new?answertype=4&question_id=4&survey_id=1
+Completed 302 Found in 229ms
+
+
+Started GET "/answers/new?answertype=4&question_id=4&survey_id=1" for 127.0.0.1 at 2011-03-23 22:34:09 +0100
+  Processing by AnswersController#new as HTML
+  Parameters: {"answertype"=>"4", "question_id"=>"4", "survey_id"=>"1"}
+  [1m[35mQuestion Load (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."id" = 4) LIMIT 1
+Rendered text template (0.0ms)
+  [1m[36mAnswer Load (1.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 4)[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 4) LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 4)[0m
+Rendered answers/new.html.erb within layouts/application (253.0ms)
+Completed 200 OK in 545ms (Views: 274.0ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/answers" for 127.0.0.1 at 2011-03-23 22:34:29 +0100
+  Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sUllMupbQZBMnyfMfyIYLbggIb+vkhsTvqNXwALAFBI=", "answer"=>{"answertext"=>"Geben Sie die Anzahl ein."}, "question_id"=>"4", "answertype"=>"4", "commit"=>"Hinzufügen", "survey_id"=>"1"}
+  [1m[35mQuestion Load (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."id" = 4) LIMIT 1
+  [1m[36mAREL (1.0ms)[0m  [1mINSERT INTO "answers" ("answertext", "question_id", "answertype_id", "created_at", "updated_at") VALUES ('Geben Sie die Anzahl ein.', 4, NULL, '2011-03-23 21:34:29.559472', '2011-03-23 21:34:29.559472')[0m
+  [1m[35mQuestion Load (1.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."id" = 4) LIMIT 1
+  [1m[36mSurvey Load (0.0ms)[0m  [1mSELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 1) ORDER BY surveys.created_at DESC LIMIT 1[0m
+  [1m[35mAnswertype Load (2.0ms)[0m  SELECT "answertypes".* FROM "answertypes" WHERE ("answertypes"."id" = 4) LIMIT 1
+  [1m[36mAREL (3.0ms)[0m  [1mUPDATE "answers" SET "answertype_id" = 4, "updated_at" = '2011-03-23 21:34:29.724472' WHERE ("answers"."id" = 12)[0m
+Redirected to http://127.0.0.1:3000/answers/new?answertype=4&question_id=4&survey_id=1
+Completed 302 Found in 299ms
+
+
+Started GET "/answers/new?answertype=4&question_id=4&survey_id=1" for 127.0.0.1 at 2011-03-23 22:34:29 +0100
+  Processing by AnswersController#new as HTML
+  Parameters: {"answertype"=>"4", "question_id"=>"4", "survey_id"=>"1"}
+  [1m[35mQuestion Load (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."id" = 4) LIMIT 1
+Rendered text template (0.0ms)
+  [1m[36mAnswer Load (1.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 4)[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 4) LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 4)[0m
+Rendered answers/new.html.erb within layouts/application (262.0ms)
+Completed 200 OK in 318ms (Views: 285.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/surveys/1/edit" for 127.0.0.1 at 2011-03-23 22:34:33 +0100
+  Processing by SurveysController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSurvey Load (1.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 1) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mSurveytype Load (2.0ms)[0m  [1mSELECT "surveytypes".* FROM "surveytypes"[0m
+  [1m[35mSurveytype Load (1.0ms)[0m  SELECT "surveytypes".* FROM "surveytypes" WHERE ("surveytypes"."id" = 2) LIMIT 1
+  [1m[36mQuestion Load (1.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."survey_id" = 1)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 1)
+  [1m[36mAnswer Load (1.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 2)[0m
+  [1m[35mAnswer Load (1.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 3)
+  [1m[36mAnswer Load (1.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 4)[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 4) LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 4)[0m
+Rendered surveys/edit.html.erb within layouts/application (543.0ms)
+Completed 200 OK in 606ms (Views: 559.0ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/surveys/1/edit" for 127.0.0.1 at 2011-03-23 22:40:43 +0100
+  Processing by SurveysController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSurvey Load (1.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 1) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mSurveytype Load (1.0ms)[0m  [1mSELECT "surveytypes".* FROM "surveytypes"[0m
+  [1m[35mSurveytype Load (1.0ms)[0m  SELECT "surveytypes".* FROM "surveytypes" WHERE ("surveytypes"."id" = 2) LIMIT 1
+  [1m[36mQuestion Load (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."survey_id" = 1)[0m
+  [1m[35mAnswer Load (1.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 1)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 2)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 3)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 4)[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 4) LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 4)[0m
+Rendered surveys/edit.html.erb within layouts/application (387.0ms)
+Completed 200 OK in 447ms (Views: 407.0ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/surveys/1/edit" for 127.0.0.1 at 2011-03-23 22:41:23 +0100
+  Processing by SurveysController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSurvey Load (1.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 1) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mSurveytype Load (2.0ms)[0m  [1mSELECT "surveytypes".* FROM "surveytypes"[0m
+  [1m[35mSurveytype Load (2.0ms)[0m  SELECT "surveytypes".* FROM "surveytypes" WHERE ("surveytypes"."id" = 2) LIMIT 1
+  [1m[36mQuestion Load (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."survey_id" = 1)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 1)
+  [1m[36mAnswer Load (1.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 2)[0m
+  [1m[35mAnswer Load (1.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 3)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 4)[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 4) LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 4)[0m
+Rendered surveys/edit.html.erb within layouts/application (345.0ms)
+Completed 200 OK in 405ms (Views: 361.0ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/surveys/1/edit" for 127.0.0.1 at 2011-03-23 22:42:24 +0100
+  Processing by SurveysController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSurvey Load (1.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 1) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mSurveytype Load (1.0ms)[0m  [1mSELECT "surveytypes".* FROM "surveytypes"[0m
+  [1m[35mSurveytype Load (1.0ms)[0m  SELECT "surveytypes".* FROM "surveytypes" WHERE ("surveytypes"."id" = 2) LIMIT 1
+  [1m[36mQuestion Load (1.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."survey_id" = 1)[0m
+  [1m[35mAnswer Load (1.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 1)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 2)[0m
+  [1m[35mAnswer Load (1.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 3)
+  [1m[36mAnswer Load (0.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 4)[0m
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 4) LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 4)[0m
+Rendered surveys/edit.html.erb within layouts/application (351.0ms)
+Completed 200 OK in 409ms (Views: 369.0ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/surveys/1/edit" for 127.0.0.1 at 2011-03-23 22:42:45 +0100
+  Processing by SurveysController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSurvey Load (0.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys"."id" = 1) ORDER BY surveys.created_at DESC LIMIT 1
+  [1m[36mSurveytype Load (2.0ms)[0m  [1mSELECT "surveytypes".* FROM "surveytypes"[0m
+  [1m[35mSurveytype Load (1.0ms)[0m  SELECT "surveytypes".* FROM "surveytypes" WHERE ("surveytypes"."id" = 2) LIMIT 1
+  [1m[36mQuestion Load (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."survey_id" = 1)[0m
+  [1m[35mAnswer Load (0.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 1)
+  [1m[36mAnswer Load (1.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 2)[0m
+  [1m[35mAnswer Load (1.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 3)
+  [1m[36mAnswer Load (1.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 4)[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 4) LIMIT 1
+  [1m[36mSQL (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 4)[0m
+Rendered surveys/edit.html.erb within layouts/application (366.0ms)
+Completed 200 OK in 428ms (Views: 383.0ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/questions/1/edit?survey_id=1" for 127.0.0.1 at 2011-03-23 22:43:08 +0100
+  Processing by QuestionsController#edit as HTML
+  Parameters: {"survey_id"=>"1", "id"=>"1"}
+  [1m[35mQuestion Load (1.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."id" = 1) LIMIT 1
+  [1m[36mAnswer Load (1.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 1)[0m
+  [1m[35mAnswertype Load (1.0ms)[0m  SELECT "answertypes".* FROM "answertypes" WHERE ("answertypes"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answertypes".* FROM "answertypes" WHERE ("answertypes"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answertypes".* FROM "answertypes" WHERE ("answertypes"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answertypes".* FROM "answertypes" WHERE ("answertypes"."id" = 1) LIMIT 1[0m
+  [1m[35mAnswertype Load (3.0ms)[0m  SELECT "answertypes".* FROM "answertypes"
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 4)
+Rendered questions/edit.html.erb within layouts/application (328.0ms)
+Completed 200 OK in 378ms (Views: 345.0ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/questions/1/edit?survey_id=1" for 127.0.0.1 at 2011-03-23 22:43:49 +0100
+  Processing by QuestionsController#edit as HTML
+  Parameters: {"survey_id"=>"1", "id"=>"1"}
+  [1m[36mQuestion Load (0.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."id" = 1) LIMIT 1[0m
+ERROR: compiling _app_views_questions_edit_html_erb__134430024_26427576_669524896 RAISED D:/Studium/Semester 4/Encuesta/Workspace/Encuesta-Projekt/app/views/questions/edit.html.erb:64: syntax error, unexpected keyword_ensure, expecting $end
+Function body:           def _app_views_questions_edit_html_erb__134430024_26427576_669524896(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "questions/edit";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('<h1>Frage bearbeiten</h1>
+
+Ändern sie bei Ihrer Frage die Fragestellung und den Fragetypen oder jeweils einzeln die Antworten.<br>
+<b>Achtung:</b>Wenn sie eine Frage grundsätzlich ändern (Fragestellung / Fragetyp) werden aufgrund von Sinnmäßigkeit die bereits erstellten Antworten gelöscht.<br>
+<br>
+');@output_buffer.append=  form_for(@question) do |f| @output_buffer.safe_concat('
+');@output_buffer.append= ( #render 'shared/error_messages', :object => f.object
+);@output_buffer.safe_concat('
+'); #cookies[:questionid] = @question.id
+
+@output_buffer.safe_concat('<div class="field">
+    ');@output_buffer.append= ( f.label :questiontext );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+    ');@output_buffer.append= ( f.text_field :questiontext );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</div>
+<br>
+
+<br>
+
+<div class="field">
+    <table>
+');@output_buffer.append_if_string=      Answer.find_all_by_question_id(@question.id).each do |answer| 
+@output_buffer.safe_concat('    
+    	<tr>
+    		<td>
+    			');@output_buffer.append= ( label_tag "answer_#{answer}", answer.answertext );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    		</td>
+    		<td>
+    			');@output_buffer.append= (	link_to bearbeiten, edit_answer_path(answer) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    		</td>	
+    	</tr>
+    	 
+');    	 end 
+@output_buffer.safe_concat('    	</table>
+    
+    
+   
+    
+');     @answertype = answer.answertype
+     p @answertype.id 
+@output_buffer.safe_concat('
+    <br>
+');     end 
+@output_buffer.safe_concat('
+    <br>
+');     survey_id = params[:survey_id]
+@output_buffer.safe_concat('    ');@output_buffer.append= ( link_to "Neue Antwort anlegen", new_answer_path(:question_id => @question.id, :answertype => @answertype.id, :survey_id => survey_id)
+    );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    <br>
+</div>
+<div class="field">
+');@output_buffer.append_if_string=      Answertype.all.each do |answertype| 
+@output_buffer.safe_concat('    <br>
+    ');@output_buffer.append= ( radio_button_tag(:answertype, answertype.id)
+    );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    ');@output_buffer.append= ( label_tag "answertype_#{answertype}", answertype.bezeichnung
+    );@output_buffer.safe_concat('
+');     end 
+@output_buffer.safe_concat('</div>
+<div class="actions">
+    ');@output_buffer.append= ( f.submit "Hinzufügen" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('</div>
+'); end ;@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/template.rb:255:in `module_eval'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/template.rb:255:in `compile'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/template.rb:134:in `block in render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications.rb:54:in `instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/template.rb:127:in `render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:59:in `block in _render_template'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:56:in `_render_template'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_view/render/rendering.rb:26:in `render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:114:in `_render_template'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:108:in `render_to_body'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:101:in `render_to_string'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:92:in `render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/rendering.rb:17:in `render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+d:/Ruby192/lib/ruby/1.9.1/benchmark.rb:309:in `realtime'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.3/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:39:in `render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/base.rb:151:in `process_action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/rendering.rb:11:in `process_action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:435:in `_run__393632959__process_action__977093050__callbacks'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:93:in `run_callbacks'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/callbacks.rb:17:in `process_action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `block in instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/notifications.rb:52:in `instrument'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/rescue.rb:17:in `process_action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/base.rb:120:in `process'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/abstract_controller/rendering.rb:40:in `process'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal.rb:138:in `dispatch'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_controller/metal.rb:178:in `block in action'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:62:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:27:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `block in call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `block in recognize'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:103:in `optimized_each'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/routing/route_set.rb:492:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/head.rb:14:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/flash.rb:182:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/cookies.rb:295:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:32:in `block in call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:12:in `cache'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.3/lib/active_record/query_cache.rb:31:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activerecord-3.0.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:353:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/railties-3.0.3/lib/rails/rack/logger.rb:13:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/activesupport-3.0.3/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/lock.rb:11:in `block in call'
+<internal:prelude>:10:in `synchronize'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/static.rb:30:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/railties-3.0.3/lib/rails/application.rb:168:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/railties-3.0.3/lib/rails/application.rb:77:in `method_missing'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/railties-3.0.3/lib/rails/rack/log_tailer.rb:14:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+d:/Ruby192/lib/ruby/gems/1.9.1/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+d:/Ruby192/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+d:/Ruby192/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+d:/Ruby192/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered questions/edit.html.erb within layouts/application (51.0ms)
+Completed   in 103ms
+
+ActionView::Template::Error (D:/Studium/Semester 4/Encuesta/Workspace/Encuesta-Projekt/app/views/questions/edit.html.erb:64: syntax error, unexpected keyword_ensure, expecting $end):
+    61:     <%= f.submit "Hinzufügen" %>
+    62: </div>
+    63: <% end %>
+  
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (10.0ms)
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (27.0ms)
+
+
+Started GET "/questions/1/edit?survey_id=1" for 127.0.0.1 at 2011-03-23 22:44:32 +0100
+  Processing by QuestionsController#edit as HTML
+  Parameters: {"survey_id"=>"1", "id"=>"1"}
+  [1m[35mQuestion Load (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."id" = 1) LIMIT 1
+Rendered questions/edit.html.erb within layouts/application (96.0ms)
+Completed   in 146ms
+
+ActionView::Template::Error (undefined local variable or method `question' for #<#<Class:0x2f56f08>:0x2f4fe28>):
+    19: 
+    20: <div class="field">
+    21:     <table>
+    22:     <% Answer.find_all_by_question_id(question.id).each do |answer| %>
+    23:     
+    24:     	<tr>
+    25:     		<td>
+  app/views/questions/edit.html.erb:22:in `block in _app_views_questions_edit_html_erb__134430024_24801336_669524896'
+  app/views/questions/edit.html.erb:6:in `_app_views_questions_edit_html_erb__134430024_24801336_669524896'
+
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.0ms)
+Rendered d:/Ruby192/lib/ruby/gems/1.9.1/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (22.0ms)
+
+
+Started GET "/questions/1/edit?survey_id=1" for 127.0.0.1 at 2011-03-23 22:44:48 +0100
+  Processing by QuestionsController#edit as HTML
+  Parameters: {"survey_id"=>"1", "id"=>"1"}
+  [1m[36mQuestion Load (1.0ms)[0m  [1mSELECT "questions".* FROM "questions" WHERE ("questions"."id" = 1) LIMIT 1[0m
+  [1m[35mAnswer Load (1.0ms)[0m  SELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 1)
+  [1m[36mAnswertype Load (1.0ms)[0m  [1mSELECT "answertypes".* FROM "answertypes" WHERE ("answertypes"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answertypes".* FROM "answertypes" WHERE ("answertypes"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answertypes".* FROM "answertypes" WHERE ("answertypes"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answertypes".* FROM "answertypes" WHERE ("answertypes"."id" = 1) LIMIT 1
+  [1m[36mAnswertype Load (3.0ms)[0m  [1mSELECT "answertypes".* FROM "answertypes"[0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 4) LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 4)[0m
+Rendered questions/edit.html.erb within layouts/application (327.0ms)
+Completed 200 OK in 381ms (Views: 345.0ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/questions/1/edit?survey_id=1" for 127.0.0.1 at 2011-03-23 22:45:25 +0100
+  Processing by QuestionsController#edit as HTML
+  Parameters: {"survey_id"=>"1", "id"=>"1"}
+  [1m[35mQuestion Load (0.0ms)[0m  SELECT "questions".* FROM "questions" WHERE ("questions"."id" = 1) LIMIT 1
+  [1m[36mAnswer Load (1.0ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE ("answers"."question_id" = 1)[0m
+  [1m[35mAnswertype Load (1.0ms)[0m  SELECT "answertypes".* FROM "answertypes" WHERE ("answertypes"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answertypes".* FROM "answertypes" WHERE ("answertypes"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "answertypes".* FROM "answertypes" WHERE ("answertypes"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "answertypes".* FROM "answertypes" WHERE ("answertypes"."id" = 1) LIMIT 1[0m
+  [1m[35mAnswertype Load (3.0ms)[0m  SELECT "answertypes".* FROM "answertypes"
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 4)
+Rendered questions/edit.html.erb within layouts/application (347.0ms)
+Completed 200 OK in 397ms (Views: 362.0ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2011-03-23 22:46:17 +0100
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 4) LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 4)[0m
+  [1m[35mSurvey Load (1.0ms)[0m  SELECT "surveys".* FROM "surveys" WHERE ("surveys".user_id = 4) ORDER BY surveys.created_at DESC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 4) LIMIT 1[0m
+Rendered surveys/_survey.html.erb (19.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 4)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "surveys" WHERE ("surveys".user_id = 4)[0m
+Rendered users/show.html.erb within layouts/application (100.0ms)
+Completed 200 OK in 214ms (Views: 126.0ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/signout" for 127.0.0.1 at 2011-03-23 22:46:57 +0100
+  Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"sUllMupbQZBMnyfMfyIYLbggIb+vkhsTvqNXwALAFBI="}
+Redirected to http://127.0.0.1:3000/home
+Completed 302 Found in 1ms
+
+
+Started GET "/home" for 127.0.0.1 at 2011-03-23 22:46:58 +0100
+  Processing by PagesController#home as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+Rendered pages/home.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 87ms (Views: 41.0ms | ActiveRecord: 1.0ms)
