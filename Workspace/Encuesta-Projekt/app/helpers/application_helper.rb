@@ -95,5 +95,18 @@ module ApplicationHelper
    def freigegebenFreigabe
  	image_tag("freigebenerFreigegebenButton.png", :alt => "freigegebeneFreigabe", :class => "round")
  end
+ 
+ def nichtAuswerten
+ 	image_tag("nichtBarchart.png", :alt => "freigegebeneFreigabe", :class => "round")
+ end
+ 
+  def veroeffentlichen
+ 	image_tag("veroeffentlichen.png", :alt => "veroeffentlichen", :class => "round")
+ end
+ 
+  def nichtVeroeffentlichen
+ 	image_tag("nichtVeroeffentlichen.png", :alt => "nichtVeroeffentlichen", :class => "round")
+ end
+ 
 end
  

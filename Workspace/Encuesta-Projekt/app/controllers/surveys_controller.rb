@@ -79,7 +79,7 @@ class SurveysController < ApplicationController
 	@survey = Survey.find(params[:id])
 	@survey.gesperrt = true
 	@survey.save!
-	redirect_to :back
+	redirect_to attend_path(:survey_id => @survey.id)
 	end
 
 
