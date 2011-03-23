@@ -45,33 +45,32 @@
 					</td>	 		 			
 				</tr>
 			</table></div></center>
-			</div>						
+			</div>	
+								
    		<div class = "abstand">
       		<% if signed_in? %>
+      		
       		<div id = "menuebox" class ="round">
       		<center><table border = "0" >
       			<tr>
       				<td><%=menue%><td>
       			</tr>
-      			<tr>
-      				<td>Eingeloggt als:<%= @current_user.login %></td>
-      			</tr>
       			<tr>	
       				<td><%= link_to "Meine Umfragen", current_user %></td>
       			</tr>
       			<tr>
+      				<td><%= link_to "Neue Umfrage",new_survey_path()%></td>
+      			</tr>	
+      			<tr>
       				<td><%= link_to "Einstellungen", edit_user_path(current_user) %></td>
       			</tr>
-      			<tr>
-      				<td><%= link_to "Ausloggen", signout_path, :method => :delete %></td>
-      			</tr>      			
-      		</table></center>
-      		
-      			
+      			     			
+      		</table></center>	
       		<% end %>
       		</div>
     	</ul>
  </nav>
+ 	
   <% if signed_in? %>
  
  <% else %>
@@ -118,7 +117,26 @@
         <!-- an dieser Stelle werden die anderen Seiten in die Hauptseite eingefügt -->
         <%= yield %>
       </section>    
-</div> 
+</div>
+ <% end %>
+<% if signed_in? %>
+<div id = "userbox" class ="round">
+      		<center><table border = "0" >
+      			<tr>
+      				<td><%=benutzer%><td>
+      			</tr>
+      			<tr>
+      				<td><%= @current_user.login %></td>
+      			</tr>
+      			<tr>
+      				<td><%= pluralize(current_user.surveys.count, "Umfragen")%></td>
+      			</tr>	
+      			<tr>
+      				<td><%= link_to "Ausloggen", signout_path, :method => :delete %></td>
+      			</tr> 
+      			<tr>
+      				</center></div> 
+
  <% end %>
     
 
