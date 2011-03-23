@@ -44,5 +44,9 @@
   		<td><%=link_to veroeffentlichen, attend_path(:survey_id => survey.id),
   								 :title => "Umfrage und Link ansehen"%></td>   
   	 <% end %>
+  	 	<td>
+  	 		<%= Form.find_all_by_survey_id(survey.id).count%> Teilnahmen
+  	 	</td>
+  	 		
  <% end %>
 </tr>  
