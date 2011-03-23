@@ -46,15 +46,14 @@
              	<% @counter = 0%>
              	<% Form.find_all_by_survey_id(@survey.id).each do |form|%>		      
              		<%form.user_answers.find_all_by_answer_id(answer.id).each do |useranswer|; %>
-             			<%= @ergebnis += useranswer.answertext.to_i
-             			   @counter = @counter +1   
-             			%>
+             			<% @ergebnis += useranswer.AnswerText.to_i %>
+             			 <%  @counter = @counter +1 %>  
              			
              		<% end %>
                 <% end %> 
                 <% if @counter != 0 %> 
-                    <%  average = @ergebnis / @counter %> 	
-             	    <%= avarage %>
+                    <%  @average = @ergebnis / @counter %> 	
+             	    <%= @avarage %>
              	 <% end %>   
              <% end %>   
   <% end %>	
