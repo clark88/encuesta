@@ -8,19 +8,56 @@
         <% a = Answer.find_all_by_question_id(question.id) %>
 		<% 	a.each do |answer| %>
 			<!--  #Antwort wird ausgegeben -->	 
-			<p><%=  answer.answertext %><p>
+			<p><%=  answer.answertext %>
 		<!--  ##Prüfund des Fragetyps --> 	
-		   <!--  Radiobutton oder Checkbox -->
-			 <% if answer.answertype_id = 1 || answer.answertype_id = 2 %>
-             <p>Checkbox oder Radiobutton, Frage ID: <%=answer.id %></p>                    
+		    <!--  Radiobutton oder Checkbox -->
+			 <% if answer.answertype == 1 || answer.answertype == 2 %>
+             	: Checkbox oder Radiobutton, Frage ID: <%=answer.id %></p>   
+             	<% @usranswer = 0%>
+             	<% Form.find_all_by_survey_id(@survey.id).each do |form|
+             		#p form
+             	%>
+             		<%=   # Form.find(form.id).user_answer.find_all_by_answer_id(answer.id).count  
+             		%>       
+             		<%@usranswer +=  form.user_answers.find_all_by_answer_id(answer.id).count;
+                             %>
+             		<% end %>        
+             <% end %>
+              <!--  Textfeld -->
+             <% if answer.answertype == 3%>
+             	<% @usranswer = 0%>
+             	<% Form.find_all_by_survey_id(@survey.id).each do |form|
+             		#p form
+             	%>
+             		<%=   # Form.find(form.id).user_answer.find_all_by_answer_id(answer.id).count  
+             		%>       
+             		<%@usranswer +=  form.user_answers.find_all_by_answer_id(answer.id).count;
+                             %>
+             		<% end %>
              <% end %>
              
-             <% if answer.answertype_id = 3%>
-             
+             <% if answer.answertype == 4%>
+             	<% @usranswer = 0%>
+             	<% Form.find_all_by_survey_id(@survey.id).each do |form|
+             		#p form
+             	%>
+             		<%=   # Form.find(form.id).user_answer.find_all_by_answer_id(answer.id).count  
+             		%>       
+             		<%@usranswer +=  form.user_answers.find_all_by_answer_id(answer.id).count;
+                             %>
+             		<% end %>
              <% end %>
-             
-             <% if answer.answertype_id = 4%>
-             <% end %>
-             
+   <!--          <% @usranswer = 0%>
+             <% Form.find_all_by_survey_id(@survey.id).each do |form|
+             	#p form
+             %>
+             <%=   # Form.find(form.id).user_answer.find_all_by_answer_id(answer.id).count  
+             %>       
+             <%               @usranswer +=  form.user_answers.find_all_by_answer_id(answer.id).count;
+                             %>
+             <% end 
+             %> -->
+             <%= @usranswer%>
+             <% @usranswer = 0%>
         <% end %>  
   <% end %>		
