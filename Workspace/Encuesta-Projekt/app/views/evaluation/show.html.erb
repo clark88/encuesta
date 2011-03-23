@@ -13,55 +13,54 @@
   			
         <% a = Answer.find_all_by_question_id(question.id) %></th>
         <th>Ergebnis</th>
-        </tr>     
-	 <%	a.each do |answer| %>
-		<tr><td>
+        </tr>
+             
+	      <%a.each do |answer| %>
+	
 	   <!--  #Antwort wird ausgegeben -->
 	 		
-           <p><%=  answer.answertext %></p> 
-		<!--  ##Prüfund des Fragetyps --> 			    
+       <tr><td><p><%=  answer.answertext %></p></td>
+		<!--  ##Prüfund des Fragetyps --> 
+					    
           <!--  Radiobutton oder Checkbox -->
 			     <% if answer.answertype_id == 1 || answer.answertype_id == 2 %>
-                        </td>
 	      				<% @usranswer = 0%>
              			<% Form.find_all_by_survey_id(@survey.id).each do |form| %>     
                            <% @usranswer +=  form.user_answers.find_all_by_answer_id(answer.id).count; %>
                         <% end %> 
-                        <td><%= @usranswer%> 
-                        <% @usranswer = 0%>		
+                        <td align="center"><b><%= @usranswer%></b></td>
                  <% end %>
-            		</td>
+            		
           <!--  Textfeld -->
+          
              <% if answer.answertype_id == 3%>
-               <hr><table border="0" >
+                <tr><td>
              	<% Form.find_all_by_survey_id(@survey.id).each do |form|%>		      
              		<%form.user_answers.find_all_by_answer_id(answer.id).each do |useranswer|; %>            		
-             		<tr><td><%= useranswer.AnswerText %></td></tr>      			
-             	<% end %>
+             		<p><%= useranswer.AnswerText %></p>     			
+             	    <% end %>
+                <% end %></td></tr>
              <% end %>
-             </table>
-             </td>
              
           <!--  Nummernfeld -->
-              <% if answer.answertype_id == 4 %>
-                </td>            	
+              <% if answer.answertype_id == 4 %>           	
              	<% @ergebnis = 0%>
              	<% @counter = 0%>
              	<% Form.find_all_by_survey_id(@survey.id).each do |form|%>		      
              		<%form.user_answers.find_all_by_answer_id(answer.id).each do |useranswer|; %>
              			<% @ergebnis += useranswer.AnswerText.to_i %>
-             			 <%  @counter = @counter +1 %>  
-             			
+             			 <%  @counter = @counter +1 %>  	
              		<% end %>
                 <% end %> 
+                
                 <% if @counter != 0 %> 
                    <% p @average = @ergebnis / @counter %> 	
-             	   <td align"center"><%= @average %>(Durchschnitt)</td>
+             	   <td align"center"><b><%= @average%></b>(Durchschnitt)</td>
              	<% end %>   
-             <% end %>   
-  <% end %>	
-   </tr>
-   </table> 
-   <br> 
-<% end %> 
+             <% end %>
+     
+     <% end %>	
+     </tr>
+     </table> 
+     <br> 
 <% end %>  	
