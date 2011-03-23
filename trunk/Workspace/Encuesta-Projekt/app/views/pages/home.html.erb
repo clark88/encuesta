@@ -2,17 +2,17 @@
 		
 <h1>Encuesta</h1>
 <p>
-    Dies ist die Home-Page des Encuesta-Umfragen-Systems. Erstellt in Unterstützung mit
-    <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
+	Willkommen auf der Home-Page des Encuesta-Umfragen-Systems. Auf dieser Seite können sie Umfragen nach ihren Vorstellungen erstellen und diese von anderen Nutzern ausfüllen lassen. Nach erfolgreichen Teilnahmen an der Umfrage können Sie diese Umfragen auswerten.<br>
+    Sobald Sie eine neue Umfrage erstellt haben können sie eine Frage für Ihre Umfrage erstellen und diese mit Antworten versehen.<br>
+    Diese Seite wurde in Unterstützung mit
+    <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a> erstellt.
 </p>
-<% cookies.delete :answertype %>
-<% cookies.delete :questionid %>
-<% cookies.delete :surveyid %>
+
 
 <table class="front" summary="For signed-in users">
     <tr>
       <td class="main">
-        <h1 class="survey">Umfragen</h1>
+        <h1 class="survey">Umfrage erstellen</h1>
         <%= render 'shared/survey_form' %>
         <%= #render 'shared/feed' 
         %> 
@@ -27,9 +27,7 @@
 <!--><p>Sie sind eingelogt als  <%= @current_user.login %> !   </p>-->
     <% else %>
  
-<% cookies.delete :answertype %>
-<% cookies.delete :questionid %>
-<% cookies.delete :surveyid %>
+
     <p>
     Dies ist die Home-Page des Encuesta-Umfragen-Systems. Erstellt in Unterstützung mit
     <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
