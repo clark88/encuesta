@@ -8,49 +8,43 @@
            <col width="450">
            <col width="100">
         </colgroup>
-  		<tr align="left">
-  		<% %>		
-  		<th><h3><%= question.questiontext%></h3>  			
+  		<tr align="left">		
+  		 <th><h3><%= question.questiontext%></h3>  			
   			
         <% a = Answer.find_all_by_question_id(question.id) %></th>
         <th>Ergebnis</th>
         </tr>     
 	 <%	a.each do |answer| %>
-		<tr>
-	 <!--  #Antwort wird ausgegeben -->	 
-		<td><form><p><%=  answer.answertext %> 
-			
-			 <!--  Wenn Textfeld kann hier das Suchwort eingegeben werden -->	 
-			<% if answer.answertype_id == 3%>	
-  		  	   <input name="Suche" type="text" size="15" value="Suche"></form></p>
-  		    <% end %>
-		</td>
-		
-		<!--  ##Prüfund des Fragetyps --> 	
-		    
+		<tr><td>
+	   <!--  #Antwort wird ausgegeben -->
+	 		
+           <p><%=  answer.answertext %></p> 
+		<!--  ##Prüfund des Fragetyps --> 			    
           <!--  Radiobutton oder Checkbox -->
 			     <% if answer.answertype_id == 1 || answer.answertype_id == 2 %>
-
+                        </td>
 	      				<% @usranswer = 0%>
              			<% Form.find_all_by_survey_id(@survey.id).each do |form| %>     
                            <% @usranswer +=  form.user_answers.find_all_by_answer_id(answer.id).count; %>
                         <% end %> 
-                        <td><%= @usranswer%> </td>
+                        <td><%= @usranswer%> 
                         <% @usranswer = 0%>		
                  <% end %>
-            
+            		</td>
           <!--  Textfeld -->
              <% if answer.answertype_id == 3%>
-              
-             	<% @usranswer = 0%>
-             	<% Form.find_all_by_survey_id(@survey.id).each do |form| %>
-             		<%@usranswer +=  form.user_answers.find_all_by_answer_id(answer.id).count; %>
-             		<% end %>
+               <hr><table border="0" >
+             	<% Form.find_all_by_survey_id(@survey.id).each do |form|%>		      
+             		<%form.user_answers.find_all_by_answer_id(answer.id).each do |useranswer|; %>            		
+             		<tr><td><%= useranswer.AnswerText %></td></tr>      			
+             	<% end %>
              <% end %>
+             </table>
+             </td>
              
           <!--  Nummernfeld -->
               <% if answer.answertype_id == 4 %>
-             	
+                </td>            	
              	<% @ergebnis = 0%>
              	<% @counter = 0%>
              	<% Form.find_all_by_survey_id(@survey.id).each do |form|%>		      
@@ -61,12 +55,13 @@
              		<% end %>
                 <% end %> 
                 <% if @counter != 0 %> 
-                 <% p @average = @ergebnis / @counter %> 	
-             	 <td align"center"><%= @average %>(Durchschnitt)</td>
-             	 <% end %>   
+                   <% p @average = @ergebnis / @counter %> 	
+             	   <td align"center"><%= @average %>(Durchschnitt)</td>
+             	<% end %>   
              <% end %>   
   <% end %>	
    </tr>
    </table> 
    <br> 
+<% end %> 
 <% end %>  	
