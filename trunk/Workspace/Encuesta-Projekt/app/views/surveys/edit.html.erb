@@ -31,7 +31,7 @@
     <br>
     
     <%= label_tag "question_#{question}", question.questiontext %>  
-    <%=	link_to "Frage bearbeiten", edit_question_path(question) %>
+    <%=	link_to "Frage bearbeiten", edit_question_path(question, :survey_id => @survey.id) %>
     <br>Achtung, wenn Sie eine Frage bearbeiten, werden die zugehörigen Antworten gelöscht
  <%#BK: Und wenn nur ein Rechtschreibfehler vorliegt??%>
     <br>

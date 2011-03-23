@@ -1,8 +1,8 @@
-	<h1>Questions#edit</h1>
+<h1>Frage bearbeiten</h1>
 <%= form_for(@question) do |f| %>
 <%= #render 'shared/error_messages', :object => f.object
 %>
-<%#cookies[:questionid] = @question.id 
+<% #cookies[:questionid] = @question.id
 %>
 <div class="field">
     <%= f.label :questiontext %>
@@ -10,31 +10,39 @@
     <%= f.text_field :questiontext %>
 </div>
 <br>
-<div class="actions">
-    <%= f.submit "Text Ändern" %>
-</div>
-    <br>
+
+<br>
+
+<div class="field">
+    <% Answer.find_all_by_question_id(@question.id).each do |answer| %>
+    <%= label_tag "answer_#{answer}", answer.answertext %>
+    <%= link_to "Antwort bearbeiten", edit_answer_path(answer)
+    %>
     
-    <div class="field">
-    	<% Answer.find_all_by_question_id(@question.id).each do |answer| %>
-    	<%= label_tag "answer_#{answer}", answer.answertext %>
-    	<%=	link_to "Antwort bearbeiten", edit_answer_path(answer) 
-    	%><br>
-    	
-    	<% end %>
-    	
-    	<%=	link_to "Neue Antwort anlegen", new_answer_path(:question_id => @question.id) 
-    	%><br>
-  
+    
+   
+    
+    <% @answertype = answer.answertype%>
+   <%  p @answertype.id %>
+
+    <br>
+    <% end %>
+
+    <br>
+    <% survey_id = params[:survey_id]%>
+    <%= link_to "Neue Antwort anlegen", new_answer_path(:question_id => @question.id, :answertype => @answertype.id, :survey_id => survey_id)
+    %>
+    <br>
 </div>
 <div class="field">
-  <% Answertype.all.each do |answertype| %>
-    <br><%= radio_button_tag(:answertype, answertype.id)
+    <% Answertype.all.each do |answertype| %>
+    <br>
+    <%= radio_button_tag(:answertype, answertype.id)
     %>
     <%= label_tag "answertype_#{answertype}", answertype.bezeichnung
     %>
-  <% end %>
-  </div>
+    <% end %>
+</div>
 <div class="actions">
     <%= f.submit "Hinzufügen" %>
 </div>
