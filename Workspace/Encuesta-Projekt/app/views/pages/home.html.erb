@@ -1,39 +1,58 @@
 <% if signed_in? %>
-		
-<center><h3> Herzlichen Willkommen auf dem Encuesta-Umfrage-System</h3></center>	
-<p><blockquote>Auf dieser Seite können sie Umfragen nach ihren Vorstellungen erstellen und diese von Teilnehmern ausfüllen lassen.</blockquote></p> 
-<p><blockquote>Encuesta richtiet sich an Personen die Umfragen wie z.B. Politische Erhebungen durchführen wollen.</blockquote></p> 
-<center><%=#umfrageStartseiteBackround
-	%></center>
 
+<center>
+    <h1>Herzlichen Willkommen auf dem Encuesta-Umfrage-System</h1>
+</center>
+<p>
+    <blockquote>
+        Auf dieser Seite können sie Umfragen nach ihren Vorstellungen erstellen und diese von Teilnehmern ausfüllen lassen.
+    </blockquote>
 
+    <blockquote>
+        Encuesta richtiet sich an Personen die Umfragen wie z.B. Politische Erhebungen durchführen wollen.
+    </blockquote>
+</p>
+<center>
+    <%= umfrageStartseiteBackround
+    %>
+</center>
 <table class="front" summary="For signed-in users">
     <tr>
-      <td class="main">
+        <td class="main">
         <h1 class="survey">Umfrage erstellen</h1>
         <%= render 'shared/survey_form' %>
-        <%= #render 'shared/feed' 
-        %> 
-
-      </td>
-      <td class="sidebar round">
-        <%= #render 'shared/user_info' 
+        <%= #render 'shared/feed'
         %>
-      </td>
+        </td>
     </tr>
-  </table>
+</table>
 </div>
-<!--><p>Sie sind eingelogt als  <%=# @current_user.login 
-	%> !   </p>-->
-    <% else %>
- 
-<center><h3> Herzlichen Willkommen auf dem Encuesta-Umfrage-System</h3></center>	
-<p><blockquote>Auf dieser Seite können sie Umfragen nach ihren Vorstellungen erstellen und diese von Teilnehmern ausfüllen lassen.</blockquote></p> 
-<p><blockquote>Encuesta richtiet sich an Personen die Umfragen wie z.B. Politische Erhebungen durchführen wollen.</blockquote></p> 
+<!--><p>Sie sind eingelogt als  <%=# @current_user.login
+%> !   </p>-->
+<% else %>
 
-    <p><blockquote>Durch klicken auf<%= link_to "Jetzt registrieren!", signup_path, :class => "signup_button round" %> können Sie sich anmelden.</blockquote></p> 
-    <% end %>
-    <br>
-    <p><center><%=umfrageStartseiteBackround
-    	%></center></p>
+<center>
+    <h1>Herzlichen Willkommen auf dem Encuesta-Umfrage-System</h1>
+</center>
+<p>
+    <blockquote>
+        Auf dieser Seite können sie Umfragen nach ihren Vorstellungen erstellen und diese von Teilnehmern ausfüllen lassen.
+    </blockquote>
+</p>
+<p>
+    <blockquote>
+        Encuesta richtiet sich an Personen die Umfragen wie z.B. Politische Erhebungen durchführen wollen.
+    </blockquote>
+
+    <blockquote>
+        Durch klicken auf<%= link_to "Jetzt registrieren!", signup_path, :class => "signup_button round" %> können Sie sich anmelden.
+    </blockquote>
+</p>
+
+<p>
+    <center>
+        <%= umfrageStartseiteBackround%>
+    </center>
+</p>
+<% end %>
 
