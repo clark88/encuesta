@@ -2,7 +2,7 @@
 <%= form_for(@survey) do |f| %>
 <% #render 'shared/error_messages', :object => f.object
 
-#cookies[:surveyid] = @survey.id
+  #cookies[:surveyid] = @survey.id
 %>
 <div class="field">
     <%= f.label :bezeichnung %>
@@ -11,66 +11,60 @@
 </div>
 <div class="field">
 
-   <!--  Da die Abgrenzung zwischen Simple und Advanced-Umfrage zu zeitintensiv war, mussten wir uns für einen Standardwert
- 	   entscheiden und legen immer für jede Umfrage diesen Fest (momentan macht es keinen Unterschied).
- 	   <% Surveytype.all.each do |surveytype| %>
-    <br><%= #radio_button_tag 'surveytype', surveytype.id, @survey.surveytype_id == surveytype.id 
+    <!--  Da die Abgrenzung zwischen Simple und Advanced-Umfrage zu zeitintensiv war, mussten wir uns für einen Standardwert
+    entscheiden und legen immer für jede Umfrage diesen Fest (momentan macht es keinen Unterschied).
+    <% Surveytype.all.each do |surveytype| %>
+    <br><%= #radio_button_tag 'surveytype', surveytype.id, @survey.surveytype_id == surveytype.id
     f.radio_button(:surveytype, surveytype.id)
     %>
     <%= label_tag "surveytype_#{surveytype}", surveytype.bezeichnung
     %>
-  <% end %>
-  <br> -->
+    <% end %>
+    <br> -->
 </div>
 <div class="actions">
     <%= f.submit "Update" %>
 </div>
-
-
 <div class="field">
 
     <% Question.find_all_by_survey_id(@survey.id).each do |question| %>
     <br>
-    
-    <%= label_tag "question_#{question}", question.questiontext %>  
-    <%=	link_to bearbeiten, edit_question_path(question, :survey_id => @survey.id) %>
-    <td><%= link_to loeschen, question, :method => :delete,
-                                  		   :confirm => "Sind sie sich sicher?",
-                                    		 :title => "Umfrage löschen" %>
-    <br>Achtung, wenn Sie eine Frage bearbeiten, werden die zugehörigen Antworten gelöscht
- <%#BK: Und wenn nur ein Rechtschreibfehler vorliegt??
- %>
+    <% @counter = Answer.find_all_by_question_id(question.id).count%>
+    <%= label_tag "question_#{question}", question.questiontext %>
+    <% if @counter >=1 %><%= link_to bearbeiten, edit_question_path(question, :survey_id => @survey.id) %><% end %>
+    <td>
+    <%= link_to loeschen, question, :method => :delete,
+    :confirm => "Sind sie sich sicher?",
+    :title => "Umfrage löschen" %>
+    <br>
+    Achtung, wenn Sie eine Frage bearbeiten, werden die zugehörigen Antworten gelöscht
+    <% #BK: Und wenn nur ein Rechtschreibfehler vorliegt??
+    %>
     <br>
     <table>
-    	<% @counter = Answer.find_all_by_question_id(question.id).count%>
-    <% Answer.find_all_by_question_id(question.id).each do |answer| %>
-    
-    	<tr>
-    		<td>
-    			<%= label_tag "answer_#{answer}", answer.answertext %>
-    		</td>
-    		<td>
-    			<%=	link_to bearbeiten, edit_answer_path(answer, :question_id => question.id) %>
-    			<% if @counter >=2 %>
-    			
-    			<%= link_to loeschen, answer, :method => :delete,
-                                  		   :confirm => "Sind sie sich sicher?",
-                                    		 :title => "Umfrage löschen" %>
-    			<% end %>
-    		</td>	
-    	</tr>
-    	 
-    	<% end %>
-    	</table>
-    <% end %>
-    
-    <%=	#link_to "Neue Frage anlegen", new_question_path 
-    %>
-        	<%=	link_to neueFrage, new_question_path(:survey_id => @survey.id) 
 
-    	%><br>
+        <% Answer.find_all_by_question_id(question.id).each do |answer| %>
+
+        <tr>
+            <td><%= label_tag "answer_#{answer}", answer.answertext %></td>
+            <td><%= link_to bearbeiten, edit_answer_path(answer, :question_id => question.id) %>
+            <% if @counter >=2 %>
+
+            <%= link_to loeschen, answer, :method => :delete,
+            :confirm => "Sind sie sich sicher?",
+            :title => "Umfrage löschen" %>
+            <% end %></td>
+        </tr>
+        <% end %>
+    </table>
+    <% end %>
+
+    <%= #link_to "Neue Frage anlegen", new_question_path
+    %>
+    <%= link_to neueFrage, new_question_path(:survey_id => @survey.id)
+
+    %>
+    <br>
 </div>
 <% end %>
-
-
 
