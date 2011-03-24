@@ -25,7 +25,7 @@
        	<% end %>
        	
        	<% if answer.answertype_id == 3%>
-       	  <tr><form><td><p>
+       	  <tr><form><td colspan="2"><p>
        	     <input name="search" type="text" size="30" maxlength="40">
        	     <input type="submit" value="Suchen"></p>
           </form>
@@ -78,7 +78,7 @@
 
                 <% if @counter != 0 %> 
                    <% p @average = @ergebnis / @counter %> 	
-             	   <td align"center"><b><%= @average%></b>(Durchschnitt)</td>
+             	   <td align"center"><b><%= @average%></b><br>(Durchschnitt)</td>
              	<% end %>   
              <% end %>
      
