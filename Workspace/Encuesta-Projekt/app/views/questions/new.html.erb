@@ -17,7 +17,7 @@ Geben Sie eine Fragestellung ein und wählen Sie die Art der Frage aus.<br>
   </div>
   <div class="field">
     <% Answertype.all.each do |answertype| %>
-    <br><%= radio_button_tag(:answertype, answertype.id)
+    <br><%= radio_button_tag(:answertype, answertype.id, { :checked => true })
     %>
     <%= label_tag "answertype_#{answertype}", answertype.bezeichnung
     %>
