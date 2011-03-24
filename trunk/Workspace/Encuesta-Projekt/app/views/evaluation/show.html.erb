@@ -1,14 +1,15 @@
   	<h1>Auswertung von  "<%= @survey.bezeichnung%>"</h1>
 
   	<!-- Fragen durchsuchen -->
-  
+  	<% if session[:some_key]!=nil%>
+  	  <% params[:searchQ] = session[:some_key]%>
+  	<% end %>
+
   	<tr><form><td colspan="2"><p>
        	     <input name="searchQ" type="text" size="30" maxlength="40" value="Fragen filtern">
-       	     <input type="submit" value="Suchen"> 
-       	     <% session[:some_key] = params[:searchQ]%>  	     
+       	     <input type="submit" value="Suchen">      	     
     </form>Sucheingabe: <%= params[:searchQ]%></p>
-  	
-  	<%= session[:some_key]%>
+ 
   	
   <% q = Question.find_all_by_survey_id(@survey.id) %>
   <% q.each do |question|%>
@@ -97,7 +98,7 @@
              	   <td align"center"><b><%= @average%></b><br>(Durchschnitt)</td>
              	<% end %>   
              <% end %>
-    
+        <% session[:some_key] = params[:searchQ]%>
      <% end %>	
      </tr>
      </table> 
