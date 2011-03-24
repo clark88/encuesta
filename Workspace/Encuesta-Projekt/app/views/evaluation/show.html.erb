@@ -1,7 +1,7 @@
   	<h1>Auswertung von  "<%= @survey.bezeichnung%>"</h1>
 
   	<!-- Fragen durchsuchen -->
-  	<% if session[:some_key]!=nil%>
+  	<% if params[:searchQ]==nil%>
   	  <% params[:searchQ] = session[:some_key]%>
   	<% end %>
 
