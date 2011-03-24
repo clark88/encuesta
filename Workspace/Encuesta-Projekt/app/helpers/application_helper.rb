@@ -112,5 +112,16 @@ module ApplicationHelper
  	image_tag("umfrageStartseiteBackround.png", :alt => "umfrageStartseiteBackround", :class => "round")
  end
  
+ def neueFrage
+ 	image_tag("neueFrage.png", :alt => "neueFrage", :class => "round")
+ end
+ 
+ def beabeitungAbschliessen
+ 	image_tag("beabeitungAbschliessen.png", :alt => "beabeitungAbschliessen", :class => "round")
+ end  
+ 
+  def back
+ 	image_tag("back.png", :alt => "back", :class => "round")
+ end  
 end
  

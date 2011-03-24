@@ -20,8 +20,8 @@
   </div>
   <%= hidden_field_tag :survey_id, params[:survey_id]%>
   <% survey_id = params[:survey_id] %>
-  <%=	link_to "Bearbeitung abschließen", edit_survey_path(survey_id) %>
-  <%=	link_to "Neue Frage anlegen", new_question_path(:survey_id => params[:survey_id]) %>
+  <%= link_to beabeitungAbschliessen, edit_survey_path(survey_id) %>
+  <%= link_to neueFrage, new_question_path(:survey_id => params[:survey_id]) %>
   		</td>
   		<td>
   			<ul>
