@@ -34,11 +34,15 @@
     
     <%= label_tag "question_#{question}", question.questiontext %>  
     <%=	link_to bearbeiten, edit_question_path(question, :survey_id => @survey.id) %>
+    <td><%= link_to loeschen, question, :method => :delete,
+                                  		   :confirm => "Sind sie sich sicher?",
+                                    		 :title => "Umfrage löschen" %>
     <br>Achtung, wenn Sie eine Frage bearbeiten, werden die zugehörigen Antworten gelöscht
  <%#BK: Und wenn nur ein Rechtschreibfehler vorliegt??
  %>
     <br>
     <table>
+    	<% @counter = Answer.find_all_by_question_id(question.id).count%>
     <% Answer.find_all_by_question_id(question.id).each do |answer| %>
     
     	<tr>
@@ -47,6 +51,12 @@
     		</td>
     		<td>
     			<%=	link_to bearbeiten, edit_answer_path(answer, :question_id => question.id) %>
+    			<% if @counter >=2 %>
+    			
+    			<%= link_to loeschen, answer, :method => :delete,
+                                  		   :confirm => "Sind sie sich sicher?",
+                                    		 :title => "Umfrage löschen" %>
+    			<% end %>
     		</td>	
     	</tr>
     	 

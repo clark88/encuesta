@@ -56,7 +56,12 @@ class AnswersController < ApplicationController
     end
   end
 
-  def delete
+  def destroy
+  	#p params[:id].to_i
+  	answer = Answer.find(params[:id].to_i)
+  	
+    answer.destroy
+    redirect_to :back
   end
 
 end
