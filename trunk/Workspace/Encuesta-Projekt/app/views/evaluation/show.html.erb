@@ -20,7 +20,7 @@
   		
   	<% if question.questiontext.include?(params[:searchQ])%>
   		<!--  #Frage wird ausgegeben-->
-  		<table border="9" align="center" >
+  		<table border="7" align="center" >
   	    <colgroup>
            <col width="450">
            <col width="100">
@@ -44,7 +44,6 @@
        	<% if answer.answertype_id == 3%>
        	  <tr><form><td colspan="2"><p>
        	     <input name="search" type="text" size="30" maxlength="40" value="Antworten filtern">
-       	     
        	     <input type="submit" value="Suchen"></p>
           </form>
        	
@@ -101,7 +100,7 @@
         <% session[:some_key] = params[:searchQ]%>
      <% end %>	
      </tr>
-     </table> 
+     </table>
      <br> 
    <% end %>  
 <% end %>  	
