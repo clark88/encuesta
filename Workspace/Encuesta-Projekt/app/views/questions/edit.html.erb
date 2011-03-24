@@ -20,16 +20,27 @@
 
 <div class="field">
     <table>
+        <% @counter = Answer.find_all_by_question_id(@question.id).count%>
+    	
         <% Answer.find_all_by_question_id(@question.id).each do |answer| %>
 
         <tr>
             <td><%= label_tag "answer_#{answer}", answer.answertext %></td>
-            <td><%= link_to bearbeiten, edit_answer_path(answer,:question_id => @question.id) %></td>
+            <td><%= link_to bearbeiten, edit_answer_path(answer,:question_id => @question.id) %>
+            	<% if @counter >=2 %>
+            	
+            	<%= link_to loeschen, answer, :method => :delete,
+                                  		   :confirm => "Sind sie sich sicher?",
+                                    		 :title => "Umfrage löschen" %>
+                <% end %>
+            </td>
         </tr>
         <% @answertype = answer.answertype%>
         <% p @answertype.id %>
 
         <% end %>
+        
+        
     </table>
     <br>
     <% survey_id = params[:survey_id]%>

@@ -75,12 +75,21 @@ class QuestionsController < ApplicationController
   	end
   	
     if @question.update_attributes(params[:question])
-      flash[:success] = "Profile updated."
-      redirect_to edit_survey_path(survey)
+      flash[:success] = "Frage bearbeitet."
+      redirect_to new_answer_path(:survey_id => survey.id, :question_id => @question.id, :answertype => answertype)
     else
       @title = "Edit Question"
       render 'edit'
     end
+  end
+  
+  
+  def destroy
+  	#p params[:id].to_i
+  	question = Question.find(params[:id].to_i)
+  	
+    question.destroy
+    redirect_to :back
   end
 
  

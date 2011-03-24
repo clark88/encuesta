@@ -3,10 +3,10 @@
 
   <td class="survey">
     <span class="content">
-  	<b>Umfrage:</b><%= survey.bezeichnung %></span> </td>
+  	<b>Umfrage: </b><%= survey.bezeichnung %></span> </td>
     <td class="survey">
     <span class="timestamp">
-     <b>Erstellzeit:</b><%= time_ago_in_words(survey.created_at) %> ago.
+     <b>Erstellzeit: </b><%= time_ago_in_words(survey.created_at) %> ago.
     </span></td>
  
   <% if current_user?(survey.user) %>

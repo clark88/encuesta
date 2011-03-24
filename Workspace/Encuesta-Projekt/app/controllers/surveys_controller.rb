@@ -67,7 +67,7 @@ class SurveysController < ApplicationController
     @survey = Survey.find(params[:id])
     cookies[:surveyid] = @survey.id
     if @survey.update_attributes(params[:survey])
-      flash[:success] = "Profile updated."
+      flash[:success] = "Umfrage bearbeitet."
       redirect_to @survey
     else
       @title = "Edit Survey"
