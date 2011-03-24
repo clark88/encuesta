@@ -63,6 +63,7 @@ class SurveysController < ApplicationController
     redirect_to :back
   end
 
+#	Einfacher Update des Surveys über alle Attribute
   def update
     @survey = Survey.find(params[:id])
     cookies[:surveyid] = @survey.id
@@ -75,6 +76,8 @@ class SurveysController < ApplicationController
     end
   end
 
+
+# Sperrt die Umfrage (Wirkung im View: keine Bearbeitungen mehr möglich und freigeben für Teilnahme und Auswertung)
   def lock
 	@survey = Survey.find(params[:id])
 	@survey.gesperrt = true

@@ -2,7 +2,7 @@ class SessionsController < ApplicationController
   def new
     @title = "Einloggen"
   end
-
+	#erstellt eine neue Session über den User
   def create
     user = User.authenticate(params[:session][:email],params[:session][:passwort])
     #p user
@@ -13,11 +13,11 @@ class SessionsController < ApplicationController
     else
     # Sign the user in and redirect to the user's show page.
       sign_in user
-      redirect_to user
+      redirect_to home_path
 
     end
   end
-
+	#logt aus und geht zurück zur Home
   def destroy
     sign_out
     #redirect_to root_path
