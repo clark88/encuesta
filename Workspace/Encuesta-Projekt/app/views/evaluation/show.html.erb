@@ -20,10 +20,14 @@
 	   <!--  #Antwort wird ausgegeben -->
 	   
 	 	<!-- Suchfeld für Textantworten-->	
+       <% if answer.answertype_id != 3%>
        <tr><form><td><p><%=  answer.answertext %>
+       	<% end %>
+       	
        	<% if answer.answertype_id == 3%>
-       	  
-       	     <input name="search" type="text" size="30" maxlength="40" value="Antworten filtern"></p>
+       	  <tr><form><td><p>
+       	     <input name="search" type="text" size="30" maxlength="40">
+       	     <input type="submit" value="Suchen"></p>
           </form>
        	
        	 <p> Sucheingabe: <%= params[:search]%></p>
