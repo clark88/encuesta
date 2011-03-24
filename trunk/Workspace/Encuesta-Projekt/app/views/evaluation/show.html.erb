@@ -1,7 +1,23 @@
   	<h1>Auswertung von  "<%= @survey.bezeichnung%>"</h1>
+
+  	<!-- Fragen durchsuchen -->
+  
+  	<tr><form><td colspan="2"><p>
+       	     <input name="searchQ" type="text" size="30" maxlength="40" value="Fragen filtern">
+       	     <input type="submit" value="Suchen"> 
+       	     <% session[:some_key] = params[:searchQ]%>  	     
+    </form>Sucheingabe: <%= params[:searchQ]%></p>
+  	
+  	<%= session[:some_key]%>
   	
   <% q = Question.find_all_by_survey_id(@survey.id) %>
   <% q.each do |question|%>
+  
+  		<% if params[:searchQ]==nil%>
+            <% params[:searchQ] = "" %>
+        <% end%>
+  		
+  	<% if question.questiontext.include?(params[:searchQ])%>
   		<!--  #Frage wird ausgegeben-->
   		<table border="9" align="center" >
   	    <colgroup>
@@ -19,21 +35,22 @@
 	
 	   <!--  #Antwort wird ausgegeben -->
 	   
-	 	<!-- Suchfeld für Textantworten-->	
+	<!-- Suchfeld für Textantworten-->	
        <% if answer.answertype_id != 3%>
        <tr><form><td><p><%=  answer.answertext %>
        	<% end %>
        	
        	<% if answer.answertype_id == 3%>
        	  <tr><form><td colspan="2"><p>
-       	     <input name="search" type="text" size="30" maxlength="40">
+       	     <input name="search" type="text" size="30" maxlength="40" value="Antworten filtern">
+       	     
        	     <input type="submit" value="Suchen"></p>
           </form>
        	
        	 <p> Sucheingabe: <%= params[:search]%></p>
        	<% end %>  
        </td>
-		<!--  ##Prüfund des Fragetyps --> 
+    <!--  ##Prüfund des Fragetyps --> 
 					    
           <!--  Radiobutton oder Checkbox -->
 			     <% if answer.answertype_id == 1 || answer.answertype_id == 2 %>
@@ -53,8 +70,7 @@
              		 <% if params[:search]==nil%>
              		    <% params[:search] = "" %>
              		 <% end%>
-             		
-             		    
+             		   
              		  <% if useranswer.AnswerText.include?(params[:search])%>        		
              		    <p><%= useranswer.AnswerText %></p> 
              		    <% @counter = @counter + 1%>
@@ -81,9 +97,10 @@
              	   <td align"center"><b><%= @average%></b><br>(Durchschnitt)</td>
              	<% end %>   
              <% end %>
-     
+    
      <% end %>	
      </tr>
      </table> 
      <br> 
+   <% end %>  
 <% end %>  	
