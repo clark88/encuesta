@@ -5,6 +5,9 @@ class FormsController < ApplicationController
     @title = "Viel Erfolg"
   end
 
+  #Erstellt zuerst über das übergeordnete Survey das Form. Darauf werden die Parameterwerte auf ihre Form analysiert und daraus ermittelt,
+  # um welche Antwort es sich handelt (dies ist wichtig, um z.B. den Antworttext einzugeben)
+  # Je nach Parameterart werden nun unterschiedlich die Creates für die User_answers angelegt
   def create
     #render :text => params.inspect
     if params[:commit]
@@ -65,17 +68,17 @@ class FormsController < ApplicationController
         @usranswer.AnswerText = parameter[1]
         @usranswer.save
         end
-        
+
       }
 
       if @form.save
         flash[:success] = "Vielen Dank fuer Ihre Teilnahme."
 
-       # Question.find_all_by_survey_id(params[:survey_id]).each do |question|
-       #   Answer.find_all_by_question_id(question.id).each do |answer|
-          #Hier User_Ansers.create einfügen (wie genau noch unklar, auf Daten warten)
-        #  end
-       # end
+      # Question.find_all_by_survey_id(params[:survey_id]).each do |question|
+      #   Answer.find_all_by_question_id(question.id).each do |answer|
+      #Hier User_Ansers.create einfügen (wie genau noch unklar, auf Daten warten)
+      #  end
+      # end
 
       #Question.find_by_id(params[])
 

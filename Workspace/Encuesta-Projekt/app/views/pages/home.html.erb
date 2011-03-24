@@ -1,11 +1,10 @@
 <% if signed_in? %>
 		
-<h1> Herzlich Willkommen auf der Home-Page des Encuesta-Umfragen-Systems</h1>
-<p>
-	Auf dieser Seite können sie Umfragen nach ihren Vorstellungen erstellen und diese von anderen Nutzern ausfüllen lassen. Nach erfolgreichen Teilnahmen an der Umfrage können Sie diese Umfragen auswerten.<br>
-    Sobald Sie eine neue Umfrage erstellt haben können sie eine Frage für Ihre Umfrage erstellen und diese mit Antworten versehen.<br>
-</p>
-<center><%=umfrageStartseiteBackround%></center>
+<center><h3> Herzlichen Willkommen auf dem Encuesta-Umfrage-System</h3></center>	
+<p><blockquote>Auf dieser Seite können sie Umfragen nach ihren Vorstellungen erstellen und diese von Teilnehmern ausfüllen lassen.</blockquote></p> 
+<p><blockquote>Encuesta richtiet sich an Personen die Umfragen wie z.B. Politische Erhebungen durchführen wollen.</blockquote></p> 
+<center><%=#umfrageStartseiteBackround
+	%></center>
 
 
 <table class="front" summary="For signed-in users">
@@ -35,5 +34,6 @@
     <p><blockquote>Durch klicken auf<%= link_to "Jetzt registrieren!", signup_path, :class => "signup_button round" %> können Sie sich anmelden.</blockquote></p> 
     <% end %>
     <br>
-    <p><center><%=umfrageStartseiteBackround%></center></p>
+    <p><center><%=umfrageStartseiteBackround
+    	%></center></p>
 

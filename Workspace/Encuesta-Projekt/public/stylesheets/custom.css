@@ -68,14 +68,15 @@ header img {
  } 
 
 #userbox {
-    width:10em;
+    width:12em;
     background:#3c9aa6;
     margin:0 ;
     padding:0.5em;
     position:absolute;
     margin:30px auto;
     margin-top:3em;
-    left:85%;
+    right:0em;
+    
  } 
 
 .round {

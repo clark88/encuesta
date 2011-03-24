@@ -85,7 +85,6 @@ class User < ActiveRecord::Base
 
 # gibt alles Umfragen zum User aus, der momentan eingelogt ist
   def feed
-    # This is preliminary. See Chapter 12 for the full implementation.
     Survey.where("user_id = ?", id)
   end
 
@@ -101,7 +100,7 @@ class User < ActiveRecord::Base
     self.salt = make_salt if new_record?
     self.encrypted_passwort = encrypt(passwort)
   end
- 
+ #Stellt einen Hash-Wert aus dem übergebenen String her
   def secure_hash(string)
     Digest::SHA2.hexdigest(string)
   end

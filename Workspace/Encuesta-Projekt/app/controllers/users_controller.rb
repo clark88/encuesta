@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   before_filter :correct_user, :only => [:edit, :update]
   
   
-  #useless
+  #Überflüssig
    def index
     @title = "All users"
     @users = User.all
@@ -13,7 +13,7 @@ class UsersController < ApplicationController
 
 
 
-# Controller-Methode zum anlegen eines neuen Benutzers
+# für die new-View zum anlegen eines neuen Benutzers
   def new
   	@user = User.new
     @title = "Registrieren"
@@ -30,7 +30,7 @@ class UsersController < ApplicationController
 
 # Die Create-Methode des Controllers legt einen neuen User mit den übergebenen Parametern an
 # darauf wird der User gespeichert und der Erfolg davon überprüft.
-# bei erfolgt wird ein signIn ausgeführt und eine "Begrüßung" ausgegeben und auf die User-Seite
+# bei erfolgt wird ein signIn ausgeführt und eine "Begrüßung" ausgegeben und auf die Home-Seite
 # weitergeleitet.
 # sollte kein Erfolg sich einstellen, wird die Sign-Up-Seite erneut aufgerufen.
   def create
@@ -60,7 +60,7 @@ class UsersController < ApplicationController
 
     if session [:user_id] != @user.user_id
     	               
-      flash[:notice] = "Sie haben keine Berechtigung den Benutzer zu l&ouml;schen" 
+      flash[:notice] = "Sie haben keine Berechtigung den Benutzer zu loeschen" 
       redirect_to(users_path)
     end
 

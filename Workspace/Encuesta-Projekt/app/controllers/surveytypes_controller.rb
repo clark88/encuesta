@@ -1,3 +1,7 @@
+# Dieser Controller wird nicht genutzt.  Die Surveytypes in der Datenbank wurden hart in diese implementiert.
+
+
+
 class SurveytypesController < ApplicationController
   def new
   	@surveytype = Surveytype.new
