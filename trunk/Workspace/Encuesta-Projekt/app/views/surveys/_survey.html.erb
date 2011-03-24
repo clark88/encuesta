@@ -45,7 +45,10 @@
   								 :title => "Umfrage und Link ansehen"%></td>   
   	 <% end %>
   	 	<td>
+  	 		<% if !survey.gesperrt%> 
+  	 		<% else %>
   	 		<%= Form.find_all_by_survey_id(survey.id).count%> Teilnahmen
+  	 		<% end %>
   	 	</td>
   	 		
  <% end %>
